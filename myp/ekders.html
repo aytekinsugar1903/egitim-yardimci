@@ -1,0 +1,148 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ek Ders Puantajı</title>
+<style>
+:root{--ac:#0b4fb3;--bd:#c9d2de;--wa:#8a5a00;--ok:#1b6e2a}
+body{font:15px system-ui,sans-serif;margin:0;color:#111418;background:#fff}
+header{background:var(--ac);color:#fff;padding:10px 14px}header h1{font-size:19px;margin:0}header small{opacity:.9}
+main{padding:10px 14px;max-width:1400px}section{border:1px solid var(--bd);border-radius:10px;padding:10px 12px;margin:10px 0}
+h2{font-size:17px;margin:4px 0 8px}table{border-collapse:collapse;width:100%;font-size:13px}th,td{border:1px solid var(--bd);padding:3px 5px;text-align:left;vertical-align:top}
+th{background:#eef2f8}td.n,th.n{text-align:center;min-width:22px}input,select{font:inherit;padding:4px;border:1px solid var(--bd);border-radius:6px;max-width:100%}
+input[type=number]{width:60px}button{font:inherit;padding:7px 12px;border-radius:8px;border:1px solid var(--ac);background:var(--ac);color:#fff;cursor:pointer;min-height:40px;margin:3px 4px 3px 0}
+button.sec{background:#fff;color:var(--ac)}.wa{color:var(--wa)}.ok{color:var(--ok)}.muted{color:#555;font-size:13px}.msg{padding:8px;border-radius:8px;background:#eef6ee;margin:6px 0}.msg.er{background:#fdecea}
+.T{background:#fff2cc}.I{background:#fde2e2}.X{background:#eee;color:#888}.wrap{overflow-x:auto}
+@media print{.noprint,header,section.ayar{display:none!important}body{font-size:10px}table{font-size:9px}section{border:0}}
+</style></head><body>
+<header><h1>Ek Ders Puantajı (ön hesap)</h1><small>Evrak Asistanı · Müdür Yardımcısı Paneli · Eyüp ŞEKER · veriler yalnızca bu cihazda</small></header>
+<main>
+<div id="msg"></div>
+<section class="noprint"><h2>1. Ay ve kaynaklar</h2>
+<label>Ay <input type="month" id="ay"></label> <label>Okul adı <input id="okul" size="34"></label>
+<button id="yenile">⟳ Ders programı, nöbet ve öğretmen listesini al</button>
+<p class="muted" id="kaynak"></p></section>
+<section class="ayar noprint"><h2>2. Kurallar (düzenlenebilir)</h2>
+<p class="muted">✔ doğrulandı: MEB Yönetici ve Öğretmenlerinin Ders ve Ek Ders Saatlerine İlişkin Karar md.5-6 (Resmî Gazete 16.12.2006; mevzuat.meb.gov.tr/dosyalar/469.pdf). ⚠ doğrulanmadı: varsayılan değer, okulunuzun uygulamasına ve güncel toplu sözleşmeye göre kontrol edip düzeltin.</p>
+<div class="wrap"><table id="normT"></table></div>
+<p><label><input type="checkbox" id="tatilM"> Resmî tatile denk gelen dersler maaş karşılığından düşülsün</label> <span class="wa">⚠ doğrulanmadı</span><br>
+<label><input type="checkbox" id="izinM"> Rapor/izin günlerindeki dersler maaş karşılığından düşülsün</label> <span class="wa">⚠ doğrulanmadı</span><br>
+Nöbet: nöbet günü başına <input type="number" id="nobS" min="0" step="1"> saat, haftada en çok <input type="number" id="nobU" min="0" step="1"> saat
+<span class="wa">⚠ "haftada 3 saati geçmemek üzere" toplu sözleşme hükmü; gün başına değer ve güncel dönem doğrulanmadı</span></p></section>
+<section class="ayar noprint"><h2>3. Takvim</h2>
+<p class="muted">MEB 2026-2027 çalışma takviminden (haber 41057) ara tatiller, yarıyıl ve resmî tatiller otomatik gelir. Ders yılı dışındaki günlere ders yazılmaz. Ek tatil/okul tatili ekleyebilirsiniz (ör. 2026-11-24..2026-11-24 İl tatili).</p>
+<div id="tatilL" class="muted"></div>
+<label>Ek tatil günleri (her satıra: başlangıç..bitiş açıklama) <br><textarea id="ekTatil" rows="3" cols="60"></textarea></label></section>
+<section class="noprint"><h2>4. Öğretmenler</h2>
+<p class="muted">Haftalık program ders programından gelir; boş bırakılırsa "Program (elle)" kullanılır, örnek: <b>Pzt:6, Sal:5, Çar:4</b>. Nöbet/DYK aynı biçimde (DYK: <b>Cmt:4</b>). Rapor/izin: <b>2026-11-03..2026-11-05 rapor; 10.11.2026 izin</b>. Ek görev: sınıf rehber öğretmenliği / kulüp danışmanlığı vb. haftalık saat (⚠ Karar md.6'da belirli öğretmen grupları için 2 saat; uygunluğu kontrol edin).</p>
+<button class="sec" id="ekle">+ Öğretmen ekle</button>
+<div class="wrap"><table id="ogrT"></table></div></section>
+<section><h2 id="baslik">5. Puantaj</h2>
+<div class="noprint"><button id="hesap">Hesapla</button><button class="sec" id="excel">⬇ Excel (.xlsx)</button><button class="sec" onclick="print()">Yazdır</button></div>
+<div class="wrap" id="sonuc"></div>
+<p class="muted">Bu tablo ön hesaptır; resmî puantaj MEBBİS/KBS'de okul müdürünün onayıyla düzenlenir. T: tatil, İ: rapor/izin, –: ders yılı dışı.</p></section>
+</main>
+<script>window.TAKVIM={"yil": "2026-2027", "bas": "2026-09-14", "son": "2027-06-25", "tatilHafta": [["2026-11-16", "1. Dönem Ara Tatili (16-20 Kasım 2026)"], ["2027-01-25", "Yarıyıl Tatili (25 Ocak - 5 Şubat 2027)"], ["2027-02-01", "Yarıyıl Tatili (25 Ocak - 5 Şubat 2027)"], ["2027-03-08", "2. Dönem Ara Tatili (8-12 Mart 2027; Ramazan Bayramı 9-11 Mart)"]], "gun": [["2026-10-28", "28 Ekim Cumhuriyet Bayramı arifesi (öğleden sonra tatil)"], ["2026-10-29", "29 Ekim Cumhuriyet Bayramı (tatil)"], ["2027-01-01", "1 Ocak Yılbaşı (tatil)"], ["2027-01-22", "1. dönem sonu, karne (22 Ocak)"], ["2027-02-08", "2. dönem başlangıcı (8 Şubat)"], ["2027-04-23", "23 Nisan Ulusal Egemenlik ve Çocuk Bayramı (tatil)"], ["2027-05-15", "Kurban Bayramı arifesi (15 Mayıs Cumartesi)"], ["2027-05-17", "Kurban Bayramı 17-19 Mayıs (tatil)"], ["2027-05-19", "19 Mayıs Atatürk'ü Anma, Gençlik ve Spor Bayramı"], ["2027-06-25", "Ders yılı sonu, karne (25 Haziran)"]], "bgh": [["2026-09-14", "İlköğretim Haftası; 15 Temmuz Demokrasi ve Millî Birlik Günü anma etkinlikleri"], ["2026-10-04", "Hayvanları Koruma Günü (4 Ekim)"], ["2026-10-29", "Kızılay Haftası (29 Ekim - 4 Kasım)"], ["2026-11-10", "10 Kasım Atatürk'ü Anma, Atatürk Haftası (10-16 Kasım)"], ["2026-11-24", "24 Kasım Öğretmenler Günü"], ["2026-12-03", "Dünya Engelliler Günü (3 Aralık)"], ["2026-12-10", "İnsan Hakları ve Demokrasi Haftası (10 Aralık'ı içine alan hafta)"], ["2026-12-12", "Tutum, Yatırım ve Türk Malları Haftası (12-18 Aralık)"], ["2027-01-11", "Enerji Tasarrufu Haftası (Ocak ayının 2. haftası)"], ["2027-02-28", "Sivil Savunma Günü (28 Şubat)"], ["2027-03-01", "Yeşilay Haftası (1 Mart'ı içine alan hafta)"], ["2027-03-12", "12 Mart İstiklal Marşı'nın Kabulü ve Mehmet Akif Ersoy'u Anma"], ["2027-03-18", "18 Mart Çanakkale Zaferi ve Şehitleri Anma"], ["2027-03-21", "Orman Haftası (21-26 Mart)"], ["2027-03-29", "Kütüphaneler Haftası (Mart'ın son pazartesisini içine alan hafta)"], ["2027-04-23", "23 Nisan Ulusal Egemenlik ve Çocuk Bayramı"], ["2027-05-01", "Trafik ve İlk Yardım Haftası (Mayıs'ın ilk haftası)"], ["2027-05-19", "19 Mayıs Atatürk'ü Anma, Gençlik ve Spor Bayramı"], ["2027-06-05", "Dünya Çevre Günü (5 Haziran)"]], "yariyil_bas": "2027-01-25", "donem1_son": "2027-01-22", "donem2_bas": "2027-02-08"};</script>
+<script>
+(function(root){
+var E={};
+E.GUN={pazartesi:1,pzt:1,pts:1,sali:2,sal:2,carsamba:3,car:3,crs:3,persembe:4,per:4,prs:4,cuma:5,cum:5,cumartesi:6,cmt:6,pazar:0,paz:0};
+E.GUNAD=['Paz','Pzt','Sal','Çar','Per','Cum','Cmt'];
+function tr(s){return String(s||'').toLocaleLowerCase('tr-TR').replace(/ç/g,'c').replace(/ğ/g,'g').replace(/ı/g,'i').replace(/ö/g,'o').replace(/ş/g,'s').replace(/ü/g,'u').replace(/\s+/g,' ').trim();}
+E.tr=tr;
+E.gunNo=function(s){var k=tr(s).replace(/[^a-z]/g,'');return E.GUN.hasOwnProperty(k)?E.GUN[k]:(E.GUN.hasOwnProperty(k.slice(0,3))?E.GUN[k.slice(0,3)]:-1);};
+E.gunSaat=function(s){var o={};String(s||'').split(/[,;\n]+/).forEach(function(p){var m=p.split(':');if(m.length<2)return;var g=E.gunNo(m[0]),h=parseFloat(String(m[1]).replace(',','.'));if(g>=0&&h>=0)o[g]=(o[g]||0)+h;});return o;};
+E.gunListe=function(s){var o=[];String(s||'').split(/[,;\s]+/).forEach(function(p){var g=E.gunNo(p);if(g>=0&&o.indexOf(g)<0)o.push(g);});return o;};
+function isoOf(s){s=String(s||'').trim();var m=s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/);if(m)return m[1]+'-'+('0'+m[2]).slice(-2)+'-'+('0'+m[3]).slice(-2);m=s.match(/^(\d{1,2})[.\/](\d{1,2})[.\/](\d{4})$/);if(m)return m[3]+'-'+('0'+m[2]).slice(-2)+'-'+('0'+m[1]).slice(-2);return '';}
+E.isoOf=isoOf;
+function D(iso){var a=iso.split('-');return new Date(Date.UTC(+a[0],+a[1]-1,+a[2]));}
+function I(d){return d.toISOString().slice(0,10);}
+function add(iso,n){return I(new Date(D(iso).getTime()+n*864e5));}
+E.add=add;
+E.araliklar=function(s){var out=[];String(s||'').split(/[;\n]+/).forEach(function(p){p=p.trim();if(!p)return;var m=p.match(/^(\S+?)(?:\s*\.\.\s*(\S+))?(?:\s+(.*))?$/);if(!m)return;var b=isoOf(m[1]),e=m[2]?isoOf(m[2]):b;if(!b||!e)return;if(e<b){var t=b;b=e;e=t;}out.push({bas:b,bit:e,ad:(m[3]||'').trim()});});return out;};
+E.tatilListesi=function(T){var L=[];(T.tatilHafta||[]).forEach(function(x){L.push({bas:x[0],bit:add(x[0],4),ad:x[1]});});
+ (T.gun||[]).forEach(function(x){var ad=x[1];if(/öğleden sonra/i.test(ad))return;if(/\(tatil\)/i.test(ad)||/19 Mayıs/.test(ad)){var m=ad.match(/(\d{1,2})-(\d{1,2}) ([A-Za-zÇĞİÖŞÜçğıöşü]+)/);if(m&&/tatil/i.test(ad)){var b=x[0],n=+m[2]-+m[1];L.push({bas:b,bit:add(b,n),ad:ad});}else L.push({bas:x[0],bit:x[0],ad:ad});}});
+ return L;};
+E.tatilMi=function(iso,L){for(var i=0;i<L.length;i++)if(iso>=L[i].bas&&iso<=L[i].bit)return L[i].ad||'Tatil';return '';};
+E.NORM=[
+ {id:'idareci',ad:'Müdür / müdür başyardımcısı / müdür yardımcısı',maas:6,ust:6,sabit:0,k:'Karar md.5/1-a, md.6/1-a',v:1},
+ {id:'sinif',ad:'Okul öncesi ve sınıf öğretmeni',maas:18,ust:'',sabit:0,k:'Karar md.5/1-b (ek ders üst sınırı md.6/2: sınıf/şubeye göre değişir, girin)',v:1,uv:'üst sınır'},
+ {id:'brans',ad:'Genel bilgi ve meslek dersleri öğretmeni',maas:15,ust:15,sabit:0,k:'Karar md.5/1-c, md.6/1-b (6 saati zorunlu, haftada 15 saate kadar)',v:1},
+ {id:'atolye',ad:'Atölye ve laboratuvar öğretmeni',maas:20,ust:24,sabit:0,k:'Karar md.5/1-ç, md.6/1-c (20 saati zorunlu, haftada 24 saate kadar)',v:1},
+ {id:'rehber',ad:'Rehber öğretmen (psikolojik danışman)',maas:0,ust:'',sabit:15,k:'Fiilen görev karşılığı haftada 15 saat ek ders (il müdürlüğü bilgilendirme metni; resmî metinde doğrulanmadı)',v:0}];
+E.rolTahmin=function(b){b=tr(b);if(/mudur/.test(b))return 'idareci';if(/rehber|psikolojik/.test(b))return 'rehber';if(/sinif ogretmen|okul oncesi|^sinif$/.test(b))return 'sinif';if(/atolye|laboratuvar/.test(b))return 'atolye';return 'brans';};
+/* ders programı (dersprog_v1) -> {ad:{gün:saat}} */
+E.programdan=function(dp){var o={};if(!dp||!dp.sonuc||!dp.sonuc.plan)return o;var days=(dp.settings&&dp.settings.days)||[];
+ dp.sonuc.plan.forEach(function(x){if(x.d==null||x.d<0)return;var g=E.gunNo(days[x.d]);if(g<0)return;var ts=[];
+  if(x.g!=null&&x.g>=0){var G=(dp.secmeli||[])[x.g];if(G)(G.dersler||[]).forEach(function(c){if(c.ogretmen)ts.push(c.ogretmen);});}
+  else{var L=(dp.lessons||[])[x.li];if(L&&L.ogretmen)String(L.ogretmen).split(/[+,]/).forEach(function(t){t=t.trim();if(t)ts.push(t);});}
+  ts.forEach(function(t){var k=t.trim();o[k]=o[k]||{};o[k][g]=(o[k][g]||0)+(+x.len||1);});});return o;};
+/* nöbet (nobet_v1) -> {ad:[gün]} */
+E.nobettenGun=function(nb){var o={};if(!nb||!nb.plan)return o;var days=(nb.settings&&nb.settings.days)||['Pazartesi','Salı','Çarşamba','Perşembe','Cuma'];
+ Object.keys(nb.plan).forEach(function(id){var di=+id.split('|')[0],g=E.gunNo(days[di]);var v=nb.plan[id];(Array.isArray(v)?v:[v]).forEach(function(a){if(!a)return;a=typeof a==='object'?(a.ad||''):String(a);if(!a)return;o[a]=o[a]||[];if(g>=0&&o[a].indexOf(g)<0)o[a].push(g);});});return o;};
+/* hesap */
+E.hesapla=function(S,T){var ay=S.ay,y=+ay.slice(0,4),m=+ay.slice(5,7),son=new Date(Date.UTC(y,m,0)).getUTCDate(),ilk=ay+'-01',sonIso=ay+'-'+('0'+son).slice(-2);
+ var tat=E.tatilListesi(T).concat(E.araliklar(S.ekTatil)),N={};(S.normlar||E.NORM).forEach(function(n){N[n.id]=n;});
+ var a=S.ayar||{},nobS=+(a.nobS==null?3:a.nobS),nobU=+(a.nobU==null?3:a.nobU);
+ var bas=ilk;while(D(bas).getUTCDay()!==1)bas=add(bas,-1);
+ return (S.ogr||[]).filter(function(o){return o.ad;}).map(function(o){var n=N[o.rol]||N.brans,M=+n.maas||0,U=(n.ust===''||n.ust==null)?null:+n.ust,SB=+n.sabit||0;
+  var prog=o.prog||{},nob=o.nobet||[],dyk=o.dyk||{},izn=E.araliklar(o.izin),gor=+o.gorev||0,G={},uy=[];
+  for(var w=bas;w<=sonIso;w=add(w,7)){var kM=M,eH=0,nH=0,gorKoy=gor;
+   for(var i=0;i<7;i++){var d=add(w,i),wd=D(d).getUTCDay(),h=+prog[wd]||0,r={ders:0,nobet:0,dyk:0,gorev:0,sabit:0,dd:''};
+    var yd=(d<T.bas||d>T.son),t=yd?'':E.tatilMi(d,tat),iz=E.tatilMi(d,izn);
+    if(yd){r.dd='-';}
+    else if(t){r.dd='T';if(a.tatilM)kM-=Math.min(h,kM);}
+    else if(iz){r.dd='İ';if(a.izinM)kM-=Math.min(h,kM);}
+    else{var mm=Math.min(h,kM);kM-=mm;var e=h-mm;if(U!=null&&eH+e>U){uy.push(d+': haftalık üst sınır ('+U+') aşıldı, '+(eH+e-U)+' saat yazılmadı');e=Math.max(0,U-eH);}eH+=e;r.ders=e;
+     if(nob.indexOf(wd)>=0&&wd>=1&&wd<=5){var nn=Math.max(0,Math.min(nobS,nobU-nH));nH+=nn;r.nobet=nn;}
+     r.dyk=+dyk[wd]||0;if(gorKoy&&wd>=1&&wd<=5&&h>0){r.gorev=gorKoy;gorKoy=0;}if(SB&&wd>=1&&wd<=5)r.sabit=SB/5;}
+    if(d>=ilk&&d<=sonIso)G[d]=r;}
+   if(kM>0&&M>0){var hs=[];for(var j=0;j<7;j++){var dj=add(w,j);if(dj>=ilk&&dj<=sonIso)hs.push(dj);}if(hs.length&&hs.some(function(x){return G[x]&&!G[x].dd;}))uy.push(w+' haftası: maaş karşılığı '+kM+' saat eksik kaldı (ek ders yazılmadı)');}}
+  var top={ders:0,nobet:0,dyk:0,gorev:0,sabit:0};Object.keys(G).forEach(function(k){for(var x in top)top[x]+=G[k][x];});top.sabit=Math.round(top.sabit*100)/100;top.toplam=Math.round((top.ders+top.nobet+top.dyk+top.gorev+top.sabit)*100)/100;
+  return {ad:o.ad,brans:o.brans||'',rol:n.ad,gun:G,top:top,uyari:uy};});};
+E.tablo=function(S,R){var y=+S.ay.slice(0,4),m=+S.ay.slice(5,7),son=new Date(Date.UTC(y,m,0)).getUTCDate(),AY=['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
+ var aoa=[[(S.okul||'')+' '+AY[m-1].toLocaleUpperCase('tr-TR')+' '+y+' AYI EK DERS PUANTAJ ÇİZELGESİ (ön hesap)'],[]],h=['S.No','Adı Soyadı','Branş','Görev'];for(var d=1;d<=son;d++){var iso=S.ay+'-'+('0'+d).slice(-2);h.push(d+' '+E.GUNAD[D(iso).getUTCDay()]);}
+ h.push('Ek ders (ders)','Nöbet','DYK/Kurs','Ek görev','Sabit (rehber)','TOPLAM');aoa.push(h);
+ R.forEach(function(r,i){var row=[i+1,r.ad,r.brans,r.rol];for(var d=1;d<=son;d++){var g=r.gun[S.ay+'-'+('0'+d).slice(-2)]||{};var v=(g.ders||0)+(g.nobet||0)+(g.dyk||0)+(g.gorev||0)+(g.sabit||0);row.push(g.dd?(g.dd==='-'?'':g.dd):(v?Math.round(v*100)/100:''));}
+  row.push(r.top.ders,r.top.nobet,r.top.dyk,r.top.gorev,r.top.sabit,r.top.toplam);aoa.push(row);});
+ aoa.push([]);aoa.push(['T: tatil, İ: rapor/izin. Ön hesaptır; MEBBİS/KBS kayıtları esastır. Hazırlayan: ........  Onay: Okul Müdürü ........']);return aoa;};
+root.EKD=E;})(typeof window!=='undefined'?window:globalThis);
+</script>
+<script>
+(function(){if(typeof document==='undefined'||!document.getElementById('ay'))return;var E=EKD,T=(window.TAKVIM||{}),KEY='ekders_v1',$=function(i){return document.getElementById(i);};
+var S;try{S=JSON.parse(localStorage.getItem(KEY))||null;}catch(e){S=null;}
+if(!S){var n=new Date();S={ay:n.getFullYear()+'-'+('0'+(n.getMonth()+1)).slice(-2),okul:'',normlar:JSON.parse(JSON.stringify(E.NORM)),ayar:{tatilM:true,izinM:true,nobS:3,nobU:3},ekTatil:'',ogr:[]};}
+function save(){localStorage.setItem(KEY,JSON.stringify(S));}
+function msg(t,er){$('msg').innerHTML='';var d=document.createElement('div');d.className='msg'+(er?' er':'');d.textContent=t;$('msg').appendChild(d);}
+function inp(v,on,a){var i=document.createElement('input');for(var k in a||{})i.setAttribute(k,a[k]);if(i.type==='checkbox')i.checked=!!v;else i.value=v==null?'':v;i.addEventListener('change',function(){on(i.type==='checkbox'?i.checked:i.value);save();});return i;}
+function td(tr,c){var t=document.createElement('td');if(c!=null){if(typeof c==='string'||typeof c==='number')t.textContent=c;else t.appendChild(c);}tr.appendChild(t);return t;}
+function th(tr,t){var x=document.createElement('th');x.textContent=t;tr.appendChild(x);}
+function gs(o){return Object.keys(o||{}).map(function(g){return E.GUNAD[g]+':'+o[g];}).join(', ');}
+function normCiz(){var t=$('normT');t.innerHTML='';var h=t.insertRow();['Görev','Maaş karşılığı (saat/hafta)','Ek ders üst sınırı (saat/hafta, boş=sınırsız)','Sabit ek ders (saat/hafta)','Dayanak'].forEach(function(x){th(h,x);});
+ S.normlar.forEach(function(n){var r=t.insertRow();td(r,n.ad);td(r,inp(n.maas,function(v){n.maas=v;n.v=0;normCiz();},{type:'number',min:0}));td(r,inp(n.ust,function(v){n.ust=v;n.v=0;normCiz();},{type:'number',min:0}));td(r,inp(n.sabit,function(v){n.sabit=v;},{type:'number',min:0}));
+  var c=td(r,'');var s=document.createElement('span');s.className=n.v?'ok':'wa';s.textContent=(n.v?'✔ doğrulandı':'⚠ doğrulanmadı')+(n.uv?' ('+n.uv+' ⚠ girilmeli)':'')+' — '+n.k;c.appendChild(s);});}
+function ogrCiz(){var t=$('ogrT');t.innerHTML='';var h=t.insertRow();['Adı Soyadı','Branş','Görev','Program (ders programı)','Program (elle)','Nöbet günleri','DYK/Kurs','Ek görev saat','Rapor/izin',''].forEach(function(x){th(h,x);});
+ S.ogr.forEach(function(o,i){var r=t.insertRow();td(r,inp(o.ad,function(v){o.ad=v;}));td(r,inp(o.brans,function(v){o.brans=v;}));
+  var sel=document.createElement('select');S.normlar.forEach(function(n){var op=document.createElement('option');op.value=n.id;op.textContent=n.ad;if(n.id===o.rol)op.selected=true;sel.appendChild(op);});sel.onchange=function(){o.rol=sel.value;save();};td(r,sel);
+  td(r,o.dpProg?gs(o.dpProg):'—');td(r,inp(o.elle,function(v){o.elle=v;},{size:16,placeholder:'Pzt:6, Sal:5'}));td(r,inp(o.nobetTxt,function(v){o.nobetTxt=v;},{size:9,placeholder:'Sal'}));
+  td(r,inp(o.dykTxt,function(v){o.dykTxt=v;},{size:8,placeholder:'Cmt:4'}));td(r,inp(o.gorev,function(v){o.gorev=v;},{type:'number',min:0}));td(r,inp(o.izin,function(v){o.izin=v;},{size:22}));
+  var b=document.createElement('button');b.className='sec';b.textContent='Sil';b.onclick=function(){S.ogr.splice(i,1);save();ogrCiz();};td(r,b);});}
+function oku(k){try{return JSON.parse(localStorage.getItem(k));}catch(e){return null;}}
+function yenile(){var dp=oku('dersprog_v1'),nb=oku('nobet_v1'),ea=oku('ea_ogretmenler')||[],P=E.programdan(dp),NB=E.nobettenGun(nb),m={};S.ogr.forEach(function(o){m[E.tr(o.ad)]=o;});var yeni=0;
+ function al(ad,brans){if(!ad)return;var o=m[E.tr(ad)];if(!o){o={ad:ad,brans:brans||'',rol:E.rolTahmin(brans),elle:'',nobetTxt:'',dykTxt:'',gorev:'',izin:''};S.ogr.push(o);m[E.tr(ad)]=o;yeni++;}else if(brans&&!o.brans)o.brans=brans;}
+ ((dp&&dp.teachers)||[]).forEach(function(t){al(t.ad,t.brans);});ea.forEach(function(t){al(t.ad,t.brans);});Object.keys(P).forEach(function(a){al(a,'');});
+ S.ogr.forEach(function(o){var k=E.tr(o.ad),pp=null;Object.keys(P).forEach(function(a){if(E.tr(a)===k)pp=P[a];});o.dpProg=pp;var ng=null;Object.keys(NB).forEach(function(a){if(E.tr(a)===k)ng=NB[a];});if(ng&&!o.nobetTxt)o.nobetTxt=ng.map(function(g){return E.GUNAD[g];}).join(', ');});
+ save();ogrCiz();$('kaynak').textContent='Ders programı: '+(dp&&dp.sonuc?'var ('+Object.keys(P).length+' öğretmen)':'oluşturulmamış')+' · Nöbet programı: '+(nb&&nb.plan?'var':'yok')+' · Ortak öğretmen listesi: '+ea.length+' kişi · yeni eklenen: '+yeni;}
+function hazir(){return {ay:S.ay,okul:S.okul,normlar:S.normlar,ayar:S.ayar,ekTatil:S.ekTatil,ogr:S.ogr.map(function(o){var el=E.gunSaat(o.elle);return {ad:o.ad,brans:o.brans,rol:o.rol,prog:Object.keys(el).length?el:(o.dpProg||{}),nobet:E.gunListe(o.nobetTxt),dyk:E.gunSaat(o.dykTxt),gorev:o.gorev,izin:o.izin};})};}
+var SON=null;
+function hesap(){if(!T.bas){msg('Takvim verisi yok.',1);return;}var H=hazir();SON={S:H,R:E.hesapla(H,T)};var aoa=E.tablo(H,SON.R),w=$('sonuc');w.innerHTML='';var t=document.createElement('table');
+ aoa.forEach(function(row,ri){var r=t.insertRow();row.forEach(function(c){var x=document.createElement(ri===2?'th':'td');x.textContent=c;if(c==='T')x.className='T n';else if(c==='İ')x.className='I n';else if(typeof c==='number'||c==='')x.className='n';r.appendChild(x);});});w.appendChild(t);
+ var u=[];SON.R.forEach(function(r){r.uyari.forEach(function(x){u.push(r.ad+': '+x);});});if(u.length){var p=document.createElement('div');p.className='msg er';p.textContent='Uyarılar: '+u.join(' | ');w.appendChild(p);}
+ $('baslik').textContent='5. Puantaj — '+aoa[0][0];msg(SON.R.length+' öğretmen hesaplandı.');}
+function excel(){if(!SON)hesap();if(!window.XLSX){msg('Excel kitaplığı yüklenemedi.',1);return;}var aoa=E.tablo(SON.S,SON.R),ws=XLSX.utils.aoa_to_sheet(aoa),wb=XLSX.utils.book_new();ws['!cols']=[{wch:5},{wch:24},{wch:16},{wch:18}];
+ XLSX.utils.book_append_sheet(wb,ws,'Puantaj');var d=[['Adı Soyadı','Tarih','Gün','Durum','Ek ders','Nöbet','DYK/Kurs','Ek görev','Sabit']];SON.R.forEach(function(r){Object.keys(r.gun).sort().forEach(function(k){var g=r.gun[k];d.push([r.ad,k,E.GUNAD[new Date(k+'T00:00:00Z').getUTCDay()],g.dd==='T'?'Tatil':g.dd==='İ'?'Rapor/izin':g.dd==='-'?'Ders yılı dışı':'',g.ders,g.nobet,g.dyk,g.gorev,g.sabit]);});});
+ XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(d),'Ayrıntı');var nr=[['Görev','Maaş karşılığı','Üst sınır','Sabit','Dayanak','Durum']];S.normlar.forEach(function(n){nr.push([n.ad,n.maas,n.ust,n.sabit,n.k,n.v?'doğrulandı':'DOĞRULANMADI']);});XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(nr),'Kurallar');
+ XLSX.writeFile(wb,'ek-ders-puantaj-'+SON.S.ay+'.xlsx');msg('Excel hazırlandı.');}
+$('ay').value=S.ay;$('ay').onchange=function(){S.ay=$('ay').value;save();};$('okul').value=S.okul||'';$('okul').onchange=function(){S.okul=$('okul').value;save();};
+['tatilM','izinM'].forEach(function(k){$(k).checked=!!S.ayar[k];$(k).onchange=function(){S.ayar[k]=$(k).checked;save();};});['nobS','nobU'].forEach(function(k){$(k).value=S.ayar[k];$(k).onchange=function(){S.ayar[k]=+$(k).value;save();};});
+$('ekTatil').value=S.ekTatil||'';$('ekTatil').onchange=function(){S.ekTatil=$('ekTatil').value;save();};
+$('tatilL').textContent=T.bas?('Ders yılı: '+T.bas+' – '+T.son+'. Tatiller: '+E.tatilListesi(T).map(function(x){return x.bas+(x.bit!==x.bas?'..'+x.bit:'')+' '+x.ad;}).join(' · ')):'Takvim yok';
+$('yenile').onclick=yenile;$('ekle').onclick=function(){S.ogr.push({ad:'',brans:'',rol:'brans',elle:'',nobetTxt:'',dykTxt:'',gorev:'',izin:''});save();ogrCiz();};$('hesap').onclick=hesap;$('excel').onclick=excel;
+normCiz();yenile();window.EKD_UI={S:function(){return S;},hesap:hesap,yenile:yenile,excel:excel};})();
+</script><script src="xlsx.js"></script></body></html>

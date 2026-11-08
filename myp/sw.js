@@ -1,4 +1,4 @@
-const C='myp-1792273778';const F=['./','gizlilik','manifest.webmanifest','icon-192.png','icon-512.png'];
+const C='myp-1.12.2-1793100009';const F=['./','gizlilik','gizlilik.html','lib/yerel.json','lib/pdfjs/pdf.min.mjs','lib/pdfjs/pdf.worker.min.mjs','manifest.webmanifest','icon-192.png','icon-512.png','qr.js','jsqr.js','nobet.html','sorumluluk.html','dersprogrami.html','ekders.html','xlsx.js'];
 // iOS Safari, servis çalışanının yönlendirilmiş (redirected) yanıt vermesini reddeder; bu yüzden yönlendirilmiş yanıtlar temiz bir kopyaya çevrilir.
 function clean(r){if(!r||!r.redirected)return Promise.resolve(r);return r.blob().then(b=>new Response(b,{status:r.status,statusText:r.statusText,headers:r.headers}))}
 self.addEventListener('install',e=>{e.waitUntil(caches.open(C).then(c=>Promise.all(F.map(u=>fetch(u,{cache:'reload'}).then(clean).then(r=>r&&r.ok?c.put(u,r):null).catch(()=>null)))));self.skipWaiting()});
