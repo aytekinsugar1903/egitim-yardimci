@@ -1,6 +1,6 @@
 {
-  "surum": "1.0.5",
-  "paket": "okul-paketi-guncelleme-1.0.5.zip",
-  "sha256": "8b0244d69908bfbb02d80a6a17da66c34925fe77f49026570e423c405fe69c7f",
-  "not": "ÖY 1.10.4, MYP 1.12.3, Not Girişi 1.7.4"
+  "surum": "1.0.6",
+  "paket": "okul-paketi-guncelleme-1.0.6.zip",
+  "sha256": "93666d72a950105f6abb51a256624b4489ec00846848a882ce5adca316eb4cab",
+  "not": "ÖY 1.10.4, MYP 1.12.3, Not Girişi 1.9.1 (şablon indirme düzeltmesi; kurulum exe 1.0.5 aynı)"
 }
