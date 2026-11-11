@@ -1,6 +1,6 @@
 {
-  "surum": "1.0.6",
-  "paket": "okul-paketi-guncelleme-1.0.6.zip",
-  "sha256": "c35d5829a11bc442db9104e9118bf8db10135bac87032c38f0bb0c5fc3b1bdb2",
-  "not": "ÖY 1.10.4, MYP 1.12.3, Not Girişi 1.9.1 (şablon indirme düzeltmesi; kurulum exe 1.0.6)"
+  "surum": "1.0.7",
+  "paket": "okul-paketi-guncelleme-1.0.7.zip",
+  "sha256": "3c8c5bf021debf4bf71bf6ddb471f5ca2ee38c10a532f0778ba574ab3dbe7335",
+  "not": "Siyah ikinci pencere düzeltmesi (başlatıcı artık konsol değil); ÖY/MYP açılışında 'Evrak Asistanı – Yükleniyor…' ekranı. ÖY 1.10.4, MYP 1.12.3, Not Girişi 1.9.1. Siyah pencere için bu kurulum exe'sini çalıştırın; yalnız güncelleme başlatıcıyı değiştirmez."
 }

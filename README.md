@@ -30,7 +30,7 @@ Kurulu Okul Paketi'nin başlatıcısı (1.0.3 ve sonrası) güncellemeyi şu adr
 `python3 scripts/paketle.py --kurulum <önceki kurulum.exe> --test --depo <bu depo>` → commit → push.
 1.0.2 kurulumlarında adres yer tutucudur; o bilgisayarlara güncel kurulum (okul-paketi/ içindeki .exe) bir kez elle kurulmalıdır.
 
-1.0.6 kurulum exe'si Not Girişi 1.9.1, ÖY 1.10.4 ve MYP 1.12.3 içerir. Kurulu paketler güncellemeyi `manifest.json` üzerinden alır.
+1.0.7 kurulum exe'si Not Girişi 1.9.1, ÖY 1.10.4 ve MYP 1.12.3 içerir; başlatıcı Windows GUI olarak derlenir (kısayolda siyah konsol penceresi açılmaz) ve ÖY/MYP açılışında yükleniyor ekranı gösterir. Kurulu paketler güncellemeyi `manifest.json` üzerinden alır; siyah pencere düzeltmesi için 1.0.7 kurulum exe'sinin çalıştırılması gerekir (yalnız güncelleme başlatıcıyı değiştirmez).
 
 ## Önemli
 
