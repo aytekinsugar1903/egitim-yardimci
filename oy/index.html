@@ -91,7 +91,7 @@ input,select,textarea{font:inherit;font-weight:400;padding:8px;border:2px solid 
 @media(max-width:800px){main{grid-template-columns:1fr}aside{max-height:none;border-right:0;border-bottom:2px solid #000}#doc{padding:14px}#asideTg{display:flex}body.akapali aside #q,body.akapali aside #cats{display:none}header{gap:6px}header button{min-height:40px;padding:6px 10px;font-size:15px}.qbox label,.qbox select,.qbox input,.qbox textarea,.form select,.form input{min-width:0;max-width:100%;box-sizing:border-box}.qbox .row>*{min-width:0;max-width:100%}}#asideTg{display:none;width:100%;justify-content:space-between;align-items:center;margin-bottom:6px}@media(max-width:800px){#asideTg{display:flex}}.welcome{border:3px solid #003a8c;border-radius:6px;padding:10px;background:#f4f8ff;margin:0 0 10px}
 @page{size:A4;margin:14mm}@media print{html,body{width:auto}section#work{overflow:visible!important}header,aside,.noprint,.bar,.form,.msg{display:none!important}main{display:block}section#work{max-height:none;padding:0}#doc{border:0;padding:0;max-width:none}body{font-size:12pt}}
 </style></head><body>
-<header><h1>Öğretmen Yardımcısı <small style="font-size:14px">v1.10.4</small></h1><button id="bProfil">Profilim</button><button id="bHesap"><span id="eyStat">☁ Hesap</span></button><button id="bGizlilik">Gizlilik</button></header>
+<header><h1>Öğretmen Yardımcısı <small style="font-size:14px">v1.10.5</small></h1><button id="bProfil">Profilim</button><button id="bHesap"><span id="eyStat">☁ Hesap</span></button><button id="bGizlilik">Gizlilik</button></header>
 <main><aside><button id="asideTg" class="sec" aria-expanded="false" aria-controls="cats">☰ Şablonlar ve bölümler <span aria-hidden="true">▾</span></button><input id="q" placeholder="Şablon ara (ör. zümre, kulüp, 4006)" aria-label="Şablon ara"><div id="cats"></div></aside>
 <section id="work"></section></main>
 <script>var MEBDEF={"yil":"2026-2027","versiyon":4,"yayin":"2026-10-28","kaynaklar":{"takvim":"https://www.meb.gov.tr/2026-2027-egitim-ogretim-yili-calisma-takvimi-belli-oldu/haber/41057/tr","dini_gunler":"https://vakithesaplama.diyanet.gov.tr/icerik.php?icerik=154"},"takvim":{"yil":"2026-2027","bas":"2026-09-14","son":"2027-06-25","tatilHafta":[["2026-11-16","1. Dönem Ara Tatili (16-20 Kasım 2026)"],["2027-01-25","Yarıyıl Tatili (25 Ocak - 5 Şubat 2027)"],["2027-02-01","Yarıyıl Tatili (25 Ocak - 5 Şubat 2027)"],["2027-03-08","2. Dönem Ara Tatili (8-12 Mart 2027; Ramazan Bayramı 9-11 Mart)"]],"gun":[["2026-10-28","28 Ekim Cumhuriyet Bayramı arifesi (öğleden sonra tatil)"],["2026-10-29","29 Ekim Cumhuriyet Bayramı (tatil)"],["2027-01-01","1 Ocak Yılbaşı (tatil)"],["2027-01-22","1. dönem sonu, karne (22 Ocak)"],["2027-02-08","2. dönem başlangıcı (8 Şubat)"],["2027-04-23","23 Nisan Ulusal Egemenlik ve Çocuk Bayramı (tatil)"],["2027-05-15","Kurban Bayramı arifesi (15 Mayıs Cumartesi)"],["2027-05-17","Kurban Bayramı 17-19 Mayıs (tatil)"],["2027-05-19","19 Mayıs Atatürk'ü Anma, Gençlik ve Spor Bayramı"],["2027-06-25","Ders yılı sonu, karne (25 Haziran)"]],"bgh":[["2026-09-14","İlköğretim Haftası; 15 Temmuz Demokrasi ve Millî Birlik Günü anma etkinlikleri"],["2026-10-04","Hayvanları Koruma Günü (4 Ekim)"],["2026-10-29","Kızılay Haftası (29 Ekim - 4 Kasım)"],["2026-11-10","10 Kasım Atatürk'ü Anma, Atatürk Haftası (10-16 Kasım)"],["2026-11-24","24 Kasım Öğretmenler Günü"],["2026-12-03","Dünya Engelliler Günü (3 Aralık)"],["2026-12-10","İnsan Hakları ve Demokrasi Haftası (10 Aralık'ı içine alan hafta)"],["2026-12-12","Tutum, Yatırım ve Türk Malları Haftası (12-18 Aralık)"],["2027-01-11","Enerji Tasarrufu Haftası (Ocak ayının 2. haftası)"],["2027-02-28","Sivil Savunma Günü (28 Şubat)"],["2027-03-01","Yeşilay Haftası (1 Mart'ı içine alan hafta)"],["2027-03-12","12 Mart İstiklal Marşı'nın Kabulü ve Mehmet Akif Ersoy'u Anma"],["2027-03-18","18 Mart Çanakkale Zaferi ve Şehitleri Anma"],["2027-03-21","Orman Haftası (21-26 Mart)"],["2027-03-29","Kütüphaneler Haftası (Mart'ın son pazartesisini içine alan hafta)"],["2027-04-23","23 Nisan Ulusal Egemenlik ve Çocuk Bayramı"],["2027-05-01","Trafik ve İlk Yardım Haftası (Mayıs'ın ilk haftası)"],["2027-05-19","19 Mayıs Atatürk'ü Anma, Gençlik ve Spor Bayramı"],["2027-06-05","Dünya Çevre Günü (5 Haziran)"]],"yariyil_bas":"2027-01-25","donem1_son":"2027-01-22","donem2_bas":"2027-02-08"},"belirli_aylik":[["Eylül","15 Temmuz Demokrasi ve Millî Birlik Günü anması (yıl başı)"],["Eylül","İlköğretim Haftası"],["Ekim","Hayvanları Koruma Günü (4 Ekim)"],["Ekim","29 Ekim Cumhuriyet Bayramı"],["Ekim-Kasım","Kızılay Haftası"],["Kasım","10 Kasım Atatürk'ü Anma"],["Kasım","24 Kasım Öğretmenler Günü"],["Aralık","İnsan Hakları ve Demokrasi Haftası"],["Aralık","Tutum, Yatırım ve Türk Malları Haftası"],["Ocak","Enerji Tasarrufu Haftası"],["Şubat","Sivil Savunma Günü (28 Şubat)"],["Mart","Yeşilay Haftası"],["Mart","12 Mart İstiklal Marşı'nın Kabulü ve Mehmet Akif Ersoy'u Anma"],["Mart","18 Mart Çanakkale Zaferi ve Şehitleri Anma"],["Mart","Orman Haftası"],["Nisan","Kütüphaneler Haftası"],["Nisan","23 Nisan Ulusal Egemenlik ve Çocuk Bayramı"],["Mayıs","Trafik ve İlk Yardım Haftası"],["Mayıs","19 Mayıs Atatürk'ü Anma, Gençlik ve Spor Bayramı"],["Haziran","Çevre Koruma Haftası"]],"sinav_kurallari":[{"x":"Okul genelinde yapılan yazılı sınavlar açık uçlu ya da açık uçlu ve kısa cevaplı sorulardan oluşur. Çoktan seçmeli test bu nedenle resmî yazılı yerine tarama, deneme veya ödev amaçlı kullanılmalıdır.","d":"resmî kaynak","k":"MEB Yazılı ve Uygulamalı Sınavlar Yönergesi md.5/e (ODSGM, 2023)"},{"x":"Bir dönemde her dersten iki yazılı sınav esastır. Haftalık ders saati 6 ve üzeri olan derslerde il sınıf/alan zümresi kararıyla üçüncü sınav yapılabilir.","d":"resmî kaynak","k":"Yönerge md.5"},{"x":"Ülke geneli dışındaki sınavlar okul genelinde ortak yazılı sınav olarak yapılır; sorular il sınıf/alan zümresinin konu-soru dağılım tablosuna göre hazırlanır.","d":"resmî kaynak","k":"Yönerge md.6; ODSGM 1. dönem konu-soru dağılım tabloları (2026-27)"},{"x":"2026-27 ülke geneli ortak yazılı: 1. dönem 6. sınıf Matematik, 7. sınıf Türkçe, 9. sınıf Matematik, 10. sınıf Türk Dili ve Edebiyatı; 2. dönem 6. sınıf Türkçe, 7. sınıf Matematik, 9. sınıf TDE, 10. sınıf Matematik. Sorular açık uçlu.","d":"resmî kaynak","k":"MEB haber 41874 (2026)"},{"x":"2026-27 tarihleri: 1. dönem 1. sınav 11-12 Kasım 2026, 1. dönem 2. sınav 5-6 Ocak 2027, 2. dönem 1. sınav 6-7 Nisan 2027, 2. dönem 2. sınav 8-9 Haziran 2027 (ülke geneli).","d":"resmî kaynak","k":"MEB haber 41874 (2026)"},{"x":"2026-27'den itibaren okul geneli ortak yazılılar Ortak Yazılı Sınav Sistemi (OYSS, Yeni EBA) üzerinden yürütülür. Kapsam: ortaokul 5-7 Türkçe, matematik, fen bilimleri, sosyal bilgiler, DKAB, İngilizce; lise 9-11 TDE, matematik, fizik, kimya, biyoloji, tarih, coğrafya, DKAB, felsefe, İngilizce (7 ve 11. sınıf İngilizce hariç). Zümrenin seçtiği senaryodaki iki öğrenme çıktısı için iki açık uçlu soru ve puanlama anahtarını öğretmen hazırlar, diğer sorular soru havuzundan seçilir; güçlük düzeyi ve puan değerlerini öğretmen belirler. Havuz soruları sınavdan 4 gün önce açılır. Her sorudan alınan puan e-Okul'a işlenir.","d":"resmî kaynak","k":"MEB haber 42228 (20.10.2026); ODSGM OYSS Uygulama Kılavuzu"},{"x":"2026-27 1. dönem 1. okul geneli ortak yazılı takvimi (OYSS): ortaokul Fen 3 Kasım, Mat 5 Kasım, Sosyal 6 Kasım, Türkçe 10 Kasım, İngilizce 12 Kasım, DKAB 13 Kasım; lise Biyoloji 3, Kimya ve Tarih 4, Mat 5, Fizik ve Felsefe 6, Coğrafya 10, TDE ve DKAB 11, İngilizce 13 Kasım 2026. Sınavlar 2. ders saatinde (günde iki sınavsa 2. ve 4.), 40 dakika. 6. sınıf Mat (11 Kasım) ve 10. sınıf TDE (12 Kasım) ülke geneli sınavdır.","d":"resmî kaynak","k":"ODSGM Okul Geneli OYSS Uygulama Takvimi (20.10.2026)"},{"x":"Bir sınıfta bir günde en fazla iki yazılı/uygulamalı sınav yapılması esastır; zorunlu hâllerde bir sınav daha yapılabilir.","d":"resmî kaynak","k":"MEB ODSGM yazısı 11.09.2025 (2025-26 için; 2026-27 yazısı görülmedi)"},{"x":"Ortak sınav sonuçlarına göre toplu öğrenci listesi yayımlanmaz, okul ve sınıflar karşılaştırılmaz; gereksiz rapor/evrak yükünden kaçınılır. Analiz formu bu yüzden yalnızca öğretmenin kendi kullanımı içindir.","d":"resmî kaynak","k":"MEB haber 41874; ODSGM yazısı 11.09.2025"},{"x":"Kaynaştırma/bütünleştirme öğrencilerinde ölçme BEP'e göre yapılır.","d":"resmî kaynak","k":"MEB haber 41874"},{"x":"Maarif Modeli: sorular öğrenme çıktılarına dayanır, süreç odaklı ve geri bildirim verecek şekilde hazırlanır; her soruya öğrenme çıktısı yazılması bu yüzden önerilir.","d":"resmî kaynak","k":"MEB Ölçme ve Değerlendirme Yönetmeliği (RG 09.09.2023) ve ODSGM duyuruları"},{"x":"Puanlama 100 üzerindendir; puan dağılımı soru kâğıdında gösterilir.","d":"uygulama örneği","k":"Ortaöğretim Kurumları Yönetmeliği; ortaokul için ayrıca kontrol edin"},{"x":"Analizdeki başarı bantları (0-44, 45-54, 55-69, 70-84, 85-100) ortaöğretim not karşılıklarıdır; ortaokulda karşılıklar farklı olabilir.","d":"doğrulanmadı","k":"Ortaöğretim Kurumları Yönetmeliği (madde no doğrulanmadı)"},{"x":"OYSS mazeret sınavları 23-27 Kasım 2026'da okul müdürlüğünün planlamasıyla OYSS üzerinden yapılır; asıl sınavın senaryosu kullanılır, iki soruyu zümre hazırlar, diğerleri havuzdan gelir. Sonuçlar açıklandıktan sonra sorular ve cevap anahtarı sınıfta öğrencilerle değerlendirilebilir, ama okul dışına çıkarılması ve internette/sosyal medyada paylaşılması yasaktır.","d":"resmî kaynak","k":"ODSGM OYSS Sıkça Sorulan Sorular (26.10.2026), md.26-27; OYSS Uygulama Kılavuzu"}],"tubitak_4006_takvim":[["22.09.2026","Başvuru dönemi başlar"],["13.11.2026 17:30","Son başvuru"],["01.03.2027","Fuar dönemi başlar; yürütücü değişikliği için son gün"],["05.06.2027","Fuar dönemi biter"],["Fuar sonrası","Sonuç raporu (alanları doğrulanmadı)"]],"myp_takvim":[["t01","Öğretmenlerin sene başı mesleki çalışmaları başlar","2026-09-01","2026-09-11","hazirlik","v","takvim"],["t02","Okul öncesi ve 1. sınıflar uyum eğitimi","2026-09-07","2026-09-11","hazirlik","v","takvim"],["t03","Birinci dönem başlar (ders yılı açılışı)","2026-09-14","","hazirlik","v","takvim"],["t04","12. sınıf Hedef Temelli Destek Eğitimi ders seçimi","2026-09-14","2026-09-18","sinav","v","2026-27 İş ve İşlemler genelgesi"],["t05","Sene başı öğretmenler kurulu","2026-09-02","","hazirlik","u","Okul yönetmelikleri (mesleki çalışma içinde)"],["t06","Sorumluluk sınavları (sene başı)","2026-09-07","2026-09-11","sinav","u","Ortaöğretim Kurumları Yön."],["t07","Ders dağıtımı, ders programı ve nöbet çizelgesinin ilanı","2026-09-11","","hazirlik","u","Okul yönetmelikleri"],["t08","Kurul ve komisyonların oluşturulması","2026-09-30","","kurul","u","İlgili yönetmelikler"],["t09","Yıllık planların toplanması","2026-09-25","","evrak","u","Okul kararı"],["t10","Kulüp seçimleri ve SEK yıllık planı","2026-10-09","","sosyal","u","Sosyal Etkinlikler Yön."],["t11","Okul-Aile Birliği genel kurulu (en geç Ekim sonu; duyuru en az 15 gün önce)","2026-10-31","","veli","v","OAB Yön. m.9"],["t12","Sene başı veli toplantısı","2026-10-09","","veli","u","Okul yönetmelikleri"],["t13","Afet tatbikatı (12 Kasım Afet Eğitimi Hazırlık Günü)","2026-11-12","","isg","u","Acil Durumlar Yön.; MEB yazıları"],["t14","Birinci dönem ara tatil","2026-11-16","2026-11-20","tatil","v","takvim"],["t15","Yıl sonu taşınır sayımı ve sayım kurulu","2026-12-15","2026-12-31","tasinir","u","Taşınır Mal Yön."],["t16","Mali yıl sonu: ödeme emirleri ve ödenek kontrolü","2026-12-20","2026-12-31","mali","u","5018 sayılı Kanun; yıl sonu genelgesi"],["t17","Taşınır yönetim hesabı cetvelleri","2027-01-15","","tasinir","u","Taşınır Mal Yön."],["t18","Birinci dönem sonu evrak teslimi ve dönem sonu kurulu","2027-01-20","","evrak","u","Okul yönetmelikleri"],["t19","Birinci dönem sona erer (karne)","2027-01-22","","hazirlik","v","takvim"],["t20","Yarıyıl tatili","2027-01-25","2027-02-05","tatil","v","takvim"],["t21","İkinci dönem başlar","2027-02-08","","hazirlik","v","takvim"],["t22","Sorumluluk sınavları (2. dönem başı)","2027-02-08","2027-02-12","sinav","u","Ortaöğretim Kurumları Yön."],["t23","İkinci dönem zümre toplantıları ve veli toplantısı","2027-02-19","","evrak","u","Okul yönetmelikleri"],["t24","İkinci dönem ara tatil","2027-03-08","2027-03-12","tatil","v","takvim"],["t25","İSG kurulu toplantısı (3 ayda bir)","2027-03-31","","isg","u","İSG Kurulları Yön."],["t26","İkinci dönem tatbikatı","2027-04-15","","isg","u","MEB afet yazıları"],["t27","Yıl sonu veli toplantısı","2027-05-21","","veli","u","Okul yönetmelikleri"],["t28","Sene sonu öğretmenler kurulu ve yıl sonu iş ve işlemleri","2027-06-18","","yilsonu","u","Okul yönetmelikleri"],["t29","Ders yılı sona erer (karne)","2027-06-25","","hazirlik","v","takvim"],["t30","Sorumluluk sınavları (sene sonu)","2027-06-28","2027-07-02","sinav","u","Ortaöğretim Kurumları Yön."],["t31","Öğretmenlerin sene sonu mesleki çalışmaları","2027-06-28","2027-06-30","hazirlik","v","takvim"],["t32","Yeni yıl hazırlığı: ders dağıtımı taslağı, ders kitabı teslimi","2027-08-20","","hazirlik","u","Okul kararı"],["t33","Ülke geneli ortak yazılı 1. dönem 1. sınav: 6. sınıf Matematik (11 Kasım Çar), 10. sınıf TDE (12 Kasım Per)","2026-11-11","2026-11-12","sinav","v","ODSGM Ülke Geneli Ortak Yazılı Sınav Takvimi 2026-27 (10.09.2026)"],["t34","Ülke geneli ortak yazılı 2. dönem 1. sınav: 7. sınıf Matematik (6 Nisan Salı), 9. sınıf TDE (7 Nisan Çar)","2027-04-06","2027-04-07","sinav","v","ODSGM Ülke Geneli Ortak Yazılı Sınav Takvimi 2026-27 (10.09.2026)"],["t35","TÜBİTAK 4006 başvuru dönemi (çağrıya göre)","2026-11-01","2026-12-15","proje","u","TÜBİTAK çağrısı"],["t36","eTwinning kalite etiketi başvuruları","2027-05-15","2027-06-15","proje","u","eTwinning Türkiye"],["t37","Erasmus+ okul başvuruları (KA1/KA2 çağrı tarihine göre)","2027-02-15","2027-03-15","proje","u","Türkiye Ulusal Ajansı"],["t38","Risk değerlendirmesi ve acil durum planı geçerlilik kontrolü","2026-09-10","","isg","u","6331 sayılı Kanun"],["t39","Ramazan Bayramı (2. ara tatille çakışıyor)","2027-03-09","2027-03-11","tatil","u","Diyanet takvimi"],["t40","Kurban Bayramı","2027-05-16","2027-05-19","tatil","u","Diyanet takvimi"],["t41","15 Temmuz Demokrasi ve Millî Birlik Günü","2027-07-15","","bgh","v","bgh"],["t42","30 Ağustos Zafer Bayramı","2027-08-30","","bgh","v","bgh"],["v01","OAB genel kurul duyurusu (genel kuruldan en az 15 gün önce)","2026-10-15","","oab","v","OAB Yön. m.9/3"],["v02","OAB denetleme kurulu ilk toplantısı (genel kuruldan sonraki ilk hafta)","2026-11-06","","oab","v","OAB Yön. m.14"],["v03","OAB yönetim kurulu aylık toplantısı (ders yılı boyunca ayda bir)","2026-11-15","","oab","v","OAB Yön. m.13"],["v04","Kantin aylık denetimi","2026-10-30","","kantin","u","Kantin denetim genelgesi"],["v05","Servis araçları sene başı belge kontrolü","2026-09-11","","servis","u","Okul Servis Araçları Yön."],["v06","Servis aylık denetimi","2026-10-30","","servis","u","Okul Servis Araçları Yön."],["v07","Okul sağlığı planı ve yönetim ekibi","2026-09-30","","saglik","u","Okul sağlığı genelgesi"],["v08","Beslenme Dostu Okul başvuru/değerlendirme (Sağlık Müdürlüğü takvimine göre)","2027-03-31","","saglik","u","Beslenme Dostu Okul Programı"],["v09","Rehberlik yıllık çalışma planı ve sınıf rehberlik planları","2026-09-30","","rehber","u","Rehberlik ve Psikolojik Danışma Hizmetleri Yön."],["v10","BEP birimi ve kaynaştırma öğrencilerinin BEP'leri","2026-10-15","","rehber","u","Özel Eğitim Hizmetleri Yön."],["v11","Rehberlik dönem sonu raporu","2027-01-20","","rehber","u","Rehberlik Yön."],["v12","Rehberlik yıl sonu raporu","2027-06-18","","rehber","u","Rehberlik Yön."],["v13","İşletmede mesleki eğitim sözleşmeleri ve SGK girişleri","2026-09-11","","staj","u","3308 sayılı Kanun; MTE Yön."],["v14","Öğrenci ücretlerinin işletmelerce ödenmesi (her ayın 8'ine kadar)","2026-10-08","","staj","u","3308 m.25; MEM duyuruları"],["v15","Ücretli öğretmen görevlendirmeleri ve SGK girişleri","2026-09-11","","personel","u","Ücretli öğretmen görevlendirme esasları"],["v16","Ek ders puantajı (ay sonu)","2026-10-30","","personel","u","2006/10344 BKK"],["t43","Ülke geneli ortak yazılı 1. dönem 2. sınav: 7. sınıf Türkçe (5 Ocak Salı), 9. sınıf Matematik (6 Ocak Çar)","2027-01-05","2027-01-06","sinav","v","ODSGM Ülke Geneli Ortak Yazılı Sınav Takvimi 2026-27 (10.09.2026)"],["t44","Ülke geneli ortak yazılı 2. dönem 2. sınav: 6. sınıf Türkçe (8 Haziran Salı), 10. sınıf Matematik (9 Haziran Çar)","2027-06-08","2027-06-09","sinav","v","ODSGM Ülke Geneli Ortak Yazılı Sınav Takvimi 2026-27 (10.09.2026)"],["t45","Okul geneli ortak yazılılar (OYSS) 1. dönem 1. sınav. Ortaokul 5-7: Fen 3, Mat 5, Sosyal 6, Türkçe 10, İngilizce 12, DKAB 13 Kasım. Lise 9-11: Biyoloji 3, Kimya ve Tarih 4, Mat 5, Fizik ve Felsefe 6, Coğrafya 10, TDE ve DKAB 11, İngilizce 13 Kasım. 2. ders saati (günde iki sınavsa 2. ve 4.), 40 dk; 7 ve 11. sınıf İngilizce OYSS dışında","2026-11-03","2026-11-13","sinav","v","ODSGM OYSS Okul Geneli Uygulama Takvimi; MEB haber 42228 (20.10.2026)"],["t46","OYSS (Yeni EBA) bilgilendirme/eğitimleri 19-23 Ekim; deneme uygulamaları 26 Ekim'e kadar, sonrasında okul geneli ortak yazılı işlemleri sistem üzerinden","2026-10-19","2026-10-26","sinav","v","MEB haber 42228 (20.10.2026)"],["t47","OYSS 1. dönem 1. sınav mazeret sınavları (okul müdürlüğü planlar, OYSS üzerinden, asıl sınavın senaryosuyla)","2026-11-23","2026-11-27","sinav","v","ODSGM OYSS Uygulama Kılavuzu; OYSS Sıkça Sorulan Sorular (26.10.2026)"]],"myp_bgh":[["Dünya Barış Günü","2026-09-01","","v","Sosyal Bilgiler/Tarih zümresi"],["Uluslararası Temiz Hava Günü","2026-09-07","","v","Çevre/Sıfır Atık kulübü"],["İlköğretim Haftası (Eylül 2. hafta; ders yılı açılışıyla)","2026-09-14","2026-09-18","v","Okul yönetimi, tüm öğretmenler"],["Gaziler Günü","2026-09-19","","v","Tarih zümresi"],["Türk Dil Bayramı","2026-09-26","","v","Türkçe/Edebiyat zümresi"],["Dünya Okul Sütü Günü","2026-09-28","","v","Sağlık kulübü"],["Disleksi Haftası (Ekim ilk haftası)","2026-10-05","2026-10-09","v","Rehberlik servisi"],["Mevlid-i Nebî Haftası (Diyanet belirler)","","","u","DKAB zümresi"],["Hayvanları Koruma Günü","2026-10-04","","v","Doğa/Hayvan sevgisi kulübü"],["Ahilik Kültürü Haftası","2026-10-08","2026-10-12","v","Girişimcilik/Meslek zümresi"],["Dünya Afet Risklerinin Azaltılması Günü","2026-10-13","","v","Sivil savunma ekibi, Afet kulübü"],["Birleşmiş Milletler Günü","2026-10-24","","v","Sosyal Bilgiler zümresi"],["Cumhuriyet Bayramı","2026-10-29","","v","Tören komisyonu"],["Kızılay Haftası","2026-10-29","2026-11-04","v","Kızılay kulübü"],["Lösemili Çocuklar Haftası","2026-11-02","2026-11-08","v","Sağlık kulübü"],["Organ Bağışı ve Nakli Haftası","2026-11-03","2026-11-09","v","Sağlık kulübü"],["Atatürk Haftası / 10 Kasım Anma","2026-11-10","2026-11-16","v","Tören komisyonu, Tarih zümresi"],["Afet Eğitimi Hazırlık Günü","2026-11-12","","v","Sivil savunma ekibi"],["Dünya Diyabet Günü","2026-11-14","","v","Sağlık kulübü"],["Dünya Çocuk Hakları Günü / Dünya Felsefe Günü","2026-11-20","","v","Rehberlik; Felsefe zümresi"],["Ağız ve Diş Sağlığı Haftası","2026-11-21","2026-11-27","v","Sağlık kulübü"],["Öğretmenler Günü","2026-11-24","","v","Okul yönetimi, öğrenci meclisi"],["Dünya Engelliler Günü","2026-12-03","","v","Rehberlik, özel eğitim"],["Türk Kadınına Seçme ve Seçilme Hakkının Verilişi","2026-12-05","","v","Tarih zümresi"],["Mevlana Haftası","2026-12-07","2026-12-17","v","Edebiyat/DKAB zümresi"],["İnsan Hakları ve Demokrasi Haftası (10 Aralık'ı içeren hafta)","2026-12-07","2026-12-11","v","Öğrenci meclisi, Sosyal Bilgiler"],["Tutum, Yatırım ve Türk Malları Haftası","2026-12-12","2026-12-18","v","Girişimcilik kulübü"],["Mehmet Akif Ersoy'u Anma Haftası","2026-12-20","2026-12-27","v","Türkçe/Edebiyat zümresi"],["Enerji Tasarrufu Haftası (Ocak 2. haftası)","2027-01-11","2027-01-15","v","Fen zümresi"],["Sivil Savunma Günü","2027-02-28","","v","Sivil savunma ekibi"],["Vergi Haftası (Şubat son haftası)","2027-02-22","2027-02-26","u","Sosyal Bilgiler zümresi"],["Yeşilay Haftası","2027-03-01","2027-03-07","v","Yeşilay kulübü"],["Deprem Haftası","2027-03-01","2027-03-07","v","Sivil savunma ekibi"],["Girişimcilik Haftası (Mart ilk haftası)","2027-03-01","2027-03-05","v","Girişimcilik kulübü"],["Dünya Kadınlar Günü","2027-03-08","","v","Sosyal Bilgiler zümresi"],["Bilim ve Teknoloji Haftası","2027-03-08","2027-03-14","v","Fen zümresi, 4006 ekibi"],["İstiklâl Marşı'nın Kabulü ve Mehmet Akif Ersoy'u Anma Günü","2027-03-12","","v","Tören komisyonu, Edebiyat"],["Tüketiciyi Koruma Haftası","2027-03-15","2027-03-21","v","Girişimcilik kulübü"],["Çanakkale Zaferi ve Şehitleri Anma Günü","2027-03-18","","v","Tören komisyonu, Tarih zümresi"],["Türk Dünyası ve Toplulukları Haftası (Nevruz)","2027-03-21","2027-03-27","v","Sosyal Bilgiler zümresi"],["Orman Haftası","2027-03-21","2027-03-26","v","Çevre kulübü"],["Dünya Su Günü","2027-03-22","","v","Fen zümresi"],["Kütüphaneler Haftası (Mart son pazartesi)","2027-03-29","2027-04-04","v","Kütüphane kulübü"],["Dünya Sağlık Günü / Haftası","2027-04-07","2027-04-13","v","Sağlık kulübü"],["Turizm Haftası","2027-04-15","2027-04-22","v","Gezi ve turizm kulübü"],["Ulusal Egemenlik ve Çocuk Bayramı","2027-04-23","","v","Tören komisyonu"],["Bilişim Haftası (Mayıs ilk haftası)","2027-05-03","2027-05-07","v","Bilişim zümresi"],["Trafik ve İlkyardım Haftası (Mayıs ilk haftası)","2027-05-03","2027-05-07","v","Trafik kulübü"],["İş Sağlığı ve Güvenliği Haftası","2027-05-04","2027-05-10","v","İSG ekibi"],["Anneler Günü (Mayıs 2. pazarı)","2027-05-09","","v","Rehberlik, sınıf öğretmenleri"],["Engelliler Haftası","2027-05-10","2027-05-16","v","Rehberlik, özel eğitim"],["Müzeler Haftası","2027-05-18","2027-05-24","v","Tarih zümresi"],["Atatürk'ü Anma, Gençlik ve Spor Bayramı","2027-05-19","","v","Tören komisyonu, Beden Eğitimi"],["İstanbul'un Fethi","2027-05-29","","v","Tarih zümresi"],["Hayat Boyu Öğrenme Haftası (Haziran ilk haftası)","2027-05-31","2027-06-04","v","Okul yönetimi"],["Çevre ve İklim Değişikliği Haftası (Haziran 2. haftası)","2027-06-07","2027-06-11","v","Çevre kulübü"],["Demokrasi ve Millî Birlik Günü","2027-07-15","","v","Tören komisyonu"],["Zafer Bayramı","2027-08-30","","v","Tören komisyonu"]],"sinav_kaynaklari":[{"t":"MEB örnek soruları (9, 10 ve 11. sınıf 1. dönem 1. yazılı)","u":"https://ogm.meb.gov.tr/www/9-10-ve-11-siniflara-yonelik-1-donem-1-yazili-ornek-sorulari-yayimlandi/icerik/2666"}]};
@@ -1088,7 +1088,7 @@ function esave(){if(E.dagitim==='esit')SV.esitDagit(E);localStorage.setItem('oy_
 function inp(obj,key,attrs,area){var el=h(area?'textarea':'input',attrs||{});el.value=obj[key]==null?'':obj[key];el.addEventListener('input',function(){obj[key]=(attrs&&attrs.type==='number')?+el.value:el.value;esave()});return el}
 function lab(t,el){return h('label',{},[t,el])}
 function perfUI(){cur={id:'sv_perf',baslik:'Performans görevi + dereceli puanlama anahtarı'};cats();var w=$('#work');w.innerHTML='';var d=(E.prog&&E.prog.d)||E.ders||P.brans||'';PF.ui(w,{h:h,lab:lab,msg:msg,P:function(){return P}},PF.uyg(d)?KZ.ad(d).replace(/ Dersi$/,''):'',(E.prog&&E.prog.s)||String(P.sinif||'').replace(/\D.*/,''),function(){E.prog={d:'',s:''};E.ders='';esave();sinavUI('kagitA')});}
-function sinavUI(k){if(k==='perf')return perfUI();if(KZ.profDers)KZ.profDers(E);if(PF.uyg(E.prog?E.prog.d:(E.ders||P.brans)))return perfUI();OUT=k||OUT;cur={id:'sv_'+OUT,baslik:SV.CIKTI[OUT][0]};cats();var w=$('#work');w.innerHTML='';w.appendChild(h('h2',{class:'noprint',text:'Yazılı / Sınav'}));w.appendChild(h('div',{id:'msg',class:'msg hidden'}));(MEB.sinav_kaynaklari||[]).forEach(function(k){if(k&&k.u)w.appendChild(h('p',{class:'noprint'},[h('a',{href:k.u,target:'_blank',rel:'noopener',style:'font-weight:700;color:#0d47a1;text-decoration:underline;cursor:pointer',text:k.t||k.u})]))});
+function sinavUI(k){if(k==='hazirla'&&window.SH&&SH.ui)return SH.ui();if(k==='perf')return perfUI();if(KZ.profDers)KZ.profDers(E);if(PF.uyg(E.prog?E.prog.d:(E.ders||P.brans)))return perfUI();OUT=k||OUT;cur={id:'sv_'+OUT,baslik:SV.CIKTI[OUT][0]};cats();var w=$('#work');w.innerHTML='';w.appendChild(h('h2',{class:'noprint',text:'Yazılı / Sınav'}));w.appendChild(h('div',{id:'msg',class:'msg hidden'}));(MEB.sinav_kaynaklari||[]).forEach(function(k){if(k&&k.u)w.appendChild(h('p',{class:'noprint'},[h('a',{href:k.u,target:'_blank',rel:'noopener',style:'font-weight:700;color:#0d47a1;text-decoration:underline;cursor:pointer',text:k.t||k.u})]))});
 var ust=h('div',{class:'form noprint',id:'sform'});var turS=h('select',{name:'tur'});[['klasik','Açık uçlu / kısa cevaplı (okul geneli yazılı)'],['test','Test (tarama / deneme amaçlı)'],['karisik','Karışık']].forEach(function(o){var op=h('option',{value:o[0],text:o[1]});if((PEND?PEND.tur:E.tur)===o[0])op.selected=true;turS.appendChild(op)});
 var tu=PEND?PEND.tur:E.tur,nT=h('input',{type:'number',min:0,max:100,name:'nTest',value:PEND?PEND.nT:(tu==='klasik'?0:(tu==='test'?20:10))}),nK=h('input',{type:'number',min:0,max:100,name:'nKlasik',value:PEND?PEND.nK:(tu==='test'?0:(tu==='klasik'?10:5))}),sec=h('select',{name:'secenek'});[4,5].forEach(function(n){var op=h('option',{value:n,text:n+' şık'});if(E.secenek===n)op.selected=true;sec.appendChild(op)});
 turS.addEventListener('change',function(){nT.value=turS.value==='klasik'?0:(turS.value==='test'?20:10);nK.value=turS.value==='test'?0:(turS.value==='klasik'?10:5)});
@@ -2027,6 +2027,526 @@ profilEksik()?profil():home();
   var st = document.createElement('style'); st.textContent = '.ek21ok{width:auto!important;margin:0 2px!important;padding:4px 10px!important;min-width:36px}ul.list>li{display:flex;gap:4px;align-items:center}ul.list>li>input{flex:1;min-width:0}@media print{.ek21ok{display:none!important}}'; document.head.appendChild(st);
   var bekle = 0; new MutationObserver(function () { if (bekle) return; bekle = requestAnimationFrame(function () { bekle = 0; tara(document.getElementById('work')); }); }).observe(document.body, { childList: true, subtree: true });
   tara();
+})();
+</script>
+<script id="ek23">/* Evrak Asistanı ek modül 23 (OY 1.10.5) — yayıncı: Eyüp ŞEKER.
+   Sınav Hazırlama (ilk sürüm): girdi, Bloom'a göre üretim komutu, yapıştır-ayrıştır,
+   onay ekranı, yazılı kâğıdı / rubrik / cevap anahtarı / A-B grubu ve uygulamalı form.
+   Yapay zekâya çağrı yapılmaz; yalnız ders içeriği komuta yazılır, öğrenci verisi yok. */
+(function () {
+  'use strict';
+  if (typeof OY === 'undefined' || !OY.T) return;
+
+  var KEY = 'oy_sinav_hazirla_v1';
+  var BLOOM = ['Hatırlama', 'Kavrama', 'Uygulama', 'Analiz', 'Değerlendirme', 'Yaratma'];
+  var ZOR = ['kolay', 'orta', 'zor', 'karışık'];
+  var SH = window.SH = {};
+
+  function el(t, a, c) {
+    var e = document.createElement(t); a = a || {};
+    for (var k in a) {
+      if (a[k] == null) continue;
+      if (k === 'on') { for (var v in a.on) e.addEventListener(v, a.on[v]); }
+      else if (k === 'text') e.textContent = a[k];
+      else if (k === 'html') e.innerHTML = a[k];
+      else e.setAttribute(k, a[k]);
+    }
+    (c || []).forEach(function (x) { if (x) e.appendChild(typeof x === 'string' ? document.createTextNode(x) : x); });
+    return e;
+  }
+  function lab(t, n) { return el('label', {}, [t, n]); }
+  function profil() { try { return JSON.parse(localStorage.getItem('oy_profil_v1') || '{}') || {}; } catch (e) { return {}; } }
+  function load() { try { return JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { return null; } }
+  function save(S) { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
+  function yeni() {
+    var p = profil();
+    return {
+      adim: 'girdi', ders: p.brans || '', sinif: p.sinif || '', donem: (OY.donem && OY.donem()) || '1. Dönem',
+      no: '1', sure: '40 dakika', kazanimMetin: '', eskiMetin: '', donustur: true,
+      bloom: { Hatırlama: 2, Kavrama: 2, Uygulama: 2, Analiz: 2, Değerlendirme: 1, Yaratma: 1 },
+      nAcik: 6, nSenaryo: 2, nTest: 0, zorluk: 'orta', secenek: 4, yapistir: '', sorular: [],
+      seed: (Date.now() % 90000) + 10000, cikti: 'kagitA'
+    };
+  }
+  function Sget() { var S = load() || yeni(); if (!S.bloom) S.bloom = yeni().bloom; if (!S.sorular) S.sorular = []; return S; }
+  function msg(t, err) {
+    var m = document.getElementById('shMsg'); if (!m) return;
+    m.className = 'msg' + (err ? ' err' : ''); m.textContent = t; m.classList.remove('hidden');
+    clearTimeout(msg._t); msg._t = setTimeout(function () { m.classList.add('hidden'); }, 6000);
+  }
+  function lines(t) { return String(t || '').split(/\n/).map(function (x) { return x.trim(); }).filter(Boolean); }
+  function kazanimlar(S) {
+    var a = lines(S.kazanimMetin);
+    return a.length ? a : ['(kazanım belirtilmedi)'];
+  }
+  function toplamSoru(S) { return (+S.nAcik || 0) + (+S.nSenaryo || 0) + (+S.nTest || 0); }
+  function uygDers(d) { return typeof PF !== 'undefined' && PF.uyg && PF.uyg(d); }
+
+  function dersListesi() {
+    var L = (typeof TYMMK !== 'undefined' ? TYMMK.liste : []), a = [];
+    L.forEach(function (r) {
+      var d = String(r.d || '').replace(/^(Ortaokul|İlkokul) /, '').replace(/ Dersi\b/, '').replace(/\s+/g, ' ').trim();
+      if (d && a.indexOf(d) < 0) a.push(d);
+    });
+    a.sort(function (x, y) { return x.localeCompare(y, 'tr'); });
+    return a;
+  }
+  function sinifListesi(ders) {
+    var L = (typeof TYMMK !== 'undefined' ? TYMMK.liste : []), SO = ['1', '2', '3', '4', '5', '6', '7', '8', 'Ortaokul seçmeli', 'Hazırlık', '9', '10', '11', '12', 'Lise seçmeli'];
+    var ad = function (d) { return String(d || '').replace(/^(Ortaokul|İlkokul) /, '').replace(/ Dersi\b/, '').replace(/\s+/g, ' ').trim(); };
+    var s = L.filter(function (r) { return !ders || ad(r.d) === ders; }).map(function (r) { return String(r.s); });
+    var u = []; s.forEach(function (x) { if (u.indexOf(x) < 0) u.push(x); });
+    u.sort(function (a, b) { var i = SO.indexOf(a), j = SO.indexOf(b); return (i < 0 ? 99 : i) - (j < 0 ? 99 : j); });
+    return u;
+  }
+
+  function komut(S, tek) {
+    var nA = +S.nAcik || 0, nS = +S.nSenaryo || 0, nT = +S.nTest || 0, n = tek ? 1 : (nA + nS + nT);
+    var bl = BLOOM.map(function (b) { return b + ': ' + (+S.bloom[b] || 0); }).join(', ');
+    var kz = kazanimlar(S).map(function (x, i) { return (i + 1) + '. ' + x; }).join('\n');
+    var t = [];
+    t.push('Sen bir ölçme-değerlendirme uzmanısın. Türkiye Yüzyılı Maarif Modeli ve Bloom taksonomisine uygun sınav soruları yaz.');
+    t.push('Yalnızca ders içeriği ve kazanımlar kullanılacak; öğrenci adı, numarası veya kişisel veri yazma ve isteme.');
+    t.push('Ders: ' + (S.ders || '……'));
+    t.push('Sınıf: ' + (S.sinif || '……'));
+    t.push('Zorluk: ' + (S.zorluk || 'orta'));
+    t.push('Kazanımlar / öğrenme çıktıları:');
+    t.push(kz);
+    if (tek) {
+      t.push('Aşağıdaki soruyu aynı kazanımı koruyarak yeniden yaz (tip: ' + (tek.tip || 'klasik') + ', Bloom: ' + (tek.bloom || '') + ').');
+      t.push('Mevcut soru: ' + (tek.metin || ''));
+    } else {
+      t.push('İstenen soru sayısı: ' + n + ' (açık uçlu: ' + nA + ', senaryolu: ' + nS + ', çoktan seçmeli: ' + nT + ').');
+      t.push('Bloom dağılımı (yaklaşık): ' + bl + '.');
+    }
+    if (S.eskiMetin && S.eskiMetin.trim()) {
+      t.push(S.donustur
+        ? 'Aşağıdaki eski test / metin sorularını aynı kazanımı ölçen senaryolu veya açık uçlu sorulara dönüştür. Şıkları aynen sorma; öğrencinin açıklamasını iste.'
+        : 'Aşağıdaki eski soruları (gerekirse düzelterek) kullan, eksikleri tamamla:');
+      t.push(S.eskiMetin.trim());
+    }
+    t.push('Her sorunun puanı toplamı 100 olacak biçimde dağıtılsın.');
+    t.push('Çoktan seçmeli sorularda tam ' + (S.secenek || 4) + ' şık olsun; doğru şıkkı "dogru" alanında A/B/C/D/E olarak yaz.');
+    t.push('Çıktıyı YALNIZCA aşağıdaki JSON dizisi olarak ver, başka açıklama ekleme:');
+    t.push('[{"tip":"klasik|senaryo|test","bloom":"Hatırlama|Kavrama|Uygulama|Analiz|Değerlendirme|Yaratma","zorluk":"kolay|orta|zor","kazanim":"...","metin":"soru metni","senaryo":"(yalnız senaryo tipinde duruma ait metin)","sec":["A şıkkı","B şıkkı","C şıkkı","D şıkkı"],"dogru":"A","cevap":"beklenen cevap veya puanlama ölçütü","puan":10}]');
+    t.push('tip="klasik" açık uçlu, tip="senaryo" kısa bir durum metni + soru, tip="test" çoktan seçmeli demektir.');
+    return t.join('\n');
+  }
+
+  function normTip(t) {
+    t = String(t || '').toLocaleLowerCase('tr-TR');
+    if (/senaryo/.test(t)) return 'senaryo';
+    if (/test|çoktan|coktan|seçmeli|secmeli/.test(t)) return 'test';
+    return 'klasik';
+  }
+  function normSoru(o, i) {
+    o = o || {};
+    var tip = normTip(o.tip || o.tur || o.type);
+    var metin = String(o.metin || o.soru || o.soru_metni || o.text || '').trim();
+    var sen = String(o.senaryo || o.durum || '').trim();
+    if (tip === 'senaryo' && sen && metin && metin.indexOf(sen) < 0) metin = sen + '\n\n' + metin;
+    else if (tip === 'senaryo' && !metin) metin = sen;
+    var sec = o.sec || o.secenekler || o.siklar || o.options || [];
+    if (!Array.isArray(sec)) sec = [];
+    sec = sec.map(function (x) { return String(x || '').replace(/^[A-Ea-e][\)\.\-]\s*/, '').trim(); });
+    var n = 4;
+    if (typeof Sget === 'function') { try { n = +Sget().secenek || 4; } catch (e) {} }
+    if (tip === 'test') { while (sec.length < n) sec.push(''); sec = sec.slice(0, n); }
+    var dogru = String(o.dogru || o.cevap_sik || o.correct || '').trim().toUpperCase();
+    if (dogru && !/^[A-E]$/.test(dogru) && tip === 'test') {
+      var ix = sec.findIndex(function (x) { return x && x.toLocaleLowerCase('tr-TR') === dogru.toLocaleLowerCase('tr-TR'); });
+      if (ix >= 0) dogru = 'ABCDE'.charAt(ix);
+    }
+    return {
+      tip: tip, metin: metin, sec: sec, dogru: /^[A-E]$/.test(dogru) ? dogru : '',
+      cevap: String(o.cevap || o.anahtar || o.cozum || o.rubrik || '').trim(),
+      puan: +o.puan || 0, kazanim: String(o.kazanim || o.cikti || o.ogrenme || '').trim(),
+      bloom: String(o.bloom || o.basamak || '').trim(), zorluk: String(o.zorluk || '').trim(),
+      onay: !!o.onay, satir: +o.satir || 6
+    };
+  }
+
+  function metindenSoru(text) {
+    var t = String(text || '').replace(/\r/g, '');
+    var parts = t.split(/(?:^|\n)\s*(?:\d+[\.\)]\s+|Soru\s*\d+\s*[\.\):]\s*)/i).map(function (x) { return x.trim(); }).filter(Boolean);
+    if (parts.length <= 1) {
+      var one = t.trim();
+      if (!one) return [];
+      parts = [one];
+    }
+    return parts.map(function (p) {
+      var sec = [], dogru = '', cevap = '';
+      var govde = p.replace(/(?:^|\n)\s*([A-Ea-e])[\)\.\-]\s+([^\n]+)/g, function (_, k, v) {
+        sec.push(v.trim()); return '';
+      }).replace(/(?:Doğru(?:\s*cevap)?|Cevap|Anahtar)\s*[:：]\s*([^\n]+)/i, function (_, v) {
+        cevap = v.trim(); var m = cevap.match(/^([A-Ea-e])\b/); if (m) dogru = m[1].toUpperCase(); return '';
+      }).trim();
+      var tip = sec.length >= 2 ? 'test' : 'klasik';
+      return normSoru({ tip: tip, metin: govde, sec: sec, dogru: dogru, cevap: cevap });
+    }).filter(function (s) { return s.metin; });
+  }
+
+  function ayikla(text) {
+    var raw = String(text || '').trim();
+    if (!raw) return { err: 'Yapıştırılacak metin yok.' };
+    var fence = raw.match(/```(?:json)?\s*([\s\S]*?)```/i);
+    var s = fence ? fence[1].trim() : raw;
+    try {
+      var a = s.indexOf('['), b = s.lastIndexOf(']'), o = s.indexOf('{'), j;
+      if (a >= 0 && b > a) j = JSON.parse(s.slice(a, b + 1));
+      else if (o >= 0) {
+        var c = s.lastIndexOf('}');
+        j = JSON.parse(s.slice(o, c + 1));
+      } else throw new Error('json yok');
+      if (j && j.sorular) j = j.sorular;
+      if (!Array.isArray(j)) j = [j];
+      var list = j.map(normSoru).filter(function (x) { return x.metin; });
+      if (!list.length) throw new Error('boş');
+      return { ok: list };
+    } catch (e) {
+      var list2 = metindenSoru(raw);
+      if (!list2.length) return { err: 'Yanıt ayrıştırılamadı. JSON dizi veya numaralı soru metni yapıştırın.' };
+      return { ok: list2 };
+    }
+  }
+
+  function donusturYerel(S) {
+    var list = metindenSoru(S.eskiMetin);
+    if (!list.length) return { err: 'Önce eski test / metin yapıştırın.' };
+    list = list.map(function (s) {
+      if (s.tip !== 'test') return s;
+      var dog = s.dogru && s.sec['ABCDE'.indexOf(s.dogru)] ? s.sec['ABCDE'.indexOf(s.dogru)] : s.cevap;
+      return normSoru({
+        tip: 'klasik',
+        metin: s.metin.replace(/\s+$/, '') + (/\?\s*$/.test(s.metin) ? '' : '.') + ' Cevabınızı gerekçesiyle açıklayınız.',
+        cevap: dog || s.cevap, kazanim: s.kazanim, bloom: s.bloom || 'Uygulama', zorluk: S.zorluk
+      });
+    });
+    return { ok: list };
+  }
+
+  function esitPuan(list) {
+    var n = list.length; if (!n) return list;
+    var b = Math.floor(100 / n), r = 100 - b * n;
+    list.forEach(function (s, i) { s.puan = b + (i < r ? 1 : 0); });
+    return list;
+  }
+  function hepsiOnay(S) { return S.sorular.length > 0 && S.sorular.every(function (s) { return s.onay; }); }
+
+  function examOf(S) {
+    return {
+      ders: S.ders, sinif: S.sinif, donem: S.donem, no: S.no, sure: S.sure,
+      seed: S.seed, secenek: S.secenek, tur: (S.sorular.some(function (s) { return s.tip === 'test'; }) && S.sorular.some(function (s) { return s.tip !== 'test'; })) ? 'karisik' : (S.sorular.every(function (s) { return s.tip === 'test'; }) ? 'test' : 'klasik'),
+      dagitim: 'ozel',
+      sorular: S.sorular.map(function (s) {
+        return {
+          tip: s.tip === 'test' ? 'test' : 'klasik',
+          metin: s.metin, sec: (s.sec || []).slice(), dogru: s.dogru || '',
+          cevap: s.cevap || '', puan: +s.puan || 0, kazanim: s.kazanim || '', satir: +s.satir || 6
+        };
+      })
+    };
+  }
+
+  function rubrikBlok(p, S) {
+    var qs = S.sorular.filter(function (s) { return s.tip !== 'test'; });
+    if (!qs.length) qs = S.sorular.slice();
+    var rows = qs.map(function (s, i) {
+      var ad = (i + 1) + '. ' + (s.bloom ? '[' + s.bloom + '] ' : '') + (s.kazanim || s.metin || 'Ölçüt').slice(0, 80);
+      return [ad, 'Beklentinin çok altında', 'Kısmen karşılıyor', 'Beklentiyi karşılıyor', 'Beklentinin üstünde', String(s.puan || '')];
+    });
+    var out = (OY.resmiUst ? OY.resmiUst(p) : []).concat([
+      { t: 'h1', x: ((S.ders || p.brans || '') + ' ' + (S.no || '') + '. YAZILI – 100 PUANLIK DERECELİ PUANLAMA ANAHTARI').replace(/\s+/g, ' ').trim() },
+      { t: 'kv', rows: [['Ders', S.ders || p.brans || '……'], ['Sınıf', S.sinif || p.sinif || '……'], ['Dönem', S.donem || '……'], ['Toplam', '100 puan']] },
+      { t: 'table', head: ['Soru / ölçüt', 'Başlangıç (1)', 'Gelişen (2)', 'Yeterli (3)', 'İleri (4)', 'Puan'], rows: rows },
+      { t: 'p', x: 'Puan hesabı: her sorunun puanı tablodadır; toplam 100 puandır. Öğretmen, düzey açıklamalarına göre kısmi puan verebilir.' },
+      { t: 'sign', names: [(p.ad || '……………………') + '\n' + (S.ders || p.brans || '') + ' Öğretmeni'] }
+    ]);
+    return out;
+  }
+
+  function uygulamaBlok(p, S) {
+    if (typeof PF === 'undefined' || !PF.blocks) return [{ t: 'h1', x: 'Uygulama formu' }, { t: 'p', x: 'Uygulama formu bu sürümde açılamadı.' }];
+    var st = {
+      ders: S.ders, sinif: String(S.sinif || '').replace(/\D.*/, '') || S.sinif,
+      kaz: kazanimlar(S).filter(function (x) { return x.indexOf('belirtilmedi') < 0; }),
+      baslik: (S.ders || 'Ders') + ' uygulama / performans görevi',
+      amac: 'Seçilen öğrenme çıktılarını uygulamalı olarak ölçmek.',
+      yonerge: 'Görevin yönergesini zümre kararınıza göre düzenleyiniz.',
+      sure: S.sure || '2 ders saati', malzeme: '', olc: []
+    };
+    return PF.blocks(p, st);
+  }
+
+  function bloklar(S) {
+    var p = profil(), e = examOf(S), k = S.cikti;
+    if (k === 'rubrik') return rubrikBlok(p, S);
+    if (k === 'uygulama') return uygulamaBlok(p, S);
+    if (typeof SV !== 'undefined' && SV.CIKTI && SV.CIKTI[k]) return SV.CIKTI[k][1](p, e);
+    if (typeof SV !== 'undefined' && SV.CIKTI && SV.CIKTI.kagitA) return SV.CIKTI.kagitA[1](p, e);
+    return [{ t: 'p', x: 'Çıktı hazırlanamadı.' }];
+  }
+
+  function kopyala(metin, ok) {
+    function done(y) { if (ok) ok(y); if (y) msg('Komut panoya kopyalandı. Yapay zekâya yapıştırıp yanıtı geri getirin.'); else msg('Kopyalanamadı; metni elle seçip kopyalayın.', 1); }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(metin).then(function () { done(true); }).catch(function () { yedek(); });
+    } else yedek();
+    function yedek() {
+      var ta = el('textarea', { style: 'position:fixed;left:-9999px' }); ta.value = metin; document.body.appendChild(ta); ta.select();
+      var y = false; try { y = document.execCommand('copy'); } catch (e) {}
+      ta.remove(); done(y);
+    }
+  }
+
+  function adimBar(S, w) {
+    var ad = [['girdi', '1) Girdi'], ['uretim', '2) Üretim'], ['onay', '3) Onay'], ['cikti', '4) Çıktı']];
+    var bar = el('div', { class: 'tabs noprint', id: 'shAdim' });
+    ad.forEach(function (x) {
+      bar.appendChild(el('button', {
+        class: S.adim === x[0] ? 'on' : 'sec', 'data-adim': x[0],
+        on: { click: function () {
+          if (x[0] === 'cikti' && !hepsiOnay(S)) { msg('Çıktı için bütün soruları onaylayın.', 1); return; }
+          S.adim = x[0]; save(S); SH.ui();
+        } }
+      }, [x[1]]));
+    });
+    w.appendChild(bar);
+  }
+
+  function girdiUI(w, S) {
+    w.appendChild(el('h3', { class: 'noprint', text: '1) Sınıf, ders ve kazanım' }));
+    var f = el('div', { class: 'form noprint', id: 'shGirdi' });
+    var dersler = dersListesi();
+    var sd = el('input', { list: 'shDersler', 'aria-label': 'Ders', value: S.ders || '', placeholder: 'Ders adı yazın veya seçin' });
+    var dl = el('datalist', { id: 'shDersler' }); dersler.forEach(function (d) { dl.appendChild(el('option', { value: d })); });
+    sd.addEventListener('input', function () { S.ders = sd.value; save(S); });
+    var ss = el('input', { list: 'shSiniflar', 'aria-label': 'Sınıf', value: S.sinif || '', placeholder: 'Örn. 7 / 7-A' });
+    var dsl = el('datalist', { id: 'shSiniflar' });
+    function fillS() { dsl.innerHTML = ''; sinifListesi(S.ders).forEach(function (s) { dsl.appendChild(el('option', { value: /^\d+$/.test(s) ? s + '. sınıf' : s })); }); }
+    fillS(); sd.addEventListener('change', function () { S.ders = sd.value; fillS(); save(S); });
+    ss.addEventListener('input', function () { S.sinif = ss.value; save(S); });
+    f.appendChild(lab('Ders', sd)); f.appendChild(dl);
+    f.appendChild(lab('Sınıf / şube', ss)); f.appendChild(dsl);
+    [['donem', 'Dönem'], ['no', 'Sınav no'], ['sure', 'Süre']].forEach(function (x) {
+      var i = el('input', { value: S[x[0]] || '', 'aria-label': x[1] });
+      i.addEventListener('input', function () { S[x[0]] = i.value; save(S); });
+      f.appendChild(lab(x[1], i));
+    });
+    var kz = el('textarea', { 'aria-label': 'Kazanımlar', placeholder: 'Her satıra bir kazanım veya öğrenme çıktısı. İsterseniz programdaki kodu da yazabilirsiniz (ör. T.7.3.1. …).', style: 'min-height:110px;width:100%' });
+    kz.value = S.kazanimMetin || '';
+    kz.addEventListener('input', function () { S.kazanimMetin = kz.value; save(S); });
+    f.appendChild(el('label', { class: 'wide' }, ['Kazanımlar / öğrenme çıktıları (serbest metin, her satıra bir)', kz]));
+    var es = el('textarea', { 'aria-label': 'Eski sorular', placeholder: 'İsteğe bağlı: eski test sorularını veya bir metni yapıştırın.', style: 'min-height:110px;width:100%' });
+    es.value = S.eskiMetin || '';
+    es.addEventListener('input', function () { S.eskiMetin = es.value; save(S); });
+    f.appendChild(el('label', { class: 'wide' }, ['Eski test soruları veya metin (isteğe bağlı)', es]));
+    w.appendChild(f);
+    w.appendChild(el('p', { class: 'note noprint', text: 'Kazanım listesi varsa yukarıya yapıştırın; ders ve sınıfı da listeden seçebilir veya serbest yazabilirsiniz. Öğrenci adı veya numarası girmeyin.' }));
+    w.appendChild(el('div', { class: 'bar noprint' }, [el('button', { id: 'shIleri1', on: { click: function () { S.adim = 'uretim'; save(S); SH.ui(); } }, text: 'Üretime geç →' })]));
+  }
+
+  function uretimUI(w, S) {
+    w.appendChild(el('h3', { class: 'noprint', text: '2) Bloom, soru türü ve üretim komutu' }));
+    var f = el('div', { class: 'form noprint', id: 'shUretim' });
+    BLOOM.forEach(function (b) {
+      var i = el('input', { type: 'number', min: '0', max: '30', value: String(+S.bloom[b] || 0), 'aria-label': b });
+      i.addEventListener('input', function () { S.bloom[b] = +i.value || 0; save(S); });
+      f.appendChild(lab(b + ' (soru)', i));
+    });
+    [['nAcik', 'Açık uçlu sayı'], ['nSenaryo', 'Senaryolu sayı'], ['nTest', 'Çoktan seçmeli sayı']].forEach(function (x) {
+      var i = el('input', { type: 'number', min: '0', max: '50', value: String(+S[x[0]] || 0), 'aria-label': x[1] });
+      i.addEventListener('input', function () { S[x[0]] = +i.value || 0; save(S); });
+      f.appendChild(lab(x[1], i));
+    });
+    var z = el('select', { 'aria-label': 'Zorluk' });
+    ZOR.forEach(function (v) { var o = el('option', { value: v, text: v }); if (S.zorluk === v) o.selected = true; z.appendChild(o); });
+    z.addEventListener('change', function () { S.zorluk = z.value; save(S); });
+    f.appendChild(lab('Zorluk', z));
+    var sc = el('select', { 'aria-label': 'Şık sayısı' });
+    [4, 5].forEach(function (n) { var o = el('option', { value: String(n), text: n + ' şık' }); if (+S.secenek === n) o.selected = true; sc.appendChild(o); });
+    sc.addEventListener('change', function () { S.secenek = +sc.value; save(S); });
+    f.appendChild(lab('Şık sayısı', sc));
+    var cb = el('input', { type: 'checkbox', id: 'shDonus' }); cb.checked = !!S.donustur;
+    cb.addEventListener('change', function () { S.donustur = cb.checked; save(S); });
+    f.appendChild(el('label', { class: 'wide' }, [cb, ' Eski test sorularını açık uçluya / senaryoluya dönüştür']));
+    w.appendChild(f);
+    w.appendChild(el('p', { class: 'aiwarn noprint', text: '⚠ Komut yalnızca ders, sınıf, kazanım ve sorduğunuz metni içerir; öğrenci bilgisi yazılmaz ve hiçbir sunucuya gönderilmez. Yanıtı siz yapıştırırsınız. Yapay zekâ önerisidir, her soruyu kontrol edin.' }));
+    var pr = el('textarea', { id: 'shKomut', 'aria-label': 'Üretim komutu', style: 'min-height:160px;width:100%' });
+    pr.value = komut(S);
+    w.appendChild(el('label', { class: 'wide noprint' }, ['Hazır komut (isterseniz düzenleyin)', pr]));
+    w.appendChild(el('div', { class: 'bar noprint' }, [
+      el('button', { id: 'shKopyala', on: { click: function () { kopyala(pr.value); } }, text: 'Komutu kopyala' }),
+      el('button', { class: 'sec', id: 'shYerel', on: { click: function () {
+        var r = S.donustur ? donusturYerel(S) : (S.eskiMetin && S.eskiMetin.trim() ? { ok: metindenSoru(S.eskiMetin) } : { err: 'Önce 1. adımda eski soru yapıştırın veya aşağıya yapay zekâ yanıtı yapıştırın.' });
+        if (r.err) { msg(r.err, 1); return; }
+        if (!r.ok || !r.ok.length) { msg('Sorular ayrıştırılamadı.', 1); return; }
+        S.sorular = esitPuan(r.ok); S.adim = 'onay'; save(S); SH.ui(); msg(S.sorular.length + ' soru ayrıştırıldı. Onaylamadan çıktı alınmaz.');
+      } }, text: 'Eski soruları yerelde ayrıştır' })
+    ]));
+    var yp = el('textarea', { id: 'shYapistir', 'aria-label': 'Üretilen yanıt', placeholder: 'Yapay zekânın ürettiği JSON veya numaralı soru metnini buraya yapıştırın.', style: 'min-height:140px;width:100%' });
+    yp.value = S.yapistir || '';
+    yp.addEventListener('input', function () { S.yapistir = yp.value; save(S); });
+    w.appendChild(el('label', { class: 'wide noprint' }, ['Üretilen yanıtı yapıştırın', yp]));
+    w.appendChild(el('div', { class: 'bar noprint' }, [
+      el('button', { class: 'sec', on: { click: function () { S.adim = 'girdi'; save(S); SH.ui(); } }, text: '← Girdi' }),
+      el('button', { id: 'shAyikla', on: { click: function () {
+        var r = ayikla(yp.value);
+        if (r.err) { msg(r.err, 1); return; }
+        S.sorular = esitPuan(r.ok); S.adim = 'onay'; save(S); SH.ui(); msg(S.sorular.length + ' soru ayrıştırıldı. Her soruyu kontrol edip onaylayın.');
+      } }, text: 'Ayrıştır ve onay ekranına geç' })
+    ]));
+  }
+
+  function onayUI(w, S) {
+    w.appendChild(el('h3', { class: 'noprint', text: '3) Soruları onaylayın' }));
+    w.appendChild(el('p', { class: 'note noprint', text: 'Onaylanmayan soru çıktıya girmez. Düzenleyin, silin veya o soru için yeni komut kopyalayıp yanıtı yapıştırın.' }));
+    if (!S.sorular.length) w.appendChild(el('p', { class: 'msg err noprint', text: 'Henüz soru yok. Üretim adımında yanıt yapıştırıp ayrıştırın.' }));
+    var ql = el('div', { class: 'noprint', id: 'shOnayListe' });
+    S.sorular.forEach(function (s, i) {
+      var bx = el('div', { class: 'qbox', id: 'shQ' + i });
+      var ok = el('input', { type: 'checkbox', id: 'shOnay' + i }); ok.checked = !!s.onay;
+      ok.addEventListener('change', function () { s.onay = ok.checked; save(S); });
+      bx.appendChild(el('div', { class: 'row' }, [
+        el('b', { text: (i + 1) + '. ' + (s.tip === 'test' ? 'Çoktan seçmeli' : s.tip === 'senaryo' ? 'Senaryolu' : 'Açık uçlu') + (s.bloom ? ' · ' + s.bloom : '') }),
+        lab('Puan', (function () { var n = el('input', { type: 'number', min: '0', max: '100', value: String(s.puan || 0), style: 'width:90px' }); n.addEventListener('input', function () { s.puan = +n.value || 0; save(S); }); return n; })()),
+        el('label', {}, [ok, ' Onayladım']),
+        el('button', { class: 'sec', title: 'Sil', on: { click: function () { S.sorular.splice(i, 1); save(S); SH.ui(); } }, text: '− Sil' })
+      ]));
+      var kz = el('input', { value: s.kazanim || '', placeholder: 'Kazanım', style: 'width:100%' });
+      kz.addEventListener('input', function () { s.kazanim = kz.value; save(S); });
+      bx.appendChild(lab('Kazanım', kz));
+      var mt = el('textarea', { style: 'width:100%;min-height:70px' }); mt.value = s.metin || '';
+      mt.addEventListener('input', function () { s.metin = mt.value; save(S); });
+      bx.appendChild(mt);
+      if (s.tip === 'test') {
+        (s.sec || []).forEach(function (o, j) {
+          var r = el('input', { type: 'radio', name: 'shD' + i }); if (s.dogru === 'ABCDE'.charAt(j)) r.checked = true;
+          r.addEventListener('change', function () { s.dogru = 'ABCDE'.charAt(j); save(S); });
+          var oi = el('input', { type: 'text', value: o || '', placeholder: 'ABCDE'.charAt(j) + ' şıkkı' });
+          oi.addEventListener('input', function () { s.sec[j] = oi.value; save(S); });
+          bx.appendChild(el('div', { class: 'opt' }, [r, el('b', { text: 'ABCDE'.charAt(j) + ')' }), oi]));
+        });
+      } else {
+        var cv = el('input', { value: s.cevap || '', placeholder: 'Beklenen cevap / puanlama ölçütü', style: 'width:100%' });
+        cv.addEventListener('input', function () { s.cevap = cv.value; save(S); });
+        bx.appendChild(lab('Cevap anahtarı / ölçüt', cv));
+      }
+      var yp = el('textarea', { id: 'shYeniden' + i, placeholder: 'Bu soru için yeni yanıtı yapıştırın', style: 'width:100%;min-height:60px;display:none' });
+      bx.appendChild(el('div', { class: 'bar' }, [
+        el('button', { class: 'sec', id: 'shYenidenBtn' + i, on: { click: function () {
+          kopyala(komut(S, s));
+          yp.style.display = 'block';
+          msg((i + 1) + '. soru için komut kopyalandı. Yanıtı aşağıdaki kutuya yapıştırıp "Uygula"ya basın.');
+        } }, text: 'Yeniden üret (komutu kopyala)' }),
+        el('button', { class: 'sec', on: { click: function () {
+          var r = ayikla(yp.value);
+          if (r.err || !r.ok || !r.ok[0]) { msg(r.err || 'Yanıt ayrışmadı.', 1); return; }
+          var n = r.ok[0]; n.puan = s.puan; n.onay = false; S.sorular[i] = n; save(S); SH.ui(); msg((i + 1) + '. soru güncellendi, yeniden onaylayın.');
+        } }, text: 'Yapıştırılanı uygula' })
+      ]));
+      bx.appendChild(yp);
+      ql.appendChild(bx);
+    });
+    w.appendChild(ql);
+    w.appendChild(el('div', { class: 'bar noprint' }, [
+      el('button', { class: 'sec', on: { click: function () { S.adim = 'uretim'; save(S); SH.ui(); } }, text: '← Üretim' }),
+      el('button', { class: 'sec', id: 'shHepsi', on: { click: function () { S.sorular.forEach(function (s) { s.onay = true; }); save(S); SH.ui(); } }, text: 'Tümünü onayla' }),
+      el('button', { id: 'shCiktiya', on: { click: function () {
+        if (!hepsiOnay(S)) { msg('Çıktı için bütün soruları onaylayın.', 1); return; }
+        var top = S.sorular.reduce(function (a, s) { return a + (+s.puan || 0); }, 0);
+        if (top !== 100) esitPuan(S.sorular);
+        S.adim = 'cikti'; save(S); SH.ui();
+      } }, text: 'Onaylı çıktılara geç →' })
+    ]));
+  }
+
+  function ciktiUI(w, S) {
+    w.appendChild(el('h3', { class: 'noprint', text: '4) Çıktılar' }));
+    if (!hepsiOnay(S)) {
+      w.appendChild(el('p', { class: 'msg err noprint', text: 'Onaylanmamış soru var; çıktı verilmez.' }));
+      w.appendChild(el('div', { class: 'bar noprint' }, [el('button', { class: 'sec', on: { click: function () { S.adim = 'onay'; save(S); SH.ui(); } }, text: '← Onaya dön' })]));
+      return;
+    }
+    var tabs = el('div', { class: 'tabs noprint', id: 'shCiktiTab' });
+    var list = [
+      ['kagitA', 'Sınav kâğıdı (A)'],
+      ['kagitB', 'Sınav kâğıdı (B)'],
+      ['anahtarA', 'Cevap anahtarı (A)'],
+      ['anahtarB', 'Cevap anahtarı (B)'],
+      ['rubrik', '100 puanlık rubrik']
+    ];
+    if (uygDers(S.ders)) list.push(['uygulama', 'Uygulama / performans formu']);
+    if (!list.some(function (x) { return x[0] === S.cikti; })) S.cikti = 'kagitA';
+    list.forEach(function (x) {
+      tabs.appendChild(el('button', { class: S.cikti === x[0] ? 'on' : 'sec', 'data-cikti': x[0], on: { click: function () { S.cikti = x[0]; save(S); SH.ui(); } }, text: x[1] }));
+    });
+    w.appendChild(tabs);
+    w.appendChild(el('p', { class: 'note noprint', text: 'A ve B grubunda soru (ve testte şık) sırası karışır. Beden Eğitimi, Müzik ve Görsel Sanatlar için uygulama formu ayrı sekmededir.' }));
+    var fname = function (ext) {
+      var ad = (list.filter(function (x) { return x[0] === S.cikti; })[0] || ['', 'Sinav'])[1] + ' ' + (S.ders || '') + ' ' + (S.no || '');
+      return ad.replace(/[^\wçğıöşüâîûÇĞİÖŞÜÂÎÛ .-]+/g, ' ').trim().replace(/\s+/g, '_') + '.' + ext;
+    };
+    w.appendChild(el('div', { class: 'bar noprint' }, [
+      el('button', { id: 'shDocx', on: { click: function () {
+        if (!hepsiOnay(S)) { msg('Onaysız çıktı yok.', 1); return; }
+        var b = new Blob([OY.toDocx(bloklar(S))], { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' });
+        var a = el('a', { href: URL.createObjectURL(b), download: fname('docx') }); document.body.appendChild(a); a.click(); a.remove();
+        msg('Word dosyası indirildi: ' + fname('docx'));
+      } }, text: 'Word (.docx) indir' }),
+      el('button', { id: 'shPdf', on: { click: function () {
+        if (!hepsiOnay(S)) { msg('Onaysız çıktı yok.', 1); return; }
+        msg('Yazdırma ekranında hedef olarak "PDF olarak kaydet"i seçin.');
+        setTimeout(function () { window.print(); }, 300);
+      } }, text: 'Yazdır / PDF' }),
+      el('button', { class: 'sec', on: { click: function () { S.adim = 'onay'; save(S); SH.ui(); } }, text: '← Onaya dön' })
+    ]));
+    var doc = el('div', { id: 'doc' });
+    w.appendChild(doc);
+    doc.innerHTML = OY.toHtml(bloklar(S));
+  }
+
+  SH.ayikla = ayikla;
+  SH.komut = komut;
+  SH.normSoru = normSoru;
+  SH.ui = function () {
+    var S = Sget();
+    if (typeof land === 'function') try { land(false); } catch (e) {}
+    if (typeof cur !== 'undefined') try { cur = { id: 'sv_hazirla', baslik: 'Sınav Hazırlama' }; } catch (e) {}
+    try { if (typeof cats === 'function') cats(); } catch (e) {}
+    var w = document.getElementById('work');
+    if (!w) return;
+    w.innerHTML = '';
+    w.appendChild(el('h2', { class: 'noprint', text: 'Sınav Hazırlama' }));
+    w.appendChild(el('p', { class: 'noprint', text: 'Evrak Asistanı · Eyüp ŞEKER · ilk sürüm. Kazanımlara uygun soru üretme komutu, onay ve yazılı çıktıları. Soru havuzu ve Not Girişi bağlantısı sonraki sürümdedir.' }));
+    w.appendChild(el('div', { id: 'shMsg', class: 'msg hidden' }));
+    adimBar(S, w);
+    if (S.adim === 'uretim') uretimUI(w, S);
+    else if (S.adim === 'onay') onayUI(w, S);
+    else if (S.adim === 'cikti') ciktiUI(w, S);
+    else girdiUI(w, S);
+  };
+
+  if (!OY.get('sv_hazirla')) {
+    var ix = 0;
+    for (; ix < OY.T.length; ix++) if (OY.T[ix].kat === 'Yazılı / Sınav') break;
+    OY.T.splice(ix, 0, {
+      id: 'sv_hazirla', kat: 'Yazılı / Sınav', baslik: 'Sınav Hazırlama',
+      kaynak: 'MEB Yazılı ve Uygulamalı Sınavlar Yönergesi; Bloom taksonomisi; Evrak Asistanı / Eyüp ŞEKER',
+      sinav: 'hazirla', alan: []
+    });
+  }
+  if (typeof sinavUI === 'function' && !sinavUI.__sh) {
+    var eski = sinavUI;
+    var wr = function (k) {
+      if (k === 'hazirla') return SH.ui();
+      return eski.apply(this, arguments);
+    };
+    wr.__sh = 1;
+    try { window.sinavUI = wr; } catch (e) {}
+    try { sinavUI = wr; } catch (e2) {}
+  }
+  try { if (typeof cats === 'function') cats(); } catch (e) {}
 })();
 </script>
 </body></html>
