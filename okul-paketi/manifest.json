@@ -1,6 +1,6 @@
 {
-  "surum": "1.0.9",
-  "paket": "okul-paketi-guncelleme-1.0.9.zip",
-  "sha256": "6627f9bf441fa191555c266ec8665f756f5092bdb999362c508ac5ad0fa8ac16",
-  "not": "ÖY 1.10.5: Sınav Hazırlama (Bloom komutu, yapıştır-ayrıştır, onay, yazılı/rubrik/anahtar/A-B, uygulamalı form). MYP 1.12.3, Not Girişi 1.9.2. Kurulum exe 1.0.7 aynı; bu güncelleme yalnız www içeriğini yeniler."
+  "surum": "1.0.10",
+  "paket": "okul-paketi-guncelleme-1.0.10.zip",
+  "sha256": "b9d758fd7af2aae2b7f22f7d80bc77d72217d742b9ba13e792e72293bb15fa91",
+  "not": "ÖY 1.10.6: Karne Görüşü (sınıf listesi, ölçüt seçimi, yerel cümle bankası, isteğe bağlı yapay zekâ komutu, düzenleme, Excel). MYP 1.12.3, Not Girişi 1.9.2. Kurulum exe 1.0.7 aynı; bu güncelleme yalnız www içeriğini yeniler."
 }
