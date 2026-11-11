@@ -91,7 +91,7 @@ input,select,textarea{font:inherit;font-weight:400;padding:8px;border:2px solid 
 @media(max-width:800px){main{grid-template-columns:1fr}aside{max-height:none;border-right:0;border-bottom:2px solid #000}#doc{padding:14px}#asideTg{display:flex}body.akapali aside #q,body.akapali aside #cats{display:none}header{gap:6px}header button{min-height:40px;padding:6px 10px;font-size:15px}.qbox label,.qbox select,.qbox input,.qbox textarea,.form select,.form input{min-width:0;max-width:100%;box-sizing:border-box}.qbox .row>*{min-width:0;max-width:100%}}#asideTg{display:none;width:100%;justify-content:space-between;align-items:center;margin-bottom:6px}@media(max-width:800px){#asideTg{display:flex}}.welcome{border:3px solid #003a8c;border-radius:6px;padding:10px;background:#f4f8ff;margin:0 0 10px}
 @page{size:A4;margin:14mm}@media print{html,body{width:auto}section#work{overflow:visible!important}header,aside,.noprint,.bar,.form,.msg{display:none!important}main{display:block}section#work{max-height:none;padding:0}#doc{border:0;padding:0;max-width:none}body{font-size:12pt}}
 </style></head><body>
-<header><h1>Öğretmen Yardımcısı <small style="font-size:14px">v1.10.5</small></h1><button id="bProfil">Profilim</button><button id="bHesap"><span id="eyStat">☁ Hesap</span></button><button id="bGizlilik">Gizlilik</button></header>
+<header><h1>Öğretmen Yardımcısı <small style="font-size:14px">v1.10.6</small></h1><button id="bProfil">Profilim</button><button id="bHesap"><span id="eyStat">☁ Hesap</span></button><button id="bGizlilik">Gizlilik</button></header>
 <main><aside><button id="asideTg" class="sec" aria-expanded="false" aria-controls="cats">☰ Şablonlar ve bölümler <span aria-hidden="true">▾</span></button><input id="q" placeholder="Şablon ara (ör. zümre, kulüp, 4006)" aria-label="Şablon ara"><div id="cats"></div></aside>
 <section id="work"></section></main>
 <script>var MEBDEF={"yil":"2026-2027","versiyon":4,"yayin":"2026-10-28","kaynaklar":{"takvim":"https://www.meb.gov.tr/2026-2027-egitim-ogretim-yili-calisma-takvimi-belli-oldu/haber/41057/tr","dini_gunler":"https://vakithesaplama.diyanet.gov.tr/icerik.php?icerik=154"},"takvim":{"yil":"2026-2027","bas":"2026-09-14","son":"2027-06-25","tatilHafta":[["2026-11-16","1. Dönem Ara Tatili (16-20 Kasım 2026)"],["2027-01-25","Yarıyıl Tatili (25 Ocak - 5 Şubat 2027)"],["2027-02-01","Yarıyıl Tatili (25 Ocak - 5 Şubat 2027)"],["2027-03-08","2. Dönem Ara Tatili (8-12 Mart 2027; Ramazan Bayramı 9-11 Mart)"]],"gun":[["2026-10-28","28 Ekim Cumhuriyet Bayramı arifesi (öğleden sonra tatil)"],["2026-10-29","29 Ekim Cumhuriyet Bayramı (tatil)"],["2027-01-01","1 Ocak Yılbaşı (tatil)"],["2027-01-22","1. dönem sonu, karne (22 Ocak)"],["2027-02-08","2. dönem başlangıcı (8 Şubat)"],["2027-04-23","23 Nisan Ulusal Egemenlik ve Çocuk Bayramı (tatil)"],["2027-05-15","Kurban Bayramı arifesi (15 Mayıs Cumartesi)"],["2027-05-17","Kurban Bayramı 17-19 Mayıs (tatil)"],["2027-05-19","19 Mayıs Atatürk'ü Anma, Gençlik ve Spor Bayramı"],["2027-06-25","Ders yılı sonu, karne (25 Haziran)"]],"bgh":[["2026-09-14","İlköğretim Haftası; 15 Temmuz Demokrasi ve Millî Birlik Günü anma etkinlikleri"],["2026-10-04","Hayvanları Koruma Günü (4 Ekim)"],["2026-10-29","Kızılay Haftası (29 Ekim - 4 Kasım)"],["2026-11-10","10 Kasım Atatürk'ü Anma, Atatürk Haftası (10-16 Kasım)"],["2026-11-24","24 Kasım Öğretmenler Günü"],["2026-12-03","Dünya Engelliler Günü (3 Aralık)"],["2026-12-10","İnsan Hakları ve Demokrasi Haftası (10 Aralık'ı içine alan hafta)"],["2026-12-12","Tutum, Yatırım ve Türk Malları Haftası (12-18 Aralık)"],["2027-01-11","Enerji Tasarrufu Haftası (Ocak ayının 2. haftası)"],["2027-02-28","Sivil Savunma Günü (28 Şubat)"],["2027-03-01","Yeşilay Haftası (1 Mart'ı içine alan hafta)"],["2027-03-12","12 Mart İstiklal Marşı'nın Kabulü ve Mehmet Akif Ersoy'u Anma"],["2027-03-18","18 Mart Çanakkale Zaferi ve Şehitleri Anma"],["2027-03-21","Orman Haftası (21-26 Mart)"],["2027-03-29","Kütüphaneler Haftası (Mart'ın son pazartesisini içine alan hafta)"],["2027-04-23","23 Nisan Ulusal Egemenlik ve Çocuk Bayramı"],["2027-05-01","Trafik ve İlk Yardım Haftası (Mayıs'ın ilk haftası)"],["2027-05-19","19 Mayıs Atatürk'ü Anma, Gençlik ve Spor Bayramı"],["2027-06-05","Dünya Çevre Günü (5 Haziran)"]],"yariyil_bas":"2027-01-25","donem1_son":"2027-01-22","donem2_bas":"2027-02-08"},"belirli_aylik":[["Eylül","15 Temmuz Demokrasi ve Millî Birlik Günü anması (yıl başı)"],["Eylül","İlköğretim Haftası"],["Ekim","Hayvanları Koruma Günü (4 Ekim)"],["Ekim","29 Ekim Cumhuriyet Bayramı"],["Ekim-Kasım","Kızılay Haftası"],["Kasım","10 Kasım Atatürk'ü Anma"],["Kasım","24 Kasım Öğretmenler Günü"],["Aralık","İnsan Hakları ve Demokrasi Haftası"],["Aralık","Tutum, Yatırım ve Türk Malları Haftası"],["Ocak","Enerji Tasarrufu Haftası"],["Şubat","Sivil Savunma Günü (28 Şubat)"],["Mart","Yeşilay Haftası"],["Mart","12 Mart İstiklal Marşı'nın Kabulü ve Mehmet Akif Ersoy'u Anma"],["Mart","18 Mart Çanakkale Zaferi ve Şehitleri Anma"],["Mart","Orman Haftası"],["Nisan","Kütüphaneler Haftası"],["Nisan","23 Nisan Ulusal Egemenlik ve Çocuk Bayramı"],["Mayıs","Trafik ve İlk Yardım Haftası"],["Mayıs","19 Mayıs Atatürk'ü Anma, Gençlik ve Spor Bayramı"],["Haziran","Çevre Koruma Haftası"]],"sinav_kurallari":[{"x":"Okul genelinde yapılan yazılı sınavlar açık uçlu ya da açık uçlu ve kısa cevaplı sorulardan oluşur. Çoktan seçmeli test bu nedenle resmî yazılı yerine tarama, deneme veya ödev amaçlı kullanılmalıdır.","d":"resmî kaynak","k":"MEB Yazılı ve Uygulamalı Sınavlar Yönergesi md.5/e (ODSGM, 2023)"},{"x":"Bir dönemde her dersten iki yazılı sınav esastır. Haftalık ders saati 6 ve üzeri olan derslerde il sınıf/alan zümresi kararıyla üçüncü sınav yapılabilir.","d":"resmî kaynak","k":"Yönerge md.5"},{"x":"Ülke geneli dışındaki sınavlar okul genelinde ortak yazılı sınav olarak yapılır; sorular il sınıf/alan zümresinin konu-soru dağılım tablosuna göre hazırlanır.","d":"resmî kaynak","k":"Yönerge md.6; ODSGM 1. dönem konu-soru dağılım tabloları (2026-27)"},{"x":"2026-27 ülke geneli ortak yazılı: 1. dönem 6. sınıf Matematik, 7. sınıf Türkçe, 9. sınıf Matematik, 10. sınıf Türk Dili ve Edebiyatı; 2. dönem 6. sınıf Türkçe, 7. sınıf Matematik, 9. sınıf TDE, 10. sınıf Matematik. Sorular açık uçlu.","d":"resmî kaynak","k":"MEB haber 41874 (2026)"},{"x":"2026-27 tarihleri: 1. dönem 1. sınav 11-12 Kasım 2026, 1. dönem 2. sınav 5-6 Ocak 2027, 2. dönem 1. sınav 6-7 Nisan 2027, 2. dönem 2. sınav 8-9 Haziran 2027 (ülke geneli).","d":"resmî kaynak","k":"MEB haber 41874 (2026)"},{"x":"2026-27'den itibaren okul geneli ortak yazılılar Ortak Yazılı Sınav Sistemi (OYSS, Yeni EBA) üzerinden yürütülür. Kapsam: ortaokul 5-7 Türkçe, matematik, fen bilimleri, sosyal bilgiler, DKAB, İngilizce; lise 9-11 TDE, matematik, fizik, kimya, biyoloji, tarih, coğrafya, DKAB, felsefe, İngilizce (7 ve 11. sınıf İngilizce hariç). Zümrenin seçtiği senaryodaki iki öğrenme çıktısı için iki açık uçlu soru ve puanlama anahtarını öğretmen hazırlar, diğer sorular soru havuzundan seçilir; güçlük düzeyi ve puan değerlerini öğretmen belirler. Havuz soruları sınavdan 4 gün önce açılır. Her sorudan alınan puan e-Okul'a işlenir.","d":"resmî kaynak","k":"MEB haber 42228 (20.10.2026); ODSGM OYSS Uygulama Kılavuzu"},{"x":"2026-27 1. dönem 1. okul geneli ortak yazılı takvimi (OYSS): ortaokul Fen 3 Kasım, Mat 5 Kasım, Sosyal 6 Kasım, Türkçe 10 Kasım, İngilizce 12 Kasım, DKAB 13 Kasım; lise Biyoloji 3, Kimya ve Tarih 4, Mat 5, Fizik ve Felsefe 6, Coğrafya 10, TDE ve DKAB 11, İngilizce 13 Kasım 2026. Sınavlar 2. ders saatinde (günde iki sınavsa 2. ve 4.), 40 dakika. 6. sınıf Mat (11 Kasım) ve 10. sınıf TDE (12 Kasım) ülke geneli sınavdır.","d":"resmî kaynak","k":"ODSGM Okul Geneli OYSS Uygulama Takvimi (20.10.2026)"},{"x":"Bir sınıfta bir günde en fazla iki yazılı/uygulamalı sınav yapılması esastır; zorunlu hâllerde bir sınav daha yapılabilir.","d":"resmî kaynak","k":"MEB ODSGM yazısı 11.09.2025 (2025-26 için; 2026-27 yazısı görülmedi)"},{"x":"Ortak sınav sonuçlarına göre toplu öğrenci listesi yayımlanmaz, okul ve sınıflar karşılaştırılmaz; gereksiz rapor/evrak yükünden kaçınılır. Analiz formu bu yüzden yalnızca öğretmenin kendi kullanımı içindir.","d":"resmî kaynak","k":"MEB haber 41874; ODSGM yazısı 11.09.2025"},{"x":"Kaynaştırma/bütünleştirme öğrencilerinde ölçme BEP'e göre yapılır.","d":"resmî kaynak","k":"MEB haber 41874"},{"x":"Maarif Modeli: sorular öğrenme çıktılarına dayanır, süreç odaklı ve geri bildirim verecek şekilde hazırlanır; her soruya öğrenme çıktısı yazılması bu yüzden önerilir.","d":"resmî kaynak","k":"MEB Ölçme ve Değerlendirme Yönetmeliği (RG 09.09.2023) ve ODSGM duyuruları"},{"x":"Puanlama 100 üzerindendir; puan dağılımı soru kâğıdında gösterilir.","d":"uygulama örneği","k":"Ortaöğretim Kurumları Yönetmeliği; ortaokul için ayrıca kontrol edin"},{"x":"Analizdeki başarı bantları (0-44, 45-54, 55-69, 70-84, 85-100) ortaöğretim not karşılıklarıdır; ortaokulda karşılıklar farklı olabilir.","d":"doğrulanmadı","k":"Ortaöğretim Kurumları Yönetmeliği (madde no doğrulanmadı)"},{"x":"OYSS mazeret sınavları 23-27 Kasım 2026'da okul müdürlüğünün planlamasıyla OYSS üzerinden yapılır; asıl sınavın senaryosu kullanılır, iki soruyu zümre hazırlar, diğerleri havuzdan gelir. Sonuçlar açıklandıktan sonra sorular ve cevap anahtarı sınıfta öğrencilerle değerlendirilebilir, ama okul dışına çıkarılması ve internette/sosyal medyada paylaşılması yasaktır.","d":"resmî kaynak","k":"ODSGM OYSS Sıkça Sorulan Sorular (26.10.2026), md.26-27; OYSS Uygulama Kılavuzu"}],"tubitak_4006_takvim":[["22.09.2026","Başvuru dönemi başlar"],["13.11.2026 17:30","Son başvuru"],["01.03.2027","Fuar dönemi başlar; yürütücü değişikliği için son gün"],["05.06.2027","Fuar dönemi biter"],["Fuar sonrası","Sonuç raporu (alanları doğrulanmadı)"]],"myp_takvim":[["t01","Öğretmenlerin sene başı mesleki çalışmaları başlar","2026-09-01","2026-09-11","hazirlik","v","takvim"],["t02","Okul öncesi ve 1. sınıflar uyum eğitimi","2026-09-07","2026-09-11","hazirlik","v","takvim"],["t03","Birinci dönem başlar (ders yılı açılışı)","2026-09-14","","hazirlik","v","takvim"],["t04","12. sınıf Hedef Temelli Destek Eğitimi ders seçimi","2026-09-14","2026-09-18","sinav","v","2026-27 İş ve İşlemler genelgesi"],["t05","Sene başı öğretmenler kurulu","2026-09-02","","hazirlik","u","Okul yönetmelikleri (mesleki çalışma içinde)"],["t06","Sorumluluk sınavları (sene başı)","2026-09-07","2026-09-11","sinav","u","Ortaöğretim Kurumları Yön."],["t07","Ders dağıtımı, ders programı ve nöbet çizelgesinin ilanı","2026-09-11","","hazirlik","u","Okul yönetmelikleri"],["t08","Kurul ve komisyonların oluşturulması","2026-09-30","","kurul","u","İlgili yönetmelikler"],["t09","Yıllık planların toplanması","2026-09-25","","evrak","u","Okul kararı"],["t10","Kulüp seçimleri ve SEK yıllık planı","2026-10-09","","sosyal","u","Sosyal Etkinlikler Yön."],["t11","Okul-Aile Birliği genel kurulu (en geç Ekim sonu; duyuru en az 15 gün önce)","2026-10-31","","veli","v","OAB Yön. m.9"],["t12","Sene başı veli toplantısı","2026-10-09","","veli","u","Okul yönetmelikleri"],["t13","Afet tatbikatı (12 Kasım Afet Eğitimi Hazırlık Günü)","2026-11-12","","isg","u","Acil Durumlar Yön.; MEB yazıları"],["t14","Birinci dönem ara tatil","2026-11-16","2026-11-20","tatil","v","takvim"],["t15","Yıl sonu taşınır sayımı ve sayım kurulu","2026-12-15","2026-12-31","tasinir","u","Taşınır Mal Yön."],["t16","Mali yıl sonu: ödeme emirleri ve ödenek kontrolü","2026-12-20","2026-12-31","mali","u","5018 sayılı Kanun; yıl sonu genelgesi"],["t17","Taşınır yönetim hesabı cetvelleri","2027-01-15","","tasinir","u","Taşınır Mal Yön."],["t18","Birinci dönem sonu evrak teslimi ve dönem sonu kurulu","2027-01-20","","evrak","u","Okul yönetmelikleri"],["t19","Birinci dönem sona erer (karne)","2027-01-22","","hazirlik","v","takvim"],["t20","Yarıyıl tatili","2027-01-25","2027-02-05","tatil","v","takvim"],["t21","İkinci dönem başlar","2027-02-08","","hazirlik","v","takvim"],["t22","Sorumluluk sınavları (2. dönem başı)","2027-02-08","2027-02-12","sinav","u","Ortaöğretim Kurumları Yön."],["t23","İkinci dönem zümre toplantıları ve veli toplantısı","2027-02-19","","evrak","u","Okul yönetmelikleri"],["t24","İkinci dönem ara tatil","2027-03-08","2027-03-12","tatil","v","takvim"],["t25","İSG kurulu toplantısı (3 ayda bir)","2027-03-31","","isg","u","İSG Kurulları Yön."],["t26","İkinci dönem tatbikatı","2027-04-15","","isg","u","MEB afet yazıları"],["t27","Yıl sonu veli toplantısı","2027-05-21","","veli","u","Okul yönetmelikleri"],["t28","Sene sonu öğretmenler kurulu ve yıl sonu iş ve işlemleri","2027-06-18","","yilsonu","u","Okul yönetmelikleri"],["t29","Ders yılı sona erer (karne)","2027-06-25","","hazirlik","v","takvim"],["t30","Sorumluluk sınavları (sene sonu)","2027-06-28","2027-07-02","sinav","u","Ortaöğretim Kurumları Yön."],["t31","Öğretmenlerin sene sonu mesleki çalışmaları","2027-06-28","2027-06-30","hazirlik","v","takvim"],["t32","Yeni yıl hazırlığı: ders dağıtımı taslağı, ders kitabı teslimi","2027-08-20","","hazirlik","u","Okul kararı"],["t33","Ülke geneli ortak yazılı 1. dönem 1. sınav: 6. sınıf Matematik (11 Kasım Çar), 10. sınıf TDE (12 Kasım Per)","2026-11-11","2026-11-12","sinav","v","ODSGM Ülke Geneli Ortak Yazılı Sınav Takvimi 2026-27 (10.09.2026)"],["t34","Ülke geneli ortak yazılı 2. dönem 1. sınav: 7. sınıf Matematik (6 Nisan Salı), 9. sınıf TDE (7 Nisan Çar)","2027-04-06","2027-04-07","sinav","v","ODSGM Ülke Geneli Ortak Yazılı Sınav Takvimi 2026-27 (10.09.2026)"],["t35","TÜBİTAK 4006 başvuru dönemi (çağrıya göre)","2026-11-01","2026-12-15","proje","u","TÜBİTAK çağrısı"],["t36","eTwinning kalite etiketi başvuruları","2027-05-15","2027-06-15","proje","u","eTwinning Türkiye"],["t37","Erasmus+ okul başvuruları (KA1/KA2 çağrı tarihine göre)","2027-02-15","2027-03-15","proje","u","Türkiye Ulusal Ajansı"],["t38","Risk değerlendirmesi ve acil durum planı geçerlilik kontrolü","2026-09-10","","isg","u","6331 sayılı Kanun"],["t39","Ramazan Bayramı (2. ara tatille çakışıyor)","2027-03-09","2027-03-11","tatil","u","Diyanet takvimi"],["t40","Kurban Bayramı","2027-05-16","2027-05-19","tatil","u","Diyanet takvimi"],["t41","15 Temmuz Demokrasi ve Millî Birlik Günü","2027-07-15","","bgh","v","bgh"],["t42","30 Ağustos Zafer Bayramı","2027-08-30","","bgh","v","bgh"],["v01","OAB genel kurul duyurusu (genel kuruldan en az 15 gün önce)","2026-10-15","","oab","v","OAB Yön. m.9/3"],["v02","OAB denetleme kurulu ilk toplantısı (genel kuruldan sonraki ilk hafta)","2026-11-06","","oab","v","OAB Yön. m.14"],["v03","OAB yönetim kurulu aylık toplantısı (ders yılı boyunca ayda bir)","2026-11-15","","oab","v","OAB Yön. m.13"],["v04","Kantin aylık denetimi","2026-10-30","","kantin","u","Kantin denetim genelgesi"],["v05","Servis araçları sene başı belge kontrolü","2026-09-11","","servis","u","Okul Servis Araçları Yön."],["v06","Servis aylık denetimi","2026-10-30","","servis","u","Okul Servis Araçları Yön."],["v07","Okul sağlığı planı ve yönetim ekibi","2026-09-30","","saglik","u","Okul sağlığı genelgesi"],["v08","Beslenme Dostu Okul başvuru/değerlendirme (Sağlık Müdürlüğü takvimine göre)","2027-03-31","","saglik","u","Beslenme Dostu Okul Programı"],["v09","Rehberlik yıllık çalışma planı ve sınıf rehberlik planları","2026-09-30","","rehber","u","Rehberlik ve Psikolojik Danışma Hizmetleri Yön."],["v10","BEP birimi ve kaynaştırma öğrencilerinin BEP'leri","2026-10-15","","rehber","u","Özel Eğitim Hizmetleri Yön."],["v11","Rehberlik dönem sonu raporu","2027-01-20","","rehber","u","Rehberlik Yön."],["v12","Rehberlik yıl sonu raporu","2027-06-18","","rehber","u","Rehberlik Yön."],["v13","İşletmede mesleki eğitim sözleşmeleri ve SGK girişleri","2026-09-11","","staj","u","3308 sayılı Kanun; MTE Yön."],["v14","Öğrenci ücretlerinin işletmelerce ödenmesi (her ayın 8'ine kadar)","2026-10-08","","staj","u","3308 m.25; MEM duyuruları"],["v15","Ücretli öğretmen görevlendirmeleri ve SGK girişleri","2026-09-11","","personel","u","Ücretli öğretmen görevlendirme esasları"],["v16","Ek ders puantajı (ay sonu)","2026-10-30","","personel","u","2006/10344 BKK"],["t43","Ülke geneli ortak yazılı 1. dönem 2. sınav: 7. sınıf Türkçe (5 Ocak Salı), 9. sınıf Matematik (6 Ocak Çar)","2027-01-05","2027-01-06","sinav","v","ODSGM Ülke Geneli Ortak Yazılı Sınav Takvimi 2026-27 (10.09.2026)"],["t44","Ülke geneli ortak yazılı 2. dönem 2. sınav: 6. sınıf Türkçe (8 Haziran Salı), 10. sınıf Matematik (9 Haziran Çar)","2027-06-08","2027-06-09","sinav","v","ODSGM Ülke Geneli Ortak Yazılı Sınav Takvimi 2026-27 (10.09.2026)"],["t45","Okul geneli ortak yazılılar (OYSS) 1. dönem 1. sınav. Ortaokul 5-7: Fen 3, Mat 5, Sosyal 6, Türkçe 10, İngilizce 12, DKAB 13 Kasım. Lise 9-11: Biyoloji 3, Kimya ve Tarih 4, Mat 5, Fizik ve Felsefe 6, Coğrafya 10, TDE ve DKAB 11, İngilizce 13 Kasım. 2. ders saati (günde iki sınavsa 2. ve 4.), 40 dk; 7 ve 11. sınıf İngilizce OYSS dışında","2026-11-03","2026-11-13","sinav","v","ODSGM OYSS Okul Geneli Uygulama Takvimi; MEB haber 42228 (20.10.2026)"],["t46","OYSS (Yeni EBA) bilgilendirme/eğitimleri 19-23 Ekim; deneme uygulamaları 26 Ekim'e kadar, sonrasında okul geneli ortak yazılı işlemleri sistem üzerinden","2026-10-19","2026-10-26","sinav","v","MEB haber 42228 (20.10.2026)"],["t47","OYSS 1. dönem 1. sınav mazeret sınavları (okul müdürlüğü planlar, OYSS üzerinden, asıl sınavın senaryosuyla)","2026-11-23","2026-11-27","sinav","v","ODSGM OYSS Uygulama Kılavuzu; OYSS Sıkça Sorulan Sorular (26.10.2026)"]],"myp_bgh":[["Dünya Barış Günü","2026-09-01","","v","Sosyal Bilgiler/Tarih zümresi"],["Uluslararası Temiz Hava Günü","2026-09-07","","v","Çevre/Sıfır Atık kulübü"],["İlköğretim Haftası (Eylül 2. hafta; ders yılı açılışıyla)","2026-09-14","2026-09-18","v","Okul yönetimi, tüm öğretmenler"],["Gaziler Günü","2026-09-19","","v","Tarih zümresi"],["Türk Dil Bayramı","2026-09-26","","v","Türkçe/Edebiyat zümresi"],["Dünya Okul Sütü Günü","2026-09-28","","v","Sağlık kulübü"],["Disleksi Haftası (Ekim ilk haftası)","2026-10-05","2026-10-09","v","Rehberlik servisi"],["Mevlid-i Nebî Haftası (Diyanet belirler)","","","u","DKAB zümresi"],["Hayvanları Koruma Günü","2026-10-04","","v","Doğa/Hayvan sevgisi kulübü"],["Ahilik Kültürü Haftası","2026-10-08","2026-10-12","v","Girişimcilik/Meslek zümresi"],["Dünya Afet Risklerinin Azaltılması Günü","2026-10-13","","v","Sivil savunma ekibi, Afet kulübü"],["Birleşmiş Milletler Günü","2026-10-24","","v","Sosyal Bilgiler zümresi"],["Cumhuriyet Bayramı","2026-10-29","","v","Tören komisyonu"],["Kızılay Haftası","2026-10-29","2026-11-04","v","Kızılay kulübü"],["Lösemili Çocuklar Haftası","2026-11-02","2026-11-08","v","Sağlık kulübü"],["Organ Bağışı ve Nakli Haftası","2026-11-03","2026-11-09","v","Sağlık kulübü"],["Atatürk Haftası / 10 Kasım Anma","2026-11-10","2026-11-16","v","Tören komisyonu, Tarih zümresi"],["Afet Eğitimi Hazırlık Günü","2026-11-12","","v","Sivil savunma ekibi"],["Dünya Diyabet Günü","2026-11-14","","v","Sağlık kulübü"],["Dünya Çocuk Hakları Günü / Dünya Felsefe Günü","2026-11-20","","v","Rehberlik; Felsefe zümresi"],["Ağız ve Diş Sağlığı Haftası","2026-11-21","2026-11-27","v","Sağlık kulübü"],["Öğretmenler Günü","2026-11-24","","v","Okul yönetimi, öğrenci meclisi"],["Dünya Engelliler Günü","2026-12-03","","v","Rehberlik, özel eğitim"],["Türk Kadınına Seçme ve Seçilme Hakkının Verilişi","2026-12-05","","v","Tarih zümresi"],["Mevlana Haftası","2026-12-07","2026-12-17","v","Edebiyat/DKAB zümresi"],["İnsan Hakları ve Demokrasi Haftası (10 Aralık'ı içeren hafta)","2026-12-07","2026-12-11","v","Öğrenci meclisi, Sosyal Bilgiler"],["Tutum, Yatırım ve Türk Malları Haftası","2026-12-12","2026-12-18","v","Girişimcilik kulübü"],["Mehmet Akif Ersoy'u Anma Haftası","2026-12-20","2026-12-27","v","Türkçe/Edebiyat zümresi"],["Enerji Tasarrufu Haftası (Ocak 2. haftası)","2027-01-11","2027-01-15","v","Fen zümresi"],["Sivil Savunma Günü","2027-02-28","","v","Sivil savunma ekibi"],["Vergi Haftası (Şubat son haftası)","2027-02-22","2027-02-26","u","Sosyal Bilgiler zümresi"],["Yeşilay Haftası","2027-03-01","2027-03-07","v","Yeşilay kulübü"],["Deprem Haftası","2027-03-01","2027-03-07","v","Sivil savunma ekibi"],["Girişimcilik Haftası (Mart ilk haftası)","2027-03-01","2027-03-05","v","Girişimcilik kulübü"],["Dünya Kadınlar Günü","2027-03-08","","v","Sosyal Bilgiler zümresi"],["Bilim ve Teknoloji Haftası","2027-03-08","2027-03-14","v","Fen zümresi, 4006 ekibi"],["İstiklâl Marşı'nın Kabulü ve Mehmet Akif Ersoy'u Anma Günü","2027-03-12","","v","Tören komisyonu, Edebiyat"],["Tüketiciyi Koruma Haftası","2027-03-15","2027-03-21","v","Girişimcilik kulübü"],["Çanakkale Zaferi ve Şehitleri Anma Günü","2027-03-18","","v","Tören komisyonu, Tarih zümresi"],["Türk Dünyası ve Toplulukları Haftası (Nevruz)","2027-03-21","2027-03-27","v","Sosyal Bilgiler zümresi"],["Orman Haftası","2027-03-21","2027-03-26","v","Çevre kulübü"],["Dünya Su Günü","2027-03-22","","v","Fen zümresi"],["Kütüphaneler Haftası (Mart son pazartesi)","2027-03-29","2027-04-04","v","Kütüphane kulübü"],["Dünya Sağlık Günü / Haftası","2027-04-07","2027-04-13","v","Sağlık kulübü"],["Turizm Haftası","2027-04-15","2027-04-22","v","Gezi ve turizm kulübü"],["Ulusal Egemenlik ve Çocuk Bayramı","2027-04-23","","v","Tören komisyonu"],["Bilişim Haftası (Mayıs ilk haftası)","2027-05-03","2027-05-07","v","Bilişim zümresi"],["Trafik ve İlkyardım Haftası (Mayıs ilk haftası)","2027-05-03","2027-05-07","v","Trafik kulübü"],["İş Sağlığı ve Güvenliği Haftası","2027-05-04","2027-05-10","v","İSG ekibi"],["Anneler Günü (Mayıs 2. pazarı)","2027-05-09","","v","Rehberlik, sınıf öğretmenleri"],["Engelliler Haftası","2027-05-10","2027-05-16","v","Rehberlik, özel eğitim"],["Müzeler Haftası","2027-05-18","2027-05-24","v","Tarih zümresi"],["Atatürk'ü Anma, Gençlik ve Spor Bayramı","2027-05-19","","v","Tören komisyonu, Beden Eğitimi"],["İstanbul'un Fethi","2027-05-29","","v","Tarih zümresi"],["Hayat Boyu Öğrenme Haftası (Haziran ilk haftası)","2027-05-31","2027-06-04","v","Okul yönetimi"],["Çevre ve İklim Değişikliği Haftası (Haziran 2. haftası)","2027-06-07","2027-06-11","v","Çevre kulübü"],["Demokrasi ve Millî Birlik Günü","2027-07-15","","v","Tören komisyonu"],["Zafer Bayramı","2027-08-30","","v","Tören komisyonu"]],"sinav_kaynaklari":[{"t":"MEB örnek soruları (9, 10 ve 11. sınıf 1. dönem 1. yazılı)","u":"https://ogm.meb.gov.tr/www/9-10-ve-11-siniflara-yonelik-1-donem-1-yazili-ornek-sorulari-yayimlandi/icerik/2666"}]};
@@ -2548,5 +2548,903 @@ profilEksik()?profil():home();
   }
   try { if (typeof cats === 'function') cats(); } catch (e) {}
 })();
+</script>
+<script id="ek24">
+/* Evrak Asistanı ek modül 24 (OY 1.10.6) — yayıncı: Eyüp ŞEKER.
+   Karne Görüşü: yerel öğrenci listesi, ölçüt seçimi, çeşitli cümle bankası,
+   isteğe bağlı yapay zekâ komutu (ad/no yok), düzenleme ve Excel çıktısı.
+   Veriler yalnız bu cihazda tutulur; yapay zekâya sunucu çağrısı yok. */
+(function () {
+  'use strict';
+  if (typeof OY === 'undefined' || !OY.T) return;
+
+  var KEY = 'oy_karne_gorus_v1';
+  var LIMIT = 250;
+  var OLCU = [
+    { k: 'katilim', ad: 'Katılım' },
+    { k: 'odev', ad: 'Ödev düzeni' },
+    { k: 'davranis', ad: 'Davranış/Sorumluluk' },
+    { k: 'gelisim', ad: 'Gelişim alanı' }
+  ];
+  var SEV = [
+    { k: 'yuksek', ad: 'Yüksek' },
+    { k: 'orta', ad: 'Orta' },
+    { k: 'gelismeli', ad: 'Gelişmeli' }
+  ];
+  var BANK = {
+    katilim: {
+      yuksek: [
+        '{ad} derslere isteyerek katılır, düşüncelerini açıkça paylaşır',
+        'Derse katılımı güçlüdür; sorulara gönüllü yanıt verir',
+        'Sınıf içi çalışmalara etkin biçimde katılır',
+        'Anlatılanları dikkatle izler, katkı sunmaktan çekinmez',
+        'Grup çalışmalarında sorumluluk alır, fikrini net söyler',
+        'Dersin akışına olumlu katkı verir, dinleme becerisi yüksektir',
+        'Soru-cevap bölümlerinde aktif ve isteklidir',
+        'Derse hazırlıklı gelir, tartışmalara yapıcı katılır',
+        'Öğrenme sürecine kendi isteğiyle ortak olur',
+        'Derslerde dikkatini sürdürmesi ve katılımı takdire değerdir',
+        'Söz hakkı aldığında anlaşılır ve ilgili konuşur',
+        'Etkinliklere gönüllü katılır, arkadaşlarını da teşvik eder'
+      ],
+      orta: [
+        '{ad} derslere düzenli katılır, zaman zaman daha aktif olabilir',
+        'Derse ilgi gösterir; katılımını artırırsa gelişimi hızlanır',
+        'Anlatılanları izler, sorulduğunda yanıt vermeye çalışır',
+        'Katılımı yeterlidir; gönüllü söz alması onu daha da güçlendirir',
+        'Dersleri takip eder, tartışmalara daha sık katılabilir',
+        'Dinleme yönü iyidir; katkılarını daha sık paylaşması beklenir',
+        'Sınıf içi çalışmalara katılır, inisiyatifini artırabilir',
+        'Derslere devamı düzenlidir, etkin katılımı geliştirilebilir',
+        'Konuya ilgi duyar; soru sorma alışkanlığını güçlendirmesi yararlı olur',
+        'Katılımı dengelidir; biraz daha cesaretle söz alması tavsiye edilir',
+        'Grup işlerinde yer alır, sorumluluğu zaman zaman üstlenebilir',
+        'Dersi takip eder; daha sık katkı sunması teşvik edilir'
+      ],
+      gelismeli: [
+        '{ad} derslere katılımını artırırsa daha hızlı ilerler',
+        'Derste daha sık söz alması ve dikkatini sürdürmesi beklenir',
+        'Katılımı geliştirilebilir; gönüllü katkıları onu güçlendirecektir',
+        'Dersi izleme alışkanlığını pekiştirmesi önemlidir',
+        'Sınıf içi çalışmalara daha etkin katılması teşvik edilir',
+        'Dikkatini derse yönlendirmesi başarısını olumlu etkileyecektir',
+        'Soru-cevaplara daha istekle katılması beklenir',
+        'Öğrenme sürecine daha fazla ortak olması yararlı olacaktır',
+        'Derse hazırlıklı gelmesi katılımını da güçlendirecektir',
+        'Söz almaktan çekinmemesi gelişimini hızlandıracaktır',
+        'Etkinliklere düzenli katılması önemlidir',
+        'Anlatılanlara odaklanması konusunda desteklenmelidir'
+      ]
+    },
+    odev: {
+      yuksek: [
+        'Ödevlerini düzenli, eksiksiz ve zamanında teslim eder',
+        'Ödev alışkanlığı güçlüdür; çalışmalarını özenle tamamlar',
+        'Ev çalışmalarında sorumluluk sahibidir',
+        'Ödevlerinde titiz ve düzenlidir',
+        'Verilen görevleri zamanında ve dikkatle yapar',
+        'Çalışmalarını eksiksiz teslim etmesi takdire değerdir',
+        'Ödev defteri ve ev çalışmaları tertiplidir',
+        'Görevlerini kendi başına, düzenli biçimde tamamlar',
+        'Ev ödevlerinde gösterdiği özen dikkat çekicidir',
+        'Teslim sürelerine uyar, işini yarım bırakmaz',
+        'Ödevleri anlaşılır ve özenlidir',
+        'Çalışmalarını planlı yürütür, aksatmaz'
+      ],
+      orta: [
+        'Ödevlerini genel olarak tamamlar; düzenini biraz daha koruması yararlı olur',
+        'Ev çalışmaları yeterlidir, süreklilik sağlanırsa gelişimi artar',
+        'Ödevlerini çoğunlukla teslim eder, eksikleri zaman zaman görülebilir',
+        'Çalışmalarını tamamlamaya gayret eder; planlılığı güçlendirilebilir',
+        'Ödev alışkanlığı oluşmuştur, özeni biraz daha artırabilir',
+        'Görevlerini yerine getirir; zamanında teslimi daha düzenli olabilir',
+        'Ev çalışmalarında orta düzeyde bir süreklilik vardır',
+        'Ödevlerini yapar, ancak daha titiz olması beklenir',
+        'Teslim ettiği çalışmalar yeterlidir; eksiksizlik biraz daha önemsenmelidir',
+        'Ödevlerinde gayret görülür, düzenini pekiştirmesi tavsiye edilir',
+        'Ev görevlerini savsaklamaz; biraz daha özen katması faydalı olur',
+        'Çalışmalarını tamamlar, sürekliliğini güçlendirmesi beklenir'
+      ],
+      gelismeli: [
+        'Ödevlerini daha düzenli ve zamanında tamamlaması beklenir',
+        'Ev çalışmalarına süreklilik kazandırması gelişimini destekler',
+        'Ödev alışkanlığını pekiştirmesi önemlidir',
+        'Verilen görevleri eksiksiz teslim etmesi teşvik edilir',
+        'Ev çalışmalarını aksatmaması başarısını artıracaktır',
+        'Ödevlerini planlı yapması konusunda desteklenmelidir',
+        'Teslim sürelerine uyması beklenir',
+        'Çalışmalarını yarım bırakmaması yararlı olacaktır',
+        'Ödev düzenini oturtması öğrenmesini güçlendirecektir',
+        'Ev görevlerine daha fazla özen göstermesi tavsiye edilir',
+        'Ödevlerini düzenli izlemesi ve tamamlaması önemlidir',
+        'Eksik ödevlerin azalması gelişimine katkı sağlayacaktır'
+      ]
+    },
+    davranis: {
+      yuksek: [
+        'Okul kurallarına uyar, arkadaşlarına saygılı ve yardımseverdir',
+        'Sorumluluklarının bilincindedir, davranışları olumludur',
+        'Sınıf ortamında örnek bir tutum sergiler',
+        'Arkadaşlık ilişkileri sağlıklıdır, iletişimde naziktir',
+        'Görevlerini ciddiye alır, güvenilir bir öğrencidir',
+        'Saygılı, ölçülü ve iş birliğine açıktır',
+        'Sınıf düzenine katkı sağlar, sorumluluk almaktan çekinmez',
+        'Davranışları tutarlı ve olumludur',
+        'Çevresine karşı özenli ve duyarlıdır',
+        'Kurallara uyar, sorunları yapıcı biçimde çözer',
+        'Görev bilinci yüksektir, arkadaşlarını da destekler',
+        'Okul yaşamında güven veren, olumlu bir duruşu vardır'
+      ],
+      orta: [
+        'Genel olarak kurallara uyar; bazı durumlarda daha özenli olması beklenir',
+        'Arkadaşlık ilişkileri yeterlidir, iletişimini güçlendirebilir',
+        'Sorumluluklarını yerine getirmeye çalışır, sürekliliği artırılabilir',
+        'Davranışları dengelidir; sınıf düzenine daha kararlı katkı verebilir',
+        'Saygılı bir tutumu vardır, istikrarını pekiştirmesi yararlı olur',
+        'Görevlerini çoğunlukla yerine getirir',
+        'Sınıf ortamına uyum sağlar, bazı alışkanlıklarını geliştirebilir',
+        'Davranışlarında olumlu yönler vardır; tutarlılığı artabilir',
+        'Arkadaşlarıyla uyumlu olmaya gayret eder',
+        'Kurallara genel olarak dikkat eder, hatırlatıldığında düzeltir',
+        'Sorumluluk alma yönü gelişmektedir',
+        'Tutumu olumluya yakındır; biraz daha özen göstermesi tavsiye edilir'
+      ],
+      gelismeli: [
+        'Okul kurallarına ve sınıf düzenine daha özen göstermesi beklenir',
+        'Sorumluluklarını düzenli yerine getirmesi teşvik edilir',
+        'Arkadaşlık ilişkilerinde daha yapıcı bir tutum geliştirmesi yararlı olur',
+        'Davranışlarını gözden geçirmesi gelişimini destekleyecektir',
+        'Sınıf ortamına uyumunu güçlendirmesi önemlidir',
+        'Görev bilincini pekiştirmesi beklenir',
+        'Saygı ve iş birliği konusunda daha özenli olması tavsiye edilir',
+        'Kurallara uymada süreklilik sağlaması gelişimine katkı verir',
+        'Olumlu davranışlarını artırması teşvik edilir',
+        'Sorumluluklarını aksatmaması önemlidir',
+        'İletişiminde daha ölçülü ve yapıcı olması beklenir',
+        'Sınıf düzenine katkı vermesi konusunda desteklenmelidir'
+      ]
+    },
+    gelisim: {
+      yuksek: [
+        'Bu dönem belirgin bir gelişim göstermiş, öğrenme çabası güçlüdür',
+        'Öğrenme hedeflerine ulaşma yönünde kararlı bir ilerleme içindedir',
+        'Kendini geliştirme isteği yüksektir, geribildirimden yararlanır',
+        'Bu dönemki gelişimi takdire değerdir',
+        'Eksiklerini fark edip tamamlaması güçlü bir yönüdür',
+        'Öğrenme çabası süreklidir, ilerleme kaydetmiştir',
+        'Kendine güveni ve öğrenme azmi artmıştır',
+        'Hedeflerine adım adım yaklaşması sevindiricidir',
+        'Gelişim grafiği olumludur, çabası karşılığını bulmaktadır',
+        'Yeni konuları kavrama hızı ve çabası yüksektir',
+        'Geri bildirimleri dikkate alarak kendini geliştirir',
+        'Bu dönemki ilerleme, düzenli çalışmasının ürünüdür'
+      ],
+      orta: [
+        'Gelişimi ilerleme yönündedir; düzenli çalışmayla daha da güçlenebilir',
+        'Bu dönem gelişme göstermiştir, ivmesini artırması beklenir',
+        'Öğrenme çabası vardır; süreklilik sağlanırsa gelişimi hızlanır',
+        'Bazı alanlarda ilerleme görülür, diğerlerinde desteklenebilir',
+        'Gelişim süreci devam etmektedir, gayretini sürdürmesi önemlidir',
+        'İlerlemesi orta düzeydedir, biraz daha kararlılık yararlı olur',
+        'Potansiyelini daha fazla ortaya koyması teşvik edilir',
+        'Gelişimi dengelidir; hedef koyarak çalışması hız kazandırır',
+        'Bu dönem çaba göstermiştir, istikrarı artarsa gelişimi belirginleşir',
+        'Öğrenme yolculuğu devam ediyor; desteğe açık ve isteklidir',
+        'Bir kısım kazanımlarda ilerleme vardır, bütünlük sağlanabilir',
+        'Gelişim kapısı açıktır; düzenli tekrar ona katkı sağlar'
+      ],
+      gelismeli: [
+        'Gelişimini hızlandırması için düzenli çalışma alışkanlığı pekişmelidir',
+        'Bu dönemde daha kararlı bir çaba göstermesi beklenir',
+        'Eksiklerini tamamlaması ilerleme kaydetmesini sağlayacaktır',
+        'Öğrenme sürecine daha fazla emek vermesi teşvik edilir',
+        'Gelişim alanı desteklenmeli, ev ve okul iş birliği sürmelidir',
+        'Düzenli tekrar ve takip, ilerleme kaydetmesine yardımcı olur',
+        'Potansiyelini ortaya koyması için süreklilik önemlidir',
+        'Bu dönemki gelişimini güçlendirmesi beklenir',
+        'Hedef koyarak çalışması ilerlemesini hızlandıracaktır',
+        'Eksik konuların üzerine gitmesi yararlı olacaktır',
+        'Gelişim için gösterdiği çabayı artırması tavsiye edilir',
+        'Daha planlı bir çalışma, görünür bir ilerleme sağlayacaktır'
+      ]
+    }
+  };
+  var KAPANIS = {
+    olumlu: [
+      'Bu olumlu tutumunu sürdürmesini dileriz.',
+      'Ailesinin desteğiyle bu başarısını sürdürmesini bekleriz.',
+      'Çabasını sürdürmesi, önümüzdeki dönemde de onu güçlendirecektir.',
+      'Kendisini tebrik eder, aynı azmi sürdürmesini dileriz.',
+      'Bu gayretini korumasını ve daha ileriye taşımasını temenni ederiz.',
+      'Önümüzdeki dönemde de aynı istekle ilerlemesini dileriz.',
+      'Destekleyici tutumumuz sürecek, kendisinden aynı özeni bekleriz.',
+      'Başarılarının devamını diler, emeği için teşekkür ederiz.',
+      'Bu seviyeyi koruması ve ileriye taşıması sevindirici olacaktır.',
+      'Kendisine güveniyor, olumlu bakışını sürdürmesini diliyoruz.',
+      'Ailesine katkıları için teşekkür eder, başarılarının sürmesini dileriz.',
+      'Yolunun açık olmasını diler, çabasını takdir ederiz.'
+    ],
+    dengeli: [
+      'Küçük ve düzenli adımlarla daha da ilerleyeceğine inanıyoruz.',
+      'Ailesinin desteğiyle potansiyelini daha fazla ortaya koyabilir.',
+      'Önümüzdeki dönemde gayretini artırması kendisine katkı sağlayacaktır.',
+      'İnanıyoruz ki kararlı çalışmayla daha da gelişecektir.',
+      'Desteklemeye devam edecek, kendisinden biraz daha süreklilik bekliyoruz.',
+      'Eksiklerini tamamladıkça başarısı daha da belirginleşecektir.',
+      'Birlikte yürüttüğümüz çalışmalarla ilerlemesinin artmasını dileriz.',
+      'Azmini sürdürmesi, gelişimini hızlandıracaktır.',
+      'Önümüzdeki dönem, biraz daha özenle daha verimli geçecektir.',
+      'Kendisine güveniyor, çabasını artırmasını bekliyoruz.',
+      'Aile-okul iş birliğiyle daha da ilerleyeceğine inanırız.',
+      'Düzenli çalışmasını sürdürmesi, gelişimini pekiştirecektir.'
+    ],
+    gelisim: [
+      'Düzenli çalışır ve desteklenirse kısa sürede belirgin ilerleme kaydeder.',
+      'Aile ve okul olarak yanındayız; küçük adımlarla gelişeceğine inanıyoruz.',
+      'Cesaretini ve çabasını artırması, önümüzdeki dönemde fark yaratacaktır.',
+      'İnanıyoruz ki süreklilik sağladığında başarısı artacaktır.',
+      'Destekleyici bir tutumla gelişimini birlikte takip edeceğiz.',
+      'Kendisine güveniyoruz; çabasını artırmasını bekliyoruz.',
+      'Eksiklerini tamamlaması için yol gösterecek, ilerlemesini izleyeceğiz.',
+      'Küçük hedeflerle ilerlemesi, kendisine güven kazandıracaktır.',
+      'Ailesinin desteği bu süreçte çok değerlidir; birlikte ilerleyeceğiz.',
+      'Önümüzdeki dönemde daha kararlı bir çalışma kendisine katkı sağlayacaktır.',
+      'Gelişimine birlikte eşlik edecek, her ilerlemeyi takdirle karşılayacağız.',
+      'Çabasını artırması halinde kısa sürede olumlu sonuçlar alacağına inanırız.'
+    ]
+  };
+
+
+  var KISA_KAPANIS = {
+    olumlu: [
+      'Bu çabasını sürdürmesini dileriz.',
+      'Aynı azmi sürdürmesini bekleriz.',
+      'Bu tutumunu korumasını dileriz.',
+      'Başarılarının devamını dileriz.',
+      'Bu gayretini sürdürmesini temenni ederiz.',
+      'Önümüzdeki dönemde de aynı özeni bekleriz.'
+    ],
+    dengeli: [
+      'Düzenli çalışmayla daha da ilerler.',
+      'Gayretini artırması onu güçlendirecektir.',
+      'Küçük adımlarla gelişeceğine inanırız.',
+      'Süreklilik sağlarsa başarısı artacaktır.',
+      'Destekle daha da ilerleyeceğine inanırız.',
+      'Çabasını sürdürmesini bekleriz.'
+    ],
+    gelisim: [
+      'Düzenli çabayla kısa sürede ilerler.',
+      'Yanındayız; küçük adımlarla gelişecektir.',
+      'Çabasını artırmasını bekleriz.',
+      'Aile-okul iş birliğiyle ilerleyeceğiz.',
+      'Kararlı çalışması fark yaratacaktır.',
+      'Destekle gelişimini birlikte izleyeceğiz.'
+    ]
+  };
+
+  var KG = window.KG = {};
+
+  function el(t, a, c) {
+    var e = document.createElement(t); a = a || {};
+    for (var k in a) {
+      if (a[k] == null) continue;
+      if (k === 'on') { for (var v in a.on) e.addEventListener(v, a.on[v]); }
+      else if (k === 'text') e.textContent = a[k];
+      else if (k === 'html') e.innerHTML = a[k];
+      else if (k === 'checked') e.checked = !!a[k];
+      else if (k === 'value') e.value = a[k];
+      else e.setAttribute(k, a[k]);
+    }
+    (c || []).forEach(function (x) { if (x) e.appendChild(typeof x === 'string' ? document.createTextNode(x) : x); });
+    return e;
+  }
+  function load() { try { return JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) { return null; } }
+  function save(S) { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
+  function yeni() {
+    return { sinif: '', ders: '', donem: (OY.donem && OY.donem()) || '', listeMetin: '', ogrenciler: [], yapistirAI: '', seciliToplu: { katilim: '', odev: '', davranis: '', gelisim: '' } };
+  }
+  function Sget() {
+    var S = load() || yeni();
+    if (!S.ogrenciler) S.ogrenciler = [];
+    if (!S.seciliToplu) S.seciliToplu = { katilim: '', odev: '', davranis: '', gelisim: '' };
+    return S;
+  }
+  function msg(t, err) {
+    var m = document.getElementById('kgMsg'); if (!m) return;
+    m.className = 'msg' + (err ? ' err' : ''); m.textContent = t; m.classList.remove('hidden');
+    clearTimeout(msg._t); msg._t = setTimeout(function () { m.classList.add('hidden'); }, 7000);
+  }
+  function trEq(a, b) { return String(a || '').toLocaleLowerCase('tr-TR').replace(/\s+/g, ' ').trim() === String(b || '').toLocaleLowerCase('tr-TR').replace(/\s+/g, ' ').trim(); }
+  function normBas(s) {
+    return String(s || '').toLocaleLowerCase('tr-TR').replace(/ı/g, 'i').replace(/ğ/g, 'g').replace(/ü/g, 'u').replace(/ş/g, 's').replace(/ö/g, 'o').replace(/ç/g, 'c').replace(/[^a-z0-9]+/g, ' ').trim();
+  }
+  function sutunTur(h) {
+    var n = normBas(h);
+    if (!n) return '';
+    if (/(okul\s*)?(ogrenci\s*)?(no|numara|numarasi)\b/.test(n) || n === 'no' || n === 'nr' || n === 'okul no') return 'no';
+    if (/(ad[i]?\s*soyad[i]?|soyad[i]?\s*ad[i]?|ogrenci\s*ad[i]|ad\s*ve\s*soyad)/.test(n)) return 'adsoyad';
+    if (n === 'adi' || n === 'ad' || n === 'ismi' || n === 'ad i') return 'ad';
+    if (n === 'soyadi' || n === 'soyad' || n === 'soy ismi') return 'soyad';
+    return '';
+  }
+  function satirAd(no, ad, soy) {
+    var a = String(ad || '').replace(/\s+/g, ' ').trim();
+    var s = String(soy || '').replace(/\s+/g, ' ').trim();
+    var adsoy = (a + ' ' + s).trim();
+    return { no: String(no || '').trim(), ad: adsoy };
+  }
+  function bosSatir(r) {
+    if (!r || !r.length) return true;
+    var t = r.map(function (c) { return String(c == null ? '' : c).trim(); }).filter(Boolean).join(' ');
+    if (!t) return true;
+    if (/^(sinif|ders|sube|ogretmen|okul|liste|e-?okul)/i.test(normBas(t)) && r.filter(function (c) { return String(c || '').trim(); }).length <= 2 && !sutunTur(t)) {
+      if (!/^\d+/.test(t) && t.length < 60) return true;
+    }
+    if (/^(toplam|genel toplam|boş satır)/i.test(t)) return true;
+    return false;
+  }
+  function parseTablo(tablo) {
+    var rows = (tablo || []).map(function (r) {
+      return (r || []).map(function (c) { return String(c == null ? '' : c).trim(); });
+    }).filter(function (r) { return r.some(Boolean); });
+    if (!rows.length) return { err: 'Listede satır bulunamadı.', liste: [] };
+    var map = { no: -1, adsoyad: -1, ad: -1, soyad: -1 }, bas = 0, i, j, t;
+    var aday = rows[0].map(sutunTur);
+    var baslik = aday.filter(Boolean).length >= 1 && (aday.indexOf('no') >= 0 || aday.indexOf('adsoyad') >= 0 || aday.indexOf('ad') >= 0);
+    if (baslik) {
+      for (j = 0; j < aday.length; j++) if (aday[j] && map[aday[j]] < 0) map[aday[j]] = j;
+      bas = 1;
+    }
+    var liste = [], atla = 0;
+    for (i = bas; i < rows.length; i++) {
+      var r = rows[i];
+      if (bosSatir(r)) { atla++; continue; }
+      var no = '', ad = '', soy = '';
+      if (baslik) {
+        if (map.no >= 0) no = r[map.no] || '';
+        if (map.adsoyad >= 0) ad = r[map.adsoyad] || '';
+        if (map.ad >= 0) ad = r[map.ad] || ad;
+        if (map.soyad >= 0) soy = r[map.soyad] || '';
+        if (!ad && map.adsoyad < 0 && map.ad < 0) {
+          ad = r.filter(function (c, k) { return k !== map.no && k !== map.soyad; }).join(' ');
+        }
+      } else {
+        var cells = r.filter(Boolean);
+        if (!cells.length) continue;
+        if (cells.length === 1) {
+          var m = cells[0].match(/^(\d{1,6})\s*[-\.)]?\s+(.+)$/);
+          if (m) { no = m[1]; ad = m[2]; }
+          else ad = cells[0];
+        } else if (/^\d{1,6}[A-Za-z]?$/.test(cells[0])) {
+          no = cells[0]; ad = cells.slice(1).join(' ');
+        } else {
+          ad = cells.join(' ');
+        }
+      }
+      var o = satirAd(no, ad, soy);
+      if (!o.ad) { atla++; continue; }
+      if (sutunTur(o.ad) || sutunTur(o.no)) { atla++; continue; }
+      liste.push(o);
+    }
+    if (!liste.length) return { err: 'Ad soyad okunamadı. İlk sütun No, sonraki sütun(lar) Ad Soyad olsun.', liste: [] };
+    return { ok: true, liste: liste, atla: atla };
+  }
+  function parseListe(text) {
+    var raw = String(text || '').replace(/^\ufeff/, '').trim();
+    if (!raw) return { err: 'Yapıştırılacak liste yok.', liste: [] };
+    var tablo = raw.split(/\r?\n/).map(function (sat) {
+      if (sat.indexOf('\t') >= 0) return sat.split('\t');
+      if (sat.indexOf(';') >= 0) return sat.split(';');
+      if (sat.indexOf(',') >= 0 && /,(?=\s*\S)/.test(sat) && sat.split(',').length >= 2 && sat.split(',').length <= 5) return sat.split(',');
+      return [sat];
+    });
+    return parseTablo(tablo);
+  }
+  function birlestir(eski, gelen) {
+    var map = {};
+    (eski || []).forEach(function (o) {
+      var k = (o.no || '') + '|' + normBas(o.ad);
+      map[k] = o;
+    });
+    return (gelen || []).map(function (g, i) {
+      var k = (g.no || '') + '|' + normBas(g.ad);
+      var e = map[k];
+      return {
+        sira: i + 1,
+        no: g.no || (e && e.no) || '',
+        ad: g.ad,
+        katilim: (e && e.katilim) || '',
+        odev: (e && e.odev) || '',
+        davranis: (e && e.davranis) || '',
+        gelisim: (e && e.gelisim) || '',
+        gorus: (e && e.gorus) || '',
+        sec: false
+      };
+    });
+  }
+  function ilkAd(ad) {
+    var p = String(ad || '').trim().split(/\s+/);
+    return p[0] || 'Öğrenci';
+  }
+  function sevAd(k) {
+    for (var i = 0; i < SEV.length; i++) if (SEV[i].k === k) return SEV[i].ad;
+    return '';
+  }
+  function olcuAd(k) {
+    for (var i = 0; i < OLCU.length; i++) if (OLCU[i].k === k) return OLCU[i].ad;
+    return k;
+  }
+  function pick(arr, used, prefix) {
+    var free = [], i, id;
+    for (i = 0; i < arr.length; i++) {
+      id = prefix + i;
+      if (!used[id]) free.push([id, arr[i]]);
+    }
+    if (!free.length) {
+      for (i = 0; i < arr.length; i++) free.push([prefix + i, arr[i]]);
+    }
+    var x = free[Math.floor(Math.random() * free.length)];
+    used[x[0]] = 1;
+    return x[1];
+  }
+  function ton(parcalar) {
+    if (!parcalar.length) return 'dengeli';
+    var s = 0;
+    parcalar.forEach(function (p) { s += p.s === 'yuksek' ? 2 : p.s === 'orta' ? 1 : 0; });
+    var o = s / parcalar.length;
+    if (o >= 1.5) return 'olumlu';
+    if (o <= 0.6) return 'gelisim';
+    return 'dengeli';
+  }
+  function nokta(s) {
+    s = String(s || '').trim();
+    if (!s) return '';
+    if (/[.!?…]$/.test(s)) return s;
+    return s + '.';
+  }
+  function adEkle(text, ad) {
+    text = String(text || '').replace(/\{ad\}/g, ad);
+    if (text.indexOf(ad) >= 0) return text;
+    return ad + ', ' + text.charAt(0).toLocaleLowerCase('tr-TR') + text.slice(1);
+  }
+  function birlestirCumle(a, b) {
+    b = String(b || '').trim();
+    if (!b) return a;
+    return a + ', ' + b.charAt(0).toLocaleLowerCase('tr-TR') + b.slice(1);
+  }
+  function pack(cumleler) {
+    var a = cumleler.filter(Boolean);
+    if (!a.length) return '';
+    if (a.length === 1) return nokta(a[0]);
+    if (a.length === 2) return nokta(a[0]) + ' ' + nokta(a[1]);
+    if (a.length === 3) return nokta(birlestirCumle(a[0], a[1])) + ' ' + nokta(a[2]);
+    return nokta(birlestirCumle(a[0], a[1])) + ' ' + nokta(birlestirCumle(a[2], a[3]));
+  }
+  function deneUret(o, used, kapanBank, maxGovde) {
+    var parcalar = [];
+    OLCU.forEach(function (ol) {
+      var s = o[ol.k];
+      if (s && BANK[ol.k] && BANK[ol.k][s]) parcalar.push({ k: ol.k, s: s });
+    });
+    if (!parcalar.length) return '';
+    if (maxGovde && parcalar.length > maxGovde) parcalar = parcalar.slice(0, maxGovde);
+    var ad = ilkAd(o.ad);
+    var ids = [];
+    function take(arr, prefix) {
+      var free = [], i, id;
+      for (i = 0; i < arr.length; i++) {
+        id = prefix + i;
+        if (!used[id] && ids.indexOf(id) < 0) free.push([id, arr[i]]);
+      }
+      if (!free.length) {
+        for (i = 0; i < arr.length; i++) {
+          id = prefix + i;
+          if (ids.indexOf(id) < 0) free.push([id, arr[i]]);
+        }
+      }
+      if (!free.length) return arr[0] || '';
+      var x = free[Math.floor(Math.random() * free.length)];
+      ids.push(x[0]);
+      return x[1];
+    }
+    var bank = kapanBank || KAPANIS;
+    var body = parcalar.map(function (p) { return take(BANK[p.k][p.s], p.k + '.' + p.s + '.'); });
+    var text = adEkle(pack(body), ad);
+    var kapan = take(bank[ton(parcalar)], (bank === KISA_KAPANIS ? 'kk.' : 'k.') + ton(parcalar) + '.');
+    kapan = kapan.replace(/\{ad\}/g, ad);
+    return { gorus: (text + ' ' + kapan).replace(/\s+/g, ' ').trim(), ids: ids };
+  }
+  function uretBir(o, used) {
+    var denemeler = [
+      { bank: KAPANIS, govde: 4, n: 6 },
+      { bank: KISA_KAPANIS, govde: 4, n: 6 },
+      { bank: KISA_KAPANIS, govde: 3, n: 4 },
+      { bank: KISA_KAPANIS, govde: 2, n: 4 }
+    ];
+    var best = null, i, j;
+    for (j = 0; j < denemeler.length; j++) {
+      var d0 = denemeler[j];
+      for (i = 0; i < d0.n; i++) {
+        var d = deneUret(o, used, d0.bank, d0.govde);
+        if (!d) return '';
+        if (!best || d.gorus.length < best.gorus.length) best = d;
+        if (d.gorus.length <= LIMIT) { best = d; best.ids.forEach(function (id) { used[id] = 1; }); return best.gorus; }
+      }
+    }
+    if (!best) return '';
+    best.ids.forEach(function (id) { used[id] = 1; });
+    return best.gorus;
+  }
+  function uretSinif(ogrenciler) {
+    var used = {}, n = 0, atla = 0, kopya = {};
+    (ogrenciler || []).forEach(function (o) {
+      var g = uretBir(o, used);
+      if (!g) { atla++; return; }
+      var deneme = 0, ham = g;
+      while (kopya[g] && deneme < 8) {
+        g = uretBir(o, used);
+        deneme++;
+      }
+      if (!g) g = ham;
+      o.gorus = g;
+      kopya[g] = 1;
+      n++;
+    });
+    return { n: n, atla: atla };
+  }
+  function olcuVar(o) {
+    return OLCU.some(function (ol) { return !!o[ol.k]; });
+  }
+  function komut(S) {
+    var t = [], list = (S.ogrenciler || []).filter(olcuVar);
+    t.push('Sen bir sınıf öğretmenisin. Türkiye’deki ilkokul/ortaokul karne görüşü yazıyorsun.');
+    t.push('Veliye ve öğrenciye uygun, teşvik edici, kopyala-yapıştır hissi vermeyen 2-3 cümlelik görüşler yaz.');
+    t.push('Yargılamayan, gelişimi destekleyen bir dil kullan. Abartılı övgü veya kırıcı ifade yok.');
+    t.push('ÖNEMLİ: Öğrenci adı, soyadı veya okul numarası YOKTUR ve YAZILMAYACAKTIR. Yalnız sıra numarası ve ölçüt düzeyleri verilmiştir.');
+    t.push('Her satır bir öğrencidir:');
+    if (!list.length) t.push('(ölçüt seçilmiş öğrenci yok)');
+    list.forEach(function (o) {
+      var par = OLCU.filter(function (ol) { return o[ol.k]; }).map(function (ol) { return olcuAd(ol.k) + ': ' + sevAd(o[ol.k]); });
+      t.push('Sıra ' + o.sira + ': ' + par.join('; '));
+    });
+    if (S.sinif) t.push('Sınıf düzeyi (ad yok): ' + String(S.sinif).replace(/\s*[A-Za-zÇĞİÖŞÜçğıöşü][A-Za-zÇĞİÖŞÜçğıöşü]?\s*$/, '').trim());
+    if (S.ders) t.push('Ders: ' + S.ders);
+    if (S.donem) t.push('Dönem: ' + S.donem);
+    t.push('Çıktıyı YALNIZCA aşağıdaki JSON dizisi olarak ver, başka açıklama veya isim ekleme:');
+    t.push('[{"sira":1,"gorus":"..."},{"sira":2,"gorus":"..."}]');
+    return t.join('\n');
+  }
+  function ayikla(text) {
+    var raw = String(text || '').trim();
+    if (!raw) return { err: 'Yapıştırılacak metin yok.' };
+    var fence = raw.match(/```(?:json)?\s*([\s\S]*?)```/i);
+    var s = fence ? fence[1].trim() : raw;
+    var list = [];
+    try {
+      var a = s.indexOf('['), b = s.lastIndexOf(']'), o = s.indexOf('{'), j;
+      if (a >= 0 && b > a) j = JSON.parse(s.slice(a, b + 1));
+      else if (o >= 0) j = JSON.parse(s.slice(o, s.lastIndexOf('}') + 1));
+      else throw new Error('json yok');
+      if (j && j.gorusler) j = j.gorusler;
+      if (!Array.isArray(j)) j = [j];
+      j.forEach(function (x) {
+        if (!x) return;
+        var sira = parseInt(x.sira != null ? x.sira : x.no != null ? x.no : x.siraNo, 10);
+        var g = String(x.gorus || x.metin || x.yazi || x.text || '').replace(/\s+/g, ' ').trim();
+        if (g) list.push({ sira: isFinite(sira) ? sira : 0, gorus: g });
+      });
+    } catch (e) {
+      String(raw).split(/\r?\n/).forEach(function (sat) {
+        var m = sat.match(/^\s*(?:s[ıi]ra\s*)?(\d{1,3})\s*[-.:)]\s*(.+)\s*$/i);
+        if (m) list.push({ sira: +m[1], gorus: m[2].replace(/\s+/g, ' ').trim() });
+      });
+    }
+    if (!list.length) return { err: 'Yanıt ayrıştırılamadı. JSON dizi veya “Sıra 1: …” satırları yapıştırın.' };
+    return { ok: list };
+  }
+  function uygulaAI(S, list) {
+    var by = {};
+    list.forEach(function (x) { if (x.sira) by[x.sira] = x.gorus; });
+    var n = 0;
+    S.ogrenciler.forEach(function (o) {
+      var g = by[o.sira];
+      if (!g) return;
+      g = String(g).replace(/\{ad\}/g, ilkAd(o.ad));
+      if (g.indexOf(o.ad) < 0 && g.indexOf(ilkAd(o.ad)) < 0) g = adEkle(g, ilkAd(o.ad));
+      o.gorus = g.replace(/\s+/g, ' ').trim();
+      n++;
+    });
+    return n;
+  }
+  function xlsxHazir() {
+    if (window.XLSX) return Promise.resolve(window.XLSX);
+    return new Promise(function (ok, no) {
+      var s = document.createElement('script');
+      s.src = 'xlsx.js';
+      s.onload = function () { ok(window.XLSX); };
+      s.onerror = function () { no(new Error('Excel okuyucu yüklenemedi.')); };
+      document.head.appendChild(s);
+    });
+  }
+  function indir(blob, ad) {
+    var a = el('a', { href: URL.createObjectURL(blob), download: ad });
+    document.body.appendChild(a); a.click(); a.remove();
+  }
+  function csvKac(s) {
+    s = String(s == null ? '' : s);
+    if (/[",;\n]/.test(s)) return '"' + s.replace(/"/g, '""') + '"';
+    return s;
+  }
+  function excelSatirlar(S) {
+    var bas = ['Sıra', 'No', 'Ad Soyad'].concat(OLCU.map(function (o) { return o.ad; })).concat(['Görüş', 'Karakter']);
+    var rows = [bas];
+    (S.ogrenciler || []).forEach(function (o) {
+      rows.push([o.sira, o.no, o.ad].concat(OLCU.map(function (ol) { return sevAd(o[ol.k]); })).concat([o.gorus || '', (o.gorus || '').length]));
+    });
+    return rows;
+  }
+  function excelIndir(S) {
+    var rows = excelSatirlar(S);
+    var ad = 'Karne_Gorusu.xlsx';
+    return xlsxHazir().then(function (X) {
+      var wb = X.utils.book_new();
+      var ws = X.utils.aoa_to_sheet(rows);
+      X.utils.book_append_sheet(wb, ws, 'Karne Görüşü');
+      var out = X.write(wb, { bookType: 'xlsx', type: 'array' });
+      indir(new Blob([out], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }), ad);
+    }).catch(function () {
+      var csv = '\ufeff' + rows.map(function (r) { return r.map(csvKac).join(';'); }).join('\r\n');
+      indir(new Blob([csv], { type: 'text/csv;charset=utf-8' }), 'Karne_Gorusu.csv');
+    });
+  }
+  function kopyala(t, cb) {
+    t = String(t || '');
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(t).then(function () { cb && cb(true); }).catch(function () { yedek(t, cb); });
+    } else yedek(t, cb);
+  }
+  function yedek(t, cb) {
+    var a = el('textarea', { style: 'position:fixed;left:-9999px' }); a.value = t; document.body.appendChild(a); a.select();
+    var ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
+    a.remove(); cb && cb(ok);
+  }
+
+  function listeUI(w, S) {
+    w.appendChild(el('h3', { class: 'noprint', text: '1. Öğrenci listesi' }));
+    w.appendChild(el('p', { class: 'note noprint', text: 'e-Okul sınıf listesini Excel olarak yükleyin veya aşağıya yapıştırın (No, Ad Soyad). Veriler yalnız bu cihazda kalır, hiçbir yere gönderilmez.' }));
+    var satir = el('div', { class: 'bar noprint' }, [
+      el('label', { class: 'sec', text: 'Excel / CSV yükle ' }, [
+        el('input', { id: 'kgExcel', type: 'file', accept: '.xlsx,.xls,.ods,.csv,.txt', 'aria-label': 'Excel veya CSV yükle', on: { change: function (ev) {
+          var f = ev.target.files && ev.target.files[0]; if (!f) return;
+          f.arrayBuffer().then(function (buf) {
+            var ad = f.name.toLowerCase();
+            if (/\.(csv|txt)$/.test(ad)) {
+              var t; try { t = new TextDecoder('utf-8', { fatal: true }).decode(buf); } catch (e) { t = new TextDecoder('windows-1254').decode(buf); }
+              var r = parseListe(t);
+              if (r.err) { msg(r.err, 1); return; }
+              S.ogrenciler = birlestir(S.ogrenciler, r.liste); save(S); KG.ui(); msg(r.liste.length + ' öğrenci alındı.');
+              return;
+            }
+            return xlsxHazir().then(function (X) {
+              var wb = X.read(new Uint8Array(buf), { type: 'array', codepage: 1254 });
+              var en = { liste: [] };
+              wb.SheetNames.forEach(function (sn) {
+                var tab = X.utils.sheet_to_json(wb.Sheets[sn], { header: 1, raw: false, defval: '' });
+                var p = parseTablo(tab);
+                if (p.liste && p.liste.length > en.liste.length) en = p;
+              });
+              if (!en.liste.length) { msg(en.err || 'Excel’den öğrenci okunamadı.', 1); return; }
+              S.ogrenciler = birlestir(S.ogrenciler, en.liste); save(S); KG.ui(); msg(en.liste.length + ' öğrenci alındı.');
+            });
+          }).catch(function (e) { msg('Dosya okunamadı: ' + (e && e.message || e), 1); });
+        } } })
+      ])
+    ]);
+    w.appendChild(satir);
+    w.appendChild(labInput('Sınıf (isteğe bağlı, örn. 7-A)', el('input', { id: 'kgSinif', 'aria-label': 'Sınıf', value: S.sinif || '', on: { input: function () { S.sinif = this.value; save(S); } } })));
+    w.appendChild(labInput('Ders (isteğe bağlı)', el('input', { id: 'kgDers', 'aria-label': 'Ders', value: S.ders || '', on: { input: function () { S.ders = this.value; save(S); } } })));
+    w.appendChild(el('label', { class: 'noprint', text: 'Listeyi yapıştırın' }, [
+      el('textarea', { id: 'kgYapistir', 'aria-label': 'Öğrenci listesi', rows: '8', style: 'width:100%;box-sizing:border-box', placeholder: 'No\tAd Soyad\n101\tAyşe Yılmaz\n102\tMehmet Demir', value: S.listeMetin || '', on: { input: function () { S.listeMetin = this.value; } } })
+    ]));
+    w.appendChild(el('div', { class: 'bar noprint' }, [
+      el('button', { id: 'kgListeAl', on: { click: function () {
+        S.listeMetin = (document.getElementById('kgYapistir') || {}).value || S.listeMetin || '';
+        var r = parseListe(S.listeMetin);
+        if (r.err) { msg(r.err, 1); return; }
+        S.ogrenciler = birlestir(S.ogrenciler, r.liste); save(S); KG.ui(); msg(r.liste.length + ' öğrenci alındı.');
+      } }, text: 'Listeyi al' }),
+      el('button', { class: 'sec', id: 'kgListeTemiz', on: { click: function () {
+        if (!confirm('Öğrenci listesi ve görüşler bu cihazdan silinsin mi?')) return;
+        S.ogrenciler = []; S.listeMetin = ''; save(S); KG.ui(); msg('Liste temizlendi.');
+      } }, text: 'Listeyi temizle' })
+    ]));
+  }
+  function labInput(t, n) { return el('label', { class: 'noprint' }, [t, n]); }
+
+  function olcuUI(w, S) {
+    w.appendChild(el('h3', { class: 'noprint', text: '2. Ölçütler' }));
+    if (!S.ogrenciler.length) {
+      w.appendChild(el('p', { class: 'note noprint', text: 'Önce öğrenci listesini alın.' }));
+      return;
+    }
+    w.appendChild(el('p', { class: 'note noprint', text: 'Her öğrenci için Katılım, Ödev düzeni, Davranış/Sorumluluk ve Gelişim alanı seçin (Yüksek / Orta / Gelişmeli). Üstteki “Tümüne / seçilenlere uygula” ile toplu atama yapabilirsiniz.' }));
+    var bar = el('div', { id: 'kgToplu', class: 'qbox noprint' });
+    bar.appendChild(el('div', { class: 'row' }, [
+      el('label', { text: 'Toplu uygulama' }),
+      el('button', { class: 'sec', id: 'kgHepsiniSec', on: { click: function () { S.ogrenciler.forEach(function (o) { o.sec = true; }); save(S); KG.ui(); } }, text: 'Tümünü seç' }),
+      el('button', { class: 'sec', on: { click: function () { S.ogrenciler.forEach(function (o) { o.sec = false; }); save(S); KG.ui(); } }, text: 'Seçimi kaldır' })
+    ]));
+    var row = el('div', { class: 'row' });
+    OLCU.forEach(function (ol) {
+      var sel = el('select', { 'aria-label': 'Toplu ' + ol.ad, 'data-olcu': ol.k, on: { change: function () { S.seciliToplu[ol.k] = this.value; } } });
+      sel.appendChild(el('option', { value: '', text: ol.ad + '…' }));
+      SEV.forEach(function (s) { sel.appendChild(el('option', { value: s.k, text: s.ad, selected: S.seciliToplu[ol.k] === s.k ? 'selected' : null })); });
+      row.appendChild(el('label', {}, [sel]));
+    });
+    row.appendChild(el('button', { id: 'kgTopluUygula', on: { click: function () {
+      var nsec = S.ogrenciler.filter(function (o) { return o.sec; }).length;
+      var hedef = nsec ? S.ogrenciler.filter(function (o) { return o.sec; }) : S.ogrenciler;
+      var n = 0;
+      hedef.forEach(function (o) {
+        OLCU.forEach(function (ol) { if (S.seciliToplu[ol.k]) { o[ol.k] = S.seciliToplu[ol.k]; n++; } });
+      });
+      save(S); KG.ui();
+      msg((nsec ? 'Seçilen ' + nsec : 'Tüm') + ' öğrenciye ölçüt uygulandı.');
+    } }, text: 'Tümüne / seçilenlere uygula' }));
+    bar.appendChild(row);
+    w.appendChild(bar);
+
+    var tbl = el('table', { id: 'kgOlcuTablo', class: 'grid small noprint', style: 'width:100%' });
+    var thead = el('thead');
+    var trh = el('tr', {}, [el('th', { text: '' }), el('th', { text: 'No' }), el('th', { text: 'Ad Soyad' })]);
+    OLCU.forEach(function (ol) { trh.appendChild(el('th', { text: ol.ad })); });
+    thead.appendChild(trh); tbl.appendChild(thead);
+    var tb = el('tbody');
+    S.ogrenciler.forEach(function (o, i) {
+      var tr = el('tr');
+      var cb = el('input', { type: 'checkbox', 'aria-label': 'Seç ' + o.ad, checked: !!o.sec, on: { change: function () { o.sec = this.checked; save(S); } } });
+      tr.appendChild(el('td', {}, [cb]));
+      tr.appendChild(el('td', { text: o.no || String(o.sira) }));
+      tr.appendChild(el('td', { text: o.ad }));
+      OLCU.forEach(function (ol) {
+        var sel = el('select', { 'aria-label': o.ad + ' ' + ol.ad, 'data-sira': String(o.sira), 'data-olcu': ol.k, on: { change: function () { o[ol.k] = this.value; save(S); } } });
+        sel.appendChild(el('option', { value: '', text: '—' }));
+        SEV.forEach(function (s) { sel.appendChild(el('option', { value: s.k, text: s.ad })); });
+        sel.value = o[ol.k] || '';
+        tr.appendChild(el('td', {}, [sel]));
+      });
+      tb.appendChild(tr);
+    });
+    tbl.appendChild(tb);
+    w.appendChild(tbl);
+  }
+
+  function uretimUI(w, S) {
+    w.appendChild(el('h3', { class: 'noprint', text: '3. Görüş üret' }));
+    w.appendChild(el('p', { class: 'note noprint', text: 'Yerel üretim, bu cihazdaki cümle bankasından çeşitlilik sağlar; aynı sınıfta aynı cümle yinelenmez. Ad soyad yerelde eklenir. İsteğe bağlı yapay zekâ: komutu kopyalayıp dilediğiniz araca yapıştırın, yanıtı geri getirin. Komutta ad ve numara yoktur.' }));
+    w.appendChild(el('div', { class: 'bar noprint' }, [
+      el('button', { id: 'kgUretYerel', on: { click: function () {
+        var r = uretSinif(S.ogrenciler);
+        save(S); KG.ui();
+        if (!r.n) { msg('Üretim için en az bir öğrencide ölçüt seçin.', 1); return; }
+        msg(r.n + ' öğrenci için yerel görüş yazıldı' + (r.atla ? ' (' + r.atla + ' öğrenci ölçütsüz atlandı)' : '') + '.');
+      } }, text: 'Yerelde üret' })
+    ]));
+    w.appendChild(el('h4', { class: 'noprint', text: 'İsteğe bağlı yapay zekâ' }));
+    w.appendChild(el('textarea', { id: 'kgKomut', 'aria-label': 'Yapay zekâ komutu', rows: '10', readonly: 'readonly', style: 'width:100%;box-sizing:border-box;font-family:ui-monospace,monospace;font-size:13px' }));
+    w.appendChild(el('div', { class: 'bar noprint' }, [
+      el('button', { class: 'sec', id: 'kgKomutKopya', on: { click: function () {
+        var t = document.getElementById('kgKomut').value;
+        kopyala(t, function (ok) { msg(ok ? 'Komut kopyalandı. Ad ve numara komutta yoktur.' : 'Kopyalanamadı, metni el ile seçin.', !ok); });
+      } }, text: 'Komutu kopyala' })
+    ]));
+    w.appendChild(el('label', { class: 'noprint', text: 'Yapay zekâ yanıtını yapıştırın' }, [
+      el('textarea', { id: 'kgYapistirAI', 'aria-label': 'Yapay zekâ yanıtı', rows: '8', style: 'width:100%;box-sizing:border-box', value: S.yapistirAI || '', on: { input: function () { S.yapistirAI = this.value; } } })
+    ]));
+    w.appendChild(el('div', { class: 'bar noprint' }, [
+      el('button', { id: 'kgAyikla', on: { click: function () {
+        S.yapistirAI = (document.getElementById('kgYapistirAI') || {}).value || '';
+        var r = ayikla(S.yapistirAI);
+        if (r.err) { msg(r.err, 1); return; }
+        var n = uygulaAI(S, r.ok);
+        save(S); KG.ui();
+        msg(n + ' görüş sıra numarasıyla eşleştirildi; ad yerelde eklendi.');
+      } }, text: 'Yanıtı ayır ve ekle' })
+    ]));
+  }
+
+  function sayacSinif(n) {
+    if (n > LIMIT) return 'tot bad';
+    if (n >= Math.floor(LIMIT * 0.8)) return 'tot';
+    return '';
+  }
+  function duzenUI(w, S) {
+    w.appendChild(el('h3', { class: 'noprint', text: '4. Düzenle ve aktar' }));
+    w.appendChild(el('p', { class: 'note noprint', text: 'e-Okul görüş alanı genellikle ' + LIMIT + ' karakter civarında sınırlı olabilir. Sınırı aşan satırlar kırmızı uyarılır. Her satırı kopyalayıp e-Okul’a yapıştırabilir, tümünü Excel olarak indirebilirsiniz.' }));
+    w.appendChild(el('div', { class: 'bar noprint' }, [
+      el('button', { id: 'kgExcelIndir', on: { click: function () {
+        if (!S.ogrenciler.length) { msg('Liste boş.', 1); return; }
+        excelIndir(S).then(function () { msg('Excel indirildi.'); }).catch(function (e) { msg('İndirilemedi: ' + (e && e.message || e), 1); });
+      } }, text: 'Tümünü Excel’e indir' })
+    ]));
+    var tbl = el('table', { id: 'kgDuzenTablo', class: 'grid noprint', style: 'width:100%' });
+    tbl.appendChild(el('thead', {}, [el('tr', {}, [el('th', { text: 'No' }), el('th', { text: 'Ad Soyad' }), el('th', { text: 'Görüş' }), el('th', { text: 'Karakter' }), el('th', { text: '' })])]));
+    var tb = el('tbody');
+    S.ogrenciler.forEach(function (o) {
+      var n = (o.gorus || '').length;
+      var ta = el('textarea', { 'aria-label': o.ad + ' görüşü', rows: '3', style: 'width:100%;box-sizing:border-box', value: o.gorus || '' });
+      var sp = el('span', { class: sayacSinif(n), text: n + ' / ' + LIMIT });
+      if (n > LIMIT) sp.title = 'e-Okul karakter sınırını aşıyor olabilir';
+      ta.addEventListener('input', function () {
+        o.gorus = ta.value; save(S);
+        var c = ta.value.length;
+        sp.textContent = c + ' / ' + LIMIT;
+        sp.className = sayacSinif(c);
+      });
+      var tr = el('tr');
+      tr.appendChild(el('td', { text: o.no || String(o.sira) }));
+      tr.appendChild(el('td', { text: o.ad }));
+      tr.appendChild(el('td', {}, [ta]));
+      tr.appendChild(el('td', {}, [sp]));
+      tr.appendChild(el('td', {}, [el('button', { class: 'sec', 'data-kopya-sira': String(o.sira), on: { click: function () {
+        kopyala(o.gorus || '', function (ok) { msg(ok ? o.ad + ' görüşü kopyalandı.' : 'Kopyalanamadı.', !ok); });
+      } }, text: 'Kopyala' })]));
+      tb.appendChild(tr);
+    });
+    tbl.appendChild(tb);
+    w.appendChild(tbl);
+    w.appendChild(el('p', { class: 'note noprint', text: 'Evrak Asistanı · Eyüp ŞEKER · Karne Görüşü (OY 1.10.6). Öğrenci listesi bu tarayıcıda saklanır.' }));
+  }
+
+  KG.parseListe = parseListe;
+  KG.parseTablo = parseTablo;
+  KG.ayikla = ayikla;
+  KG.komut = komut;
+  KG.uretSinif = uretSinif;
+  KG.uretBir = uretBir;
+  KG.uygulaAI = uygulaAI;
+  KG.LIMIT = LIMIT;
+  KG.ui = function () {
+    var S = Sget();
+    if (typeof land === 'function') try { land(false); } catch (e) {}
+    if (typeof cur !== 'undefined') try { cur = { id: 'kg_gorus', baslik: 'Karne Görüşü' }; } catch (e) {}
+    try { if (typeof cats === 'function') cats(); } catch (e) {}
+    var w = document.getElementById('work');
+    if (!w) return;
+    w.innerHTML = '';
+    w.appendChild(el('h2', { class: 'noprint', text: 'Karne Görüşü' }));
+    w.appendChild(el('p', { class: 'noprint', text: 'Evrak Asistanı · Eyüp ŞEKER. Kişiselleştirilmiş karne görüşü: yerel cümle bankası veya isteğe bağlı yapay zekâ. Öğrenci adı ve numarası yapay zekâ komutuna yazılmaz; veriler yalnız bu cihazdadır.' }));
+    w.appendChild(el('div', { id: 'kgMsg', class: 'msg hidden' }));
+    listeUI(w, S);
+    olcuUI(w, S);
+    uretimUI(w, S);
+    duzenUI(w, S);
+    var k = document.getElementById('kgKomut');
+    if (k) k.value = komut(S);
+  };
+
+  if (!OY.get('kg_gorus')) {
+    var ix = 0;
+    for (; ix < OY.T.length; ix++) if (OY.T[ix].kat === 'Not Girişi') break;
+    OY.T.splice(ix, 0, {
+      id: 'kg_gorus', kat: 'Not Girişi', baslik: 'Karne Görüşü',
+      kaynak: 'Evrak Asistanı / Eyüp ŞEKER; yerel cümle bankası (öğrenci verisi cihazda kalır)',
+      karne: 1, alan: []
+    });
+  }
+  if (typeof sel === 'function' && !sel.__kg) {
+    var eski = sel;
+    var wr = function (id) {
+      var tt = (typeof OY !== 'undefined' && OY.get) ? OY.get(id) : null;
+      if (tt && tt.karne) return KG.ui();
+      return eski.apply(this, arguments);
+    };
+    wr.__kg = 1;
+    try { window.sel = wr; } catch (e) {}
+    try { sel = wr; } catch (e2) {}
+  }
+  try { if (typeof cats === 'function') cats(); } catch (e) {}
+})();
+
 </script>
 </body></html>

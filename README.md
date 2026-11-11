@@ -36,6 +36,8 @@ Kurulu Okul Paketi'nin başlatıcısı (1.0.3 ve sonrası) güncellemeyi şu adr
 
 1.0.9 güncelleme paketi Öğretmen Yardımcısı 1.10.5 getirir: Sınav Hazırlama bölümü (Bloom'a göre komut, yapıştır-ayrıştır, onay ekranı, yazılı kâğıdı / rubrik / cevap anahtarı / A-B grubu, uygulamalı ders formu). Kurulu paketler bunu `manifest.json` üzerinden alır. Kurulum exe 1.0.7 olarak durur; exe yeniden üretilmedi.
 
+1.0.10 güncelleme paketi Öğretmen Yardımcısı 1.10.6 getirir: Karne Görüşü bölümü (e-Okul sınıf listesi içe aktarma, ölçüt seçimi, yerel cümle bankası, isteğe bağlı yapay zekâ komutu, düzenleme tablosu ve Excel çıktısı; öğrenci verisi cihazda kalır, komutta ad/numara yoktur). Kurulu paketler bunu `manifest.json` üzerinden alır. Kurulum exe 1.0.7 olarak durur; exe yeniden üretilmedi.
+
 ## Önemli
 
 - Bu depo **kaynak kod değildir**; derleme çıktısıdır. Değişiklik asıl uygulama deposunda yapılır, sonra derlenmiş dosyalar buraya kopyalanır. Burada elle düzenleme yapma.
