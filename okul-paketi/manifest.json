@@ -1,6 +1,6 @@
 {
-  "surum": "1.0.8",
-  "paket": "okul-paketi-guncelleme-1.0.8.zip",
-  "sha256": "3c18d33bd152457e161d5ac0e8fa7140e50c387dd4709b7beef3af3c22b0f317",
-  "not": "Not Girişi 1.9.2: panel ve Not sekmesi sağ kenarda; sekme+panel birlikte yukarı-aşağı taşınır. ÖY 1.10.4, MYP 1.12.3. Kurulum exe 1.0.7 aynı (siyah pencere düzeltmesi için o exe gerekir); bu güncelleme yalnız www ve NotGirisi içeriğini yeniler."
+  "surum": "1.0.9",
+  "paket": "okul-paketi-guncelleme-1.0.9.zip",
+  "sha256": "6627f9bf441fa191555c266ec8665f756f5092bdb999362c508ac5ad0fa8ac16",
+  "not": "ÖY 1.10.5: Sınav Hazırlama (Bloom komutu, yapıştır-ayrıştır, onay, yazılı/rubrik/anahtar/A-B, uygulamalı form). MYP 1.12.3, Not Girişi 1.9.2. Kurulum exe 1.0.7 aynı; bu güncelleme yalnız www içeriğini yeniler."
 }

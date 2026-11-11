@@ -34,6 +34,8 @@ Kurulu Okul Paketi'nin başlatıcısı (1.0.3 ve sonrası) güncellemeyi şu adr
 
 1.0.8 güncelleme paketi Not Girişi 1.9.2 getirir (panel ve Not sekmesi sağ kenarda, birlikte yukarı-aşağı taşınır). Kurulu paketler bunu `manifest.json` üzerinden alır. Kurulum exe 1.0.7 olarak durur; exe yeniden üretilmedi.
 
+1.0.9 güncelleme paketi Öğretmen Yardımcısı 1.10.5 getirir: Sınav Hazırlama bölümü (Bloom'a göre komut, yapıştır-ayrıştır, onay ekranı, yazılı kâğıdı / rubrik / cevap anahtarı / A-B grubu, uygulamalı ders formu). Kurulu paketler bunu `manifest.json` üzerinden alır. Kurulum exe 1.0.7 olarak durur; exe yeniden üretilmedi.
+
 ## Önemli
 
 - Bu depo **kaynak kod değildir**; derleme çıktısıdır. Değişiklik asıl uygulama deposunda yapılır, sonra derlenmiş dosyalar buraya kopyalanır. Burada elle düzenleme yapma.
