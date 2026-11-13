@@ -38,6 +38,9 @@ Kurulu Okul Paketi'nin başlatıcısı (1.0.3 ve sonrası) güncellemeyi şu adr
 
 1.0.10 güncelleme paketi Öğretmen Yardımcısı 1.10.6 getirir: Karne Görüşü bölümü (e-Okul sınıf listesi içe aktarma, ölçüt seçimi, yerel cümle bankası, isteğe bağlı yapay zekâ komutu, düzenleme tablosu ve Excel çıktısı; öğrenci verisi cihazda kalır, komutta ad/numara yoktur). Kurulu paketler bunu `manifest.json` üzerinden alır. Kurulum exe 1.0.7 olarak durur; exe yeniden üretilmedi.
 
+1.0.11 güncelleme paketi Öğretmen Yardımcısı 1.10.7 getirir: TDE hazırlık (Sözün Ebrusu) ve TDE 10 (Nesillerin Mirası) eksik öğrenme çıktıları tamamlandı; Coğrafya 11–12 için resmi 2 saatlik dağılım eklendi (öğretmen yıllık planda 2 veya 4 saat seçer); tema saatleri resmi programdaki `h` alanıyla haftalara dağılır (saat yoksa çıktı sayısına düşer); Tarih 11 ünite adı resmi biçime çekildi; Beden Eğitimi / Müzik / Görsel Sanatlar'da yazılı yerine uygulamalı sınav zümre kararıyla (OOY md. 45/f) seçenek oldu; kurul ve zümre takvimi Kurullar ve Zümreler Yönergesi'ne göre güncellendi. MYP 1.12.3, Not Girişi 1.9.2. Kurulu paketler bunu `manifest.json` üzerinden alır. Kurulum exe 1.0.7 olarak durur; exe yeniden üretilmedi.
+
+
 ## Önemli
 
 - Bu depo **kaynak kod değildir**; derleme çıktısıdır. Değişiklik asıl uygulama deposunda yapılır, sonra derlenmiş dosyalar buraya kopyalanır. Burada elle düzenleme yapma.
