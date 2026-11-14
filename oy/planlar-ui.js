@@ -1,4 +1,4 @@
-/* Evrak Asistanı · ÖY 1.11.0 plan araçları arayüzü. Yayıncı: Eyüp ŞEKER. */
+/* Evrak Asistanı · ÖY 1.11.1 plan araçları arayüzü. Yayıncı: Eyüp ŞEKER. */
 (function (root) {
 'use strict';
 if (typeof document === 'undefined') return;
@@ -40,7 +40,7 @@ function stil() {
     '.oyx-grid input,.oyx-grid select{width:100%;min-width:160px;min-height:36px;box-sizing:border-box}',
     '.oyx-gunler{display:grid;grid-template-columns:1fr 80px 110px 110px;gap:6px;align-items:center}',
     '@media(max-width:800px){.oyx-gunler{grid-template-columns:1fr 1fr;}.oyx-gunler .oyx-gh{display:none}}',
-    '@media print{.oyx-sayfa{page-break-after:always}.noprint{display:none!important}}',
+    '@media print{.oyx-sayfa{page-break-after:always;break-after:page}.noprint{display:none!important}#doc h1{page-break-before:always;break-before:page}#doc h1:first-child,#doc>:first-child h1,#doc p.c:first-child+#doc h1{page-break-before:auto;break-before:auto}#doc h1:first-of-type{page-break-before:auto;break-before:auto}#doc table{page-break-inside:auto;break-inside:auto}#doc tr,#doc .sign,table.sign{page-break-inside:avoid;break-inside:avoid}#doc thead{display:table-header-group}#doc h2{page-break-after:avoid;break-after:avoid}#doc{orphans:3;widows:3}}',
     '.oyx-not{font-size:13px;color:#444;margin:6px 0}'
   ].join('');
   document.head.appendChild(s);
@@ -69,6 +69,14 @@ function tatilSec(F) {
     resmi: F.resmi !== false, arefe: F.arefe !== false
   };
 }
+function saatUyari(F, kutu) {
+  if (OYX.saatEksik(haftaOku(F))) {
+    kutu.appendChild(el('div', { class: 'oyx-uyari', text: 'Süre girilen günlerde başlangıç ve bitiş saatini yazınız. Saat sütunu bu aralığı gösterir; boşsa süre “Süre” sütununda kalır.' }));
+  }
+}
+function seansSatir(s, konu) {
+  return [OYX.trDate(s.tarih), s.gun, OYX.saatYazi(s), (s.sure ? s.sure + ' saat' : ''), konu != null ? konu : (s.konu || '')];
+}
 function seansKonulu(F, oneri) {
   var se = OYX.seanslar({ bas: F.bas, bit: F.bit, hafta: haftaOku(F), sec: tatilSec(F) });
   return OYX.konuDoldur(se, F.konular || {}, oneri);
@@ -95,24 +103,48 @@ function gunProgrami(form, F, upd) {
     }
     var iB = el('input', { type: 'time', value: cur.baslangic || '' });
     var iS = el('input', { type: 'time', value: cur.bitis || '' });
-    function yaz() {
+    function yaz(kaynak) {
       var saat = Number(sSaat.value) || 0;
       iB.disabled = iS.disabled = saat === 0;
       if (saat === 0) { iB.value = ''; iS.value = ''; }
+      else {
+        if (!iB.value || !iS.value) {
+          var on = OYX.varsayilanAralik(g, saat);
+          if (!iB.value) iB.value = on.baslangic;
+          iS.value = OYX.bitisHesap(iB.value, saat);
+        } else if (kaynak === 'saat') {
+          iS.value = OYX.bitisHesap(iB.value, saat);
+        }
+      }
       map[g] = { gun: g, saat: saat, baslangic: iB.value, bitis: iS.value };
       F.hafta = gunler.map(function (x) { return map[x] || { gun: x, saat: 0, baslangic: '', bitis: '' }; });
       upd();
     }
-    sSaat.addEventListener('change', yaz);
-    iB.addEventListener('change', yaz);
-    iS.addEventListener('change', yaz);
+    /* Kayıtlı sürede saat yoksa (1.11.0) makul aralık öner. */
+    if (Number(cur.saat) > 0 && (!cur.baslangic || !cur.bitis)) {
+      var on0 = OYX.varsayilanAralik(g, cur.saat);
+      if (!cur.baslangic) cur.baslangic = on0.baslangic;
+      if (!cur.bitis) cur.bitis = OYX.bitisHesap(cur.baslangic, cur.saat);
+      iB.value = cur.baslangic;
+      iS.value = cur.bitis;
+      map[g] = { gun: g, saat: Number(cur.saat), baslangic: cur.baslangic, bitis: cur.bitis };
+      F.hafta = gunler.map(function (x) { return map[x] || { gun: x, saat: 0, baslangic: '', bitis: '' }; });
+    }
+    sSaat.addEventListener('change', function () { yaz('saat'); });
+    iB.addEventListener('change', function () {
+      if (iB.value && Number(sSaat.value) > 0 && (!iS.value || iS.dataset.otomatik === '1')) {
+        iS.value = OYX.bitisHesap(iB.value, sSaat.value);
+      }
+      yaz('bas');
+    });
+    iS.addEventListener('change', function () { yaz('bitis'); });
     iB.disabled = iS.disabled = !Number(cur.saat);
     wrap.appendChild(el('label', { text: g }));
     wrap.appendChild(sSaat);
     wrap.appendChild(iB);
     wrap.appendChild(iS);
   });
-  form.appendChild(el('p', { class: 'oyx-not noprint', text: 'Haftanın çalışma günlerini, sürelerini ve saat aralığını giriniz.' }));
+  form.appendChild(el('p', { class: 'oyx-not noprint', text: 'Haftanın çalışma günlerini ve süresini seçiniz; başlangıç–bitiş saati ders saati (40 dk) ile önerilir, değiştirebilirsiniz. Çıktıdaki Saat sütunu bu aralığı gösterir.' }));
   form.appendChild(wrap);
 }
 
@@ -121,10 +153,10 @@ function tatilKutuları(form, F, upd) {
     ['ara1', OYX.TATIL.ara1.ad],
     ['ara2', OYX.TATIL.ara2.ad],
     ['yariyil', OYX.TATIL.yariyil.ad],
-    ['resmi', OYX.TATIL.resmi.ad + ' (29 Ekim, 1 Ocak, 23 Nisan, 1 Mayıs, Kurban 17–19 Mayıs 2027)'],
-    ['arefe', OYX.TATIL.arefe.ad + ' (28 Ekim 2026 öğleden sonra, 15 Mayıs 2027)']
+    ['resmi', OYX.TATIL.resmi.ad + ' (29 Ekim 2026, 1 Ocak, 23 Nisan, 1 Mayıs 2027; Ramazan 9–11 Mart; Kurban 16–19 Mayıs — 19 Mayıs aynı zamanda Gençlik ve Spor Bayramı)'],
+    ['arefe', OYX.TATIL.arefe.ad + ' (28 Ekim 2026, 8 Mart 2027 Ramazan ve 15 Mayıs 2027 Kurban; saat 13.00’ten)']
   ];
-  form.appendChild(el('p', { class: 'oyx-not noprint', text: 'İşaretli tatiller plana dahil edilmez. Arefe işaretliyken o gün seans “yarım gün” olarak kalır.' }));
+  form.appendChild(el('p', { class: 'oyx-not noprint', text: 'İşaretli tatiller plana dahil edilmez. Ara tatil ve yarıyılın resmi hafta içi aralığına bitişik hafta sonları da (ör. 14–15 ve 21–22 Kasım 2026) kapalıdır. Arefe, başka bir tatille çakışmıyorsa “yarım gün” olarak kalır.' }));
   order.forEach(function (x) {
     var cb = el('input', { type: 'checkbox' });
     cb.checked = F[x[0]] !== false;
@@ -148,6 +180,7 @@ function wizard(opt) {
   var id = opt.id;
   var def = opt.defaults ? opt.defaults() : {};
   var F = oku(id, def);
+  if (typeof opt.yukle === 'function') opt.yukle(F);
   if (typeof P !== 'undefined' && opt.prefill !== false) {
     /* Öğretmen adı profilde varsa yalnızca boşsa önerilir; kurum adı asla varsayılan doldurulmaz. */
     if (!F.ogretmen && P.ad) F.ogretmen = P.ad;
@@ -244,7 +277,7 @@ function egzBuild(p, F) {
   o.push({ t: 'h2', x: 'ÇALIŞMA TAKVİMİ' });
   if (!se.length) o.push({ t: 'p', x: 'Haftalık gün ve saat seçildiğinde çalışma günleri burada listelenir.' });
   else o.push({ t: 'table', head: ['Tarih', 'Gün', 'Saat', 'Süre', 'Konu'], rows: se.map(function (s) {
-    return [OYX.trDate(s.tarih), s.gun, s.saat, s.sure + ' saat', s.konu || ''];
+    return seansSatir(s);
   })});
   o.push(notIlce());
   o.push(imza([
@@ -290,6 +323,7 @@ function egzUI() {
       kutu.innerHTML = '';
       if (hs > 6) kutu.appendChild(el('div', { class: 'oyx-uyari', text: 'Haftalık süre ' + hs + ' saat. Karar md. 17 uyarınca ders dışı eğitimde haftada azami 6 saat uygulanır.' }));
       else if (hs > 0) kutu.appendChild(el('div', { class: 'oyx-ok', text: 'Haftalık süre ' + hs + ' saat. Toplam plan süresi ' + OYX.toplamSaat(egzSeans(F)) + ' saat.' }));
+      saatUyari(F, kutu);
     },
     build: egzBuild,
     steps: [
@@ -336,7 +370,7 @@ function egzUI() {
         var se = egzSeans(F);
         if (se.length) {
           var tbl = el('table', { class: 'oyx-grid noprint' });
-          tbl.appendChild(el('thead', {}, [el('tr', {}, ['Tarih', 'Gün', 'Saat', 'Konu'].map(function (h) { return el('th', { text: h }); }))]));
+          tbl.appendChild(el('thead', {}, [el('tr', {}, ['Tarih', 'Gün', 'Saat', 'Süre', 'Konu'].map(function (h) { return el('th', { text: h }); }))]));
           var tb = el('tbody');
           se.forEach(function (s) {
             var i = el('input', { value: s.konu || '' });
@@ -344,7 +378,8 @@ function egzUI() {
             tb.appendChild(el('tr', {}, [
               el('td', { text: OYX.trDate(s.tarih) }),
               el('td', { text: s.gun }),
-              el('td', { text: s.saat }),
+              el('td', { text: OYX.saatYazi(s) }),
+              el('td', { text: s.sure ? s.sure + ' saat' : '' }),
               el('td', {}, [i])
             ]));
           });
@@ -384,7 +419,7 @@ function dykBuild(p, F) {
   o.push({ t: 'h2', x: 'HAFTALIK / GÜNLÜK KAZANIM PLANI' });
   if (!yer.length) o.push({ t: 'p', x: 'Tarih ve haftalık saatleri giriniz.' });
   else o.push({ t: 'table', head: ['Tarih', 'Gün', 'Saat', 'Süre', 'Kazanım / konu'], rows: yer.map(function (s) {
-    return [OYX.trDate(s.tarih), s.gun, s.saat, (s.sure || '') + ' saat', s.konu || ''];
+    return seansSatir(s);
   })});
   /* yoklama iskeleti */
   var nH = parseInt(F.yoklamaHafta, 10) || 8;
@@ -413,15 +448,17 @@ function dykBuild(p, F) {
 }
 function dykUI(mod) {
   wizard({
-    id: 'ev_dyk',
+    id: mod === 'İYEP' ? 'ev_iyep' : 'ev_dyk',
     baslik: 'DYK ve İYEP Kurs Planı',
     kaynak: 'Destekleme ve Yetiştirme Kursları Yönergesi; İlkokullarda Yetiştirme Programı (İYEP) Yönergesi. Madde numaraları buraya yazılmamıştır; güncel resmî metinden kontrol ediniz.',
-    defaults: function () { var d = dykDefaults(); if (mod === 'İYEP') d.tur = 'İYEP'; return d; },
+    defaults: function () { var d = dykDefaults(); d.tur = mod === 'İYEP' ? 'İYEP' : 'DYK'; return d; },
+    yukle: function (F) { if (mod === 'İYEP') F.tur = 'İYEP'; else if (!F.tur) F.tur = 'DYK'; },
     build: dykBuild,
     onUpd: function (F, kutu) {
       kutu.innerHTML = '';
       var prog = OYX.programCiktilar(F.ders, F.sinif);
       kutu.appendChild(el('div', { class: prog.bulunan ? 'oyx-ok' : 'oyx-uyari', text: prog.bulunan ? ('Kütüphaneden ' + prog.ciktilar.length + ' kazanım bulundu: ' + prog.ders + ' / ' + prog.sinif) : 'Bu ders-sınıf için kazanım kütüphanesi boş; konuları elle yazınız.' }));
+      saatUyari(F, kutu);
     },
     steps: [
       { ad: 'Program', render: function (form, F, upd) {
@@ -475,10 +512,12 @@ function saDefaults() {
     soruSay: '5', sorular: [], ogrenciler: '', tablo: '', ogretmen: '', kurum: '' };
 }
 function saData(F) {
-  var sorular = (F.sorular && F.sorular.length) ? F.sorular : [];
+  var n = parseInt(F.soruSay, 10) || 0, i;
+  var sorular = (F.sorular && F.sorular.length) ? F.sorular.slice() : [];
   if (!sorular.length) {
-    var n = parseInt(F.soruSay, 10) || 0, i;
     for (i = 0; i < n; i++) sorular.push({ no: i + 1, max: F.tur === 'test' ? 1 : 10, kazanım: '', kod: '' });
+  } else if (n > 0 && sorular.length > n) {
+    sorular = sorular.slice(0, n);
   }
   var ogr = [];
   lines(F.ogrenciler || F.tablo).forEach(function (sat) {
@@ -488,11 +527,18 @@ function saData(F) {
   });
   if (F._ogrenciNesne) ogr = F._ogrenciNesne;
   if (ogr.length) {
+    var maxP = 0;
+    ogr.forEach(function (o) {
+      var L = (o.puanlar || []).length;
+      while (L && (o.puanlar[L-1] == null || String(o.puanlar[L-1] || '') === '')) L--;
+      if (L > maxP) maxP = L;
+    });
     while (sorular.length && !String(sorular[sorular.length-1].kazanım||'').trim() && !String(sorular[sorular.length-1].kod||'').trim()
-      && ogr.every(function (o) { return o.puanlar == null || o.puanlar[sorular.length-1] == null || String(o.puanlar[sorular.length-1]||'')===''; })) {
+      && (maxP < sorular.length) && ogr.every(function (o) { return o.puanlar == null || o.puanlar[sorular.length-1] == null || String(o.puanlar[sorular.length-1]||'')===''; })) {
       sorular = sorular.slice(0, -1);
     }
   }
+  sorular.forEach(function (q, i) { q.no = i + 1; });
   return { sorular: sorular, ogrenciler: ogr, esik: parseFloat(F.esik) || 50 };
 }
 function saBuild(p, F) {
@@ -512,7 +558,7 @@ function saBuild(p, F) {
   ]});
   o.push({ t: 'h2', x: 'SORU BAZLI BAŞARI' });
   o.push({ t: 'table', head: ['Soru', 'Kazanım', 'Tam puan', 'Ortalama', 'Başarı %'], rows: A.soru.map(function (s) {
-    return [String(s.no), (s.kod ? s.kod + ' ' : '') + (s.kazanım || '—'), String(s.max), String(s.ort), s.yuzde == null ? '—' : ('%' + s.yuzde)];
+    return [String(s.no), ((s.kod ? s.kod + ' ' : '') + (s.kazanım || '')).trim() || '…………', String(s.max), s.yuzde == null ? '…………' : String(s.ort), s.yuzde == null ? '—' : ('%' + s.yuzde)];
   })});
   o.push({ t: 'h2', x: 'KAZANIM BAZLI BAŞARI' });
   o.push({ t: 'table', head: ['Kazanım', 'Soru sayısı', 'Başarı %'], rows: A.kazanım.map(function (k) {
@@ -737,8 +783,15 @@ function kaBuild(p, F) {
   o.push({ t: 'h2', x: 'YILLIK PLANDAKİ BU AY' });
   var yillik = {};
   try { yillik = JSON.parse(localStorage.getItem('oy_f_kulup_yillik') || 'null') || {}; } catch (e) { yillik = {}; }
-  var plan = (yillik.aylar && yillik.aylar[F.ay]) || (yillik && kyAyEtkinlik(yillik, F.ay).join('\n')) || 'Bu ay için kayıtlı yıllık plan bulunamadı.';
-  o.push({ t: 'p', x: String(plan) });
+  var plan = '';
+  if (yillik.aylar && yillik.aylar[F.ay] && String(yillik.aylar[F.ay]).trim()) {
+    plan = String(yillik.aylar[F.ay]).trim().split(/\r?\n/).map(function (x) { return x.trim(); }).filter(Boolean).join('; ');
+  } else if (yillik && (yillik.kulup || yillik.aylar)) {
+    plan = kyAyEtkinlik(yillik, F.ay).join('; ');
+  } else {
+    plan = 'Bu ay için kayıtlı yıllık plan bulunamadı.';
+  }
+  o.push({ t: 'p', x: plan });
   o.push({ t: 'h2', x: 'YAPILAN ÇALIŞMALAR' });
   o.push({ t: 'p', x: F.yapilan || '…………………………………………' });
   o.push({ t: 'h2', x: 'KATILIM' });
@@ -928,12 +981,13 @@ function ckBuild(p, F) {
     ['Başlama / bitiş', OYX.trDate(F.bas) + ' – ' + OYX.trDate(F.bit)],
     ['Çalışma yeri', F.yer || '…………'],
     ['Haftalık süre', OYX.haftalikSaat(haftaOku(F)) + ' saat'],
+    ['Toplam süre', OYX.toplamSaat(se) + ' saat'],
     ['Öğretmen', F.ogretmen || ((p && p.ad) || '…………')]
   ]});
   o.push({ t: 'h2', x: 'ETKİNLİK TAKVİMİ' });
   if (!se.length) o.push({ t: 'p', x: 'Tarih ve haftalık saatleri giriniz.' });
   else o.push({ t: 'table', head: ['Tarih', 'Gün', 'Saat', 'Süre', 'Tema / etkinlik'], rows: se.map(function (s) {
-    return [OYX.trDate(s.tarih), s.gun, s.saat, s.sure + ' saat', s.konu || ''];
+    return seansSatir(s);
   })});
   o.push({ t: 'note', x: 'Okul öncesi ve ilkokul çocuk kulübü çalışmaları kurumunuzun uygulama esaslarına ve veli izinlerine göre yürütülmelidir. Temalar öneri iskeletidir.' });
   o.push(notIlce());
@@ -947,6 +1001,7 @@ function ckUI() {
     kaynak: 'Okul öncesi ve ilkokul düzeyinde ders saatleri dışında veya çocuk kulübü kapsamında yürütülen etkinlik planı. Kurumunuzun yönerge ve veli izin uygulamasını kontrol ediniz.',
     defaults: ckDefaults,
     build: ckBuild,
+    onUpd: function (F, kutu) { kutu.innerHTML = ''; saatUyari(F, kutu); },
     steps: [
       { ad: 'Grup ve içerik', render: function (form, F, upd) {
         var s = el('select');
@@ -1074,7 +1129,7 @@ function ekleSablonlar() {
     if (!varMi) {
       OY.T.push({
         id: s.id, kat: s.kat, baslik: s.baslik,
-        kaynak: 'ÖY 1.11.0 plan aracı (özgün metin)',
+        kaynak: 'ÖY 1.11.1 plan aracı (özgün metin)',
         alan: [], oyx: true, build: function (p, f) { return (OYX.ui && OYX.ui.buildFor && OYX.ui.buildFor(s.id, p, f)) || []; }
       });
     }

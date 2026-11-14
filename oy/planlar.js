@@ -1,4 +1,4 @@
-/* Evrak Asistanı · Öğretmen Yardımcısı 1.11.0 — plan araçları
+/* Evrak Asistanı · Öğretmen Yardımcısı 1.11.1 — plan araçları
    Yayıncı: Eyüp ŞEKER. Metinler özgün yazımdır. Öğrenci verisi yalnızca bu cihazda kalır. */
 (function (root) {
 'use strict';
@@ -43,21 +43,39 @@ function num(v) {
 }
 function sum(arr) { return arr.reduce(function (a, b) { return a + b; }, 0); }
 
-/* ---------- 2026-2027 tatil takvimi (MEB çalışma takvimi + ulusal bayramlar) ---------- */
-/* Ara tatil ve yarıyıl: uygulamadaki MEBDEF 2026-2027 takvimi.
-   Resmî günler: takvimdeki tatil işaretli günler + Kurban 17-19 Mayıs 2027 (aralık)
-   + 1 Mayıs 2027 (ulusal bayram; takvim satırında ayrıca geçmese de resmî tatile dahildir).
-   Arefe: 28 Ekim 2026 (öğleden sonra), 15 Mayıs 2027 (Kurban arefesi).
-   8 Mart 2027 hem 2. ara tatilin ilk günü hem Ramazan arefesidir. */
+/* ---------- 2026-2027 tatil takvimi (MEB 2026-2027 Çalışma Takvimi + ulusal bayramlar) ---------- */
+/* Ara tatil ve yarıyıl tarihleri MEB çalışma takvimindeki hafta içi aralıklardır
+   (16–20 Kasım 2026, 25 Ocak–5 Şubat 2027, 8–12 Mart 2027).
+   Uygulamada bu aralıkların hemen öncesindeki ve sonrasındaki hafta sonu da
+   (son ders günü Cuma ile tatil Pazartesi arası, tatil Cuma ile ilk ders Pazartesi arası)
+   plana alınmaz; resmî etiketler hafta içi tarihleri korur.
+   Resmî günler: 29 Ekim 2026, 1 Ocak 2027, 23 Nisan 2027, 1 Mayıs 2027,
+   Ramazan Bayramı 9–11 Mart 2027, Kurban Bayramı 16–19 Mayıs 2027
+   (19 Mayıs aynı zamanda Atatürk'ü Anma, Gençlik ve Spor Bayramı).
+   Arefe (saat 13.00'ten): 28 Ekim 2026, 8 Mart 2027 (Ramazan), 15 Mayıs 2027 (Kurban).
+   8–11 Mart 2027 ikinci ara tatille çakışır. */
 var TATIL = {
   yil: '2026-2027',
   ara1: { id: 'ara1', ad: '1. dönem ara tatili (16–20 Kasım 2026)', gunler: range('2026-11-16', '2026-11-20') },
   ara2: { id: 'ara2', ad: '2. dönem ara tatili (8–12 Mart 2027)', gunler: range('2027-03-08', '2027-03-12') },
   yariyil: { id: 'yariyil', ad: 'Yarıyıl tatili (25 Ocak–5 Şubat 2027)', gunler: range('2027-01-25', '2027-02-05') },
-  resmi: { id: 'resmi', ad: 'Resmî tatil günleri', gunler: ['2026-10-29', '2027-01-01', '2027-04-23', '2027-05-01', '2027-05-17', '2027-05-18', '2027-05-19'] },
-  arefe: { id: 'arefe', ad: 'Arefe (yarım gün)', gunler: ['2026-10-28', '2027-05-15'] }
+  resmi: { id: 'resmi', ad: 'Resmî tatil günleri', gunler: ['2026-10-29', '2027-01-01', '2027-03-09', '2027-03-10', '2027-03-11', '2027-04-23', '2027-05-01', '2027-05-16', '2027-05-17', '2027-05-18', '2027-05-19'] },
+  arefe: { id: 'arefe', ad: 'Arefe (yarım gün)', gunler: ['2026-10-28', '2027-03-08', '2027-05-15'] }
 };
 var TATIL_SIRA = ['ara1', 'ara2', 'yariyil', 'resmi', 'arefe'];
+
+/* Ara tatil / yarıyıl hafta içi aralığının bitişik hafta sonlarını da kapatır. */
+function haftaSonuEkle(gunler) {
+  var set = {}, i, t, g;
+  for (i = 0; i < (gunler || []).length; i++) set[gunler[i]] = true;
+  for (i = 0; i < (gunler || []).length; i++) {
+    t = gunler[i];
+    g = gunNo(t);
+    if (g === 1) { set[addDays(t, -2)] = true; set[addDays(t, -1)] = true; }
+    if (g === 5) { set[addDays(t, 1)] = true; set[addDays(t, 2)] = true; }
+  }
+  return Object.keys(set).sort();
+}
 
 function tatilDurum(sec) {
   sec = sec || {};
@@ -66,13 +84,49 @@ function tatilDurum(sec) {
     k = TATIL_SIRA[i];
     if (sec[k] === false) continue;
     liste = TATIL[k].gunler;
+    if (k === 'ara1' || k === 'ara2' || k === 'yariyil') liste = haftaSonuEkle(liste);
     for (g = 0; g < liste.length; g++) {
       if (k === 'arefe') yarim[liste[g]] = TATIL[k].ad;
       else haric[liste[g]] = TATIL[k].ad;
     }
   }
-  /* 8 Mart arefe + ara tatil açıkken zaten hariçte */
+  /* Arefe, aynı gün resmi veya ara tatildeyse tam gün kapalı sayılır (yarım işaretlenmez). */
+  Object.keys(haric).forEach(function (t) { if (yarim[t]) delete yarim[t]; });
   return { haric: haric, yarim: yarim };
+}
+
+/* Ders saati 40 dakika kabul edilerek bitiş saati hesaplanır (2 saat → 15:00–16:20). */
+function bitisHesap(bas, saat) {
+  var p = String(bas || '15:00').split(':');
+  if (p.length < 2) p = ['15', '00'];
+  var m = (+p[0]) * 60 + (+p[1] || 0) + Math.round((Number(saat) || 0) * 40);
+  if (m < 0) m = 0;
+  var h = Math.floor(m / 60) % 24, mm = ((m % 60) + 60) % 60;
+  return pad(h) + ':' + pad(mm);
+}
+
+/* Hafta içi 15:00, hafta sonu 10:00 başlangıç. */
+function varsayilanAralik(gun, saat) {
+  var ad = String(gun || '');
+  var haftaIci = ['Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma'].indexOf(ad) >= 0;
+  var bas = haftaIci ? '15:00' : '10:00';
+  return { baslangic: bas, bitis: bitisHesap(bas, saat) };
+}
+
+/* Saat sütunu: yalnızca saat aralığı (ör. 15:00–16:20). Süre asla buraya yazılmaz. */
+function saatYazi(s) {
+  s = s || {};
+  var a = String(s.baslangic || '').trim();
+  var b = String(s.bitis || '').trim();
+  var t = (a && b) ? (a + '–' + b) : (a || b || '');
+  if (s.yarim) t = (t ? t + ' · ' : '') + 'yarım gün';
+  return t;
+}
+
+function saatEksik(hafta) {
+  return (hafta || []).some(function (s) {
+    return Number(s && s.saat) > 0 && !(String(s.baslangic || '').trim() && String(s.bitis || '').trim());
+  });
 }
 
 /**
@@ -111,8 +165,7 @@ function seanslar(opts) {
       yarimAd: dur.yarim[t] || '',
       konu: ''
     };
-    kayit.saat = (kayit.baslangic && kayit.bitis) ? (kayit.baslangic + '–' + kayit.bitis) : (kayit.sure ? (kayit.sure + ' saat') : '');
-    if (kayit.yarim) kayit.saat = (kayit.saat ? kayit.saat + ' · ' : '') + 'yarım gün';
+    kayit.saat = saatYazi(kayit);
     out.push(kayit);
   }
   return out;
@@ -414,7 +467,7 @@ var BEP_HAVUZ_ZEP = [
 
 /* ---------- Dışa açık çekirdek ---------- */
 var OYX = {
-  SURUM: '1.11.0',
+  SURUM: '1.11.1',
   TATIL: TATIL,
   ALANLAR: EGZ_ALANLAR,
   KULUPLER: KULUPLER,
@@ -426,6 +479,11 @@ var OYX = {
   gunAd: gunAd,
   trDate: trDate,
   tatilDurum: tatilDurum,
+  haftaSonuEkle: haftaSonuEkle,
+  bitisHesap: bitisHesap,
+  varsayilanAralik: varsayilanAralik,
+  saatYazi: saatYazi,
+  saatEksik: saatEksik,
   seanslar: seanslar,
   haftalikSaat: haftalikSaat,
   toplamSaat: toplamSaat,
