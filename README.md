@@ -60,3 +60,7 @@ Kurulu Okul Paketi'nin başlatıcısı (1.0.3 ve sonrası) güncellemeyi şu adr
 python3 -m http.server 8080
 # http://localhost:8080/
 ```
+
+1.12.0 Öğretmen Yardımcısı: Sınıf Listelerim, rehberlik formlarında öğrenci seçimi, Rehberlik Kayıtlarım, sosyometri / Kimdir Bu?, sınıf risk haritası, bireysel görüşme, sınıf rehberlik yıllık planı, aylık ve yıl sonu rapor, BEP hedef havuzu (74 örnek). 1.11.1 plan araçları duruyor. MYP 1.12.3 aynı; Not Girişi 1.9.11 (OYSS ve sınıf listesi aktarımı). Rehberlik Yardımcısı ayrı üründür, bu pakete ve bu deponun güncelleme manifestine dahil edilmez.
+
+1.0.14 güncelleme paketi ve kurulum exe Öğretmen Yardımcısı 1.12.0 ve Not Girişi 1.9.11 getirir. MYP 1.12.3 değişmedi. Kurulu paketler bunu `manifest.json` üzerinden alır. Yeni kurulum için `EvrakAsistani-OkulPaketi-Kurulum-1.0.14.exe` kullanılır; 1.0.13 ve 1.0.7 exe depoda durur.
