@@ -42,9 +42,11 @@ Kurulu Okul Paketi'nin başlatıcısı (1.0.3 ve sonrası) güncellemeyi şu adr
 
 
 
-1.11.0 Öğretmen Yardımcısı: Ders dışı egzersiz planı sihirbazı; sınav analizi (klasik/test, OYSS Excel, yerel); DYK/İYEP kurs planı (takvim ve kazanım yerleşimi); sosyal kulüp yıllık planı ve aylık faaliyet raporu; BEP/ZEP sihirbazı; çocuk kulübü planı; performans rubriği Excel çıktısı. MYP 1.12.3 ve Not Girişi aynı. Bu sürümün GitHub Pages / okul paketi manifest yayını ayrıca onay ister; kurulum exe yeniden üretilmedi.
+1.11.0 Öğretmen Yardımcısı: Ders dışı egzersiz planı sihirbazı; sınav analizi (klasik/test, OYSS Excel, yerel); DYK/İYEP kurs planı (takvim ve kazanım yerleşimi); sosyal kulüp yıllık planı ve aylık faaliyet raporu; BEP/ZEP sihirbazı; çocuk kulübü planı; performans rubriği Excel çıktısı. MYP 1.12.3 ve Not Girişi aynı. Canlı yayın 1.11.1 / Okul Paketi 1.0.13 ile yapıldı.
 
-1.11.1 Öğretmen Yardımcısı: Saat sütunu çalışma saat aralığını gösterir (süre ile karışmaz); ara tatil/yarıyıl bitişik hafta sonları ve 2026-2027 Ramazan (9–11 Mart) ile Kurban (16–19 Mayıs, arefe 8 Mart ve 15 Mayıs) takvimi tamamlandı; sınav analizinde boş artçı sorular budanır; yazdırma sayfa kırılımları iyileştirildi. 1.11.0 araçları aynıdır. GitHub Pages / okul paketi manifest yayını ayrıca onay ister; kurulum exe yeniden üretilmedi.
+1.11.1 Öğretmen Yardımcısı: Saat sütunu çalışma saat aralığını gösterir (süre ile karışmaz); ara tatil/yarıyıl bitişik hafta sonları ve 2026-2027 Ramazan (9–11 Mart) ile Kurban (16–19 Mayıs, arefe 8 Mart ve 15 Mayıs) takvimi tamamlandı; sınav analizinde boş artçı sorular budanır; yazdırma sayfa kırılımları iyileştirildi. 1.11.0 araçları aynıdır.
+
+1.0.13 güncelleme paketi ve kurulum exe Öğretmen Yardımcısı 1.11.1 getirir (yukarıdaki plan araçları ve çıktı cilası). MYP 1.12.3, Not Girişi 1.9.2 değişmedi. Kurulu paketler bunu `manifest.json` üzerinden alır. Yeni kurulum için `EvrakAsistani-OkulPaketi-Kurulum-1.0.13.exe` kullanılır; 1.0.7 exe depoda durur.
 
 ## Önemli
 

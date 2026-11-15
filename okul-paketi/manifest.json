@@ -1,6 +1,6 @@
 {
-  "surum": "1.0.11",
-  "paket": "okul-paketi-guncelleme-1.0.11.zip",
-  "sha256": "8a96258864390277ff491bfb44d861f033e84dcc4f8858b2ae2d7419dfaef1c1",
-  "not": "ÖY 1.10.7: TDE eksik çıktılar, Coğrafya 11–12 2 saatlik dağılım, resmi tema saatleriyle hafta dağılımı, Tarih 11 ünite adı, BE/Müzik/Görsel’de zümre kararıyla uygulamalı sınav (OOY md. 45/f), kurul/zümre takvimi. MYP 1.12.3, Not Girişi 1.9.2. Kurulum exe 1.0.7 aynı; bu güncelleme yalnız www içeriğini yeniler."
+  "surum": "1.0.13",
+  "paket": "okul-paketi-guncelleme-1.0.13.zip",
+  "sha256": "fcdf8efa86d4d171e33cc3c6b73b0d9a881e7446e17257a50ae797f119603c68",
+  "not": "ÖY 1.11.1: ders dışı egzersiz, sınav analizi, DYK/İYEP, kulüp planları, BEP/ZEP, çocuk kulübü, rubrik Excel; Saat/süre ayrımı ve 2026-2027 tatil takvimi. MYP 1.12.3, Not Girişi 1.9.2. Kurulum exe 1.0.13."
 }
