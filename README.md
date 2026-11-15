@@ -41,6 +41,11 @@ Kurulu Okul Paketi'nin başlatıcısı (1.0.3 ve sonrası) güncellemeyi şu adr
 1.0.11 güncelleme paketi Öğretmen Yardımcısı 1.10.7 getirir: TDE hazırlık (Sözün Ebrusu) ve TDE 10 (Nesillerin Mirası) eksik öğrenme çıktıları tamamlandı; Coğrafya 11–12 için resmi 2 saatlik dağılım eklendi (öğretmen yıllık planda 2 veya 4 saat seçer); tema saatleri resmi programdaki `h` alanıyla haftalara dağılır (saat yoksa çıktı sayısına düşer); Tarih 11 ünite adı resmi biçime çekildi; Beden Eğitimi / Müzik / Görsel Sanatlar'da yazılı yerine uygulamalı sınav zümre kararıyla (OOY md. 45/f) seçenek oldu; kurul ve zümre takvimi Kurullar ve Zümreler Yönergesi'ne göre güncellendi. MYP 1.12.3, Not Girişi 1.9.2. Kurulu paketler bunu `manifest.json` üzerinden alır. Kurulum exe 1.0.7 olarak durur; exe yeniden üretilmedi.
 
 
+
+1.11.0 Öğretmen Yardımcısı: Ders dışı egzersiz planı sihirbazı; sınav analizi (klasik/test, OYSS Excel, yerel); DYK/İYEP kurs planı (takvim ve kazanım yerleşimi); sosyal kulüp yıllık planı ve aylık faaliyet raporu; BEP/ZEP sihirbazı; çocuk kulübü planı; performans rubriği Excel çıktısı. MYP 1.12.3 ve Not Girişi aynı. Bu sürümün GitHub Pages / okul paketi manifest yayını ayrıca onay ister; kurulum exe yeniden üretilmedi.
+
+1.11.1 Öğretmen Yardımcısı: Saat sütunu çalışma saat aralığını gösterir (süre ile karışmaz); ara tatil/yarıyıl bitişik hafta sonları ve 2026-2027 Ramazan (9–11 Mart) ile Kurban (16–19 Mayıs, arefe 8 Mart ve 15 Mayıs) takvimi tamamlandı; sınav analizinde boş artçı sorular budanır; yazdırma sayfa kırılımları iyileştirildi. 1.11.0 araçları aynıdır. GitHub Pages / okul paketi manifest yayını ayrıca onay ister; kurulum exe yeniden üretilmedi.
+
 ## Önemli
 
 - Bu depo **kaynak kod değildir**; derleme çıktısıdır. Değişiklik asıl uygulama deposunda yapılır, sonra derlenmiş dosyalar buraya kopyalanır. Burada elle düzenleme yapma.
