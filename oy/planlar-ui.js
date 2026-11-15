@@ -1,4 +1,4 @@
-/* Evrak Asistanı · ÖY 1.11.1 plan araçları arayüzü. Yayıncı: Eyüp ŞEKER. */
+/* Evrak Asistanı · ÖY 1.12.0 plan araçları arayüzü. Yayıncı: Eyüp ŞEKER. */
 (function (root) {
 'use strict';
 if (typeof document === 'undefined') return;
@@ -860,6 +860,7 @@ function havuzOku(tur) {
     var v = JSON.parse(localStorage.getItem('oy_bep_havuz') || 'null');
     if (v && v[tur] && v[tur].length) return v[tur];
   } catch (e) {}
+  if (root.OY_BEP_HAVUZ && root.OY_BEP_HAVUZ[tur === 'ZEP' ? 'ZEP' : 'BEP']) return root.OY_BEP_HAVUZ[tur === 'ZEP' ? 'ZEP' : 'BEP'].slice();
   return (tur === 'ZEP' ? ['Konuyu farklı kaynaklardan karşılaştırarak derinleştirebilme', 'Özgün bir ürün veya proje tasarlayabilme', 'Üst düzey bir problemi adım adım çözebilme', 'Öğrendiğini akranlarına açıklayarak aktarabilme']
     : ['Kısa bir metni kendi cümleleriyle anlatabilme', 'Temel dört işlemde doğru sonuca ulaşabilme', 'Sınıf içinde verilen yönergeyi takip edebilme', 'Günlük ihtiyaçlarını sözlü olarak ifade edebilme', 'Belirlenen süre boyunca göreve dikkatini verebilme']);
 }
@@ -925,24 +926,53 @@ function bepUI() {
         var taP = el('textarea'); taP.value = F.performans || '';
         taP.addEventListener('input', function () { F.performans = taP.value; upd(); });
         form.appendChild(el('label', { class: 'wide' }, ['Mevcut performans düzeyi', taP]));
-        form.appendChild(el('p', { class: 'oyx-not', text: 'Aşağıdaki örnek hedefler düzenlenebilir bir havuzdur; resmî amaç listesi değildir. İstediğinizi uzun veya kısa döneme ekleyiniz.' }));
-        var havuz = havuzOku(F.tur || 'BEP');
-        var th = el('textarea'); th.value = havuz.join('\n');
-        th.addEventListener('input', function () { havuzYaz(F.tur || 'BEP', lines(th.value)); });
-        form.appendChild(el('label', { class: 'wide' }, ['Hedef havuzu (cihazda saklanır)', th]));
+        form.appendChild(el('p', { class: 'oyx-not', text: 'Aşağıdaki örnek hedefler düzenlenebilir bir havuzdur; resmî amaç listesi değildir. Alan seçip istediğinizi uzun veya kısa döneme ekleyiniz.' }));
+        var tur = F.tur || 'BEP';
+        var havuz = havuzOku(tur);
+        var alanAd = function (x) { var m = /^\[([^\]]+)\]\s*/.exec(x); return m ? m[1] : 'Diğer'; };
+        var sade = function (x) { return String(x).replace(/^\[[^\]]+\]\s*/, ''); };
+        var alanlar = havuz.map(alanAd).filter(function (x, i, a) { return a.indexOf(x) === i; });
+        var sA = el('select', { 'aria-label': 'Gelişim / ders alanı' });
+        sA.appendChild(el('option', { value: '', text: 'Tüm alanlar (' + havuz.length + ' hedef)' }));
+        alanlar.forEach(function (a) { var n = havuz.filter(function (x) { return alanAd(x) === a; }).length; var o = el('option', { value: a, text: a + ' (' + n + ')' }); if (F._alan === a) o.selected = true; sA.appendChild(o); });
+        var qA = el('input', { type: 'search', placeholder: 'Hedeflerde ara', value: F._ara || '' });
+        form.appendChild(el('label', {}, ['Alan', sA]));
+        form.appendChild(el('label', {}, ['Ara', qA]));
+        var kutu = el('div', { class: 'wide', style: 'grid-column:1/-1;max-height:340px;overflow:auto;border:1px solid #999;border-radius:6px;padding:4px 8px;background:#fff' });
+        form.appendChild(kutu);
         function ekle(hedef, alan) {
+          hedef = sade(hedef);
           var mevcut = lines(F[alan]);
           if (mevcut.indexOf(hedef) < 0) mevcut.push(hedef);
           F[alan] = mevcut.join('\n'); upd();
+          var t = alan === 'uzun' ? u : k; if (t) t.value = F[alan];
         }
-        havuz.forEach(function (hdef) {
-          var satir = el('div', { style: 'display:flex;gap:6px;flex-wrap:wrap;margin:4px 0;align-items:center' }, [
-            el('span', { text: hdef, style: 'flex:1' }),
-            el('button', { type: 'button', class: 'sec', on: { click: function () { ekle(hdef, 'uzun'); } }, text: 'Uzun döneme ekle' }),
-            el('button', { type: 'button', class: 'sec', on: { click: function () { ekle(hdef, 'kisa'); } }, text: 'Kısa döneme ekle' })
-          ]);
-          form.appendChild(satir);
-        });
+        function ciz() {
+          kutu.innerHTML = '';
+          var q = String(qA.value || '').toLocaleLowerCase('tr-TR');
+          var liste = havuz.filter(function (x) { return (!sA.value || alanAd(x) === sA.value) && (!q || x.toLocaleLowerCase('tr-TR').indexOf(q) >= 0); });
+          if (!liste.length) kutu.appendChild(el('p', { class: 'oyx-not', text: 'Bu seçimde hedef yok.' }));
+          liste.forEach(function (hdef) {
+            kutu.appendChild(el('div', { style: 'display:flex;gap:6px;flex-wrap:wrap;margin:4px 0;align-items:center;border-bottom:1px dotted #ccc;padding-bottom:4px' }, [
+              el('span', { text: sade(hdef), style: 'flex:1;min-width:220px' }),
+              sA.value ? null : el('small', { text: alanAd(hdef), style: 'color:#555' }),
+              el('button', { type: 'button', class: 'sec', on: { click: function () { ekle(hdef, 'uzun'); } }, text: '+ Uzun' }),
+              el('button', { type: 'button', class: 'sec', on: { click: function () { ekle(hdef, 'kisa'); } }, text: '+ Kısa' })
+            ]));
+          });
+        }
+        sA.addEventListener('change', function () { F._alan = sA.value; ciz(); });
+        qA.addEventListener('input', function () { F._ara = qA.value; ciz(); });
+        var th = el('textarea', { style: 'min-height:200px' }); th.value = havuz.join('\n');
+        th.addEventListener('input', function () { havuzYaz(tur, lines(th.value)); });
+        var geri = el('button', { type: 'button', class: 'sec', on: { click: function () {
+          try { var v = JSON.parse(localStorage.getItem('oy_bep_havuz') || '{}') || {}; delete v[tur]; localStorage.setItem('oy_bep_havuz', JSON.stringify(v)); } catch (e) {}
+          havuz = havuzOku(tur); th.value = havuz.join('\n'); ciz();
+        } }, text: 'Hazır havuza dön' });
+        form.appendChild(el('details', { class: 'wide', style: 'grid-column:1/-1' }, [
+          el('summary', { text: 'Havuzu düzenle (her satıra bir hedef; "[Alan] hedef" biçimi; cihazda saklanır)' }), th, geri
+        ]));
+        ciz();
         var u = el('textarea'); u.value = F.uzun || '';
         u.addEventListener('input', function () { F.uzun = u.value; upd(); });
         var k = el('textarea'); k.value = F.kisa || '';
@@ -1129,7 +1159,7 @@ function ekleSablonlar() {
     if (!varMi) {
       OY.T.push({
         id: s.id, kat: s.kat, baslik: s.baslik,
-        kaynak: 'ÖY 1.11.1 plan aracı (özgün metin)',
+        kaynak: 'ÖY 1.12.0 plan aracı (özgün metin)',
         alan: [], oyx: true, build: function (p, f) { return (OYX.ui && OYX.ui.buildFor && OYX.ui.buildFor(s.id, p, f)) || []; }
       });
     }
