@@ -1,4 +1,4 @@
-/* Evrak Asistanı · Öğretmen Yardımcısı 1.12.0 — plan araçları
+/* Evrak Asistanı · Öğretmen Yardımcısı 1.12.1 — plan araçları
    Yayıncı: Eyüp ŞEKER. Metinler özgün yazımdır. Öğrenci verisi yalnızca bu cihazda kalır. */
 (function (root) {
 'use strict';
@@ -193,6 +193,21 @@ function konuDoldur(seans, konular, oneriler) {
   });
 }
 
+
+/* ---------- İlkokul / okul öncesi sınav yasağı (md.4/1-b, RG 14.11.2026) ---------- */
+function ilkokulSinavYasak(s) {
+  var t = String(s || '').toLocaleLowerCase('tr-TR').trim();
+  if (!t) return false;
+  if (/okul\s*öncesi|okul\s*oncesi|okulöncesi|okuloncesi|anaokul|anasınıf|anasinif|ana\s*sınıf|ana\s*sinif/.test(t)) return true;
+  if (/^(0|[1-4])(\D|$)/.test(t)) return true;
+  return false;
+}
+function sinavYasakMetin() {
+  return 'Yönetmelik gereği okul öncesi ve ilkokulda sınav yapılmaz (Ölçme ve Değerlendirme Yön. md.4/1-b, RG 14.11.2026). Öğrenme etkinliği ve gözlem formları kullanılabilir.';
+}
+function siralamaYasakMetin() {
+  return 'Sonuçlar öğrenciler, sınıflar, okullar veya iller arasında sıralama, karşılaştırma ya da kıyaslama yapmak amacıyla kullanılamaz (Ölçme ve Değerlendirme Yön. md.4/1-g, RG 14.11.2026). Bu özet yalnızca şube bazında öğrenme eksiklerini görmek içindir.';
+}
 /* ---------- Sınav analizi ---------- */
 function analizHesap(data) {
   data = data || {};
@@ -467,7 +482,7 @@ var BEP_HAVUZ_ZEP = [
 
 /* ---------- Dışa açık çekirdek ---------- */
 var OYX = {
-  SURUM: '1.12.0',
+  SURUM: '1.12.1',
   TATIL: TATIL,
   ALANLAR: EGZ_ALANLAR,
   KULUPLER: KULUPLER,
@@ -490,6 +505,9 @@ var OYX = {
   konuDoldur: konuDoldur,
   analizHesap: analizHesap,
   telafiMetin: telafiMetin,
+  ilkokulSinavYasak: ilkokulSinavYasak,
+  sinavYasakMetin: sinavYasakMetin,
+  siralamaYasakMetin: siralamaYasakMetin,
   oyssSayfaParse: oyssSayfaParse,
   oyssKitapParse: oyssKitapParse,
   programCiktilar: programCiktilar,

@@ -1,4 +1,4 @@
-/* Evrak Asistanı · ÖY 1.12.0 BEP / ZEP örnek hedef havuzu. Yayıncı: Eyüp ŞEKER.
+/* Evrak Asistanı · ÖY 1.12.1 BEP / ZEP örnek hedef havuzu. Yayıncı: Eyüp ŞEKER.
    Özgün ifadelerdir; resmî amaç listesi değildir. Her satır "[Alan] hedef" biçimindedir.
    Öğretmen havuzu düzenlerse cihazdaki kendi havuzu (oy_bep_havuz) kullanılır. */
 (function (root) {
