@@ -61,6 +61,10 @@ python3 -m http.server 8080
 # http://localhost:8080/
 ```
 
+1.12.1 Öğretmen Yardımcısı: Ölçme ve Değerlendirme Yönetmeliği değişikliği (RG 14.11.2026). Sınav analizinde öğrenci/şube/okul sıralaması veya derece yok, şube bazlı analiz duruyor (md.4/1-g). Okul öncesi veya 1–4. sınıf seçilince sınav oluşturma, analiz ve sınav hazırlama akışlarında “Yönetmelik gereği okul öncesi ve ilkokulda sınav yapılmaz” uyarısı (md.4/1-b). Yapay zekâ soru önerisi uyarısına not: resmî sınav soruları için yalnızca Bakanlıkça uygun görülen araçlar kullanılabilir (md.4/1-h). 1.12.0 rehberlik araçları ve 1.11.1 plan araçları duruyor. MYP 1.12.3 ve Not Girişi 1.9.11 aynı. Rehberlik Yardımcısı ayrı üründür, bu pakete ve bu deponun güncelleme manifestine dahil edilmez.
+
+1.0.15 güncelleme paketi ve kurulum exe Öğretmen Yardımcısı 1.12.1 getirir. MYP 1.12.3 ve Not Girişi 1.9.11 değişmedi. Kurulu paketler bunu `manifest.json` üzerinden alır (canlıya alınması ayrı onay ister). Yeni kurulum için `EvrakAsistani-OkulPaketi-Kurulum-1.0.15.exe` kullanılır; 1.0.14, 1.0.13 ve 1.0.7 exe depoda durur.
+
 1.12.0 Öğretmen Yardımcısı: Sınıf Listelerim, rehberlik formlarında öğrenci seçimi, Rehberlik Kayıtlarım, sosyometri / Kimdir Bu?, sınıf risk haritası, bireysel görüşme, sınıf rehberlik yıllık planı, aylık ve yıl sonu rapor, BEP hedef havuzu (74 örnek). 1.11.1 plan araçları duruyor. MYP 1.12.3 aynı; Not Girişi 1.9.11 (OYSS ve sınıf listesi aktarımı). Rehberlik Yardımcısı ayrı üründür, bu pakete ve bu deponun güncelleme manifestine dahil edilmez.
 
 1.0.14 güncelleme paketi ve kurulum exe Öğretmen Yardımcısı 1.12.0 ve Not Girişi 1.9.11 getirir. MYP 1.12.3 değişmedi. Kurulu paketler bunu `manifest.json` üzerinden alır. Yeni kurulum için `EvrakAsistani-OkulPaketi-Kurulum-1.0.14.exe` kullanılır; 1.0.13 ve 1.0.7 exe depoda durur.

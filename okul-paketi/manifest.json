@@ -1,6 +1,6 @@
 {
-  "surum": "1.0.14",
-  "paket": "okul-paketi-guncelleme-1.0.14.zip",
-  "sha256": "08bd50246fd23463b0ea6d629a3e0f6df15f300fd6b41612d7cfc968571643c3",
-  "not": "ÖY 1.12.0: rehberlik araçları (sınıf listeleri, sosyometri, risk haritası, bireysel görüşme, yıllık/aylık/yıl sonu rapor, BEP hedef havuzu). MYP 1.12.3, Not Girişi 1.9.11. Kurulum exe 1.0.14. Rehberlik Yardımcısı bu pakete dahil değildir."
+  "surum": "1.0.15",
+  "paket": "okul-paketi-guncelleme-1.0.15.zip",
+  "sha256": "056e84d66b415552048779c5c4420907c5a632984e2a4f91f5fa58085e90e694",
+  "not": "ÖY 1.12.1: Ölçme ve Değerlendirme Yönetmeliği (RG 14.11.2026) — sıralama yok, ilkokul/okul öncesi sınav uyarısı, yapay zekâ md.4/1-h notu. MYP 1.12.3, Not Girişi 1.9.11 aynı. Kurulum exe 1.0.15. Rehberlik Yardımcısı bu pakete dahil değildir."
 }

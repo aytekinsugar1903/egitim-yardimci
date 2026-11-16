@@ -1,4 +1,4 @@
-/* Evrak Asistanı · ÖY 1.12.0 plan araçları arayüzü. Yayıncı: Eyüp ŞEKER. */
+/* Evrak Asistanı · ÖY 1.12.1 plan araçları arayüzü. Yayıncı: Eyüp ŞEKER. */
 (function (root) {
 'use strict';
 if (typeof document === 'undefined') return;
@@ -571,7 +571,7 @@ function saBuild(p, F) {
   })});
   o.push({ t: 'h2', x: 'TELAFİ PLANI ÖNERİSİ' });
   o.push({ t: 'p', x: A.telafi });
-  o.push({ t: 'note', x: 'Öğrenci puanları raporda ad listesi olarak yazdırılmadı; ayrıntılı öğrenci dökümü Excel dışa aktarmada (bu cihazda) kullanılabilir. Veri bu cihazın dışına gönderilmez.' });
+  o.push({ t: 'note', x: (OYX.siralamaYasakMetin ? OYX.siralamaYasakMetin() : '') + ' Öğrenci puanları raporda ad veya başarı sırası olarak yazdırılmaz. Ayrıntılı puan dökümü Excel dışa aktarmada (bu cihazda, sıralamasız) öğretmenin kendi kullanımı içindir. Veri bu cihazın dışına gönderilmez.' });
   o.push(notIlce());
   o.push(imza([(F.ogretmen || '……………………') + '\nÖğretmen']));
   return o;
@@ -582,6 +582,11 @@ function saExcelYaz(F) {
   var d = saData(F);
   var A = OYX.analizHesap(d);
   var wb = X.utils.book_new();
+  X.utils.book_append_sheet(wb, X.utils.aoa_to_sheet([
+    ['Not'],
+    [(OYX.siralamaYasakMetin ? OYX.siralamaYasakMetin() : 'Bu döküm sıralama veya kıyaslama amacı taşımaz.')],
+    ['Öğrenci sayfası giriş sırasındadır; başarı sırası veya derece sütunu yoktur.']
+  ]), 'Not');
   X.utils.book_append_sheet(wb, X.utils.aoa_to_sheet(
     [['Soru', 'Kazanım', 'Tam puan', 'Ortalama', 'Başarı %']].concat(A.soru.map(function (s) {
       return [s.no, (s.kod ? s.kod + ' ' : '') + (s.kazanım || ''), s.max, s.ort, s.yuzde];
@@ -604,7 +609,7 @@ function saUI() {
   wizard({
     id: 'sa_analiz',
     baslik: 'Sınav Analizi',
-    kaynak: 'Yazılı ve uygulamalı sınav sonuçlarının kazanım / soru bazlı özeti. Veri yalnızca bu cihazda işlenir; yapay zekâya veya buluta gönderilmez. Ölçme-değerlendirme esasları için zümre kararınızı ve ilgili yönergeyi esas alınız.',
+    kaynak: 'Yazılı ve uygulamalı sınav sonuçlarının kazanım / soru bazlı özeti. Şube bazlı analiz yapılır; öğrenci, şube veya okul sıralaması üretilmez (Ölçme ve Değerlendirme Yön. md.4/1-g, RG 14.11.2026). Veri yalnızca bu cihazda işlenir; yapay zekâya veya buluta gönderilmez. Ölçme-değerlendirme esasları için zümre kararınızı ve ilgili yönergeyi esas alınız.',
     defaults: saDefaults,
     build: saBuild,
     onUpd: function (F, kutu) {
@@ -622,6 +627,16 @@ function saUI() {
         form.appendChild(el('label', {}, ['Sınav türü', s]));
         inp(form, F, 'ders', 'Ders', 'text');
         inp(form, F, 'sinif', 'Sınıf / şube', 'text');
+        var saUy = el('p', { class: 'oyx-uyari', id: 'saIlkUyari' });
+        function saIlkUyar() {
+          var yasak = OYX.ilkokulSinavYasak && OYX.ilkokulSinavYasak(F.sinif || '');
+          saUy.textContent = yasak ? OYX.sinavYasakMetin() : '';
+          saUy.style.display = yasak ? 'block' : 'none';
+        }
+        var sinifInp = form.querySelector('input[name="sinif"]');
+        if (sinifInp) sinifInp.addEventListener('input', saIlkUyar);
+        saIlkUyar();
+        form.appendChild(saUy);
         inp(form, F, 'sinavAd', 'Sınav adı', 'text', 'Örn. 1. dönem 1. yazılı');
         inp(form, F, 'tarih', 'Tarih', 'date');
         inp(form, F, 'esik', 'Başarı eşiği (%)', 'text');
@@ -1159,7 +1174,7 @@ function ekleSablonlar() {
     if (!varMi) {
       OY.T.push({
         id: s.id, kat: s.kat, baslik: s.baslik,
-        kaynak: 'ÖY 1.12.0 plan aracı (özgün metin)',
+        kaynak: 'ÖY 1.12.1 plan aracı (özgün metin)',
         alan: [], oyx: true, build: function (p, f) { return (OYX.ui && OYX.ui.buildFor && OYX.ui.buildFor(s.id, p, f)) || []; }
       });
     }
