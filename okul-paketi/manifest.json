@@ -1,6 +1,6 @@
 {
-  "surum": "1.0.15",
-  "paket": "okul-paketi-guncelleme-1.0.15.zip",
-  "sha256": "056e84d66b415552048779c5c4420907c5a632984e2a4f91f5fa58085e90e694",
-  "not": "ÖY 1.12.1: Ölçme ve Değerlendirme Yönetmeliği (RG 14.11.2026) — sıralama yok, ilkokul/okul öncesi sınav uyarısı, yapay zekâ md.4/1-h notu. MYP 1.12.3, Not Girişi 1.9.11 aynı. Kurulum exe 1.0.15. Rehberlik Yardımcısı bu pakete dahil değildir."
+  "surum": "1.0.16",
+  "paket": "okul-paketi-guncelleme-1.0.16.zip",
+  "sha256": "945939c97f798dd4519a7f3cfd6aaa1cc1e4c28440e24fca0916f8c927e53d90",
+  "not": "ÖY 1.12.1, MYP 1.12.3, Not Girişi 1.9.12. Lisans ve 48 saat deneme eklendi (kurum kodu, KVKK onayı, imzalı jeton). Kurulum exe 1.0.16. Rehberlik Yardımcısı bu pakete dahil değildir."
 }
