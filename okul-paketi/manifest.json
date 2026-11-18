@@ -1,6 +1,6 @@
 {
-  "surum": "1.0.16",
-  "paket": "okul-paketi-guncelleme-1.0.16.zip",
-  "sha256": "945939c97f798dd4519a7f3cfd6aaa1cc1e4c28440e24fca0916f8c927e53d90",
-  "not": "ÖY 1.12.1, MYP 1.12.3, Not Girişi 1.9.12. Lisans ve 48 saat deneme eklendi (kurum kodu, KVKK onayı, imzalı jeton). Kurulum exe 1.0.16. Rehberlik Yardımcısı bu pakete dahil değildir."
+  "surum": "1.0.17",
+  "paket": "okul-paketi-guncelleme-1.0.17.zip",
+  "sha256": "7b86a28081fe25c883ccc0c0242a07de61957feba6fd1b8697e7d60bea2d2961",
+  "not": "ÖY 1.12.1, MYP 1.12.3, Not Girişi 1.9.21. Kurulum exe 1.0.17. Rehberlik Yardımcısı bu pakete dahil değildir."
 }
