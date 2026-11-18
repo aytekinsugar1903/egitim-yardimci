@@ -1,6 +1,6 @@
 {
-  "surum": "1.0.17",
-  "paket": "okul-paketi-guncelleme-1.0.17.zip",
-  "sha256": "7b86a28081fe25c883ccc0c0242a07de61957feba6fd1b8697e7d60bea2d2961",
-  "not": "ÖY 1.12.1, MYP 1.12.3, Not Girişi 1.9.21. Kurulum exe 1.0.17. Rehberlik Yardımcısı bu pakete dahil değildir."
+  "surum": "1.0.18",
+  "paket": "okul-paketi-guncelleme-1.0.18.zip",
+  "sha256": "82018ccf54693afdae3f03693c7f139f252f93f506ef2802d2c1920ecb291ebf",
+  "not": "ÖY 1.12.1, MYP 1.12.3, Not Girişi Asistanı 1.9.22. Kurulum exe 1.0.18. Rehberlik Yardımcısı bu pakete dahil değildir."
 }
