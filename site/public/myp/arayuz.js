@@ -3,13 +3,17 @@
   'use strict';
   var css = document.createElement('style');
   css.textContent = [
-    'body{background:#f6f1e7;color:#1c1915;font-size:18px}',
-    'header{background:#fffdf8;color:#1c1915;border-bottom:1px solid #e4d8c4}',
+    'body{background:#fff4ec;color:#1c1915;font-size:18px}',
+    'header{background:#fffaf6;color:#1c1915;border-bottom:1px solid #f0d2c0}',
     'header h1{color:#1c1915}',
-    'header button,button{min-height:48px;border-radius:12px;font-weight:800;font-size:16px}',
-    'header button{background:#0f5c4c;color:#fff;border:0}',
-    'button{background:#0f5c4c;border-color:#0f5c4c;color:#fff}',
-    'button.sec{background:#fff;color:#0f5c4c;border:2px solid #0f5c4c}',
+    'header button,button{min-height:48px;border-radius:14px;font-weight:800;font-size:16px;transition:transform .15s ease}',
+    'header button{background:#c2410c;color:#fff;border:0}',
+    'button{background:#c2410c;border-color:#c2410c;color:#fff}',
+    'button.sec{background:#fff;color:#0f766e;border:2px solid #0f766e}',
+    'button:hover{transform:translateY(-1px)}',
+    '.ea-merhaba{font-weight:800;font-size:20px}',
+    '.evcard,h2{border-color:#f0d2c0}',
+    '.evcard{border-width:1px;border-radius:16px;box-shadow:0 8px 20px rgba(80,40,10,.05)}',
     'aside{background:#fff}',
     '.grp{border:0;border-radius:14px;overflow:hidden;box-shadow:0 1px 2px rgba(30,58,95,.08);background:#fff}',
     '.grp>button{min-height:52px;background:#f7f4ec;font-weight:800}',
@@ -22,7 +26,7 @@
     '@media(max-width:800px){',
     'body{padding-bottom:76px}',
     '.ea-alt{display:grid;grid-template-columns:repeat(4,1fr);position:fixed;left:0;right:0;bottom:0;z-index:30;background:#fffdf8;border-top:1px solid #e4d8c4;padding:6px 4px calc(6px + env(safe-area-inset-bottom));gap:4px}',
-    '.ea-alt button{background:transparent;color:#0f5c4c;border:0;min-height:48px;font-size:15px;font-weight:800}',
+    '.ea-alt button{background:transparent;color:#c2410c;border:0;min-height:48px;font-size:15px;font-weight:800}',
     '}',
     '@media print{.ea-alt,.ea-hizli{display:none!important}body{background:#fff;padding:0}}'
   ].join('');
@@ -56,6 +60,12 @@
         d.appendChild(b);
       });
       var h2 = w.querySelector('h2');
+      if (!w.querySelector('.ea-merhaba')) {
+        var m = document.createElement('p');
+        m.className = 'ea-merhaba';
+        m.textContent = 'Merhaba, bugün ne hazırlayalım?';
+        w.insertBefore(m, w.firstChild);
+      }
       if (h2 && h2.nextSibling) w.insertBefore(d, h2.nextSibling);
       else w.insertBefore(d, w.firstChild);
     };
@@ -64,6 +74,28 @@
   if (typeof NAV !== 'undefined') {
     NAV.push(['Alan şefliği', [['beceri', 'Beceri eğitimi dosyası'], ['sgorev', 'Sınav görev yazışması']]]);
     if (typeof nav === 'function') nav();
+  }
+  function rozetM() {
+    var harita = [[/öğrenci|devam|nakil/i, '🎒', '#fff4d6'], [/personel|öğretmen/i, '👩‍🏫', '#e7f8f2'], [/yazı|evrak|resm/i, '📄', '#fff0e6'], [/nöbet|takvim/i, '🕒', '#fff6cc'], [/denetim|kontrol/i, '✅', '#e8f8ee'], [/rehber/i, '💬', '#e6fbf6'], [/alan|sınav/i, '🏫', '#fff1e4']];
+    document.querySelectorAll('#nav .grp').forEach(function (c) {
+      var b = c.querySelector(':scope > button');
+      if (!b || b.querySelector('.ea-rozet')) return;
+      var sec = null;
+      harita.forEach(function (x) { if (!sec && x[0].test(b.textContent || '')) sec = x; });
+      sec = sec || [null, '📁', '#fff7ef'];
+      c.style.background = sec[2];
+      var s = document.createElement('span');
+      s.className = 'ea-rozet';
+      s.setAttribute('aria-hidden', 'true');
+      s.style.cssText = 'display:inline-grid;place-items:center;width:28px;height:28px;border-radius:9px;margin-right:8px';
+      s.textContent = sec[1];
+      b.insertBefore(s, b.firstChild);
+    });
+  }
+  if (typeof window.nav === 'function') {
+    var en = window.nav;
+    window.nav = function () { var r = en.apply(this, arguments); rozetM(); return r; };
+    rozetM();
   }
   function eaListe(baslik, metin, ids) {
     var h = '<h2>' + baslik + '</h2><p>' + metin + '</p><div class="ea-hizli">';

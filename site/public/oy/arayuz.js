@@ -4,14 +4,16 @@
   var css = document.createElement('style');
   css.id = 'ea-oy-arayuz';
   css.textContent = [
-    ':root{--ea-k:#0f5c4c;--ea-k2:#146c43;--ea-z:#f6f1e7;--ea-c:#fff;--ea-ciz:#e4d8c4;--ea-y:#9a3412}',
+    ':root{--ea-k:#c2410c;--ea-k2:#0f766e;--ea-z:#fff4ec;--ea-c:#fff;--ea-ciz:#f0d2c0;--ea-y:#b45309}',
     'body{background:var(--ea-z);color:#1c1915;font-size:18px}',
-    'header{background:#fffdf8;color:#1c1915;border-bottom:1px solid var(--ea-ciz);padding:12px 14px;gap:8px}',
+    'header{background:#fffaf6;color:#1c1915;border-bottom:1px solid var(--ea-ciz);padding:12px 14px;gap:8px}',
     'header h1{font-size:20px;color:#1c1915}',
-    'header button,button{min-height:48px;border-radius:12px;padding:10px 14px;font-size:16px}',
-    'header button{background:#0f5c4c;color:#fff;border:0;font-weight:800}',
-    'button{background:#0f5c4c;border-color:#0f5c4c;color:#fff;font-weight:800}',
-    'button.sec{background:#fff;color:#0f5c4c;border:2px solid #0f5c4c}',
+    'header button,button{min-height:48px;border-radius:14px;padding:10px 16px;font-size:16px;transition:transform .15s ease,box-shadow .15s ease}',
+    'header button{background:#c2410c;color:#fff;border:0;font-weight:800}',
+    'button{background:#c2410c;border-color:#c2410c;color:#fff;font-weight:800}',
+    'button.sec{background:#fff;color:#0f766e;border:2px solid #0f766e}',
+    'button:hover{transform:translateY(-1px)}',
+    '@media(prefers-reduced-motion:reduce){button:hover{transform:none}}',
     'main{background:transparent}',
     'aside{background:#fff;border-right:1px solid var(--ea-ciz)}',
     '#q{border:2px solid var(--ea-k);border-radius:12px;min-height:48px}',
@@ -22,15 +24,9 @@
     'section#work{background:transparent}',
     '.form{background:#fff;border:1px solid var(--ea-ciz);border-radius:16px}',
     '.bar button{min-height:48px}',
-    '#doc{background:#fff;color:#1a1a1a;border:1px solid #c5ced8;border-radius:4px;box-shadow:0 10px 28px rgba(30,58,95,.08);max-width:820px;margin:16px auto;padding:28px 32px 36px;line-height:1.45}',
-    '#doc h1{font-size:16px;letter-spacing:.03em;border-bottom:2.5px solid #1e3a5f;padding-bottom:8px;margin:14px 0 10px}',
-    '#doc h2{font-size:14px;color:#1e3a5f;border-bottom:1px solid #d5dde6;padding-bottom:2px}',
-    '#doc .kv th,#doc .grid th{background:#e7eef6}',
-    '#doc table{border-color:#1e3a5f}',
-    '#doc .grid td,#doc .grid th,#doc .kv td,#doc .kv th{border-color:#1e3a5f;padding:6px 8px}',
-    '#doc .sign{margin-top:28px}',
-    '#doc .sign .line{height:42px}',
-    '#doc .note{background:#f7f4ec;border-left:4px solid #8a6a2f;padding:8px 10px}',
+    '.ea-merhaba{font-weight:800;font-size:20px;margin:0 0 8px}',
+    '.ea-rozet{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:9px;margin-right:8px}',
+    '.ea-tarih{display:inline-block;background:#fde68a;color:#1c1915;font-weight:800;border-radius:999px;padding:4px 10px;margin-right:8px}',
     '.ea-panel{margin-top:8px}',
     '.ea-kutu{background:#fff;border:1px solid var(--ea-ciz);border-radius:16px;padding:14px;margin:0 0 14px;box-shadow:0 1px 2px rgba(30,58,95,.06)}',
     '.ea-kutu h2{border:0;margin:0 0 6px;font-size:22px}',
@@ -47,7 +43,7 @@
     'aside{border-right:0;border-bottom:1px solid var(--ea-ciz)}',
     '#doc{padding:16px}',
     '.ea-alt{display:grid;grid-template-columns:repeat(4,1fr);position:fixed;left:0;right:0;bottom:0;z-index:30;background:#fffdf8;border-top:1px solid #e4d8c4;padding:6px 4px calc(6px + env(safe-area-inset-bottom));gap:4px}',
-    '.ea-alt button{background:transparent;color:#0f5c4c;border:0;min-height:48px;font-size:15px;font-weight:800;border-radius:10px}',
+    '.ea-alt button{background:transparent;color:#c2410c;border:0;min-height:48px;font-size:15px;font-weight:800;border-radius:10px}',
     '.ea-kart{flex:1 1 100%}',
     '}',
     '@media(min-width:801px){.ea-kart{flex:1 1 180px}}',
@@ -237,9 +233,17 @@
     var H = hafta(), sec = okuSec();
     var kutu = document.createElement('section');
     kutu.className = 'ea-kutu';
+    var selam = document.createElement('p');
+    selam.className = 'ea-merhaba';
+    selam.textContent = 'Merhaba, bugün ne hazırlayalım?';
+    panel.appendChild(selam);
     kutu.innerHTML = '<p class="ea-adim">BU HAFTA</p>';
     var h = document.createElement('h2');
-    h.textContent = H.yil + ' · ' + H.no + '. hafta';
+    var roz = document.createElement('span');
+    roz.className = 'ea-tarih';
+    roz.textContent = H.no + '. hafta';
+    h.appendChild(roz);
+    h.appendChild(document.createTextNode(H.yil));
     kutu.appendChild(h);
     var p = document.createElement('p');
     p.textContent = H.bas.toLocaleDateString('tr-TR') + ' – ' + H.bit.toLocaleDateString('tr-TR') + (H.tatil ? ' · ' + H.tatil : '') + '. Bu haftanın evrakı seçime ve yıllık plana göre listelenir; kazanım kodu uydurulmaz.';
@@ -389,7 +393,8 @@
     if (!w || document.getElementById('eaPanel')) return;
     var p = document.createElement('div');
     p.id = 'eaPanel';
-    w.appendChild(p);
+    if (w.firstChild) w.insertBefore(p, w.firstChild);
+    else w.appendChild(p);
     ciz(p);
   }
   if (typeof home === 'function') {
@@ -401,6 +406,27 @@
     profil = function () { var r = ep.apply(this, arguments); ekle(); return r; };
   }
   ekle();
+  function rozetle() {
+    var harita = [[/plan|yıllık|günlük|maarif/i, '📅', '#fff4d6'], [/tutanak|zümre|şök|kurul/i, '📋', '#e7f8f2'], [/kulüp|sosyal/i, '🎨', '#fde8f3'], [/bep|özel/i, '🤝', '#e7f1ff'], [/sınav|yazılı/i, '✏️', '#fff6cc'], [/rehber/i, '💬', '#e6fbf6'], [/veli/i, '👪', '#fff0e6'], [/egzersiz|kurs|dyk/i, '🏃', '#e8f8ee'], [/şef|alan/i, '🏫', '#fff1e4']];
+    document.querySelectorAll('#cats .cat').forEach(function (c) {
+      var b = c.querySelector(':scope > button');
+      if (!b || b.querySelector('.ea-rozet')) return;
+      var sec = null;
+      harita.forEach(function (x) { if (!sec && x[0].test(b.textContent || '')) sec = x; });
+      sec = sec || [null, '📄', '#fff7ef'];
+      c.style.background = sec[2];
+      var s = document.createElement('span');
+      s.className = 'ea-rozet';
+      s.setAttribute('aria-hidden', 'true');
+      s.textContent = sec[1];
+      b.insertBefore(s, b.firstChild);
+    });
+  }
+  if (typeof window.cats === 'function') {
+    var ec = window.cats;
+    window.cats = function () { var r = ec.apply(this, arguments); rozetle(); return r; };
+    rozetle();
+  }
   if (location.hash.indexOf('sablon=') >= 0) {
     var id = decodeURIComponent((location.hash.split('sablon=')[1] || '').split('&')[0]);
     if (id && typeof sel === 'function') sel(id);
