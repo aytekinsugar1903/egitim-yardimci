@@ -382,5 +382,234 @@
     }
   });
 
+  var NOT_BE = 'İşletmelerde beceri eğitimi; alan şefi ve koordinatör öğretmenin izlemesi, devam, değerlendirme ve ücret belgelerinin okulda saklanmasıyla yürür. Madde numarası yazılmamıştır; güncel mesleki eğitim mevzuatını esas alınız. ' + NOT_CIHAZ;
+  var KAT_BE = 'Alan Şefliği Dosyası';
+  function beKv(p, f, ekstra) {
+    return { t: 'kv', rows: [['Alan', f.alan || '…………'], ['İşyeri', f.isyeri || '…………'], ['Dönem / ay', f.donem || f.ay || '…………'], ['Koordinatör / alan şefi', ogretmen(p, f)]].concat(ekstra || []) };
+  }
+  ekle({
+    id: 'be_devam', kat: KAT_BE, baslik: 'İşyeri devam cetveli',
+    kaynak: NOT_BE,
+    alan: [
+      { k: 'alan', l: 'Alan / dal' }, { k: 'isyeri', l: 'İşyeri' }, { k: 'ay', l: 'Ay' },
+      { k: 'satirlar', l: 'Her satır: numara veya ad | devam günü | özür | not (T.C. kimlik yazmayın)', type: 'area' }
+    ],
+    build: function (p, f) {
+      f = f || {};
+      var o = ust(p, 'İşyeri Devam Cetveli', f);
+      o.push(beKv(p, f));
+      var L = satir(f.satirlar); if (!L.length) L = ['', '', ''];
+      o.push({ t: 'table', head: ['Sıra', 'Öğrenci (no veya ad)', 'Devam günü', 'Özür', 'Not'], rows: L.map(function (s, i) {
+        var c = s.split(/\s*\|\s*/); return [String(i + 1), c[0] || '', c[1] || '', c[2] || '', c[3] || ''];
+      }) });
+      o.push(not(NOT_BE));
+      o.push(imza([ogretmen(p, f) + '\nKoordinatör öğretmen']));
+      return o;
+    }
+  });
+  ekle({
+    id: 'be_gun', kat: KAT_BE, baslik: 'Koordinatör gün notu',
+    kaynak: NOT_BE,
+    alan: [
+      { k: 'tarih', l: 'Tarih', type: 'date' }, { k: 'alan', l: 'Alan' }, { k: 'isyeri', l: 'İşyeri' }, { k: 'yetkili', l: 'Görüşülen yetkili' },
+      { k: 'sayi', l: 'Görülen öğrenci sayısı' },
+      { k: 'gozlem', l: 'Gözlem (iş güvenliği, usta öğretici, devam)', type: 'area' },
+      { k: 'eksik', l: 'Eksik ve öneri', type: 'area' }
+    ],
+    build: function (p, f) {
+      f = f || {};
+      var o = ust(p, 'Koordinatör Gün Notu', f);
+      o.push({ t: 'kv', rows: [['Tarih', f.tarih || '…………'], ['Alan', f.alan || '…………'], ['İşyeri', f.isyeri || '…………'], ['Yetkili', f.yetkili || '…………'], ['Öğrenci sayısı', f.sayi || '…………'], ['Koordinatör', ogretmen(p, f)]] });
+      o.push({ t: 'h2', x: 'GÖZLEM' }); o.push({ t: 'p', x: f.gozlem || '…………………………………………' });
+      o.push({ t: 'h2', x: 'EKSİK VE ÖNERİ' }); o.push({ t: 'p', x: f.eksik || '…………………………………………' });
+      o.push(not(NOT_BE));
+      o.push(imza([ogretmen(p, f) + '\nKoordinatör öğretmen']));
+      return o;
+    }
+  });
+  ekle({
+    id: 'be_ay', kat: KAT_BE, baslik: 'Koordinatör ay özeti',
+    kaynak: NOT_BE,
+    alan: [
+      { k: 'ay', l: 'Ay' }, { k: 'alan', l: 'Alan' },
+      { k: 'isyeriSayi', l: 'İzlenen işyeri sayısı' }, { k: 'ziyaret', l: 'Ziyaret sayısı' },
+      { k: 'devam', l: 'Devamda görülen durum', type: 'area' },
+      { k: 'ucret', l: 'Ücret belgesi durumu (tutar yazmayabilirsiniz)', type: 'area' },
+      { k: 'sonuc', l: 'Ay değerlendirmesi', type: 'area' }
+    ],
+    build: function (p, f) {
+      f = f || {};
+      var o = ust(p, 'Koordinatör Ay Özeti', f);
+      o.push({ t: 'kv', rows: [['Ay', f.ay || '…………'], ['Alan', f.alan || '…………'], ['İşyeri sayısı', f.isyeriSayi || '…………'], ['Ziyaret', f.ziyaret || '…………'], ['Koordinatör', ogretmen(p, f)]] });
+      o.push({ t: 'h2', x: 'DEVAM' }); o.push({ t: 'p', x: f.devam || '…………………………………………' });
+      o.push({ t: 'h2', x: 'ÜCRET BELGESİ' }); o.push({ t: 'p', x: f.ucret || '…………………………………………' });
+      o.push({ t: 'h2', x: 'DEĞERLENDİRME' }); o.push({ t: 'p', x: f.sonuc || '…………………………………………' });
+      o.push(not(NOT_BE));
+      o.push(imza([ogretmen(p, f) + '\nKoordinatör öğretmen', ((p && p.mudur) || '……………………') + '\nOkul müdürü']));
+      return o;
+    }
+  });
+  ekle({
+    id: 'be_not', kat: KAT_BE, baslik: 'Beceri dönemi değerlendirme fişi',
+    kaynak: NOT_BE,
+    alan: [
+      { k: 'donem', l: 'Dönem' }, { k: 'alan', l: 'Alan / dal' }, { k: 'isyeri', l: 'İşyeri' },
+      { k: 'ogrenci', l: 'Öğrenci (numara önerilir)' }, { k: 'usta', l: 'Usta öğretici görüşü', type: 'area' },
+      { k: 'koord', l: 'Koordinatör değerlendirmesi', type: 'area' }
+    ],
+    build: function (p, f) {
+      f = f || {};
+      var o = ust(p, 'Beceri Dönemi Değerlendirme Fişi', f);
+      o.push(beKv(p, f, [['Öğrenci', f.ogrenci || '…………']]));
+      o.push({ t: 'h2', x: 'USTA ÖĞRETİCİ GÖRÜŞÜ' }); o.push({ t: 'p', x: f.usta || '…………………………………………' });
+      o.push({ t: 'h2', x: 'KOORDİNATÖR DEĞERLENDİRMESİ' }); o.push({ t: 'p', x: f.koord || '…………………………………………' });
+      o.push({ t: 'table', head: ['Başlık', 'Not (e-Okul’a elle işlenir)'], rows: [['Uygulama', ''], ['İş güvenliği ve devam', ''], ['Genel', '']] });
+      o.push(not('Bu fiş taslaktır; not e-Okul’a sizin onayınızla işlenir. ' + NOT_BE));
+      o.push(imza([ogretmen(p, f) + '\nKoordinatör öğretmen']));
+      return o;
+    }
+  });
+  ekle({
+    id: 'be_fesih', kat: KAT_BE, baslik: 'Eğitim sözleşmesi sonlandırma yazısı',
+    kaynak: NOT_BE,
+    alan: [
+      { k: 'tarih', l: 'Tarih', type: 'date' }, { k: 'alan', l: 'Alan' }, { k: 'isyeri', l: 'İşyeri' },
+      { k: 'ogrenci', l: 'Öğrenci (numara veya ad)' }, { k: 'gerekce', l: 'Gerekçe', type: 'area' },
+      { k: 'yon', l: 'Yazı kime', type: 'select', opts: ['İşyerine', 'Okul müdürlüğüne', 'Veliye bilgi'] }
+    ],
+    build: function (p, f) {
+      f = f || {};
+      var o = ust(p, 'Eğitim Sözleşmesi Sonlandırma Yazısı', f);
+      o.push({ t: 'p', x: (f.yon || 'İşyerine') + ' iletilmek üzere.' });
+      o.push(beKv(p, f, [['Öğrenci', f.ogrenci || '…………'], ['Tarih', f.tarih || '…………']]));
+      o.push({ t: 'p', x: 'Yukarıda belirtilen öğrencinin işyerindeki beceri eğitimi ilişkisi, aşağıda yazılan gerekçeyle sonlandırılmak istenmektedir. Okul, işyeri ve veli aynı bilgiyi almalıdır.' });
+      o.push({ t: 'h2', x: 'GEREKÇE' }); o.push({ t: 'p', x: f.gerekce || '…………………………………………' });
+      o.push(not(NOT_BE));
+      o.push(imza([ogretmen(p, f) + '\nAlan şefi / koordinatör', ((p && p.mudur) || '……………………') + '\nOkul müdürü']));
+      return o;
+    }
+  });
+  ekle({
+    id: 'be_dekont', kat: KAT_BE, baslik: 'Ücret dekont izleme listesi',
+    kaynak: NOT_BE,
+    alan: [
+      { k: 'ay', l: 'Ay' }, { k: 'alan', l: 'Alan' },
+      { k: 'satirlar', l: 'Her satır: öğrenci no | işyeri | dekont tarihi | durum (geldi / gelmedi)', type: 'area' }
+    ],
+    build: function (p, f) {
+      f = f || {};
+      var o = ust(p, 'Ücret Dekont İzleme Listesi', f);
+      o.push({ t: 'kv', rows: [['Ay', f.ay || '…………'], ['Alan', f.alan || '…………'], ['İzleyen', ogretmen(p, f)]] });
+      var L = satir(f.satirlar); if (!L.length) L = ['', '', ''];
+      o.push({ t: 'table', head: ['Sıra', 'Öğrenci no', 'İşyeri', 'Dekont tarihi', 'Durum'], rows: L.map(function (s, i) {
+        var c = s.split(/\s*\|\s*/); return [String(i + 1), c[0] || '', c[1] || '', c[2] || '', c[3] || ''];
+      }) });
+      o.push(not('Tutar bu listede zorunlu değildir. Belge okulda saklanır. ' + NOT_CIHAZ));
+      o.push(imza([ogretmen(p, f) + '\nAlan şefi']));
+      return o;
+    }
+  });
+  ekle({
+    id: 'be_dagilim', kat: KAT_BE, baslik: 'İşyeri öğrenci dağılım tablosu',
+    kaynak: NOT_BE,
+    alan: [
+      { k: 'alan', l: 'Alan' }, { k: 'donem', l: 'Dönem' },
+      { k: 'satirlar', l: 'Her satır: işyeri | kontenjan | kayıtlı öğrenci sayısı | koordinatör', type: 'area' }
+    ],
+    build: function (p, f) {
+      f = f || {};
+      var o = ust(p, 'İşyeri Öğrenci Dağılım Tablosu', f);
+      o.push({ t: 'kv', rows: [['Alan', f.alan || '…………'], ['Dönem', f.donem || '…………'], ['Alan şefi', ogretmen(p, f)]] });
+      var L = satir(f.satirlar); if (!L.length) L = ['', '', ''];
+      o.push({ t: 'table', head: ['İşyeri', 'Kontenjan', 'Kayıtlı öğrenci', 'Koordinatör'], rows: L.map(function (s) {
+        var c = s.split(/\s*\|\s*/); return [c[0] || '', c[1] || '', c[2] || '', c[3] || ''];
+      }) });
+      o.push(not(NOT_BE));
+      o.push(imza([ogretmen(p, f) + '\nAlan şefi', ((p && p.mudur) || '……………………') + '\nOkul müdürü']));
+      return o;
+    }
+  });
+  ekle({
+    id: 'be_ziyaret', kat: KAT_BE, baslik: 'İşyeri izleme tutanağı',
+    kaynak: NOT_BE,
+    alan: [
+      { k: 'tarih', l: 'Tarih', type: 'date' }, { k: 'alan', l: 'Alan' }, { k: 'isyeri', l: 'İşyeri' }, { k: 'yetkili', l: 'İşyeri yetkilisi' },
+      { k: 'sayi', l: 'Görülen öğrenci sayısı' },
+      { k: 'tespit', l: 'Tespit (güvenlik, eğitim, devam)', type: 'area' },
+      { k: 'oneri', l: 'Öneri', type: 'area' }
+    ],
+    build: function (p, f) {
+      f = f || {};
+      var o = ust(p, 'İşyeri İzleme Tutanağı', f);
+      o.push({ t: 'kv', rows: [['Tarih', f.tarih || '…………'], ['Alan', f.alan || '…………'], ['İşyeri', f.isyeri || '…………'], ['Yetkili', f.yetkili || '…………'], ['Öğrenci sayısı', f.sayi || '…………'], ['İzleyen', ogretmen(p, f)]] });
+      o.push({ t: 'h2', x: 'TESPİT' }); o.push({ t: 'p', x: f.tespit || '…………………………………………' });
+      o.push({ t: 'h2', x: 'ÖNERİ' }); o.push({ t: 'p', x: f.oneri || '…………………………………………' });
+      o.push(not(NOT_BE));
+      o.push(imza([ogretmen(p, f) + '\nKoordinatör öğretmen', (f.yetkili || '……………………') + '\nİşyeri yetkilisi']));
+      return o;
+    }
+  });
+  ekle({
+    id: 'be_plan', kat: KAT_BE, baslik: 'Alan şefliği yıllık iş planı',
+    kaynak: NOT_BE,
+    alan: [
+      { k: 'alan', l: 'Alan' }, { k: 'donem', l: 'Eğitim yılı' },
+      { k: 'isler', l: 'Her satır: ay | iş (sözleşme, dağılım, ziyaret, değerlendirme, dekont)', type: 'area' }
+    ],
+    build: function (p, f) {
+      f = f || {};
+      var o = ust(p, 'Alan Şefliği Yıllık İş Planı', f);
+      o.push({ t: 'kv', rows: [['Alan', f.alan || '…………'], ['Eğitim yılı', f.donem || yil(f)], ['Alan şefi', ogretmen(p, f)]] });
+      var L = satir(f.isler);
+      var aylar = ['Eylül', 'Ekim', 'Kasım', 'Aralık', 'Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran'];
+      if (!L.length) L = aylar.map(function (a) { return a + ' | '; });
+      o.push({ t: 'table', head: ['Ay', 'İş'], rows: L.map(function (s) {
+        var c = s.split(/\s*\|\s*/); return [c[0] || '', c.slice(1).join(' | ') || ''];
+      }) });
+      o.push(not(NOT_BE));
+      o.push(imza([ogretmen(p, f) + '\nAlan şefi', ((p && p.mudur) || '……………………') + '\nOkul müdürü']));
+      return o;
+    }
+  });
+  ekle({
+    id: 'sg_istek', kat: 'Sınav Görev Yazışması', baslik: 'Merkezî sınav görev isteği',
+    kaynak: 'Öğretmenin sınav görevi isteğini okula iletmesi için özgün dilekçe. Görevlendirme kararı idarededir.',
+    alan: [
+      { k: 'tarih', l: 'Tarih', type: 'date' }, { k: 'sinav', l: 'Sınavın adı' },
+      { k: 'aralik', l: 'Tarih aralığı' },
+      { k: 'tur', l: 'İstenen görev', type: 'select', opts: ['Gözetmen', 'Yedek gözetmen', 'Bina görevi', 'Sınav koordinasyonu'] },
+      { k: 'tercih', l: 'Tercih veya açıklama', type: 'area' }
+    ],
+    build: function (p, f) {
+      f = f || {};
+      var o = ust(p, 'Merkezî Sınav Görev İsteği', f);
+      o.push({ t: 'p', x: (p && p.okul ? p.okul + ' Müdürlüğüne' : 'Okul Müdürlüğüne') });
+      o.push({ t: 'kv', rows: [['Öğretmen', ogretmen(p, f)], ['Branş', (p && p.brans) || '…………'], ['Sınav', f.sinav || '…………'], ['Tarih aralığı', f.aralik || '…………'], ['İstenen görev', f.tur || 'Gözetmen'], ['Yazı tarihi', f.tarih || '…………']] });
+      o.push({ t: 'p', x: 'Belirtilen sınavda görev almak istiyorum. Görevlendirme okulun ve ilgili merciin kararıdır; bu yazı yalnızca isteği bildirir.' });
+      o.push({ t: 'h2', x: 'AÇIKLAMA' }); o.push({ t: 'p', x: f.tercih || '…………………………………………' });
+      o.push(imza([ogretmen(p, f) + '\nÖğretmen']));
+      return o;
+    }
+  });
+  ekle({
+    id: 'sg_izleme', kat: 'Sınav Görev Yazışması', baslik: 'Görev isteği izleme listesi',
+    kaynak: 'İdare veya öğretmen, iletilen görev isteklerinin durumunu bu cihazda izler.',
+    alan: [
+      { k: 'sinav', l: 'Sınav' },
+      { k: 'satirlar', l: 'Her satır: öğretmen | istenen görev | durum (yazıldı / iletildi / görev geldi / gelmedi)', type: 'area' }
+    ],
+    build: function (p, f) {
+      f = f || {};
+      var o = ust(p, 'Görev İsteği İzleme Listesi', f);
+      o.push({ t: 'kv', rows: [['Sınav', f.sinav || '…………'], ['Tutan', ogretmen(p, f)]] });
+      var L = satir(f.satirlar); if (!L.length) L = ['', '', ''];
+      o.push({ t: 'table', head: ['Öğretmen', 'İstenen görev', 'Durum'], rows: L.map(function (s) {
+        var c = s.split(/\s*\|\s*/); return [c[0] || '', c[1] || '', c[2] || ''];
+      }) });
+      o.push(not('Liste bu cihazda kalır. Görevlendirme yazısı idare tarafından ayrıca düzenlenir.'));
+      return o;
+    }
+  });
+
   if (typeof cats === 'function') { try { cats(); } catch (e) {} }
 })();

@@ -191,7 +191,9 @@
     ['Veli toplantısı', /veli toplant/i],
     ['Rehberlik', /rehberlik|gözlem formu|görüşme formu/i],
     ['Egzersiz / DYK', /egzersiz|DYK|İYEP|haftalık çalışma/i],
-    ['Yazılı', /yazılı|sınav|rubrik/i]
+    ['Yazılı', /yazılı|sınav|rubrik/i],
+    ['Alan şefliği', /alan şef|işyeri|koordinatör|beceri dönemi|dekont|sözleşmesi sonlandırma/i],
+    ['Sınav görev yazısı', /sınav görev|görev isteği/i]
   ];
   function onDoldur(id, sec, H) {
     if (id === 'yplan') {

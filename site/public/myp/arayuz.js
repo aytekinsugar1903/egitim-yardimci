@@ -48,7 +48,7 @@
       if (!w || w.querySelector('.ea-hizli')) return;
       var d = document.createElement('div');
       d.className = 'ea-hizli noprint';
-      [['nobet', 'Nöbet planı'], ['uret', 'Evrak üret'], ['kurul', 'Kurullar'], ['sosyal', 'Sosyal etkinlik'], ['takvim', 'Bu haftanın takvimi'], ['check', 'Kontrol listesi']].forEach(function (x) {
+      [['nobet', 'Nöbet planı'], ['uret', 'Evrak üret'], ['beceri', 'Alan şefliği'], ['sgorev', 'Sınav görev yazısı'], ['takvim', 'Bu haftanın takvimi'], ['check', 'Kontrol listesi']].forEach(function (x) {
         var b = document.createElement('button');
         b.type = 'button';
         b.setAttribute('data-go', x[0]);
@@ -60,5 +60,28 @@
       else w.insertBefore(d, w.firstChild);
     };
     if (typeof cur !== 'undefined' && cur === 'dash') V.dash();
+  }
+  if (typeof NAV !== 'undefined') {
+    NAV.push(['Alan şefliği', [['beceri', 'Beceri eğitimi dosyası'], ['sgorev', 'Sınav görev yazışması']]]);
+    if (typeof nav === 'function') nav();
+  }
+  function eaListe(baslik, metin, ids) {
+    var h = '<h2>' + baslik + '</h2><p>' + metin + '</p><div class="ea-hizli">';
+    ids.forEach(function (id) {
+      var t = (typeof OY !== 'undefined' && OY.get) ? OY.get(id) : null;
+      if (!t) return;
+      h += '<button type="button" data-doc="oy:' + id + '" data-f="{}">' + t.baslik + '</button>';
+    });
+    h += '</div><p>Çıktı bu cihazda oluşur. Öğrenci kimlik numarası yazmayın.</p>';
+    if (typeof W === 'function') W(h);
+    else document.getElementById('work').innerHTML = h;
+  }
+  if (typeof V !== 'undefined') {
+    V.beceri = function () {
+      eaListe('Beceri eğitimi dosyası', 'Alan şefliği ve koordinatör izleme evrakı. Adlar bu pakete özgüdür.', ['be_dagilim', 'be_dekont', 'be_plan', 'be_devam', 'be_gun', 'be_ay', 'be_not', 'be_ziyaret', 'be_fesih']);
+    };
+    V.sgorev = function () {
+      eaListe('Sınav görev yazışması', 'Öğretmenin görev isteği ve idarenin izleme listesi.', ['sg_istek', 'sg_izleme']);
+    };
   }
 })();
