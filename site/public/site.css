@@ -201,3 +201,38 @@ a.geri:hover{color:var(--ac);border-color:rgba(14,116,144,.5)}
 .nasil-oyss figcaption{font-size:14.5px;line-height:1.45;padding:10px 12px}
 .nasil-oyss figcaption b{display:block;margin-bottom:2px}
 .nasil-oyss .tiny{margin-top:8px}
+
+/* Açık, sıcak tema. Koyu görünüm varsayılan değildir. */
+html{color-scheme:light}
+:root{--bg:#f6f1e7;--card:#fff;--line:#e4d8c4;--tx:#1c1915;--mut:#3f4b46;--ac:#0f5c4c;--ac2:#9a3412;--glow:0 8px 20px rgba(15,92,76,.16);--sh:0 1px 2px rgba(60,40,20,.05),0 8px 24px rgba(60,40,20,.06)}
+body{font-size:18px;line-height:1.6;color:var(--tx);background:#f6f1e7;background-image:none}
+.heroband{background:linear-gradient(180deg,#fffdf8,#f3ecdf);border-bottom:1px solid var(--line)}
+header.top{background:#fffdf8;border-bottom:1px solid var(--line)}
+nav a,nav summary{font-size:16px}
+.btn{font-size:17px;min-height:48px;border-radius:14px}
+.btn.p{background:#0f5c4c;color:#fff}
+.btn.d{background:#146c43;color:#fff}
+.btn.s{background:#fff;color:#1c1915;border:2px solid #0f5c4c}
+h1 .g{color:#0f5c4c;background:none;-webkit-text-fill-color:#0f5c4c}
+.card{background:#fff;border-radius:18px}
+.grid{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+a{color:#0f5c4c}
+a:hover{color:#9a3412}
+.ea-tema{min-height:44px;margin-left:8px;padding:8px 12px;border-radius:999px;border:2px solid #0f5c4c;background:#fff;color:#0f5c4c;font:700 15px/1 system-ui,sans-serif;cursor:pointer}
+.sp-back{background:#fff;color:#1c1915;border:2px solid #0f5c4c}
+@media(max-width:800px){
+  .grid,.steps,.formgrid,.adim-galeri{grid-template-columns:1fr}
+  header.top .w{flex-direction:column;align-items:flex-start}
+  nav{display:flex;flex-wrap:wrap;gap:6px;width:100%}
+  nav a,nav details.navdrop{margin-left:0}
+}
+nav a.ea-yan{margin-left:12px}
+a.fiyat-mini{font-size:16px;font-weight:700}
+.tiny,.meta,.tag,footer,nav .navmenu a{font-size:16px}
+.destek-form button{background:#0f5c4c}
+.destek-form{display:grid;gap:12px;max-width:640px;margin:12px 0 24px}
+.destek-form label{display:flex;flex-direction:column;gap:6px;font-weight:700}
+.destek-form input,.destek-form select,.destek-form textarea{font:inherit;padding:12px;border:1px solid var(--line);border-radius:12px;min-height:48px;background:#fff;color:var(--tx)}
+.destek-form textarea{min-height:140px}
+.destek-form button{min-height:48px;font:inherit;font-weight:800;border:0;border-radius:12px;background:#0e7490;color:#fff;padding:12px 18px;cursor:pointer}
+@media(max-width:720px){nav a.ea-yan{margin-left:8px}}
