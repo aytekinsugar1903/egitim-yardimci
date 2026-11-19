@@ -1,0 +1,28 @@
+Rehberlik Yardımcısı 1.1.1 (tam sürüm: rehber öğretmen / psikolojik danışman)
+Evrak Asistanı · Eyüp ŞEKER
+
+Sınıf rehber öğretmenleri ve rehber öğretmenler (psikolojik danışmanlar) için:
+- Sınıf Listelerim: e-Okul Sınıf Listesi (.xls) ya da e-Okul Not Girişi Asistanı'ndan "sinif-listeleri.json".
+- Rehberlik formları: öğrenci ve veli görüşme, ev ziyareti, aile bilgi, gözlem, rehberlik servisine yönlendirme, bireysel görüşme kayıt formu.
+- Sosyometri ve "Kimdir Bu?" (sosyogram PNG), Sınıf Risk Haritası.
+- Sınıf Rehberlik Yıllık Planı (örnek temalarla), Aylık Faaliyet Raporu ve Yıl Sonu Raporu ("Kayıtlardan doldur").
+- BEP / ZEP (74 örnek hedef), kaynaştırma değerlendirme, BEP birimi tutanağı, destek eğitim odası ve evde eğitim formları.
+- RPD yürütme komisyonu, psikososyal ekip, okul güvenliği tutanakları; ŞÖK ve zümre tutanakları; veli toplantısı evrakı; disiplin sevk/olay bildirimi.
+- Resmî yazı ve dilekçe şablonları, çevrimdışı mevzuat.
+
+Kurulum: klasörü bilgisayara kopyalayın, index.html dosyasını Chrome veya Edge ile açın.
+Gizlilik: öğrenci bilgileri yalnız bu cihazdaki tarayıcı deposunda tutulur. Hesap eşitlemesini açarsanız yalnız kendi hesabınıza gider. Rehberlik Kayıtlarım öğrenci adı ve görüşme içeriği tutmaz.
+Not: Öğretmen Yardımcısı ile aynı bilgisayarda aynı tarayıcıda açılırsa profil ve sınıf listeleri ortak kullanılır.
+
+1.1.0 ile gelenler
+- Sınıf Rapor Dosyası: sınıfın yıllık rehberlik sayıları, risk haritası dağılımı ve yıl sonu önerileri tek dosyada (.rhbrapor). Öğrenci adı içermez.
+- Okul Rehberlik İcmali: sınıf rehber öğretmenlerinden gelen rapor dosyalarını birleştirir; sınıf sınıf tablo, okul toplamı, risk özeti, eksik sınıflar; Word, PDF ve Excel.
+- e-Rehberlik'e Giriş Hazırlığı: yıllık plan satırları alan alan "Kopyala" düğmeleriyle. Hiçbir sisteme bağlanmaz, otomatik giriş yapmaz.
+- Yıllık Hedef ve Etkinlik Bankası: 2026-2027 genel hedefi "Selamlaşma" için aylık etkinlik önerileri; yıllık plana kendiliğinden eklenir.
+- Şifreli Yedek ve Sınıf Devri: tüm veriler ya da tek bir sınıf, parolayla şifrelenmiş dosyaya (AES-256). Parola unutulursa dosya açılamaz.
+
+1.1.1 düzeltmeleri
+- Doldur / Öner yeniden çalışıyor (öneri servisi adresi düzeltildi). Yalnız form başlığı, alan adları ve boş/dolu bilgisi gider; öğrenci bilgisi gönderilmez.
+- Lisans ve sözleşme onay ekranı geri geldi (48 saatlik deneme, lisans anahtarı).
+- Tam Rehberlik anahtarı Sınıf Rehberlik sürümünü de açar.
+- Masaüstü güncelleyici doğru dosyayı denetler.

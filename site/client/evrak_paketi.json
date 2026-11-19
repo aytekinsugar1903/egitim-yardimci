@@ -1,0 +1,2247 @@
+{
+ "versiyon": "2026-10-17",
+ "yil": "2026-2027",
+ "not": "Mevzuat özetleri kendi ifademizdir, resmî metin değildir. 'kontrol ediniz' işaretli madde numaraları resmî metinden doğrulanmamıştır; işlem yapmadan önce mevzuat.gov.tr'deki güncel metne bakınız.",
+ "mevzuat": [
+  {
+   "id": "sinav",
+   "a": [
+    "sınav",
+    "yazılı",
+    "ortak sınav",
+    "sorumluluk"
+   ],
+   "k": "MEB Ölçme ve Değerlendirme Yönetmeliği (RG 09.09.2023, 32304)",
+   "m": "m.5 (yazılı sınavlar), m.6 (ortak yazılı sınavlar) — sonraki değişiklikler için kontrol ediniz",
+   "o": "Her ders için dönemde iki yazılı sınav yapılır (haftalık 6+ saatlik derslerde üçüncü sınav yapılabilir). Sınavlar şu aralıklarda yapılır: Ekim son–Kasım ilk hafta, Aralık son–Ocak ilk hafta, Mart son–Nisan ilk hafta, Mayıs son–Haziran ilk hafta. Tarihler ders yılı başında e-Okul'da duyurulur; aynı derse ait şubelerde ortak sınav esastır ve sorular konu-soru dağılım tablosuna göre hazırlanır. 2026-2027 ülke geneli ortak yazılı tarihleri için Bakanlık duyurusunu kontrol ediniz.",
+   "u": "https://odsgm.meb.gov.tr/www/ulke-geneli-ortak-yazili-sinav-takvimi-belli-oldu/icerik/1732",
+   "d": "Madde numaraları resmî metinden doğrulandı (17.10.2026); güncel değişiklikler için kontrol ediniz"
+  },
+  {
+   "id": "kurul",
+   "a": [
+    "öğretmenler kurulu",
+    "kurul toplantı",
+    "gündem"
+   ],
+   "k": "MEB Ortaöğretim Kurumları Yönetmeliği / Okul Öncesi Eğitim ve İlköğretim Kurumları Yönetmeliği",
+   "m": "İlköğretim: OİY m.34. Ortaöğretim: OOY m.108 (22.02.2025 değişikliği; toplantı zamanı ve gündem Bakanlık yönergesiyle belirlenir, kontrol ediniz)",
+   "o": "İlkokul/ortaokulda (OİY m.34) öğretmenler kurulu ders yılı başlamadan önce, ikinci dönem başında ve ders yılı sonunda toplanır; gündem en az 5 gün önce duyurulur, tutanağı yazman tutar. Ortaöğretimde kurullar OOY m.108'de sayılır; toplantı zaman ve gündemi Bakanlık yönergesine göredir (kontrol ediniz).",
+   "u": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=19942&MevzuatTur=7&MevzuatTertip=5",
+   "d": "Madde numaraları resmî metinden doğrulandı (17.10.2026); güncel değişiklikler için kontrol ediniz"
+  },
+  {
+   "id": "zumre",
+   "a": [
+    "zümre"
+   ],
+   "k": "MEB Ortaöğretim Kurumları Yönetmeliği / Okul Öncesi Eğitim ve İlköğretim Kurumları Yönetmeliği; 2026/70 İş ve İşlemler Genelgesi",
+   "m": "İlköğretim: OİY m.35. Ortaöğretim: OOY m.108 + Bakanlık yönergesi (kontrol ediniz)",
+   "o": "İlkokul/ortaokulda (OİY m.35) zümre öğretmenler kurulu ders yılı başında, ortasında ve sonunda, gerektiğinde ayrıca toplanır; başkan zümre öğretmenlerince seçilir. Plan, ölçme-değerlendirme (ortak sınav, konu-soru dağılımı) ve öğrenci başarısı görüşülür; tutanak okul müdürünün onayına sunulur. Ortaöğretim için yönergeyi kontrol ediniz.",
+   "u": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=19942&MevzuatTur=7&MevzuatTertip=5",
+   "d": "Madde numaraları resmî metinden doğrulandı (17.10.2026); güncel değişiklikler için kontrol ediniz"
+  },
+  {
+   "id": "sok",
+   "a": [
+    "şube öğretmenler",
+    "şök"
+   ],
+   "k": "MEB Ortaöğretim Kurumları Yönetmeliği / Okul Öncesi Eğitim ve İlköğretim Kurumları Yönetmeliği",
+   "m": "İlköğretim: OİY m.36. Ortaöğretim: OOY m.108 + yönerge (kontrol ediniz)",
+   "o": "İlkokul/ortaokulda (OİY m.36) sınıf/şube öğretmenler kurulu birinci dönemin ikinci ayında, ikinci dönemin birinci veya ikinci haftasında ve ders yılı sonunda toplanır; şubenin başarı, devam ve davranış durumu ile alınacak önlemler görüşülür. Ortaöğretim için yönergeyi kontrol ediniz.",
+   "u": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=19942&MevzuatTur=7&MevzuatTertip=5",
+   "d": "Madde numaraları resmî metinden doğrulandı (17.10.2026); güncel değişiklikler için kontrol ediniz"
+  },
+  {
+   "id": "disiplin",
+   "a": [
+    "disiplin",
+    "savunma",
+    "olay tespit",
+    "sevk"
+   ],
+   "k": "MEB Ortaöğretim Kurumları Yönetmeliği (ödül ve disiplin) / OİY (ortaokul davranış)",
+   "m": "OOY m.192(3), m.194, m.196, m.197, m.169(3); ortaokul: OİY m.54–61",
+   "o": "Ortaöğretimde kurul konuyu en geç 10 iş günü içinde karara bağlar (m.192/3). Öğrencinin yazılı, gerekirse sözlü savunması alınır; savunmaya çağrı imza karşılığı yazılı yapılır (m.194). Kararlar gerekçeli yazılır (m.196); ilçe kuruluna gidecek dosyalar müdürce 5 iş günü içinde gönderilir (m.197). İtiraz tebliği izleyen 5 iş günü içinde yapılır (m.169/3). Ortaokulda disiplin cezası yerine davranış yaptırımları (uyarma, kınama, okul değiştirme) uygulanır; kurulun adı Öğrenci Davranışlarını Değerlendirme Kuruludur (OİY m.54–61).",
+   "u": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=18812&MevzuatTur=7&MevzuatTertip=5",
+   "d": "Madde numaraları resmî metinden doğrulandı (17.10.2026); güncel değişiklikler için kontrol ediniz"
+  },
+  {
+   "id": "nobet",
+   "a": [
+    "nöbet"
+   ],
+   "k": "MEB Ortaöğretim Kurumları Yönetmeliği / Okul Öncesi Eğitim ve İlköğretim Kurumları Yönetmeliği",
+   "m": "OOY m.91; OİY m.44",
+   "o": "Nöbet çizelgesi hazırlanır, müdür onaylar ve öğretmenlere tebliğ edilir; nöbet esasları öğretmenler kurulunda görüşülür. Ortaöğretimde nöbet ilk dersten 30 dakika önce başlar, son dersten 30 dakika sonra biter; kurul bu süreyi 15 dakikadan az olmamak üzere kısaltabilir (OOY m.91). Hamile öğretmenler 24. haftadan analık izni bitiminden itibaren 2 yıl dolana kadar (isterlerse hariç), 20 yıl hizmeti olan kadın ve 25 yıl hizmeti olan erkek öğretmenler isteğe bağlı olarak nöbetten muaf tutulur. İlkokul/ortaokul için OİY m.44'e bakınız.",
+   "u": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=18812&MevzuatTur=7&MevzuatTertip=5",
+   "d": "Madde numaraları resmî metinden doğrulandı (17.10.2026); güncel değişiklikler için kontrol ediniz"
+  },
+  {
+   "id": "veli",
+   "a": [
+    "veli toplantı",
+    "veli"
+   ],
+   "k": "MEB Okul-Aile Birliği Yönetmeliği (RG 09.02.2012, 28199); kademe yönetmelikleri",
+   "m": "OAB Yön. m.9 (genel kurul). Veli toplantısı sıklığı: kontrol ediniz",
+   "o": "OAB genel kurulu her yıl en geç Ekim ayının sonuna kadar okulda toplanır (m.9; sonraki değişiklikler için kontrol ediniz). Veli toplantılarının sıklığı ve zamanı için kademe yönetmeliği ve okul planını kontrol ediniz. Toplantı tutanağı ve katılım listesi saklanır.",
+   "u": "https://www.mevzuat.gov.tr/",
+   "d": "Madde numaraları resmî metinden doğrulandı (17.10.2026); güncel değişiklikler için kontrol ediniz"
+  },
+  {
+   "id": "ekders",
+   "a": [
+    "ek ders",
+    "puantaj",
+    "ücretli öğretmen"
+   ],
+   "k": "Millî Eğitim Bakanlığı Yönetici ve Öğretmenlerinin Ders ve Ek Ders Saatlerine İlişkin Karar",
+   "m": "kontrol ediniz",
+   "o": "Ek ders ücreti fiilen girilen derse ödenir; ders dışı eğitim çalışmaları (DYK, egzersiz) ayrıca onaylı plana göre ödenir. Puantaj her ay sonunda okul müdürünün onayıyla tahakkuka gönderilir.",
+   "u": "https://www.mevzuat.gov.tr/",
+   "d": "kontrol ediniz"
+  },
+  {
+   "id": "izin",
+   "a": [
+    "izin",
+    "mazeret",
+    "rapor",
+    "hastalık"
+   ],
+   "k": "657 sayılı Devlet Memurları Kanunu",
+   "m": "m.103 (öğretmenlerin yıllık izni), m.104/B (babalık 10 gün; evlilik ve ölüm 7 gün), m.104/C (amirce 10 güne kadar mazeret izni), m.105 (hastalık ve refakat izni)",
+   "o": "Öğretmenler yaz ve dinlenme tatillerinde izinli sayılır (m.103). Babalık izni 10 gün; kendisinin veya çocuğunun evlenmesi ve yakınlarının ölümünde 7 gün mazeret izni verilir (m.104/B). Bunların dışında amir 10 güne kadar mazeret izni verebilir; ikinci 10 günlük mazeret izni öğretmenlere uygulanmaz (m.104/C). Hastalık ve refakat izni rapora göre verilir (m.105). Analık izni m.104/A, süt izni m.104/D.",
+   "u": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=657&MevzuatTur=1&MevzuatTertip=5",
+   "d": "Madde numaraları resmî metinden doğrulandı (17.10.2026); güncel değişiklikler için kontrol ediniz"
+  },
+  {
+   "id": "gezi",
+   "a": [
+    "gezi",
+    "muvafakat",
+    "sosyal etkinlik"
+   ],
+   "k": "MEB Eğitim Kurumları Sosyal Etkinlikler Yönetmeliği (RG 08.06.2017, 30090)",
+   "m": "m.10 (geziler) — sonraki değişiklikler için kontrol ediniz",
+   "o": "Gezi için Veli İzin Belgesi (EK-5) gezi öncesi sorumlu öğretmenlerce alınır ve gezi dosyasına konur. 1 kafile başkanı ile 40 öğrenciye kadar en az 1, en fazla 2 öğretmen görevlendirilir (özel eğitimde 10 öğrenciye en az 2). Program kapsamındaki geziler ders saatinde, diğerleri dersleri aksatmadan hafta sonu veya tatilde yapılır. Onay makamı için yönetmeliği kontrol ediniz.",
+   "u": "https://www.resmigazete.gov.tr/eskiler/2017/06/20170608-5.htm",
+   "d": "Madde numaraları resmî metinden doğrulandı (17.10.2026); güncel değişiklikler için kontrol ediniz"
+  },
+  {
+   "id": "bep",
+   "a": [
+    "bep",
+    "kaynaştırma",
+    "özel eğitim",
+    "destek eğitim",
+    "evde eğitim"
+   ],
+   "k": "MEB Özel Eğitim Hizmetleri Yönetmeliği (RG 07.07.2018, 30471)",
+   "m": "m.20 (BEP), m.47–48 (BEP geliştirme birimi ve görevleri) — sonraki değişiklikler için kontrol ediniz",
+   "o": "Özel eğitim ihtiyacı olan öğrenciler için okulda müdür başkanlığında BEP geliştirme birimi oluşturulur (m.47); birim BEP'in hazırlanması, uygulanması, izlenmesi ve değerlendirilmesini koordine eder (m.48). BEP, takip edilen eğitim programı temel alınarak hazırlanır (m.20). Değerlendirme sıklığını kontrol ediniz.",
+   "u": "https://www.resmigazete.gov.tr/eskiler/2018/07/20180707-8.htm",
+   "d": "Madde numaraları resmî metinden doğrulandı (17.10.2026); güncel değişiklikler için kontrol ediniz"
+  },
+  {
+   "id": "dyk",
+   "a": [
+    "dyk",
+    "destekleme ve yetiştirme",
+    "iyep",
+    "egzersiz",
+    "ders dışı"
+   ],
+   "k": "MEB Destekleme ve Yetiştirme Kursları Yönergesi; İYEP Yönergesi; Ders Dışı Eğitim Çalışmaları Yönergesi",
+   "m": "kontrol ediniz",
+   "o": "Kurs ve egzersiz çalışmaları onaylı plan, yoklama ve devam çizelgesiyle yürütülür; ücret onaylı plana ve fiilen yapılan saate göre ödenir.",
+   "u": "https://www.meb.gov.tr/",
+   "d": "kontrol ediniz"
+  },
+  {
+   "id": "rehberlik",
+   "a": [
+    "rehberlik",
+    "rehber öğretmen",
+    "görüşme",
+    "ram"
+   ],
+   "k": "MEB Rehberlik ve Psikolojik Danışma Hizmetleri Yönetmeliği (RG 14.08.2020, 31213)",
+   "m": "m.23 (sınıf rehber öğretmeninin görevleri)",
+   "o": "Sınıf rehber öğretmeni sınıf rehberlik planını okul RPD programı çerçevesinde hazırlar ve en geç ekim ayının ikinci haftasında müdüre onaylatır; bir örneğini RPD servisiyle paylaşır. Her yıl kasım ayında risk altındaki öğrencilere ait verilerin bir örneğini servise iletir (m.23). Öğrenci bilgileri gizli tutulur.",
+   "u": "https://www.resmigazete.gov.tr/eskiler/2020/08/20200814-2.htm",
+   "d": "Madde numaraları resmî metinden doğrulandı (17.10.2026); güncel değişiklikler için kontrol ediniz"
+  },
+  {
+   "id": "isg",
+   "a": [
+    "isg",
+    "acil durum",
+    "tatbikat",
+    "sivil savunma",
+    "güvenlik"
+   ],
+   "k": "6331 sayılı İş Sağlığı ve Güvenliği Kanunu",
+   "m": "m.11 (acil durum planları), m.22 (İSG kurulu)",
+   "o": "İşyerinde acil durum planı hazırlanır, ekipler belirlenir ve tatbikat yapılır. Elli ve daha fazla çalışanı olan işyerlerinde İSG kurulu oluşturulur.",
+   "u": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6331&MevzuatTur=1&MevzuatTertip=5",
+   "d": "Madde numaraları resmî metinden doğrulandı (17.10.2026); güncel değişiklikler için kontrol ediniz"
+  },
+  {
+   "id": "tasinir",
+   "a": [
+    "taşınır",
+    "zimmet",
+    "sayım",
+    "demirbaş"
+   ],
+   "k": "Taşınır Mal Yönetmeliği (RG 18.01.2007, 26407)",
+   "m": "m.32 (sayım ve sayım sonrası işlemler) — sonraki değişiklikler için kontrol ediniz",
+   "o": "Taşınırlar zimmetle teslim edilir. Taşınır kayıt kontrol yetkilisinin görevden ayrılmasında, yıl sonlarında ve harcama yetkilisinin gerekli gördüğü hallerde sayım yapılır (m.32). Sayım fazlası taşınırlar Taşınır İşlem Fişiyle kayda alınır (m.17).",
+   "u": "https://www.mevzuat.gov.tr/",
+   "d": "Madde numaraları resmî metinden doğrulandı (17.10.2026); güncel değişiklikler için kontrol ediniz"
+  },
+  {
+   "id": "yazi",
+   "a": [
+    "resmî yazı",
+    "dilekçe",
+    "olur",
+    "tebliğ",
+    "üst yazı"
+   ],
+   "k": "Resmî Yazışmalarda Uygulanacak Usul ve Esaslar Hakkında Yönetmelik (RG 10.06.2020, 31151)",
+   "m": "m.11 (sayı), m.12 (tarih), m.15 (ilgi), m.17 (imza), m.19 (dağıtım)",
+   "o": "Belgede sayı zorunludur (m.11). Tarih sayı ile aynı satırda en sağda gün.ay.yıl olarak yazılır, gün ve ay iki haneli, yıl dört haneli (01.09.2019) (m.12). İlgi, muhatabın son satırından iki satır sonra yazılır (m.15). İmza metinden 2–4 satır sonra sağda ad-soyad ve unvanla yer alır (m.17). Birden fazla muhatap varsa Dağıtım bölümü kullanılır (m.19). Dilekçelerde sayı, ilgi ve dağıtım kullanılmaz.",
+   "u": "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=21&MevzuatNo=2646&MevzuatTertip=5",
+   "d": "Madde numaraları resmî metinden doğrulandı (17.10.2026); güncel değişiklikler için kontrol ediniz"
+  }
+ ],
+ "takvim": [
+  [
+   "2026-09-07",
+   "Mesleki çalışma (seminer) dönemi; yıl başı öğretmenler kurulu ve zümre toplantıları",
+   "kurul",
+   "kontrol ediniz"
+  ],
+  [
+   "2026-09-14",
+   "Ders yılı başlıyor; yıllık planlar, kulüp ve nöbet görevlendirmeleri",
+   "plan",
+   ""
+  ],
+  [
+   "2026-09-28",
+   "İlk veli toplantısı ve OAB genel kurulu (Eylül sonu–Ekim başı)",
+   "veli",
+   "kontrol ediniz"
+  ],
+  [
+   "2026-10-26",
+   "1. dönem şube öğretmenler kurulu (Ekim–Kasım)",
+   "kurul",
+   "kontrol ediniz"
+  ],
+  [
+   "2026-11-11",
+   "Ülke geneli ortak yazılı sınav (1. dönem 1. yazılı) 11-12 Kasım",
+   "sinav",
+   ""
+  ],
+  [
+   "2026-11-16",
+   "1. dönem ara tatili 16-20 Kasım",
+   "tatil",
+   ""
+  ],
+  [
+   "2027-01-05",
+   "Ülke geneli ortak yazılı sınav (1. dönem 2. yazılı) 5-6 Ocak",
+   "sinav",
+   ""
+  ],
+  [
+   "2027-01-22",
+   "1. dönem sonu, karne; dönem sonu evrak teslimi",
+   "plan",
+   ""
+  ],
+  [
+   "2027-02-01",
+   "2. dönem başı öğretmenler kurulu ve zümre toplantıları (yarıyıl tatilinin 2. haftası)",
+   "kurul",
+   "kontrol ediniz"
+  ],
+  [
+   "2027-02-08",
+   "2. dönem başlıyor",
+   "plan",
+   ""
+  ],
+  [
+   "2027-03-08",
+   "2. dönem ara tatili 8-12 Mart",
+   "tatil",
+   ""
+  ],
+  [
+   "2027-04-06",
+   "Ülke geneli ortak yazılı sınav (2. dönem 1. yazılı) 6-7 Nisan",
+   "sinav",
+   ""
+  ],
+  [
+   "2027-04-19",
+   "2. dönem şube öğretmenler kurulu (Nisan–Mayıs)",
+   "kurul",
+   "kontrol ediniz"
+  ],
+  [
+   "2027-06-08",
+   "Ülke geneli ortak yazılı sınav (2. dönem 2. yazılı) 8-9 Haziran",
+   "sinav",
+   ""
+  ],
+  [
+   "2027-06-25",
+   "Ders yılı sonu; yıl sonu öğretmenler kurulu, zümre, rehberlik raporları, evrak teslimi",
+   "kurul",
+   ""
+  ]
+ ],
+ "gundem_zorunlu": [
+  "açılış ve yoklama",
+  "önceki toplantı kararları",
+  "dilek ve temenniler"
+ ],
+ "sablonlar": [
+  {
+   "app": "oy",
+   "id": "ev_rehber_yilsonu",
+   "kat": "Rehberlik",
+   "baslik": "Sınıf Rehber Öğretmeni Yıl Sonu Raporu",
+   "ay": [
+    6,
+    1
+   ],
+   "mz": "rehberlik",
+   "alan": [
+    [
+     "sinif",
+     "Sınıf/Şube",
+     "{sinif}"
+    ],
+    [
+     "mevcut",
+     "Öğrenci mevcudu"
+    ],
+    [
+     "yapilan",
+     "Yapılan rehberlik etkinlikleri",
+     "list"
+    ],
+    [
+     "bireysel",
+     "Bireysel görüşme / yönlendirme sayısı (ad yazmayınız)"
+    ],
+    [
+     "veli",
+     "Veli görüşmeleri ve toplantılar",
+     "list"
+    ],
+    [
+     "sorun",
+     "Gözlenen genel sorunlar",
+     "area"
+    ],
+    [
+     "oneri",
+     "Gelecek yıl için öneriler",
+     "list"
+    ]
+   ],
+   "y": [
+    [
+     "kv",
+     [
+      [
+       "Sınıf/Şube",
+       "sinif"
+      ],
+      [
+       "Öğrenci mevcudu",
+       "mevcut"
+      ],
+      [
+       "Bireysel görüşme / yönlendirme",
+       "bireysel"
+      ]
+     ]
+    ],
+    [
+     "h2",
+     "YAPILAN ETKİNLİKLER"
+    ],
+    [
+     "list",
+     "yapilan"
+    ],
+    [
+     "h2",
+     "VELİ ÇALIŞMALARI"
+    ],
+    [
+     "list",
+     "veli"
+    ],
+    [
+     "h2",
+     "GÖZLEMLER"
+    ],
+    [
+     "p",
+     "sorun"
+    ],
+    [
+     "h2",
+     "ÖNERİLER"
+    ],
+    [
+     "list",
+     "oneri"
+    ]
+   ],
+   "imza": [
+    "ogretmen",
+    "mudur"
+   ]
+  },
+  {
+   "app": "oy",
+   "id": "ev_bep",
+   "kat": "BEP",
+   "baslik": "Bireyselleştirilmiş Eğitim Programı (BEP) Formu",
+   "ay": [
+    10,
+    2
+   ],
+   "mz": "bep",
+   "alan": [
+    [
+     "ogr",
+     "Öğrenci (baş harfleri)"
+    ],
+    [
+     "sinif",
+     "Sınıf",
+     "{sinif}"
+    ],
+    [
+     "ders",
+     "Ders",
+     "{ders}"
+    ],
+    [
+     "performans",
+     "Mevcut performans düzeyi",
+     "area"
+    ],
+    [
+     "uzun",
+     "Uzun dönemli amaçlar",
+     "list"
+    ],
+    [
+     "kisa",
+     "Kısa dönemli amaçlar (öğrenme çıktısıyla)",
+     "list"
+    ],
+    [
+     "yontem",
+     "Yöntem, materyal ve uyarlamalar",
+     "list"
+    ],
+    [
+     "degerlendirme",
+     "Değerlendirme yolu ve tarihleri",
+     "list"
+    ]
+   ],
+   "y": [
+    [
+     "kv",
+     [
+      [
+       "Öğrenci",
+       "ogr"
+      ],
+      [
+       "Sınıf",
+       "sinif"
+      ],
+      [
+       "Ders",
+       "ders"
+      ]
+     ]
+    ],
+    [
+     "h2",
+     "MEVCUT PERFORMANS"
+    ],
+    [
+     "p",
+     "performans"
+    ],
+    [
+     "h2",
+     "UZUN DÖNEMLİ AMAÇLAR"
+    ],
+    [
+     "list",
+     "uzun"
+    ],
+    [
+     "h2",
+     "KISA DÖNEMLİ AMAÇLAR"
+    ],
+    [
+     "list",
+     "kisa"
+    ],
+    [
+     "h2",
+     "YÖNTEM VE UYARLAMALAR"
+    ],
+    [
+     "list",
+     "yontem"
+    ],
+    [
+     "h2",
+     "DEĞERLENDİRME"
+    ],
+    [
+     "list",
+     "degerlendirme"
+    ]
+   ],
+   "imza": [
+    "ogretmen",
+    "BEP birimi başkanı",
+    "Veli"
+   ]
+  },
+  {
+   "app": "oy",
+   "id": "ev_kaynastirma",
+   "kat": "BEP",
+   "baslik": "Kaynaştırma Öğrencisi Dönem Değerlendirme Formu",
+   "ay": [
+    1,
+    6
+   ],
+   "mz": "bep",
+   "alan": [
+    [
+     "ogr",
+     "Öğrenci (baş harfleri)"
+    ],
+    [
+     "sinif",
+     "Sınıf",
+     "{sinif}"
+    ],
+    [
+     "kazanilan",
+     "Ulaşılan amaçlar",
+     "list"
+    ],
+    [
+     "kalan",
+     "Ulaşılamayan amaçlar ve nedenleri",
+     "list"
+    ],
+    [
+     "oneri",
+     "Sonraki dönem için öneriler",
+     "list"
+    ]
+   ],
+   "y": [
+    [
+     "kv",
+     [
+      [
+       "Öğrenci",
+       "ogr"
+      ],
+      [
+       "Sınıf",
+       "sinif"
+      ],
+      [
+       "Dönem",
+       "donem"
+      ]
+     ]
+    ],
+    [
+     "h2",
+     "ULAŞILAN AMAÇLAR"
+    ],
+    [
+     "list",
+     "kazanilan"
+    ],
+    [
+     "h2",
+     "ULAŞILAMAYAN AMAÇLAR"
+    ],
+    [
+     "list",
+     "kalan"
+    ],
+    [
+     "h2",
+     "ÖNERİLER"
+    ],
+    [
+     "list",
+     "oneri"
+    ]
+   ],
+   "imza": [
+    "ogretmen",
+    "mudur"
+   ]
+  },
+  {
+   "app": "oy",
+   "id": "ev_gezi",
+   "kat": "Sosyal Etkinlik ve Kulüp",
+   "baslik": "Gezi Planı ve Veli İzin Belgesi",
+   "ay": [
+    10,
+    11,
+    3,
+    4,
+    5
+   ],
+   "mz": "gezi",
+   "alan": [
+    [
+     "yer",
+     "Gezilecek yer"
+    ],
+    [
+     "amac",
+     "Amaç (öğrenme çıktısıyla ilişkisi)",
+     "area"
+    ],
+    [
+     "gtarih",
+     "Gezi tarihi",
+     "date"
+    ],
+    [
+     "saat",
+     "Çıkış – dönüş saati",
+     "",
+     "08.30 – 15.30"
+    ],
+    [
+     "arac",
+     "Ulaşım"
+    ],
+    [
+     "sorumlu",
+     "Sorumlu öğretmenler",
+     "list"
+    ],
+    [
+     "sayi",
+     "Öğrenci sayısı"
+    ]
+   ],
+   "y": [
+    [
+     "kv",
+     [
+      [
+       "Gezilecek yer",
+       "yer"
+      ],
+      [
+       "Tarih",
+       "gtarih"
+      ],
+      [
+       "Saat",
+       "saat"
+      ],
+      [
+       "Ulaşım",
+       "arac"
+      ],
+      [
+       "Öğrenci sayısı",
+       "sayi"
+      ]
+     ]
+    ],
+    [
+     "h2",
+     "AMAÇ"
+    ],
+    [
+     "p",
+     "amac"
+    ],
+    [
+     "h2",
+     "SORUMLU ÖĞRETMENLER"
+    ],
+    [
+     "list",
+     "sorumlu"
+    ],
+    [
+     "h2",
+     "VELİ İZİN BELGESİ"
+    ],
+    [
+     "txt",
+     "Velisi bulunduğum ……………………………… adlı öğrencinin {yer} gezisine {gtarih} tarihinde katılmasına izin veriyorum."
+    ],
+    [
+     "txt",
+     "Veli Adı Soyadı: ……………………   İmza: ……………   Telefon: ……………"
+    ]
+   ],
+   "imza": [
+    "ogretmen",
+    "mudur"
+   ]
+  },
+  {
+   "app": "oy",
+   "id": "ev_dyk",
+   "kat": "Kurs ve Egzersiz",
+   "baslik": "DYK Kurs Planı ve Yoklama Çizelgesi",
+   "ay": [
+    10,
+    2
+   ],
+   "mz": "dyk",
+   "alan": [
+    [
+     "ders",
+     "Ders",
+     "{ders}"
+    ],
+    [
+     "sinif",
+     "Sınıf düzeyi",
+     "{sinif}"
+    ],
+    [
+     "gunsaat",
+     "Gün ve saat",
+     "",
+     "Cumartesi 09.00-11.30"
+    ],
+    [
+     "konular",
+     "Haftalık konular / öğrenme çıktıları",
+     "list"
+    ],
+    [
+     "hafta",
+     "Yoklama sütunu (hafta) sayısı",
+     "",
+     "8"
+    ]
+   ],
+   "y": [
+    [
+     "kv",
+     [
+      [
+       "Ders",
+       "ders"
+      ],
+      [
+       "Sınıf",
+       "sinif"
+      ],
+      [
+       "Gün ve saat",
+       "gunsaat"
+      ],
+      [
+       "Öğretmen",
+       "ogretmen"
+      ]
+     ]
+    ],
+    [
+     "h2",
+     "KURS PLANI"
+    ],
+    [
+     "list",
+     "konular"
+    ],
+    [
+     "h2",
+     "YOKLAMA ÇİZELGESİ"
+    ],
+    [
+     "yoklama",
+     "hafta"
+    ]
+   ],
+   "imza": [
+    "ogretmen",
+    "mudur"
+   ]
+  },
+  {
+   "app": "oy",
+   "id": "ev_iyep",
+   "kat": "Kurs ve Egzersiz",
+   "baslik": "İYEP Öğrenci İzleme ve Değerlendirme Formu",
+   "ay": [
+    11,
+    3,
+    5
+   ],
+   "mz": "dyk",
+   "alan": [
+    [
+     "ogr",
+     "Öğrenci (baş harfleri)"
+    ],
+    [
+     "sinif",
+     "Sınıf",
+     "{sinif}"
+    ],
+    [
+     "modul",
+     "Modül",
+     "select",
+     [
+      "Türkçe",
+      "Matematik"
+     ]
+    ],
+    [
+     "on",
+     "Ön test sonucu"
+    ],
+    [
+     "son",
+     "Son test sonucu"
+    ],
+    [
+     "gozlem",
+     "Gözlemler",
+     "area"
+    ]
+   ],
+   "y": [
+    [
+     "kv",
+     [
+      [
+       "Öğrenci",
+       "ogr"
+      ],
+      [
+       "Sınıf",
+       "sinif"
+      ],
+      [
+       "Modül",
+       "modul"
+      ],
+      [
+       "Ön test",
+       "on"
+      ],
+      [
+       "Son test",
+       "son"
+      ]
+     ]
+    ],
+    [
+     "h2",
+     "GÖZLEMLER"
+    ],
+    [
+     "p",
+     "gozlem"
+    ]
+   ],
+   "imza": [
+    "ogretmen",
+    "mudur"
+   ]
+  },
+  {
+   "app": "oy",
+   "id": "ev_egzersiz",
+   "kat": "Kurs ve Egzersiz",
+   "baslik": "Egzersiz (Ders Dışı Eğitim) Çalışma Planı",
+   "ay": [
+    9,
+    10
+   ],
+   "mz": "dyk",
+   "alan": [
+    [
+     "alan",
+     "Egzersiz alanı",
+     "",
+     "Satranç"
+    ],
+    [
+     "gunsaat",
+     "Gün ve saat"
+    ],
+    [
+     "yer",
+     "Yer"
+    ],
+    [
+     "aylik",
+     "Aylık çalışma konuları",
+     "list"
+    ],
+    [
+     "katilim",
+     "Katılımcı öğrenci sayısı"
+    ]
+   ],
+   "y": [
+    [
+     "kv",
+     [
+      [
+       "Alan",
+       "alan"
+      ],
+      [
+       "Gün ve saat",
+       "gunsaat"
+      ],
+      [
+       "Yer",
+       "yer"
+      ],
+      [
+       "Öğrenci sayısı",
+       "katilim"
+      ],
+      [
+       "Öğretmen",
+       "ogretmen"
+      ]
+     ]
+    ],
+    [
+     "h2",
+     "AYLIK ÇALIŞMA PLANI"
+    ],
+    [
+     "list",
+     "aylik"
+    ]
+   ],
+   "imza": [
+    "ogretmen",
+    "mudur"
+   ]
+  },
+  {
+   "app": "oy",
+   "id": "ev_seminer",
+   "kat": "Raporlar",
+   "baslik": "Mesleki Çalışma (Seminer) Dönemi Raporu",
+   "ay": [
+    9,
+    6
+   ],
+   "mz": "kurul",
+   "alan": [
+    [
+     "donemi",
+     "Dönem",
+     "select",
+     [
+      "Eylül",
+      "Haziran"
+     ]
+    ],
+    [
+     "katildigi",
+     "Katıldığı çalışmalar",
+     "list"
+    ],
+    [
+     "kazanim",
+     "Edinilen bilgi ve beceriler",
+     "area"
+    ],
+    [
+     "uygulama",
+     "Derse yansıtılacak uygulamalar",
+     "list"
+    ]
+   ],
+   "y": [
+    [
+     "kv",
+     [
+      [
+       "Öğretmen",
+       "ogretmen"
+      ],
+      [
+       "Branş",
+       "brans"
+      ],
+      [
+       "Dönem",
+       "donemi"
+      ]
+     ]
+    ],
+    [
+     "h2",
+     "KATILDIĞI ÇALIŞMALAR"
+    ],
+    [
+     "list",
+     "katildigi"
+    ],
+    [
+     "h2",
+     "EDİNİLENLER"
+    ],
+    [
+     "p",
+     "kazanim"
+    ],
+    [
+     "h2",
+     "UYGULAMA PLANI"
+    ],
+    [
+     "list",
+     "uygulama"
+    ]
+   ],
+   "imza": [
+    "ogretmen",
+    "mudur"
+   ]
+  },
+  {
+   "app": "oy",
+   "id": "ev_yilsonu_evrak",
+   "kat": "Raporlar",
+   "baslik": "Yıl Sonu Evrak Teslim Listesi (Öğretmen)",
+   "ay": [
+    6,
+    1
+   ],
+   "mz": "kurul",
+   "alan": [
+    [
+     "evraklar",
+     "Teslim edilen evrak",
+     "list",
+     [
+      "Zümre tutanakları",
+      "ŞÖK tutanakları",
+      "Sınıf rehberlik yıl sonu raporu",
+      "Kulüp yıl sonu raporu",
+      "Yazılı sınav kâğıtları ve analizleri",
+      "Proje ödevleri",
+      "Nöbet defteri",
+      "DYK/egzersiz yoklamaları"
+     ]
+    ]
+   ],
+   "y": [
+    [
+     "kv",
+     [
+      [
+       "Öğretmen",
+       "ogretmen"
+      ],
+      [
+       "Branş",
+       "brans"
+      ]
+     ]
+    ],
+    [
+     "checklist",
+     "evraklar"
+    ]
+   ],
+   "imza": [
+    "ogretmen",
+    "Teslim alan müdür yardımcısı"
+   ]
+  },
+  {
+   "app": "oy",
+   "id": "ev_odul",
+   "kat": "Öğrenci",
+   "baslik": "Öğrenci Ödül Önerisi Formu",
+   "ay": [
+    1,
+    5,
+    6
+   ],
+   "mz": "disiplin",
+   "alan": [
+    [
+     "ogr",
+     "Öğrenci (ad soyad)"
+    ],
+    [
+     "sinif",
+     "Sınıf/Şube",
+     "{sinif}"
+    ],
+    [
+     "tur",
+     "Önerilen ödül",
+     "select",
+     [
+      "Teşekkür belgesi",
+      "Takdir belgesi (davranış)",
+      "Onur belgesi",
+      "Diğer"
+     ]
+    ],
+    [
+     "gerekce",
+     "Gerekçe",
+     "area"
+    ]
+   ],
+   "y": [
+    [
+     "kv",
+     [
+      [
+       "Öğrenci",
+       "ogr"
+      ],
+      [
+       "Sınıf/Şube",
+       "sinif"
+      ],
+      [
+       "Önerilen ödül",
+       "tur"
+      ]
+     ]
+    ],
+    [
+     "h2",
+     "GEREKÇE"
+    ],
+    [
+     "p",
+     "gerekce"
+    ]
+   ],
+   "imza": [
+    "ogretmen"
+   ]
+  },
+  {
+   "app": "oy",
+   "id": "ev_olay",
+   "kat": "Öğrenci",
+   "baslik": "Disiplin Kuruluna Sevk Önerisi / Olay Bildirimi",
+   "ay": [],
+   "mz": "disiplin",
+   "alan": [
+    [
+     "ogr",
+     "Öğrenci (ad soyad)"
+    ],
+    [
+     "sinif",
+     "Sınıf/Şube",
+     "{sinif}"
+    ],
+    [
+     "otarih",
+     "Olay tarihi ve saati"
+    ],
+    [
+     "yer",
+     "Olay yeri"
+    ],
+    [
+     "olay",
+     "Olayın açıklaması (nesnel)",
+     "area"
+    ],
+    [
+     "yapilan",
+     "Daha önce yapılan rehberlik/uyarılar",
+     "list"
+    ],
+    [
+     "tanik",
+     "Tanıklar",
+     "list"
+    ]
+   ],
+   "y": [
+    [
+     "kv",
+     [
+      [
+       "Öğrenci",
+       "ogr"
+      ],
+      [
+       "Sınıf/Şube",
+       "sinif"
+      ],
+      [
+       "Olay tarihi",
+       "otarih"
+      ],
+      [
+       "Yer",
+       "yer"
+      ]
+     ]
+    ],
+    [
+     "h2",
+     "OLAY"
+    ],
+    [
+     "p",
+     "olay"
+    ],
+    [
+     "h2",
+     "DAHA ÖNCE YAPILANLAR"
+    ],
+    [
+     "list",
+     "yapilan"
+    ],
+    [
+     "h2",
+     "TANIKLAR"
+    ],
+    [
+     "list",
+     "tanik"
+    ],
+    [
+     "txt",
+     "Yukarıda açıklanan olayın gereği için bilgilerinize arz ederim."
+    ]
+   ],
+   "imza": [
+    "ogretmen"
+   ]
+  },
+  {
+   "app": "oy",
+   "id": "ev_toren",
+   "kat": "Sosyal Etkinlik ve Kulüp",
+   "baslik": "Tören / Kutlama Görev Programı",
+   "ay": [
+    9,
+    10,
+    11,
+    3,
+    4,
+    5
+   ],
+   "mz": "gezi",
+   "alan": [
+    [
+     "tören",
+     "Tören / gün",
+     "",
+     "29 Ekim Cumhuriyet Bayramı"
+    ],
+    [
+     "ttarih",
+     "Tarih ve saat"
+    ],
+    [
+     "akis",
+     "Program akışı",
+     "list",
+     [
+      "Saygı duruşu ve İstiklal Marşı",
+      "Günün anlam ve önemini belirten konuşma",
+      "Şiirler",
+      "Gösteri",
+      "Kapanış"
+     ]
+    ],
+    [
+     "gorevli",
+     "Görevli öğretmen ve öğrenciler (görev)",
+     "list"
+    ]
+   ],
+   "y": [
+    [
+     "kv",
+     [
+      [
+       "Tören",
+       "tören"
+      ],
+      [
+       "Tarih",
+       "ttarih"
+      ]
+     ]
+    ],
+    [
+     "h2",
+     "PROGRAM AKIŞI"
+    ],
+    [
+     "list",
+     "akis"
+    ],
+    [
+     "h2",
+     "GÖREVLİLER"
+    ],
+    [
+     "list",
+     "gorevli"
+    ]
+   ],
+   "imza": [
+    "ogretmen",
+    "mudur"
+   ]
+  },
+  {
+   "app": "oy",
+   "id": "ev_ekders",
+   "kat": "Dilekçeler",
+   "baslik": "Ek Ders / Ders Değişikliği Dilekçesi",
+   "ay": [],
+   "mz": "ekders",
+   "alan": [
+    [
+     "konu",
+     "Talep",
+     "select",
+     [
+      "Ek ders görevlendirmesi",
+      "Ders değişikliği",
+      "Telafi dersi"
+     ]
+    ],
+    [
+     "detay",
+     "Açıklama (gün, saat, sınıf)",
+     "area"
+    ]
+   ],
+   "y": [
+    [
+     "muhatap",
+     "{OKUL} MÜDÜRLÜĞÜNE"
+    ],
+    [
+     "p",
+     "detay"
+    ],
+    [
+     "txt",
+     "Gereğini bilgilerinize arz ederim."
+    ]
+   ],
+   "imza": [
+    "ogretmen"
+   ]
+  },
+  {
+   "app": "oy",
+   "id": "ev_izin",
+   "kat": "Dilekçeler",
+   "baslik": "İzin Dilekçesi (mazeret / hastalık)",
+   "ay": [],
+   "mz": "izin",
+   "alan": [
+    [
+     "tur",
+     "İzin türü",
+     "select",
+     [
+      "mazeret izni (657 DMK m.104/C)",
+      "babalık izni (657 DMK m.104/B)",
+      "evlilik nedeniyle mazeret izni (657 DMK m.104/B)",
+      "ölüm nedeniyle mazeret izni (657 DMK m.104/B)",
+      "hastalık izni (657 DMK m.105, rapor ektedir)"
+     ]
+    ],
+    [
+     "baslangic",
+     "Başlangıç tarihi",
+     "date"
+    ],
+    [
+     "gun",
+     "Süre (gün)"
+    ],
+    [
+     "gerekce",
+     "Gerekçe",
+     "area"
+    ],
+    [
+     "telafi",
+     "Derslerimin yürütülmesi / telafi önerisi",
+     "area"
+    ]
+   ],
+   "y": [
+    [
+     "muhatap",
+     "{OKUL} MÜDÜRLÜĞÜNE"
+    ],
+    [
+     "txt",
+     "{gerekce} nedeniyle {baslangic} tarihinden itibaren {gun} gün {tur} kullanmak istiyorum."
+    ],
+    [
+     "txt",
+     "Gereğini bilgilerinize arz ederim."
+    ],
+    [
+     "h2",
+     "DERSLERİN YÜRÜTÜLMESİ"
+    ],
+    [
+     "p",
+     "telafi"
+    ]
+   ],
+   "imza": [
+    "ogretmen"
+   ]
+  },
+  {
+   "app": "oy",
+   "id": "ev_gorevizin",
+   "kat": "Dilekçeler",
+   "baslik": "Kurs / Seminer Görevlendirme İzin Dilekçesi",
+   "ay": [],
+   "mz": "yazi",
+   "alan": [
+    [
+     "etkinlik",
+     "Etkinlik adı"
+    ],
+    [
+     "yer",
+     "Yer"
+    ],
+    [
+     "tarihler",
+     "Tarihler"
+    ],
+    [
+     "telafi",
+     "Derslerin telafisi / görevlendirme önerisi",
+     "area"
+    ]
+   ],
+   "y": [
+    [
+     "muhatap",
+     "{OKUL} MÜDÜRLÜĞÜNE"
+    ],
+    [
+     "txt",
+     "{tarihler} tarihlerinde {yer} adresinde düzenlenecek {etkinlik} etkinliğine görevli olarak katılmam için izin verilmesini arz ederim."
+    ],
+    [
+     "h2",
+     "DERSLERİN TELAFİSİ"
+    ],
+    [
+     "p",
+     "telafi"
+    ]
+   ],
+   "imza": [
+    "ogretmen"
+   ]
+  },
+  {
+   "app": "oy",
+   "id": "ev_telafi",
+   "kat": "Plan",
+   "baslik": "Telafi Eğitimi Planı",
+   "ay": [
+    1,
+    2,
+    6
+   ],
+   "mz": "sinav",
+   "alan": [
+    [
+     "ders",
+     "Ders",
+     "{ders}"
+    ],
+    [
+     "sinif",
+     "Sınıf/Şube",
+     "{sinif}"
+    ],
+    [
+     "eksik",
+     "Eksik kalan öğrenme çıktıları",
+     "list"
+    ],
+    [
+     "etkinlik",
+     "Telafi etkinlikleri ve tarihleri",
+     "list"
+    ],
+    [
+     "olcme",
+     "Ölçme yolu",
+     "area"
+    ]
+   ],
+   "y": [
+    [
+     "kv",
+     [
+      [
+       "Ders",
+       "ders"
+      ],
+      [
+       "Sınıf",
+       "sinif"
+      ]
+     ]
+    ],
+    [
+     "h2",
+     "EKSİK ÖĞRENME ÇIKTILARI"
+    ],
+    [
+     "list",
+     "eksik"
+    ],
+    [
+     "h2",
+     "TELAFİ ETKİNLİKLERİ"
+    ],
+    [
+     "list",
+     "etkinlik"
+    ],
+    [
+     "h2",
+     "ÖLÇME"
+    ],
+    [
+     "p",
+     "olcme"
+    ]
+   ],
+   "imza": [
+    "ogretmen",
+    "mudur"
+   ]
+  },
+  {
+   "app": "myp",
+   "id": "ev_dersdagilim",
+   "kat": "Görevlendirme",
+   "baslik": "Haftalık Ders Dağılım Çizelgesi (öğretmen bazlı)",
+   "ay": [
+    9,
+    2
+   ],
+   "mz": "ekders",
+   "alan": [
+    [
+     "liste",
+     "Öğretmen ; branş ; maaş karşılığı ; ek ders (her satıra bir)",
+     "list"
+    ]
+   ],
+   "y": [
+    [
+     "tablo",
+     "liste",
+     [
+      "Öğretmen",
+      "Branş",
+      "Maaş karşılığı",
+      "Ek ders"
+     ]
+    ]
+   ],
+   "imza": [
+    "mudur_yrd",
+    "mudur"
+   ]
+  },
+  {
+   "app": "myp",
+   "id": "ev_ekders_olur",
+   "kat": "Personel ve Ücretli Öğretmen",
+   "baslik": "Ders Dışı Eğitim (DYK / Egzersiz) Ek Ders Görevlendirme Oluru",
+   "ay": [
+    10,
+    2
+   ],
+   "mz": "ekders",
+   "alan": [
+    [
+     "liste",
+     "Öğretmen ; çalışma ; haftalık saat",
+     "list"
+    ],
+    [
+     "bas",
+     "Başlangıç tarihi",
+     "date"
+    ]
+   ],
+   "y": [
+    [
+     "muhatap",
+     "MÜDÜRLÜK MAKAMINA"
+    ],
+    [
+     "txt",
+     "Okulumuzda {bas} tarihinden itibaren yürütülecek ders dışı eğitim çalışmalarında aşağıda adı yazılı öğretmenlerin ek ders ücreti karşılığı görevlendirilmesini olurlarınıza arz ederim."
+    ],
+    [
+     "tablo",
+     "liste",
+     [
+      "Öğretmen",
+      "Çalışma",
+      "Haftalık saat"
+     ]
+    ]
+   ],
+   "imza": [
+    "mudur_yrd"
+   ],
+   "olur": 1
+  },
+  {
+   "app": "myp",
+   "id": "ev_sinavtakvim",
+   "kat": "Sınavlar",
+   "baslik": "Okul Geneli Yazılı Sınav Takvimi Duyurusu",
+   "ay": [
+    10,
+    3
+   ],
+   "mz": "sinav",
+   "alan": [
+    [
+     "donem",
+     "Dönem",
+     "select",
+     [
+      "1. dönem",
+      "2. dönem"
+     ]
+    ],
+    [
+     "liste",
+     "Tarih ; ders ; sınıf düzeyi ; ders saati",
+     "list"
+    ]
+   ],
+   "y": [
+    [
+     "txt",
+     "{donem} okul geneli ortak yazılı sınav takvimi aşağıdadır. Ülke geneli ortak sınav tarihleri ÖDSGM duyurusuna göredir."
+    ],
+    [
+     "tablo",
+     "liste",
+     [
+      "Tarih",
+      "Ders",
+      "Sınıf",
+      "Saat"
+     ]
+    ]
+   ],
+   "imza": [
+    "mudur_yrd",
+    "mudur"
+   ]
+  },
+  {
+   "app": "myp",
+   "id": "ev_zumrebaskan",
+   "kat": "Görevlendirme",
+   "baslik": "Zümre Başkanları Görevlendirme Oluru",
+   "ay": [
+    9
+   ],
+   "mz": "zumre",
+   "alan": [
+    [
+     "liste",
+     "Zümre ; başkan öğretmen",
+     "list"
+    ]
+   ],
+   "y": [
+    [
+     "muhatap",
+     "MÜDÜRLÜK MAKAMINA"
+    ],
+    [
+     "txt",
+     "{yil} eğitim-öğretim yılında zümre başkanı olarak aşağıdaki öğretmenlerin görevlendirilmesini olurlarınıza arz ederim."
+    ],
+    [
+     "tablo",
+     "liste",
+     [
+      "Zümre",
+      "Zümre başkanı"
+     ]
+    ]
+   ],
+   "imza": [
+    "mudur_yrd"
+   ],
+   "olur": 1
+  },
+  {
+   "app": "myp",
+   "id": "ev_izintakip",
+   "kat": "Personel ve Ücretli Öğretmen",
+   "baslik": "Personel İzin Takip Çizelgesi",
+   "ay": [],
+   "mz": "izin",
+   "alan": [
+    [
+     "liste",
+     "Personel ; izin türü ; başlangıç ; bitiş ; gün",
+     "list"
+    ]
+   ],
+   "y": [
+    [
+     "tablo",
+     "liste",
+     [
+      "Personel",
+      "İzin türü",
+      "Başlangıç",
+      "Bitiş",
+      "Gün"
+     ]
+    ]
+   ],
+   "imza": [
+    "mudur_yrd"
+   ]
+  },
+  {
+   "app": "myp",
+   "id": "ev_nakil",
+   "kat": "Öğrenci İşleri",
+   "baslik": "Nakil Öğrenci Evrak Kontrol Listesi",
+   "ay": [],
+   "mz": "yazi",
+   "alan": [
+    [
+     "ogr",
+     "Öğrenci"
+    ],
+    [
+     "yon",
+     "Nakil",
+     "select",
+     [
+      "Gelen",
+      "Giden"
+     ]
+    ],
+    [
+     "evrak",
+     "Kontrol edilecekler",
+     "list",
+     [
+      "e-Okul nakil işlemi",
+      "Veli dilekçesi",
+      "Sağlık/aşı bilgisi",
+      "Rehberlik dosyası (gizlilik kurallarıyla)",
+      "Kitap ve taşınır teslimi",
+      "Ders denklik/ fark kontrolü"
+     ]
+    ]
+   ],
+   "y": [
+    [
+     "kv",
+     [
+      [
+       "Öğrenci",
+       "ogr"
+      ],
+      [
+       "Nakil",
+       "yon"
+      ]
+     ]
+    ],
+    [
+     "checklist",
+     "evrak"
+    ]
+   ],
+   "imza": [
+    "mudur_yrd"
+   ]
+  },
+  {
+   "app": "myp",
+   "id": "ev_aciltahliye",
+   "kat": "İSG ve Sivil Savunma",
+   "baslik": "Acil Durum ve Tahliye Görev Çizelgesi",
+   "ay": [
+    9,
+    10,
+    3
+   ],
+   "mz": "isg",
+   "alan": [
+    [
+     "liste",
+     "Ekip ; sorumlu ; yedek ; toplanma noktası",
+     "list",
+     [
+      "Söndürme ekibi ; ; ; Bahçe",
+      "Kurtarma ekibi ; ; ; Bahçe",
+      "Koruma ekibi ; ; ; Bahçe",
+      "İlk yardım ekibi ; ; ; Bahçe"
+     ]
+    ],
+    [
+     "telefon",
+     "Acil telefonlar",
+     "list",
+     [
+      "112 Acil Çağrı"
+     ]
+    ]
+   ],
+   "y": [
+    [
+     "tablo",
+     "liste",
+     [
+      "Ekip",
+      "Sorumlu",
+      "Yedek",
+      "Toplanma noktası"
+     ]
+    ],
+    [
+     "h2",
+     "ACİL TELEFONLAR"
+    ],
+    [
+     "list",
+     "telefon"
+    ]
+   ],
+   "imza": [
+    "mudur_yrd",
+    "mudur"
+   ]
+  },
+  {
+   "app": "myp",
+   "id": "ev_ziyaretci",
+   "kat": "Okul Güvenliği",
+   "baslik": "Ziyaretçi Kayıt Çizelgesi",
+   "ay": [],
+   "mz": "isg",
+   "alan": [
+    [
+     "satir",
+     "Boş satır sayısı",
+     "",
+     "20"
+    ]
+   ],
+   "y": [
+    [
+     "bostablo",
+     "satir",
+     [
+      "Tarih",
+      "Giriş",
+      "Çıkış",
+      "Ziyaretçi",
+      "Ziyaret nedeni",
+      "Görüştüğü kişi",
+      "İmza"
+     ]
+    ]
+   ],
+   "imza": [
+    "Nöbetçi müdür yardımcısı"
+   ]
+  },
+  {
+   "app": "myp",
+   "id": "ev_rehberplanonay",
+   "kat": "Rehberlik",
+   "baslik": "Okul Rehberlik Yıllık Planı Onay Yazısı",
+   "ay": [
+    9,
+    10
+   ],
+   "mz": "rehberlik",
+   "alan": [
+    [
+     "ekler",
+     "Ekler",
+     "list",
+     [
+      "Okul rehberlik ve psikolojik danışma programı",
+      "Sınıf rehberlik planları"
+     ]
+    ]
+   ],
+   "y": [
+    [
+     "muhatap",
+     "MÜDÜRLÜK MAKAMINA"
+    ],
+    [
+     "txt",
+     "Okulumuz {yil} eğitim-öğretim yılı rehberlik ve psikolojik danışma hizmetleri yıllık planı ile sınıf rehberlik planları ekte sunulmuştur. Onaylarınıza arz ederim."
+    ],
+    [
+     "h2",
+     "EKLER"
+    ],
+    [
+     "list",
+     "ekler"
+    ]
+   ],
+   "imza": [
+    "mudur_yrd"
+   ],
+   "olur": 1
+  },
+  {
+   "app": "myp",
+   "id": "ev_isbasi",
+   "kat": "Görevlendirme",
+   "baslik": "Yıl Başı / Yıl Sonu İş Takvimi",
+   "ay": [
+    9,
+    6
+   ],
+   "mz": "kurul",
+   "alan": [
+    [
+     "tur",
+     "Takvim",
+     "select",
+     [
+      "Yıl başı (Eylül)",
+      "Yıl sonu (Haziran)"
+     ]
+    ],
+    [
+     "isler",
+     "Tarih ; iş ; sorumlu",
+     "list",
+     [
+      "; Öğretmenler kurulu ; Müdür",
+      "; Zümre toplantıları ; Zümre başkanları",
+      "; Nöbet çizelgesi tebliği ; Müdür yardımcısı",
+      "; Kulüp ve sınıf rehber öğretmeni görevlendirmeleri ; Müdür yardımcısı",
+      "; Ders programı tebliği ; Müdür yardımcısı"
+     ]
+    ]
+   ],
+   "y": [
+    [
+     "kv",
+     [
+      [
+       "Takvim",
+       "tur"
+      ]
+     ]
+    ],
+    [
+     "tablo",
+     "isler",
+     [
+      "Tarih",
+      "İş",
+      "Sorumlu"
+     ]
+    ]
+   ],
+   "imza": [
+    "mudur_yrd",
+    "mudur"
+   ]
+  },
+  {
+   "app": "myp",
+   "id": "ev_velimektup",
+   "kat": "Veli ve OAB",
+   "baslik": "Veli Bilgilendirme Mektubu",
+   "ay": [
+    9,
+    1,
+    2,
+    6
+   ],
+   "mz": "veli",
+   "alan": [
+    [
+     "konu",
+     "Konu",
+     "",
+     "Yeni eğitim-öğretim yılı"
+    ],
+    [
+     "maddeler",
+     "Bilgilendirme maddeleri",
+     "list",
+     [
+      "Ders başlama ve bitiş saatleri",
+      "Ortak yazılı sınav tarihleri",
+      "Devamsızlık kuralları",
+      "Okulla iletişim yolları"
+     ]
+    ]
+   ],
+   "y": [
+    [
+     "txt",
+     "Değerli Velimiz,"
+    ],
+    [
+     "txt",
+     "{konu} hakkında bilgilerinizi sunarız:"
+    ],
+    [
+     "list",
+     "maddeler"
+    ],
+    [
+     "txt",
+     "Saygılarımızla."
+    ]
+   ],
+   "imza": [
+    "mudur"
+   ]
+  },
+  {
+   "app": "myp",
+   "id": "ev_tasinirdevir",
+   "kat": "Taşınır",
+   "baslik": "Taşınır Devir Teslim Tutanağı",
+   "ay": [
+    6,
+    9
+   ],
+   "mz": "tasinir",
+   "alan": [
+    [
+     "devreden",
+     "Devreden"
+    ],
+    [
+     "devralan",
+     "Devralan"
+    ],
+    [
+     "liste",
+     "Taşınır ; sicil no ; adet ; durum",
+     "list"
+    ]
+   ],
+   "y": [
+    [
+     "kv",
+     [
+      [
+       "Devreden",
+       "devreden"
+      ],
+      [
+       "Devralan",
+       "devralan"
+      ]
+     ]
+    ],
+    [
+     "tablo",
+     "liste",
+     [
+      "Taşınır",
+      "Sicil no",
+      "Adet",
+      "Durum"
+     ]
+    ]
+   ],
+   "imza": [
+    "Devreden",
+    "Devralan",
+    "mudur"
+   ]
+  },
+  {
+   "app": "oy",
+   "id": "ev_okuma",
+   "kat": "Öğrenci",
+   "baslik": "Okuma Takip Çizelgesi (ilkokul)",
+   "ay": [
+    10,
+    11,
+    12,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "mz": "",
+   "alan": [
+    [
+     "sinif",
+     "Sınıf / şube",
+     "{sinif}"
+    ],
+    [
+     "donem",
+     "Dönem / ay",
+     "",
+     "1. Dönem"
+    ],
+    [
+     "liste",
+     "Öğrenci okuma kayıtları (her satıra: Öğrenci ; Kitap adı ; Başlama ; Bitiş ; Sayfa sayısı)",
+     "area"
+    ],
+    [
+     "satir",
+     "Ev okuma kayıt satırı sayısı",
+     "",
+     "15"
+    ],
+    [
+     "notlar",
+     "Öğretmen gözlemleri (okuma hızı, anlama, akıcılık)",
+     "area"
+    ]
+   ],
+   "y": [
+    [
+     "kv",
+     [
+      [
+       "Sınıf / şube",
+       "sinif"
+      ],
+      [
+       "Dönem / ay",
+       "donem"
+      ]
+     ]
+    ],
+    [
+     "h2",
+     "SINIF OKUMA KAYITLARI"
+    ],
+    [
+     "tablo",
+     "liste",
+     [
+      "Öğrenci",
+      "Kitap adı",
+      "Başlama",
+      "Bitiş",
+      "Sayfa"
+     ]
+    ],
+    [
+     "h2",
+     "EVDE OKUMA TAKİBİ (veli imzalı)"
+    ],
+    [
+     "bostablo",
+     "satir",
+     [
+      "Tarih",
+      "Kitap / sayfa aralığı",
+      "Okuma süresi (dk)",
+      "Veli imzası"
+     ]
+    ],
+    [
+     "h2",
+     "ÖĞRETMEN GÖZLEMLERİ"
+    ],
+    [
+     "p",
+     "notlar"
+    ]
+   ],
+   "imza": [
+    "ogretmen"
+   ]
+  }
+ ]
+}

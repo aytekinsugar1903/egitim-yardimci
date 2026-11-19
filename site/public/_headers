@@ -1,0 +1,8 @@
+/data/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: no-cache
+
+/rh/sw.js
+  Cache-Control: no-cache
+/srh/sw.js
+  Cache-Control: no-cache

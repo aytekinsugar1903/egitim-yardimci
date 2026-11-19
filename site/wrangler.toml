@@ -1,0 +1,21 @@
+name = "egitim-yardimci"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+workers_dev = true
+routes = [
+  { pattern = "otonomevrak.com", custom_domain = true },
+  { pattern = "www.otonomevrak.com", custom_domain = true },
+]
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "egitim-sync"
+database_id = "9c648528-862e-4264-9b68-c5a8568ea371"
+
+[vars]
+PRICES = '{"para":"TRY","donem":"yillik","planlar":{"oy":{"ad":"Öğretmen Yardımcısı","fiyat":500,"kapsam":["oy"],"fiyat_tek":1000},"myp":{"ad":"Müdür Yardımcısı Paneli","fiyat":3000,"kapsam":["myp"],"fiyat_tek":6000},"okul":{"ad":"Okul lisansı (50 öğretmene kadar, Öğretmen Yardımcısı + Müdür Yardımcısı)","fiyat":7500,"kapsam":["oy","myp"],"not":"Okul kodu ile katılan tüm kullanıcılar; Öğretmen Yardımcısı ve Müdür Yardımcısı dahil. Rehberlik Yardımcısı dahil değildir.","fiyat_tek":15000},"oymyp":{"ad":"Öğretmen Yardımcısı + Müdür Yardımcısı","fiyat":3000,"kapsam":["oy","myp"],"fiyat_tek":6000},"okul50":{"ad":"Okul lisansı (50+ öğretmen, Öğretmen Yardımcısı + Müdür Yardımcısı)","fiyat":10000,"kapsam":["oy","myp"],"not":"Okul kodu ile katılan tüm kullanıcılar; Öğretmen Yardımcısı ve Müdür Yardımcısı dahil. Rehberlik Yardımcısı dahil değildir.","fiyat_tek":20000},"eokul":{"ad":"Okul Pro Devamsızlık Rapor Asistanı","fiyat":2500,"fiyat_tek":5000,"kapsam":["eokul"]},"notgirisi":{"ad":"Not Girişi Asistanı","fiyat":500,"fiyat_tek":1000,"kapsam":["notgirisi"]},"oymypeokul":{"ad":"Öğretmen Yardımcısı + Müdür Yardımcısı + Okul Pro","fiyat":5000,"fiyat_tek":10000,"kapsam":["oy","myp","eokul"]},"evrak":{"ad":"Evrak Asistanı (EBYS / DYS / Belgenet)","fiyat":2500,"fiyat_tek":5000,"kapsam":["evrak"]},"mudur":{"ad":"Müdür Paketi","fiyat":2000,"fiyat_tek":4000,"kapsam":["mudur"]},"form":{"ad":"Form Toplayıcı / Form Birleştirme (Bireysel)","fiyat":1500,"fiyat_tek":3000,"kapsam":["form"]},"form_okul":{"ad":"Form Toplayıcı kurum lisansı (Okul)","fiyat":2000,"fiyat_tek":4000,"kapsam":["form"]},"form_ilce":{"ad":"Form Toplayıcı kurum lisansı (MEB İlçe)","fiyat":5000,"fiyat_tek":10000,"kapsam":["form"]},"form_il":{"ad":"Form Toplayıcı kurum lisansı (MEB İl)","fiyat":7500,"fiyat_tek":15000,"kapsam":["form"]},"rehberlik":{"ad":"Rehberlik Yardımcısı","fiyat":500,"fiyat_tek":1000,"kapsam":["rehberlik"],"not":"Ayrı üründür; paketlere ve ÖY + MYP okul lisansına dahil değildir."},"rehberlikhafif":{"ad":"Sınıf Rehberlik Yardımcısı","fiyat":500,"fiyat_tek":1000,"kapsam":["rehberlikhafif"],"not":"Hafif sürüm; ayrı üründür; paketlere ve ÖY + MYP okul lisansına dahil değildir."},"rehberlik_okul":{"ad":"Rehberlik Yardımcısı okul lisansı","fiyat":1000,"fiyat_tek":2000,"kapsam":["rehberlik"],"not":"Ayrı üründür; paketlere ve ÖY + MYP okul lisansına dahil değildir."},"form_diger":{"ad":"Form Toplayıcı kurum lisansı (Diğer kurumlar, eski kod)","fiyat":5000,"fiyat_tek":10000,"kapsam":["form"],"not":"Eski plan kodu; mevcut lisanslar için korunur. Yeni satışta form_diger_ilce / form_diger_il kullanılır."},"form_diger_ilce":{"ad":"Form Toplayıcı kurum lisansı (Diğer kurum İlçe)","fiyat":5000,"fiyat_tek":10000,"kapsam":["form"]},"form_diger_il":{"ad":"Form Toplayıcı kurum lisansı (Diğer kurum İl)","fiyat":7500,"fiyat_tek":15000,"kapsam":["form"]}},"ucretsiz":"Temel şablonlar, tek cihaz, eşitleme yok","tek_seferlik":"Yıllık fiyatın 2 katı, 1 yıl güncelleme dahil"}'
