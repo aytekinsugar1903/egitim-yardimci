@@ -369,7 +369,7 @@
     egz.innerHTML = '<p class="ea-adim">EGZERSİZ PLANLARI</p><h2>DYK, egzersiz, haftalık çalışma</h2><p>Önce türü seçin, haftayı kontrol edin, konuyu kendiniz yazın. Tam dönem planı ile tek haftalık plan ayrıdır.</p>';
     var es = document.createElement('div');
     es.className = 'ea-satir';
-    [['egz_haftalik', 'Bu haftanın planı', 'Tek hafta'], ['ev_egzersiz', 'Egzersiz çalışma planı', 'Dönem'], ['ev_dyk', 'DYK ve İYEP kurs planı', 'Dönem'], ['ev_iyep', 'İYEP izleme formu', 'İzleme']].forEach(function (x) {
+    [['egz_sec', 'Egzersiz seçimi', 'Liste'], ['egz_haftalik', 'Bu haftanın planı', 'Tek hafta'], ['ev_egzersiz', 'Egzersiz çalışma planı', 'Dönem'], ['ev_dyk', 'DYK ve İYEP kurs planı', 'Dönem'], ['ev_iyep', 'İYEP izleme formu', 'İzleme']].forEach(function (x) {
       if (OY.get && !OY.get(x[0]) && x[0] !== 'egz_haftalik') return;
       es.appendChild(btn(x[1], x[2], function () { ac(x[0]); }));
     });
