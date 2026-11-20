@@ -1,0 +1,26 @@
+Sınıf Rehberlik Yardımcısı 1.1.1 (hafif sürüm: sınıf / şube rehber öğretmeni)
+Evrak Asistanı · Eyüp ŞEKER
+
+Sınıf / şube rehber öğretmenleri için:
+- Sınıf Listelerim: e-Okul Sınıf Listesi (.xls) ya da e-Okul Not Girişi Asistanı'ndan "sinif-listeleri.json".
+- Rehberlik formları: öğrenci ve veli görüşme, ev ziyareti, aile bilgi, gözlem, rehberlik servisine yönlendirme.
+- Sosyometri ve "Kimdir Bu?" (sosyogram PNG), Sınıf Risk Haritası.
+- Sınıf Rehberlik Yıllık Planı (örnek temalarla), Aylık Faaliyet Raporu ve Yıl Sonu Raporu ("Kayıtlardan doldur").
+- ŞÖK tutanağı ve veli toplantısı evrakı.
+- Resmî yazı ve dilekçe şablonları, çevrimdışı mevzuat.
+
+Kurulum: klasörü bilgisayara kopyalayın, index.html dosyasını Chrome veya Edge ile açın.
+Gizlilik: öğrenci bilgileri yalnız bu cihazdaki tarayıcı deposunda tutulur. Hesap eşitlemesini açarsanız yalnız kendi hesabınıza gider. Rehberlik Kayıtlarım öğrenci adı ve görüşme içeriği tutmaz.
+Not: Öğretmen Yardımcısı ile aynı bilgisayarda aynı tarayıcıda açılırsa profil ve sınıf listeleri ortak kullanılır.
+
+1.1.0 ile gelenler
+- Sınıf Rapor Dosyası: sınıfın yıllık rehberlik sayıları, risk haritası dağılımı ve yıl sonu önerileri tek dosyada (.rhbrapor). Öğrenci adı içermez.
+- e-Rehberlik'e Giriş Hazırlığı: yıllık plan satırları alan alan "Kopyala" düğmeleriyle. Hiçbir sisteme bağlanmaz, otomatik giriş yapmaz.
+- Yıllık Hedef ve Etkinlik Bankası: 2026-2027 genel hedefi "Selamlaşma" için aylık etkinlik önerileri; yıllık plana kendiliğinden eklenir.
+- Şifreli Yedek ve Sınıf Devri: tüm veriler ya da tek bir sınıf, parolayla şifrelenmiş dosyaya (AES-256). Parola unutulursa dosya açılamaz.
+
+1.1.1 düzeltmeleri
+- Doldur / Öner yeniden çalışıyor (öneri servisi adresi düzeltildi). Yalnız form başlığı, alan adları ve boş/dolu bilgisi gider; öğrenci bilgisi gönderilmez.
+- Lisans ve sözleşme onay ekranı geri geldi (48 saatlik deneme, lisans anahtarı).
+- Sınıf Rehberlik ayrı lisans türüyle çalışır; tam Rehberlik anahtarı bu sürümü de açar.
+- Masaüstü güncelleyici doğru dosyayı denetler.

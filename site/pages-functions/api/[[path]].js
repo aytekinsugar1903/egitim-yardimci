@@ -1,0 +1,2 @@
+// Cloudflare Pages yedeği: /api/* isteklerini ana Worker'a aktarır (workers.dev erişilemeyen ağlar için).
+export async function onRequest({request,env}){const u=new URL(request.url);const t='https://egitim-yardimci.aytekinsugar1903.workers.dev'+u.pathname+u.search;const h=new Headers(request.headers);h.delete('host');h.set('x-ey-ip',request.headers.get('cf-connecting-ip')||'');h.set('x-ey-proxy',env.PROXY_KEY||'');return fetch(t,{method:request.method,headers:h,body:['GET','HEAD'].includes(request.method)?undefined:request.body});}

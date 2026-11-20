@@ -1,0 +1,11 @@
+0ad2a8b3a9427fe0bc7bd25726777bd4b9fc0a24ecabd6443e8a63c755244e36  okulpro-asistani-v2.7.1.zip
+1b2745b69857af120adecf59763889e2bfd15dcc9d364298da7785ddaea8ad38  FormToplayici-Kurulum-1.7.2.exe
+2e760d7038994c1f04e67473cca86acaf325c6bafbaf3741efaec26e2217b48f  okulpro-asistani-v2.7.0.zip
+2e760d7038994c1f04e67473cca86acaf325c6bafbaf3741efaec26e2217b48f  eokul-asistani-pro-v2.7.0.zip
+9c76a4cba7106bc64382360bd4fa1fbc07bd2769721b2920412d73fb6f6adb40  EvrakAsistani-OkulPaketi-Kurulum-1.0.18.exe
+adafd72f87bf16e0113985b98551cd754a4a253bf1a7f1a7dc525a399fa6c61e  EvrakAsistani-Rehberlik-Kurulum-1.1.1.exe
+9a112876564c197a786a9c58c485ce73818434665c82d5e4d9503790cf7e31f6  EvrakAsistani-SinifRehberlik-Kurulum-1.1.1.exe
+1845d68fc71db1572841a3535c220d7568c1cba31a7af0e6fa56bd3081011f2f  FormToplayici-Kurulum-1.7.1.exe
+96889adbf0cd994f3f58800e235089e06989854be1ceeba88931f3a8581161a7  eokul-asistani-pro-v2.6.0.zip
+fb9e1f58a0028e8d3d80ba1062250211c94096e15a6c780c2715eeb5b560321f  notgirisi-asistani-v1_9_22.zip
+41ff27b2cacf5dce0acd4091a62a30e4e0c9884e70bb5081933ebe33b355a55b  evrak-asistani-mudur-paketi-v1.0.7.zip

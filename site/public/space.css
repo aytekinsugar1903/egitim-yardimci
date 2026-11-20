@@ -1,0 +1,7 @@
+/* Karanlık görünüm yalnızca kullanıcı seçerse. Varsayılan açık temadır. */
+html[data-tema=koyu]{--bg:#1b2430;--card:#243140;--line:#3d4f63;--tx:#f4f7fb;--mut:#d5deea;--ac:#9ae6d6;color-scheme:dark}
+html[data-tema=koyu] body{background:#1b2430!important;color:#f4f7fb!important}
+html[data-tema=koyu] header.top{background:#243140!important;border-bottom-color:#3d4f63}
+html[data-tema=koyu] .card,html[data-tema=koyu] details,html[data-tema=koyu] footer,html[data-tema=koyu] .note,html[data-tema=koyu] .trust{background:#243140!important;color:#f4f7fb}
+html[data-tema=koyu] .heroband{background:#1b2430!important}
+html[data-tema=koyu] #sp-stars{position:fixed;inset:0;z-index:-1;pointer-events:none}

@@ -1,0 +1,8 @@
+/* Android (Capacitor) köprüsü: indirmeleri dosyaya yazıp paylaşım menüsü açar, yazdırmayı Android yazdırma/PDF ekranına yönlendirir. Web/PC'de PWA service worker kaydeder. */
+var NATIVE=(function(){function isNative(){return !!(window.Capacitor&&window.Capacitor.isNativePlatform&&window.Capacitor.isNativePlatform())}
+ function b64(blob){return new Promise(function(res,rej){var r=new FileReader();r.onload=function(){res(String(r.result).split(',')[1])};r.onerror=rej;r.readAsDataURL(blob)})}
+ function save(blob,name){var P=window.Capacitor.Plugins;return b64(blob).then(function(d){return P.Filesystem.writeFile({path:name,data:d,directory:'DOCUMENTS',recursive:true}).catch(function(){return P.Filesystem.writeFile({path:name,data:d,directory:'CACHE'})})}).then(function(w){window.__lastSaved=w.uri;return P.Share.share({title:name,files:[w.uri],dialogTitle:'Dosyayı kaydet veya paylaş'}).catch(function(){})})}
+ function init(){if(isNative()){var oc=HTMLAnchorElement.prototype.click;HTMLAnchorElement.prototype.click=function(){if(this.download&&/^blob:/.test(this.href)){var n=this.download;fetch(this.href).then(function(r){return r.blob()}).then(function(b){return save(b,n)});return}return oc.call(this)};
+   window.print=function(){var P=window.Capacitor.Plugins;if(P.Yazdir)P.Yazdir.print({name:document.title||'Belge'})}}
+  else if(/^https?:/.test(location.protocol)){var l=document.createElement('link');l.rel='manifest';l.href='manifest.webmanifest';document.head.appendChild(l);var ic=document.createElement('link');ic.rel='icon';ic.href='icon-192.png';document.head.appendChild(ic);if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(function(){})}}
+ return {init:init,isNative:isNative,save:save};})();
