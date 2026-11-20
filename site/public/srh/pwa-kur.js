@@ -41,9 +41,9 @@
   function cubuk(html, dugme) {
     if (kapali() || bagimsiz() || document.getElementById('pwaKur')) return;
     var d = document.createElement('div'); d.id = 'pwaKur'; d.setAttribute('role', 'note');
-    d.style.cssText = 'position:fixed;left:8px;right:8px;bottom:calc(8px + env(safe-area-inset-bottom));z-index:10000;background:#fff;color:#1a1a1a;border:2px solid #0d47a1;border-radius:12px;box-shadow:0 6px 24px #0003;padding:10px 40px 10px 12px;font:14px/1.4 system-ui,-apple-system,Segoe UI,sans-serif';
-    d.innerHTML = html + ' <a href="kurulum.html" style="color:#0d47a1;font-weight:700">Ayrıntılı rehber</a>';
-    if (dugme) { var b = document.createElement('button'); b.type = 'button'; b.id = 'pwaKurYukle'; b.textContent = 'Uygulamayı yükle'; b.style.cssText = 'margin:6px 8px 0 0;padding:8px 12px;border:0;border-radius:8px;background:#0d47a1;color:#fff;font-weight:700'; b.onclick = dugme; d.appendChild(document.createElement('br')); d.appendChild(b); }
+    d.style.cssText = 'position:fixed;left:8px;right:8px;bottom:calc(8px + env(safe-area-inset-bottom));z-index:10000;background:#fffaf6;color:#1c1915;border:2px solid #c2410c;border-radius:12px;box-shadow:0 6px 24px rgba(80,40,10,.16);padding:10px 40px 10px 12px;font:14px/1.4 system-ui,-apple-system,Segoe UI,sans-serif';
+    d.innerHTML = html + ' <a href="kurulum.html" style="color:#0f766e;font-weight:700">Ayrıntılı rehber</a>';
+    if (dugme) { var b = document.createElement('button'); b.type = 'button'; b.id = 'pwaKurYukle'; b.textContent = 'Uygulamayı yükle'; b.style.cssText = 'margin:6px 8px 0 0;padding:8px 12px;border:0;border-radius:14px;background:#c2410c;color:#fff;font-weight:800'; b.onclick = dugme; d.appendChild(document.createElement('br')); d.appendChild(b); }
     var x = document.createElement('button'); x.type = 'button'; x.id = 'pwaKurKapat'; x.setAttribute('aria-label', 'Kapat'); x.textContent = '×';
     x.style.cssText = 'position:absolute;top:4px;right:6px;border:0;background:none;font-size:22px;line-height:1;color:#555;padding:4px 8px';
     x.onclick = function () { try { localStorage.setItem(KAPAT, '1'); } catch (e) {} d.remove(); };
