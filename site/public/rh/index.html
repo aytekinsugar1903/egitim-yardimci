@@ -57,24 +57,24 @@ window.EA_OCR=function(src){return yerel().then(function(y){var t=y.tess;return 
 </script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0d47a1"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" type="image/png" href="icon-192.png"><link rel="apple-touch-icon" href="icon-180.png"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Rehberlik"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="mobile-web-app-capable" content="yes"><meta name="description" content="Öğretmen Yardımcısı – çevrimdışı çalışan eğitim yönetimi aracı">
 <title>Rehberlik Yardımcısı</title>
 <style>
-:root{--bg:#fff;--fg:#000;--acc:#003c8f;--line:#000;--soft:#eef3ff}
+:root{--bg:#fff4ec;--fg:#1c1915;--acc:#c2410c;--line:#f0d2c0;--soft:#fff7ef}
 *{box-sizing:border-box}body{margin:0;font:18px/1.5 system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--fg)}
-header{background:var(--acc);color:#fff;padding:10px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-header h1{font-size:22px;margin:0;flex:1}header button{background:#fff;color:var(--acc);border:2px solid #fff;font-weight:700}
-button{font:inherit;font-weight:600;padding:8px 14px;border:2px solid var(--acc);background:var(--acc);color:#fff;border-radius:6px;cursor:pointer;min-height:44px}
-button.sec{background:#fff;color:var(--acc)}button:focus,input:focus,select:focus,textarea:focus{outline:3px solid #ff9800;outline-offset:1px}
+header{background:#fffaf6;color:#1c1915;padding:10px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;border-bottom:1px solid var(--line)}
+header h1{font-size:22px;margin:0;flex:1;color:#1c1915}header button{background:#c2410c;color:#fff;border:0;font-weight:800;border-radius:14px}
+button{font:inherit;font-weight:700;padding:10px 16px;border:0;background:#c2410c;color:#fff;border-radius:14px;cursor:pointer;min-height:48px}
+button.sec{background:#fff;color:#0f766e;border:2px solid #0f766e}button:focus,input:focus,select:focus,textarea:focus{outline:3px solid #f59e0b;outline-offset:1px}
 main{display:grid;grid-template-columns:340px 1fr;min-height:calc(100vh - 64px)}
-aside{border-right:2px solid var(--line);padding:12px;overflow:auto;max-height:calc(100vh - 64px)}
-#q{width:100%;font:inherit;padding:10px;border:2px solid #000;border-radius:6px}
-.cat{margin-top:10px;border:2px solid #000;border-radius:6px}.cat>button{width:100%;text-align:left;background:#fff;color:#000;border:0;border-radius:6px;display:flex;justify-content:space-between}
+aside{border-right:1px solid var(--line);padding:12px;overflow:auto;max-height:calc(100vh - 64px);background:#fffaf6}
+#q{width:100%;font:inherit;padding:12px 14px;border:1px solid #f0d2c0;border-radius:14px;background:#fff;min-height:48px}
+.cat{margin-top:10px;border:0;border-radius:16px;background:#fff;box-shadow:0 8px 20px rgba(80,40,10,.06)}.cat>button{width:100%;text-align:left;background:#fff7ef;color:#1c1915;border:0;border-radius:16px;display:flex;justify-content:space-between;min-height:52px}
 .cat>button .pm{font-size:22px;font-weight:900;width:28px;text-align:center}.cat ul{list-style:none;margin:0;padding:0 6px 6px}
-.cat li button{width:100%;text-align:left;background:#fff;color:#000;border:1px solid #666;margin-top:4px;font-weight:500}
+.cat li button{width:100%;text-align:left;background:#fff;color:#1c1915;border:1px solid #f0d2c0;margin-top:4px;font-weight:650;border-radius:12px;min-height:48px}
 .cat li button.on{background:var(--acc);color:#fff}
 section#work{padding:16px;overflow:auto;max-height:calc(100vh - 64px)}
 .msg{border:2px solid #1b5e20;background:#e8f5e9;color:#000;padding:8px 12px;border-radius:6px;margin:8px 0}.msg.err{border-color:#b71c1c;background:#ffebee}
-.form{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;background:var(--soft);border:2px solid #000;padding:12px;border-radius:6px}
+.form{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;background:#fff;border:1px solid #f0d2c0;padding:12px;border-radius:16px}
 .form label{display:flex;flex-direction:column;font-weight:700;font-size:16px}.form label.wide{grid-column:1/-1}
-input,select,textarea{font:inherit;font-weight:400;padding:8px;border:2px solid #000;border-radius:6px;background:#fff;color:#000}textarea{min-height:90px}
+input,select,textarea{font:inherit;font-weight:400;padding:10px 12px;border:1px solid #f0d2c0;border-radius:12px;background:#fff;color:#1c1915}textarea{min-height:90px}
 .bar{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
 #doc{border:2px solid #000;padding:28px 36px;background:#fff;max-width:900px;font-family:"Times New Roman",serif;font-size:16px;color:#000}
 #doc h1{font-size:17px;text-align:center;margin:12px 0}#doc h2{font-size:16px;margin:16px 0 6px}#doc .c{text-align:center;margin:0}#doc .b{font-weight:700}
@@ -88,7 +88,7 @@ input,select,textarea{font:inherit;font-weight:400;padding:8px;border:2px solid 
 #doc .bos{border-bottom:1px dotted #999}#doc .cvp{font-style:italic;border-left:3px solid #000;padding-left:6px}#doc .ogr{display:flex;justify-content:space-between;border:1px solid #000;padding:6px;margin:6px 0;font-weight:700}#doc .optik td{font-size:18px;letter-spacing:2px;padding:2px 6px}#doc .optik{break-inside:auto}
 .list{list-style:none;padding:0}.list li{display:flex;gap:6px;margin:4px 0;align-items:center}.list li>span{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.cat li button.evHazirla{width:auto;flex:0 0 auto;margin-top:0;text-align:center;background:var(--acc);color:#fff;border:2px solid var(--acc);font-weight:600}.bgmark{white-space:pre-wrap;border:2px solid #000;border-radius:6px;padding:10px;max-height:420px;overflow:auto;background:#fff;font-size:15px;line-height:1.55}.bgmark mark{cursor:pointer;border-radius:3px;padding:0 2px;font-weight:700}.bgmark mark.on{background:#ffe066;color:#000;outline:2px solid #b38f00}.bgmark mark.off{background:#fff;color:#8a0000;text-decoration:underline dotted;outline:2px dashed #8a0000}.evcard{border:3px solid #000;border-radius:6px;padding:10px;margin:10px 0;background:#fff}.evrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap;border-bottom:1px solid #000;padding:4px 0}.evrow.late{background:#ffd6d6}.evrow.soon{background:#fff3b0}.evmz{border:2px solid #000;border-left:8px solid #003a8c;padding:8px;margin:8px 0;background:#f4f8ff}.evmz p{margin:4px 0}.evwarn{font-weight:700;color:#8a0000}.tag{font-size:.85em}.aiwarn{font-weight:700;border:2px solid #000;background:#fff3b0;color:#000;padding:6px 8px;margin:6px 0}.form h3{grid-column:1/-1;margin:10px 0 2px;font-size:1.05em}.kzsoru{border-top:1px dashed #000;margin:6px 0;padding-top:6px}.kzs{max-width:100%}.qbox{border:2px solid #000;border-radius:6px;padding:10px;margin:8px 0;background:#fff}.qbox .row{display:flex;gap:8px;flex-wrap:wrap;align-items:end}.qbox label{display:flex;flex-direction:column;font-weight:700;font-size:15px}.qbox .opt{display:flex;gap:6px;align-items:center;margin:3px 0}.qbox .opt input[type=text]{flex:1}.tot{font-weight:800;font-size:20px}.tot.bad{color:#b71c1c}.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}.tabs button.on{background:#000;border-color:#000;color:#fff}
 @media print{#doc .q{break-inside:avoid}}
-@media(max-width:800px){main{grid-template-columns:1fr}aside{max-height:none;border-right:0;border-bottom:2px solid #000}#doc{padding:14px}#asideTg{display:flex}body.akapali aside #q,body.akapali aside #cats{display:none}header{gap:6px}header button{min-height:40px;padding:6px 10px;font-size:15px}.qbox label,.qbox select,.qbox input,.qbox textarea,.form select,.form input{min-width:0;max-width:100%;box-sizing:border-box}.qbox .row>*{min-width:0;max-width:100%}}#asideTg{display:none;width:100%;justify-content:space-between;align-items:center;margin-bottom:6px}@media(max-width:800px){#asideTg{display:flex}}.welcome{border:3px solid #003a8c;border-radius:6px;padding:10px;background:#f4f8ff;margin:0 0 10px}
+@media(max-width:800px){main{grid-template-columns:1fr}aside{max-height:none;border-right:0;border-bottom:2px solid #000}#doc{padding:14px}#asideTg{display:flex}body.akapali aside #q,body.akapali aside #cats{display:none}header{gap:6px}header button{min-height:40px;padding:6px 10px;font-size:15px}.qbox label,.qbox select,.qbox input,.qbox textarea,.form select,.form input{min-width:0;max-width:100%;box-sizing:border-box}.qbox .row>*{min-width:0;max-width:100%}}#asideTg{display:none;width:100%;justify-content:space-between;align-items:center;margin-bottom:6px}@media(max-width:800px){#asideTg{display:flex}}.welcome{border:1px solid #f0d2c0;border-radius:16px;padding:12px;background:#fff7ef;color:#1c1915;margin:0 0 10px}
 @page{size:A4;margin:14mm}@media print{html,body{width:auto}section#work{overflow:visible!important}header,aside,.noprint,.bar,.form,.msg{display:none!important}main{display:block}section#work{max-height:none;padding:0}#doc{border:0;padding:0;max-width:none}body{font-size:12pt}}
 </style></head><body>
 <header><h1>Rehberlik Yardımcısı <small style="font-size:14px">v1.1.1</small></h1><button id="bProfil">Profilim</button><button id="bHesap"><span id="eyStat">☁ Hesap</span></button><button id="bGizlilik">Gizlilik</button></header>
@@ -1745,14 +1745,14 @@ profilEksik()?profil():home();
       '@media screen{html[data-tema=koyu] .ea-ak,html[data-tema=koyu] .ea-ak *:not(input):not(select):not(textarea):not(button){color:#111418!important}html[data-tema=yk] .ea-ak{background:#000!important;border:2px solid #fff!important}html[data-tema=yk] .ea-ak *:not(input):not(select):not(textarea):not(button){color:#fff!important;background:transparent!important}html[data-tema=koyu] .ea-ak a{color:#0b4fb3!important}}' + '@media print{html[data-tema] body,html[data-tema] #doc,html[data-tema] header,html[data-tema] aside,html[data-tema] main,html[data-tema] .card{background:#fff!important;color:#000!important}html[data-tema] *:not(option){color:#000!important;background:#fff!important;border-color:#000!important}.ea-tema,#eaGeri,.ea-dp{display:none!important}}';
     document.head.appendChild(el('style', { id: 'ea-tema-css', text: css }));
     var mq = window.matchMedia ? matchMedia('(prefers-color-scheme: dark)') : null;
-    function uygula() { var t = localStorage.getItem(K) || 'oto', g = t === 'oto' ? (mq && mq.matches ? 'koyu' : 'acik') : t; document.documentElement.setAttribute('data-tema', g); akKart(); return g; }
+    function uygula() { var t = localStorage.getItem(K) || 'acik', g = t === 'oto' ? (mq && mq.matches ? 'koyu' : 'acik') : t; document.documentElement.setAttribute('data-tema', g); akKart(); return g; }
     function lumi(c) { var v = (c.match(/[\d.]+/g) || []).map(Number); if (v.length < 3 || v[3] === 0) return -1; v = v.slice(0, 3).map(function (x) { x /= 255; return x <= 0.03928 ? x / 12.92 : Math.pow((x + 0.055) / 1.055, 2.4); }); return 0.2126 * v[0] + 0.7152 * v[1] + 0.0722 * v[2]; }
     var akZ; function akKart() { clearTimeout(akZ); akZ = setTimeout(function () { var k = /^(koyu|yk)$/.test(document.documentElement.getAttribute('data-tema')); [].forEach.call(document.querySelectorAll('.ea-ak'), function (e) { e.classList.remove('ea-ak'); }); if (!k) return; [].forEach.call(document.body.querySelectorAll('div,section,p,li,span,label,td,th,details,summary,fieldset,a,b,strong,small,h1,h2,h3,h4'), function (e) { if (e.closest('#doc')) return; if (lumi(getComputedStyle(e).backgroundColor) > 0.45) e.classList.add('ea-ak'); }); }, 60); }
     try { new MutationObserver(function (m) { if (/^(koyu|yk)$/.test(document.documentElement.getAttribute('data-tema')) && m.some(function (x) { return x.addedNodes.length; })) akKart(); }).observe(document.body, { childList: true, subtree: true }); } catch (e) {}
     EK.tema = { uygula: uygula, ayarla: function (t) { localStorage.setItem(K, t); return uygula(); } };
     if (mq && mq.addEventListener) mq.addEventListener('change', uygula);
     uygula();
-    var s = el('select', { id: 'eaTema', 'aria-label': 'Tema' }); [['oto', 'Otomatik'], ['acik', 'Açık'], ['koyu', 'Koyu'], ['yk', 'Yüksek karşıtlık'], ['eokul', 'e-Okul renkleri']].forEach(function (x) { var o = el('option', { value: x[0], text: x[1] }); if ((localStorage.getItem(K) || 'oto') === x[0]) o.selected = true; s.appendChild(o); });
+    var s = el('select', { id: 'eaTema', 'aria-label': 'Tema' }); [['oto', 'Otomatik'], ['acik', 'Açık'], ['koyu', 'Koyu'], ['yk', 'Yüksek karşıtlık'], ['eokul', 'e-Okul renkleri']].forEach(function (x) { var o = el('option', { value: x[0], text: x[1] }); if ((localStorage.getItem(K) || 'acik') === x[0]) o.selected = true; s.appendChild(o); });
     s.addEventListener('change', function () { EK.tema.ayarla(s.value); });
     var w = el('label', { class: 'ea-tema noprint' }, ['🌓 ', s]); var hd = document.querySelector('header'); if (hd) hd.appendChild(w); else document.body.insertBefore(w, document.body.firstChild);
   })();
@@ -3475,5 +3475,7 @@ profilEksik()?profil():home();
 
 <script src="planlar.js"></script>
 <script src="paket.js"></script><script src="bep-havuz.js"></script><script src="planlar-ui.js"></script><script src="ng-cozumle.js"></script><script src="ekler.js"></script>
-<script src="rehberlik-ek.js"></script><script src="lisans.js"></script><script src="lisans-ui.js"></script><script src="pwa-kur.js"></script>
+<script src="rehberlik-ek.js"></script>
+<script src="lisans.js"></script><script src="lisans-ui.js"></script><script src="pwa-kur.js"></script>
+<script src="sicak.js"></script>
 </body></html>

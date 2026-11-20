@@ -12,7 +12,7 @@
     'button.sec{background:#fff;color:#0f766e;border:2px solid #0f766e}',
     'button:hover{transform:translateY(-1px)}',
     '.ea-merhaba{font-weight:800;font-size:20px}',
-    '.evcard,h2{border-color:#f0d2c0}',
+    '.evcard{border-color:#f0d2c0}',
     '.evcard{border-width:1px;border-radius:16px;box-shadow:0 8px 20px rgba(80,40,10,.05)}',
     'aside{background:#fff}',
     '.grp{border:0;border-radius:14px;overflow:hidden;box-shadow:0 1px 2px rgba(30,58,95,.08);background:#fff}',
