@@ -4,7 +4,26 @@
   if (!window.EA_GUNDEM || !window.OY || !OY.T) return;
   var ANAHTAR = 'ea_gemini_anahtar';
   var KADEME = [['ilkokul', 'İlkokul', 'i'], ['ortaokul', 'Ortaokul', 'o'], ['lise', 'Lise', 'l'], ['mtal', 'MTAL', 'm']];
-  var BRANS = [['', 'Genel'], ['turkce', 'Türkçe / TDE'], ['mat', 'Matematik'], ['fen', 'Fen / Fizik / Kimya / Biyoloji'], ['sosyal', 'Sosyal / Tarih / Coğrafya'], ['dil', 'Yabancı dil'], ['beden', 'Beden eğitimi'], ['muzik', 'Müzik'], ['gorsel', 'Görsel sanatlar'], ['dkab', 'DKAB'], ['meslek', 'Meslek alanı']];
+  var BRANS = [['', 'Branş seçin'], ['turkce', 'Türkçe / TDE'], ['mat', 'Matematik'], ['fen', 'Fen / Fizik / Kimya / Biyoloji'], ['sosyal', 'Sosyal / Tarih / Coğrafya'], ['dil', 'Yabancı dil'], ['beden', 'Beden eğitimi'], ['muzik', 'Müzik'], ['gorsel', 'Görsel sanatlar'], ['dkab', 'DKAB'], ['meslek', 'Meslek alanı']];
+  var BRANS_AD = { turkce: 'Türkçe', mat: 'Matematik', fen: 'Fen bilimleri', sosyal: 'Sosyal bilgiler', dil: 'Yabancı dil', beden: 'Beden eğitimi', muzik: 'Müzik', gorsel: 'Görsel sanatlar', dkab: 'Din kültürü ve ahlak bilgisi', meslek: 'Meslek alanı' };
+  function unvanMi(s) {
+    var x = String(s || '').trim().toLocaleLowerCase('tr-TR');
+    return /müdür/.test(x);
+  }
+  function bransSec(p, f, ka) {
+    var a = String((f && f.zumre_adi) || '').trim();
+    if (a && !unvanMi(a)) return a;
+    if (ka && ka.brans && BRANS_AD[ka.brans]) return BRANS_AD[ka.brans];
+    var b = String((p && p.brans) || '').trim();
+    if (b && !unvanMi(b)) return b;
+    return '';
+  }
+  function zumreBaslik(p, f, ka, yil) {
+    var br = bransSec(p, f, ka);
+    var okul = String((p && p.okul) || '').trim() || '……';
+    var tur = String((ka && ka.tur) || (f && f.tur) || 'Sene başı').replace(/\s*\([^)]*\)\s*$/, '');
+    return okul.toLocaleUpperCase('tr-TR') + ' ' + yil + ' EĞİTİM-ÖĞRETİM YILI ' + (br ? br.toLocaleUpperCase('tr-TR') : '……') + ' ZÜMRE ÖĞRETMENLERİ ' + tur.toLocaleUpperCase('tr-TR') + ' TOPLANTI TUTANAĞI';
+  }
 
   function kopya(m) {
     return { b: m.b, g: m.g || '', k: m.k || '', a: (m.a || []).map(function (x) { return { b: x.b, g: x.g || '', k: x.k || '' }; }), d: m.d || '', r: m.r || '' };
@@ -104,8 +123,8 @@
         var yil = f.egitim_yili || (OY.egitimYili ? OY.egitimYili() : '');
         if (t.id === 'ok') return belge(p, f, 'ok', yil + ' EĞİTİM-ÖĞRETİM YILI ÖĞRETMENLER KURULU TUTANAĞI', false);
         if (t.id === 'sok') return belge(p, f, 'sok', (f.sinif || p.sinif || '……') + ' ŞUBE ÖĞRETMENLER KURULU TUTANAĞI', false);
-        var ders = f.zumre_adi || p.brans || '……';
-        return belge(p, f, 'zumre', yil + ' ' + String(ders).toLocaleUpperCase('tr-TR') + ' ZÜMRE ÖĞRETMENLERİ TUTANAĞI', true);
+        var ka0 = okuKa(f) || {};
+        return belge(p, f, 'zumre', zumreBaslik(p, f, ka0, yil), true);
       };
     } else if (kurulMu(t) && t.build) {
       t._ka = 1;
@@ -389,10 +408,20 @@
         cizMaddeler(maddeKok, my); planla(my);
       });
       if (id === 'zumre') {
+        var uyari = document.createElement('p');
+        uyari.className = 'ka-uyari';
+        function uyar() {
+          var f0 = my && window.curDoc ? curDoc.f : (window.F || {});
+          var p0 = my && window.curDoc ? { brans: '' } : (window.P || {});
+          uyari.textContent = bransSec(p0, f0, durum) ? '' : 'Branş boş. Zümre adını yazın veya branş grubunu seçin. Müdür ve müdür yardımcısı unvanı branş yerine yazılmaz.';
+        }
         secim('Branş grubu', durum.brans || '', BRANS, function (e) {
           durum.brans = e.target.value;
+          uyar();
           cizMaddeler(maddeKok, my); planla(my);
         });
+        kok.appendChild(uyari);
+        uyar();
       }
       var turLab = document.createElement('label');
       turLab.textContent = 'Toplantı türü';
