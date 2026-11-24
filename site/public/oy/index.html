@@ -1501,8 +1501,8 @@ profilEksik()?profil():home();
   }
 
   /* ---------- Branş listesi (meslek + İHL branşları dahil) ---------- */
-  function bransDL() { var M = window.MESLEK20; if (!M || document.getElementById('ek20Brans')) return; var dl = el('datalist', { id: 'ek20Brans' }); M.brans.forEach(function (b) { dl.appendChild(el('option', { value: b[0].replace(/ Öğretmeni$/, ''), text: b[1] })); }); document.body.appendChild(dl); }
-  EK.bransBagla = function () { if (!window.MESLEK20) return; bransDL(); [].forEach.call(document.querySelectorAll('input[name=brans],input#pBrans,input[id*=rans],input[aria-label*=Branş],input[placeholder*=Branş],input[data-k=brans]'), function (i) { if (!i.getAttribute('list')) i.setAttribute('list', 'ek20Brans'); }); };
+  function bransDL() { var M = window.MESLEK20; if (!M || document.getElementById('ek20Brans')) return; var dl = el('datalist', { id: 'ek20Brans' }); var GEN=["Sınıf Öğretmenliği", "Okul Öncesi", "Özel Eğitim", "Rehberlik ve Psikolojik Danışmanlık", "Türkçe", "Türk Dili ve Edebiyatı", "Matematik", "Fen Bilimleri", "Fizik", "Kimya", "Biyoloji", "Sosyal Bilgiler", "Tarih", "Coğrafya", "Felsefe", "Din Kültürü ve Ahlak Bilgisi", "İngilizce", "Almanca", "Fransızca", "Arapça", "Beden Eğitimi ve Spor", "Görsel Sanatlar", "Müzik", "Teknoloji ve Tasarım", "Bilişim Teknolojileri ve Yazılım", "İmam-Hatip Meslek Dersleri", "Kur'an-ı Kerim", "Sağlık Bilgisi ve Trafik Kültürü"], VAR={}; GEN.forEach(function (g) { VAR[g] = 1; dl.appendChild(el('option', { value: g, text: 'Genel' })); }); M.brans.forEach(function (b) { var v = b[0].replace(/ Öğretmeni$/, ''); if (VAR[v]) return; VAR[v] = 1; dl.appendChild(el('option', { value: v, text: b[1] })); }); document.body.appendChild(dl); }
+  EK.bransBagla = function () { if (!window.MESLEK20) return; bransDL(); [].forEach.call(document.querySelectorAll('input[name=brans],input#pBrans,input[id*=rans],input[aria-label*=Branş],input[placeholder*=Branş],input[data-k=brans]'), function (i) { if (!i.getAttribute('list') && !i.hasAttribute('data-eaders')) i.setAttribute('list', 'ek20Brans'); }); };
 
   /* ---------- 📎 Excel'den ekle: tüm liste alanlarına genel içe aktarıcı (yerel; Excel/CSV/yapıştır) ---------- */
   var IMP = EK.imp = {};
@@ -1811,7 +1811,7 @@ profilEksik()?profil():home();
           var by = {}; hep.forEach(function (o) { by[o.t] = o; });
           var fv = fav.map(function (t) { return by[t]; }).filter(Boolean), sn = son.map(function (t) { return by[t]; }).filter(function (o) { return o && fv.indexOf(o) < 0; });
           if (fv.length) { grp('★ Favoriler'); fv.forEach(ek); } if (sn.length) { grp('🕘 Son seçilenler'); sn.forEach(ek); }
-          grp('Tüm dersler (' + hep.length + ') — yazarak daraltın'); hep.slice(0, 40).forEach(ek);
+          grp((/brans|Branş/i.test((inp.name || '') + (inp.placeholder || '')) ? 'Tüm branşlar (' : 'Tüm dersler (') + hep.length + ') — yazarak daraltın veya listede yoksa kendiniz yazın'); hep.slice(0, 40).forEach(ek);
         } else {
           var tk = q.split(' '); out = hep.filter(function (o) { return tk.every(function (t) { return o.n.indexOf(t) >= 0; }); });
           out.sort(function (a, b) { var x = nz(a.t).indexOf(q) === 0 ? 0 : 1, y = nz(b.t).indexOf(q) === 0 ? 0 : 1; return x - y; });
