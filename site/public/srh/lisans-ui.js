@@ -60,24 +60,24 @@
     if (document.getElementById('rhbLisans')) return;
     var st = document.createElement('style');
     st.textContent = 'html.rhb-lisans-kilit body > header, html.rhb-lisans-kilit body > main{visibility:hidden}'
-      + '#rhbLisans{position:fixed;inset:0;z-index:9999;background:#fff4ec;color:#1c1915;overflow:auto;font:16px/1.45 system-ui,Segoe UI,sans-serif}'
-      + '#rhbLisans .kutu{max-width:420px;margin:8vh auto;padding:24px;background:#fff;border-radius:16px;box-shadow:0 8px 32px rgba(80,40,10,.12)}'
-      + '#rhbLisans h1{font-size:22px;margin:0 0 6px;color:#c2410c}'
+      + '#rhbLisans{position:fixed;inset:0;z-index:9999;background:#f4f1ea;color:#1a1a1a;overflow:auto;font:16px/1.45 system-ui,Segoe UI,sans-serif}'
+      + '#rhbLisans .kutu{max-width:420px;margin:8vh auto;padding:24px;background:#fff;border-radius:14px;box-shadow:0 8px 32px #0002}'
+      + '#rhbLisans h1{font-size:22px;margin:0 0 6px;color:#0d47a1}'
       + '#rhbLisans .alt{color:#555;font-size:13px;margin:0 0 16px}'
       + '#rhbLisans label{display:block;margin:10px 0 4px;font-weight:600}'
       + '#rhbLisans input[type=text]{width:100%;box-sizing:border-box;padding:10px;font:inherit;border:1px solid #ccc;border-radius:8px}'
       + '#rhbLisans .satir{display:flex;gap:8px;align-items:flex-start;margin:12px 0}'
-      + '#rhbLisans button{padding:10px 16px;border:0;border-radius:14px;background:#c2410c;color:#fff;font-weight:800;cursor:pointer;min-height:48px}'
-      + '#rhbLisans button.sec{background:#fff;color:#0f766e;border:2px solid #0f766e}'
+      + '#rhbLisans button{padding:10px 14px;border:0;border-radius:8px;background:#0d47a1;color:#fff;font-weight:700;cursor:pointer}'
+      + '#rhbLisans button.sec{background:#ece8df;color:#1a1a1a}'
       + '#rhbLisans .durum{margin-top:14px;padding:10px;border-radius:8px;background:#eef3fb;font-size:14px}'
       + '#rhbLisans .durum[data-durum=bitti],#rhbLisans .durum[data-durum=gecersiz],#rhbLisans .durum[data-durum=cevrimdisi]{background:#fdecea;color:#7a1f16}'
-      + '#rhbLisansRozet{margin-left:8px;font-size:12px;padding:2px 8px;border-radius:999px;background:#fff4d6;color:#c2410c;font-weight:700;cursor:pointer;border:0}';
+      + '#rhbLisansRozet{margin-left:8px;font-size:12px;padding:2px 8px;border-radius:999px;background:#e8f0fe;color:#0d47a1;font-weight:700;cursor:pointer;border:0}';
     document.head.appendChild(st);
 
     var ov = el('div', { id: 'rhbLisans', role: 'dialog', 'aria-labelledby': 'rhbLisansBaslik' }, [
       el('div', { class: 'kutu' }, [
         el('h1', { id: 'rhbLisansBaslik', text: L.AD || 'Rehberlik Yardımcısı' }),
-        el('p', { class: 'alt', text: 'Evrak Asistanı · Eyüp ŞEKER · v' + (L.SURUM || '1.1.1') + ' · ayrı lisanslı ürün' }),
+        el('p', { class: 'alt', text: 'Evrak Asistanı · Eyüp ŞEKER · v' + (L.SURUM || '1.1.4') + ' · ayrı lisanslı ürün' }),
         el('label', { 'for': 'rhbKurumKodu', text: 'Kurum kodu (en az 4 rakam)' }),
         el('input', { id: 'rhbKurumKodu', type: 'text', inputmode: 'numeric', autocomplete: 'off', 'aria-label': 'Kurum kodu' }),
         el('div', { class: 'satir' }, [

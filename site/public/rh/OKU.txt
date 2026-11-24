@@ -1,4 +1,4 @@
-Rehberlik Yardımcısı 1.1.2 (tam sürüm: rehber öğretmen / psikolojik danışman)
+Rehberlik Yardımcısı 1.1.4 (tam sürüm: rehber öğretmen / psikolojik danışman)
 Evrak Asistanı · Eyüp ŞEKER
 
 Sınıf rehber öğretmenleri ve rehber öğretmenler (psikolojik danışmanlar) için:
@@ -32,3 +32,10 @@ Not: Öğretmen Yardımcısı ile aynı bilgisayarda aynı tarayıcıda açılı
 1.1.2
 - Menü, rehber öğretmenin işine yarayan evrakla sınırlandı. ŞÖK, zümre, izin/görev izin, nöbet, yıllık ders planı, not girişi, şeflik, kulüp ve "Tüm Evraklar" bu sürümde yok; aramada da çıkmaz. Veli toplantısı evrakı duruyor.
 - Disiplin, ödül (teşekkür/takdir/onur), veli toplantısı, DYK, egzersiz ve proje (TÜBİTAK, eTwinning, Erasmus+, okul projeleri) evrakları duruyor.
+
+1.1.3
+- Sınıf İçi Ölçme ve Değerlendirme Kütüphanesi eklendi (PDF kılavuzlarını yerelde saklama, kaynaklarda arama, etkinlik/ölçme aracı taslağı).
+- Arayüz renkleri Öğretmen Yardımcısı ile aynı sıcak krem tona alındı; belge önizlemesi beyaz kalır.
+
+1.1.4
+- 36 ODSGM kılavuzu hazır yüklü; kitap özeti kılavuzun kendi metninden.

@@ -1,4 +1,4 @@
-Sınıf Rehberlik Yardımcısı 1.1.1 (hafif sürüm: sınıf / şube rehber öğretmeni)
+Sınıf Rehberlik Yardımcısı 1.1.4 (hafif sürüm: sınıf / şube rehber öğretmeni)
 Evrak Asistanı · Eyüp ŞEKER
 
 Sınıf / şube rehber öğretmenleri için:
@@ -24,3 +24,14 @@ Not: Öğretmen Yardımcısı ile aynı bilgisayarda aynı tarayıcıda açılı
 - Lisans ve sözleşme onay ekranı geri geldi (48 saatlik deneme, lisans anahtarı).
 - Sınıf Rehberlik ayrı lisans türüyle çalışır; tam Rehberlik anahtarı bu sürümü de açar.
 - Masaüstü güncelleyici doğru dosyayı denetler.
+
+1.1.2
+- Sınıf İçi Ölçme ve Değerlendirme Kütüphanesi eklendi (PDF kılavuzlarını yerelde saklama, kaynaklarda arama, etkinlik/ölçme aracı taslağı).
+- Arayüz renkleri Öğretmen Yardımcısı ile aynı sıcak krem tona alındı; belge önizlemesi beyaz kalır.
+
+
+1.1.3
+- 36 ODSGM kılavuzu hazır yüklü; kitap özeti kılavuzun kendi metninden.
+
+1.1.4
+- Profil branş listesi: Sınıf Öğretmenliği, Okul Öncesi ve genel dersler üstte; meslek alanları; serbest yazılabilir. Çift açılır liste düzeltmesi.

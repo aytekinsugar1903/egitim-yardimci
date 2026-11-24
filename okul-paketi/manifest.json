@@ -1,6 +1,6 @@
 {
-  "surum": "1.0.19",
-  "paket": "okul-paketi-guncelleme-1.0.19.zip",
-  "sha256": "2c2b986003ae09cb8bc7b220b40f2fad112ad64fb7833a572e8645f717b865f0",
-  "not": "ÖY 1.12.1 ve MYP 1.12.3 yeni sıcak arayüz (krem/mercan/turkuaz); MYP index.html SheetJS </script> sızması düzeltildi; SW önbellek 1019. Not Girişi Asistanı 1.9.22. Kurulum exe 1.0.19. Rehberlik Yardımcısı bu pakete dahil değildir."
+  "surum": "1.0.21",
+  "paket": "okul-paketi-guncelleme-1.0.21.zip",
+  "sha256": "8ecd7cc4f5e9d37cdd34d81300d7b1da63e6cae6e0ae05ff9351dcb3720d3d07",
+  "not": "Öğretmen Yardımcısı 1.12.3 ve Müdür Yardımcısı 1.12.5: Sınıf İçi Ölçme ve Değerlendirme Kütüphanesi (ODSGM'nin 36 resmi kılavuzu hazır yüklü), branş listesi düzeltmesi. Not Girişi Asistanı 1.9.22. Kurulum exe 1.0.21. Rehberlik Yardımcısı bu pakete dahil değildir."
 }

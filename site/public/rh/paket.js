@@ -2,7 +2,7 @@
    tur: "tam" = rehber öğretmen, "sinif" = sınıf rehber öğretmeni. Yayıncı: Eyüp ŞEKER. */
 window.OY_PAKET = {
   "ad": "Rehberlik Yardımcısı",
-  "surum": "1.1.2",
+  "surum": "1.1.4",
   "tur": "tam",
   "katlar": [
     "Rehberlik",
@@ -11,7 +11,8 @@ window.OY_PAKET = {
     "Özel Eğitim",
     "Veli",
     "Yazı Şablonları",
-    "Mevzuat"
+    "Mevzuat",
+    "Ölçme ve Değerlendirme"
   ],
   "idler": [
     "rpd",
@@ -26,7 +27,8 @@ window.OY_PAKET = {
     "proj_p4006",
     "proj_petw",
     "proj_perasmus",
-    "proj_pokul"
+    "proj_pokul",
+    "oy_olcme_kutuphanesi"
   ],
   "haric": []
 };

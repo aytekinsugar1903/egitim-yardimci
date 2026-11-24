@@ -9,7 +9,7 @@
 (function (root) {
 'use strict';
 if (typeof document === 'undefined' || typeof OY === 'undefined') return;
-var SURUM = '1.1.1';
+var SURUM = '1.1.4';
 var KAT = 'Rehberlik';
 var KAT_OGR = 'Sınıf Listeleri ve Kayıtlar';
 function PK() { return root.OY_PAKET || {}; }
