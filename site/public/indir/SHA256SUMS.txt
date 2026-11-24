@@ -1,4 +1,4 @@
-41ff27b2cacf5dce0acd4091a62a30e4e0c9884e70bb5081933ebe33b355a55b  evrak-asistani-mudur-paketi-v1.0.7.zip
+1d668e27267dab21226db5a66e059758107941fc5e700d2852eb948c585b9f70  evrak-asistani-mudur-paketi-v1.0.9.zip
 6b66f549813fef69102add6abed40086d91f2cf2eb791be17b6dcbd31f66a345  EvrakAsistani-OkulPaketi-Kurulum-1.0.19.exe
 3de0cd5359e2127ba37df1451a2af13bbf019d2989b80fb0f2139cfe14f68e7b  EvrakAsistani-Rehberlik-Kurulum-1.1.2.exe
 9a112876564c197a786a9c58c485ce73818434665c82d5e4d9503790cf7e31f6  EvrakAsistani-SinifRehberlik-Kurulum-1.1.1.exe
