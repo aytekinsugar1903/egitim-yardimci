@@ -48,6 +48,8 @@ Kurulu Okul Paketi'nin başlatıcısı (1.0.3 ve sonrası) güncellemeyi şu adr
 
 1.0.13 güncelleme paketi ve kurulum exe Öğretmen Yardımcısı 1.11.1 getirir (yukarıdaki plan araçları ve çıktı cilası). MYP 1.12.3, Not Girişi 1.9.2 değişmedi. Kurulu paketler bunu `manifest.json` üzerinden alır. Yeni kurulum için `EvrakAsistani-OkulPaketi-Kurulum-1.0.13.exe` kullanılır; 1.0.7 exe depoda durur.
 
+1.12.2 Öğretmen Yardımcısı (Okul Paketi 1.0.19'daki ÖY üzerine): Sınıf İçi Ölçme ve Değerlendirme Kütüphanesi (`olcme-kutuphanesi.js` v1.0.1). Öğretmen ODSGM kılavuz PDF'lerini ekler; metin cihazda IndexedDB'de (`oy_olcme_kutuphanesi_v1`) tutulur; sayfa numarasıyla arama; 7 türde taslak (etkinlik, açık uçlu araç, dereceli puanlama anahtarı, öz/akran değerlendirme, geri bildirim, destekleme-zenginleştirme). Harici API yok. `site/public/oy` (otonomevrak.com) ve `oy/` (GitHub Pages) aynı. Aynı sürümde ÖY ve MYP profil branş listesine sınıf öğretmenliği ve 28 genel ders eklendi (liste dışı branş elle yazılabilir, iki listenin üst üste açılması giderildi); `site/public/myp` ve `myp/` Okul Paketi 1.0.19'daki MYP'ye çekildi (SheetJS `</script>` sızması düzeltmesi siteye de geldi), önbellek `myp-1.12.3-1124brans`. Okul Paketi güncelleme zip'i henüz üretilmedi; taranmış PDF için OCR ve öğrenme çıktısı kataloğu sonraki aşama.
+
 ## Önemli
 
 - Bu depo **kaynak kod değildir**; derleme çıktısıdır. Değişiklik asıl uygulama deposunda yapılır, sonra derlenmiş dosyalar buraya kopyalanır. Burada elle düzenleme yapma.
