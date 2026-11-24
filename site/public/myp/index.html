@@ -1612,7 +1612,7 @@ $('#bYedek').onclick=function(){OZ.dosyalar().then(function(d){var b=new Blob([J
 var fg=$('#fGeri'),_g=fg.onchange;fg.onchange=function(){var f=this.files[0];if(f)f.text().then(function(t){try{var j=JSON.parse(t);if(j&&j.dosyalar)OZ.dosyaYukle(j.dosyalar);}catch(e){}});return _g.call(this);};})();
 
 /* ===== v1.10.4: Proje Görevlendirme (projeler, öğretmen görevleri, durum, sene sonu özeti) ===== */
-MD.VER='1.12.3';
+MD.VER='1.12.5';
 (function(){
 var PGD=['Sosyal Sorumluluk ve Toplum Hizmeti Projeleri','Sosyal ve Kültürel Okul Etkinlikleri','Bilimsel ve Teknik Projeler (TEKNOFEST / TÜBİTAK)','Mesleki Gelişim ve Sektör İş Birlikleri','Okul Tanıtım ve Kurumsal İletişim'];
 var PGS=['Planlandı','Devam Ediyor','Tamamlandı'];
@@ -2647,4 +2647,5 @@ load();$('#ver').textContent=MD.VER;benSel();ogrDL();teachDL();go('dash');
 <script src="gundem-veri.js"></script>
 <script src="kurul-ayrinti.js"></script>
 <script src="arayuz.js"></script>
+<script src="olcme-kutuphanesi.js"></script>
 </body></html>

@@ -1,4 +1,4 @@
-Sınıf Rehberlik Yardımcısı 1.1.4 (hafif sürüm: sınıf / şube rehber öğretmeni)
+Sınıf Rehberlik Yardımcısı 1.1.5 (hafif sürüm: sınıf / şube rehber öğretmeni)
 Evrak Asistanı · Eyüp ŞEKER
 
 Sınıf / şube rehber öğretmenleri için:
@@ -35,3 +35,6 @@ Not: Öğretmen Yardımcısı ile aynı bilgisayarda aynı tarayıcıda açılı
 
 1.1.4
 - Profil branş listesi: Sınıf Öğretmenliği, Okul Öncesi ve genel dersler üstte; meslek alanları; serbest yazılabilir. Çift açılır liste düzeltmesi.
+
+1.1.5
+- Gizlilik metninde veri sorumlusu iletişim adresi info@otonomevrak.com olarak güncellendi. Başka değişiklik yoktur.

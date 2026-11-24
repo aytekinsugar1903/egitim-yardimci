@@ -1,4 +1,4 @@
-/* Evrak Asistanı · ÖY 1.12.2 rehberlik eklentileri. Yayıncı: Eyüp ŞEKER.
+/* Evrak Asistanı · ÖY 1.12.3 rehberlik eklentileri. Yayıncı: Eyüp ŞEKER.
    - Sınıf listelerim: e-Okul Sınıf Listesi (.xls/.xlsx/.csv) ve Not Girişi Asistanı'ndan aktarım (.json)
    - Formlarda sınıf / öğrenci seçimi (yazarken liste açılır)
    - Rehberlik kayıt defteri (yalnız form adı, tarih, sınıf; öğrenci adı tutulmaz) → yıl sonu ve aylık rapora sayılar
@@ -8,7 +8,7 @@
 (function (root) {
 'use strict';
 if (typeof document === 'undefined' || typeof OY === 'undefined') return;
-var SURUM = '1.12.2';
+var SURUM = '1.12.3';
 var KAT = 'Rehberlik';
 var KAT_OGR = 'Sınıf Listeleri ve Kayıtlar';
 

@@ -1,4 +1,4 @@
-/* Evrak Asistanı · Öğretmen Yardımcısı 1.12.2 — plan araçları
+/* Evrak Asistanı · Öğretmen Yardımcısı 1.12.3 — plan araçları
    Yayıncı: Eyüp ŞEKER. Metinler özgün yazımdır. Öğrenci verisi yalnızca bu cihazda kalır. */
 (function (root) {
 'use strict';
@@ -482,7 +482,7 @@ var BEP_HAVUZ_ZEP = [
 
 /* ---------- Dışa açık çekirdek ---------- */
 var OYX = {
-  SURUM: '1.12.2',
+  SURUM: '1.12.3',
   TATIL: TATIL,
   ALANLAR: EGZ_ALANLAR,
   KULUPLER: KULUPLER,
