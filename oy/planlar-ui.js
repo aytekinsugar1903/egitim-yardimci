@@ -1,4 +1,4 @@
-/* Evrak Asistanı · ÖY 1.12.1 plan araçları arayüzü. Yayıncı: Eyüp ŞEKER. */
+/* Evrak Asistanı · ÖY 1.12.2 plan araçları arayüzü. Yayıncı: Eyüp ŞEKER. */
 (function (root) {
 'use strict';
 if (typeof document === 'undefined') return;
@@ -1174,7 +1174,7 @@ function ekleSablonlar() {
     if (!varMi) {
       OY.T.push({
         id: s.id, kat: s.kat, baslik: s.baslik,
-        kaynak: 'ÖY 1.12.1 plan aracı (özgün metin)',
+        kaynak: 'ÖY 1.12.2 plan aracı (özgün metin)',
         alan: [], oyx: true, build: function (p, f) { return (OYX.ui && OYX.ui.buildFor && OYX.ui.buildFor(s.id, p, f)) || []; }
       });
     }

@@ -3,6 +3,7 @@
   'use strict';
   var css = document.createElement('style');
   css.textContent = [
+    '#eaTema,label.ea-tema,.ea-tema{display:none!important}',
     'body{background:#fff4ec;color:#1c1915;font-size:18px}',
     'header{background:#fffaf6;color:#1c1915;border-bottom:1px solid #f0d2c0}',
     'header h1{color:#1c1915}',
@@ -117,3 +118,28 @@
     };
   }
 })();
+
+  /* 1.0.19: eski tema seçici artakalını gizle; sıcak paleti koru */
+  (function () {
+    var st = document.createElement('style');
+    st.id = 'ea-tema-gizle';
+    st.textContent = '#eaTema,label.ea-tema,.ea-tema{display:none!important}';
+    (document.head || document.documentElement).appendChild(st);
+    function kilit() {
+      try { localStorage.setItem('ea_tema', 'acik'); } catch (e) {}
+      try { document.documentElement.removeAttribute('data-tema'); } catch (e) {}
+      var n = document.getElementById('eaTema');
+      if (n) {
+        var w = n.closest ? (n.closest('label') || n.parentNode) : n.parentNode;
+        if (w && w.style) w.style.display = 'none';
+        n.style.display = 'none';
+      }
+      if (window.EK && EK.tema) {
+        EK.tema.uygula = function () { return 'acik'; };
+        EK.tema.ayarla = function () { return 'acik'; };
+      }
+    }
+    kilit();
+    setTimeout(kilit, 0);
+    document.addEventListener('DOMContentLoaded', kilit);
+  })();

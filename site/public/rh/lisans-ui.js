@@ -77,7 +77,7 @@
     var ov = el('div', { id: 'rhbLisans', role: 'dialog', 'aria-labelledby': 'rhbLisansBaslik' }, [
       el('div', { class: 'kutu' }, [
         el('h1', { id: 'rhbLisansBaslik', text: L.AD || 'Rehberlik Yardımcısı' }),
-        el('p', { class: 'alt', text: 'Evrak Asistanı · Eyüp ŞEKER · v' + (L.SURUM || '1.1.1') + ' · ayrı lisanslı ürün' }),
+        el('p', { class: 'alt', text: 'Evrak Asistanı · Eyüp ŞEKER · v' + (L.SURUM || '1.1.2') + ' · ayrı lisanslı ürün' }),
         el('label', { 'for': 'rhbKurumKodu', text: 'Kurum kodu (en az 4 rakam)' }),
         el('input', { id: 'rhbKurumKodu', type: 'text', inputmode: 'numeric', autocomplete: 'off', 'aria-label': 'Kurum kodu' }),
         el('div', { class: 'satir' }, [

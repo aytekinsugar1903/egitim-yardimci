@@ -16,7 +16,7 @@
   var YENILE_MS = GUN;
   var SOZLESME_SURUMU = '2026-11-15';
   var DEPO = HAFIF ? 'srh_lisans_v1' : 'rhb_lisans_v1';
-  var SURUM = '1.1.1';
+  var SURUM = '1.1.2';
 
   function b64uDec(s) {
     s = String(s).replace(/-/g, '+').replace(/_/g, '/');

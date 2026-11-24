@@ -1,4 +1,4 @@
-/* Evrak Asistanı · ÖY 1.12.1 rehberlik eklentileri. Yayıncı: Eyüp ŞEKER.
+/* Evrak Asistanı · ÖY 1.12.2 rehberlik eklentileri. Yayıncı: Eyüp ŞEKER.
    - Sınıf listelerim: e-Okul Sınıf Listesi (.xls/.xlsx/.csv) ve Not Girişi Asistanı'ndan aktarım (.json)
    - Formlarda sınıf / öğrenci seçimi (yazarken liste açılır)
    - Rehberlik kayıt defteri (yalnız form adı, tarih, sınıf; öğrenci adı tutulmaz) → yıl sonu ve aylık rapora sayılar
@@ -8,7 +8,7 @@
 (function (root) {
 'use strict';
 if (typeof document === 'undefined' || typeof OY === 'undefined') return;
-var SURUM = '1.12.1';
+var SURUM = '1.12.2';
 var KAT = 'Rehberlik';
 var KAT_OGR = 'Sınıf Listeleri ve Kayıtlar';
 
@@ -55,7 +55,7 @@ function stil() {
     '.oyek-t{border-collapse:collapse;width:100%;margin:8px 0}.oyek-t td,.oyek-t th{border:1px solid #666;padding:4px 6px;text-align:left;vertical-align:middle}.oyek-t th{background:#eee}',
     '.oyek-t select{min-width:120px;max-width:100%}.oyek-t input[type=number]{width:56px}',
     '.oyek-kart{border:2px solid #000;border-radius:8px;padding:10px 12px;margin:8px 0;background:#fff}',
-    '.oyek-oto{border:2px solid #003c8f;border-radius:8px;padding:8px 12px;margin:8px 0;background:#eef3ff}',
+    '.oyek-oto{border:2px solid #c2410c;border-radius:8px;padding:8px 12px;margin:8px 0;background:#eef3ff}',
     '.oyek-sg svg{max-width:100%;height:auto;border:1px solid #999;border-radius:6px;background:#fff}',
     '.oyek-kucuk{font-size:14px;color:#333}'
   ].join('');

@@ -1,4 +1,4 @@
-Rehberlik Yardımcısı 1.1.1 (tam sürüm: rehber öğretmen / psikolojik danışman)
+Rehberlik Yardımcısı 1.1.2 (tam sürüm: rehber öğretmen / psikolojik danışman)
 Evrak Asistanı · Eyüp ŞEKER
 
 Sınıf rehber öğretmenleri ve rehber öğretmenler (psikolojik danışmanlar) için:
@@ -7,7 +7,9 @@ Sınıf rehber öğretmenleri ve rehber öğretmenler (psikolojik danışmanlar)
 - Sosyometri ve "Kimdir Bu?" (sosyogram PNG), Sınıf Risk Haritası.
 - Sınıf Rehberlik Yıllık Planı (örnek temalarla), Aylık Faaliyet Raporu ve Yıl Sonu Raporu ("Kayıtlardan doldur").
 - BEP / ZEP (74 örnek hedef), kaynaştırma değerlendirme, BEP birimi tutanağı, destek eğitim odası ve evde eğitim formları.
-- RPD yürütme komisyonu, psikososyal ekip, okul güvenliği tutanakları; ŞÖK ve zümre tutanakları; veli toplantısı evrakı; disiplin sevk/olay bildirimi.
+- RPD yürütme komisyonu, psikososyal ekip, okul güvenliği tutanakları; disiplin sevk/olay bildirimi; öğrenci ödül önerisi (teşekkür, takdir, onur belgesi); veli toplantısı evrakı (tutanak, davet, imza listesi).
+- DYK kurs planı/yoklama ve ders dışı egzersiz çalışma planı (rehber öğretmen DYK'ya görevlendirilebilir; egzersiz belge ve onay şartına bağlıdır).
+- Proje evrakı: TÜBİTAK 4006, eTwinning, Erasmus+ ve okul projeleri.
 - Resmî yazı ve dilekçe şablonları, çevrimdışı mevzuat.
 
 Kurulum: klasörü bilgisayara kopyalayın, index.html dosyasını Chrome veya Edge ile açın.
@@ -26,3 +28,7 @@ Not: Öğretmen Yardımcısı ile aynı bilgisayarda aynı tarayıcıda açılı
 - Lisans ve sözleşme onay ekranı geri geldi (48 saatlik deneme, lisans anahtarı).
 - Tam Rehberlik anahtarı Sınıf Rehberlik sürümünü de açar.
 - Masaüstü güncelleyici doğru dosyayı denetler.
+
+1.1.2
+- Menü, rehber öğretmenin işine yarayan evrakla sınırlandı. ŞÖK, zümre, izin/görev izin, nöbet, yıllık ders planı, not girişi, şeflik, kulüp ve "Tüm Evraklar" bu sürümde yok; aramada da çıkmaz. Veli toplantısı evrakı duruyor.
+- Disiplin, ödül (teşekkür/takdir/onur), veli toplantısı, DYK, egzersiz ve proje (TÜBİTAK, eTwinning, Erasmus+, okul projeleri) evrakları duruyor.

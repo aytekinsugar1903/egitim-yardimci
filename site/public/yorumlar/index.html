@@ -1,0 +1,61 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Yorumlar – Evrak Asistanı</title><meta name="description" content="Kullanıcı yorumları. Yalnız onaylanan yorumlar yayımlanır. Uygulamalar hakkında deneyiminizi yazabilirsiniz."><meta name="theme-color" content="#e0f2fe">
+<link rel="canonical" href="https://otonomevrak.com/yorumlar/"><link rel="icon" href="data:image/svg+xml,<svg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'><rect x='5' y='9' width='22' height='17' rx='5' fill='%230b1a33' stroke='%2322d3ee' stroke-width='2'/><circle cx='12' cy='17' r='2.4' fill='%2322d3ee'/><circle cx='20' cy='17' r='2.4' fill='%2322d3ee'/><path d='M12 22h8M16 9V5' stroke='%2322d3ee' stroke-width='2' stroke-linecap='round'/><circle cx='16' cy='4' r='2' fill='%2360a5fa'/></svg>"><link rel="stylesheet" href="/site.css"><script src="/ux.js" defer></script><script src="/tema.js" defer></script>
+<script src="/lightbox.js" defer></script><script src="/yorumlar.js" defer></script></head><body>
+<a class="skip" href="#ana">İçeriğe geç</a>
+<header class="top"><div class="w"><a class="logo" href="/"><span>Evrak Asistanı</span></a><nav aria-label="Ana menü"><a href="/ogretmenler/">Öğretmenler</a><details class="navdrop"><summary>Okul idaresi</summary><div class="navmenu"><a href="/mudur-yardimcisi/">Müdür Yardımcısı</a><a href="/eokul/">Okul Pro</a><a href="/mudur-paketi/">Müdür Paketi</a><a href="/evrak/">EBYS</a><a href="/form-toplayici/">Form Toplayıcı</a><a href="/muhasebe/">Muhasebe</a><a href="/veli/">Veli</a></div></details><details class="navdrop"><summary>Kamu kurumları</summary><div class="navmenu"><a href="/evrak/">EBYS</a><a href="/dys/">DYS</a><a href="/belgenet/">Belgenet</a><a href="/form-toplayici/">Form Toplayıcı</a></div></details><a href="/fiyatlar/">Fiyatlar</a><a href="/sss/">SSS</a><a href="/destek/">Destek</a><a href="/iletisim/">İletişim</a></nav></div></header>
+<main id="ana"><div class="w page">
+<p class="crumb"><a href="/">← Ana sayfa</a></p>
+<h1>Yorumlar</h1>
+<p class="meta">Onaylanan kullanıcı yorumları. İlk yorumu siz yazabilirsiniz.</p>
+<section class="yorumlar-sec" id="yorumlar" aria-labelledby="yorumlar-baslik">
+<h2 id="yorumlar-baslik">Yorumlar</h2>
+<p class="sub">Yalnız onaylanan yorumlar yayımlanır. Gönderdiğiniz yorum incelemeden sonra görünür.</p>
+<div class="yorum-liste" data-yorum-liste>
+<p class="yorum-bos">Henüz yorum yok — ilk yorumu siz yazın</p>
+</div>
+<form class="yorum-formu" method="post" action="/api/yorumlar" novalidate>
+<p class="hp" aria-hidden="true"><label>Web siteniz<input type="text" name="website" tabindex="-1" autocomplete="off"></label></p>
+<div class="yorum-alanlar">
+<label>Adınız <span class="mut">(isteğe bağlı)</span><input type="text" name="ad" maxlength="80" autocomplete="name"></label>
+<label>Unvanınız <span class="mut">(isteğe bağlı)</span><input type="text" name="unvan" maxlength="80" autocomplete="organization-title"></label>
+<label>Ürün
+<select name="urun" required>
+<option value="">Seçiniz</option>
+<option value="evrak">Evrak Asistanı EBYS</option>
+<option value="dys">Evrak Asistanı DYS</option>
+<option value="belgenet">Evrak Asistanı Belgenet</option>
+<option value="eokul">Okul Pro</option>
+<option value="not-girisi">Not Girişi Asistanı</option>
+<option value="ogretmen-yardimcisi">Öğretmen Yardımcısı</option>
+<option value="mudur-yardimcisi">Müdür Yardımcısı</option>
+<option value="form-toplayici">Form Toplayıcı</option>
+<option value="mudur-paketi">Müdür Paketi</option>
+<option value="rehberlik">Rehberlik Yardımcısı</option>
+<option value="muhasebe">Okul Muhasebe Asistanı</option>
+<option value="veli">Veli Asistanı</option>
+</select>
+</label>
+<label>Puan
+<select name="puan" required>
+<option value="">Seçiniz</option>
+<option value="5">5 — Çok iyi</option>
+<option value="4">4 — İyi</option>
+<option value="3">3 — Orta</option>
+<option value="2">2 — Zayıf</option>
+<option value="1">1 — Kötü</option>
+</select>
+</label>
+<label class="yorum-metin">Yorumunuz
+<textarea name="yorum" required minlength="10" maxlength="2000" rows="5" placeholder="Deneyiminizi yazın (en az 10 karakter)"></textarea>
+</label>
+<label class="yorum-kvkk"><input type="checkbox" name="kvkk" value="1" required> <span><a href="/yasal/kvkk-ve-sorumluluk">KVKK ve Sorumluluk Metni</a>’ni okudum, yorumumun adım ve unvanımla (yazdıysam) yayımlanmasını kabul ediyorum.</span></label>
+</div>
+<p class="yorum-durum" data-yorum-durum hidden></p>
+<button type="submit">Yorumu gönder</button>
+</form>
+</section>
+</div></main>
+<footer><div class="w"><div><b style="color:var(--tx)">Evrak Asistanı</b> · Eyüp ŞEKER<br><a href="mailto:info@otonomevrak.com">info@otonomevrak.com</a> · <a href="https://wa.me/905531002636">0553 100 26 36</a></div>
+<div class="links" aria-label="Yasal metinler ve gizlilik"><a href="/iletisim/">İletişim</a><a href="/sss/">Sık sorulan sorular</a><a href="/destek/">Destek</a><a href="/fiyatlar/">Fiyatlar</a><a href="/gizlilik">Gizlilik (KVKK)</a></div></div></footer>
+</body></html>
