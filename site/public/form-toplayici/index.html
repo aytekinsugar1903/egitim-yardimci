@@ -13,9 +13,13 @@
 .hero-video{margin:22px 0 8px;max-width:760px}
 .hero-video video{display:block;width:100%;height:auto;border-radius:18px;border:1px solid var(--line);box-shadow:var(--sh);background:#0b1526}
 #tanitim-video{scroll-margin-top:84px}
+.tanitim-dikey{display:none}
 @media(max-width:700px){
   .flow{flex-wrap:wrap}
   .flow .step{flex:1 1 100%}
+  .hero-video{max-width:420px}
+  .tanitim-yatay{display:none}
+  .tanitim-dikey{display:block}
 }
 </style>
 </head><body>
@@ -40,10 +44,14 @@
 
 
 
-<div class="hero-video">
-<video id="tanitim-video" controls preload="metadata" playsinline poster="tanitim-poster.jpg" width="1280" height="720">
-<source src="tanitim.mp4" type="video/mp4">
-Tanıtım videosu tarayıcınızda oynatılamıyor. <a href="tanitim.mp4">Videoyu indirin</a>.
+<div class="hero-video" id="tanitim-video">
+<video class="tanitim-yatay" controls preload="metadata" playsinline poster="tanitim-poster.jpg?v=20261128" width="1920" height="1080">
+<source src="tanitim.mp4?v=20261128" type="video/mp4">
+Tanıtım videosu tarayıcınızda oynatılamıyor. <a href="tanitim.mp4?v=20261128">Videoyu indirin</a>.
+</video>
+<video class="tanitim-dikey" controls preload="metadata" playsinline poster="tanitim-poster-dikey.jpg?v=20261128" width="1080" height="1920">
+<source src="tanitim-dikey.mp4?v=20261128" type="video/mp4">
+Tanıtım videosu tarayıcınızda oynatılamıyor. <a href="tanitim-dikey.mp4?v=20261128">Videoyu indirin</a>.
 </video>
 </div>
 <p class="tiny">48 saat deneme · Birleştirme için internet gerekmez · Verileriniz bilgisayarınızda kalır · Yıllık lisans (tek seferlik seçenek 1 yıl güncelleme içerir)</p>
